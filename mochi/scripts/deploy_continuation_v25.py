@@ -47,8 +47,11 @@ def web():
         return FileResponse('/web/continuation-v25/manifest.json',media_type='application/json',headers={'Cache-Control':'no-cache'})
     @api.get('/api/health')
     def health():
+        navigation=max((c['update'] for c in report['checkpoints'] if c['domain']=='navigation'),default=0)
+        task=max((c['update'] for c in report['checkpoints'] if c['domain']=='task and recovery'),default=0)
         return {'status':'ok','release':os.getenv('MOCHI_RELEASE'),'run_id':report['run_id'],
-            'evaluation_status':report['status'],'optimizer_updates':report['totals'][0][0],
+            'evaluation_status':report['status'],'optimizer_updates':navigation+task,
+            'navigation_optimizer_updates':navigation,'task_optimizer_updates':task,
             'cases':len(report['cases']),'native_gait_weights_trained':False,'privileged_state':True,
             'mode':'Recorded physical simulation; actual saved-checkpoint decisions'}
     api.mount('/',StaticFiles(directory='/web',html=True))

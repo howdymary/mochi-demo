@@ -4,9 +4,9 @@
 
 [Current progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) · [Methods](docs/continuation-v25-methods.md)
 
-The continuation study has completed 32 real Tinker navigation optimizer updates using measured outcomes from 144 candidate requests across 24 training layouts. The controlled development comparison is running. No fresh-layout advantage over the strongest fixed strategy is claimed yet. The parent is the earlier V23 selected checkpoint, not an untrained model.
+The continuation study has completed 32 real Tinker navigation optimizer updates using measured outcomes from 144 candidate requests across 24 training layouts, plus 16 separate task and recovery updates. The controlled development comparison is running. No fresh-layout advantage over the strongest fixed strategy is claimed yet. The parent is the earlier V23 selected checkpoint, not an untrained model.
 
-Shared engineering repairs now complete the continuous clock, drawer, laptop and globe sequence under the original contact, balance and foot-clearance checks. The replay separates those controller changes from saved-weight training comparisons and retains the book-descent failure. Task and arm-recovery post-training uses alternatives executed from physically reached states; complete-sequence checkpoint selection and unopened-layout evaluation follow separately.
+Shared engineering repairs now complete the continuous clock, drawer, laptop and globe sequence under the original contact, balance and foot-clearance checks. The replay separates those controller changes from saved-weight training comparisons and retains the book-descent failure. In a subsequent matched, uninterrupted development comparison, task checkpoint 4 qualified while the parent missed laptop-leg sole clearance. Task and arm-recovery training uses alternatives executed from physically reached states. Remaining checkpoint comparisons and unopened-layout evaluation are separate from that development result.
 
 The original native gait network remains fixed. Tinker trains navigation and task-controller selection weights. Exa supplies failure-driven sources, past.dev passes source-verified findings between workflow stages, and Modal executes physical evaluation batches and authenticated training. Existing studies and deployments remain available below.
 

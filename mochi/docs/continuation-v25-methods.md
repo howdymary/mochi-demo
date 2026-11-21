@@ -43,3 +43,34 @@ Component alternatives branch only from physically reached states. A clone check
 Exact measurements, rejected candidates, trajectories and optimizer receipts remain in Mochi artifact storage. past.dev stores compact, source-linked findings with explicit writer identities and audience controls. Dependent reads wait for ingestion and require the expected source ID. A synthetic private canary checks isolation.
 
 No final-layout outcome may become a training label. No engineering change is attributed to weight training. This study does not establish visual perception, low-level gait learning, hardware transfer, a robotics benchmark record or a causal memory advantage.
+
+## Setup and reproduction
+
+Run commands from the repository root. Reuse the existing environment when available. The continuation pins its provider SDKs separately because the original project's optional dependency versions predate this study.
+
+```sh
+uv venv --python 3.11 mochi/.venv
+uv pip install --python mochi/.venv/bin/python torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+uv pip install --python mochi/.venv/bin/python -r mochi/configs/continuation-v25/runtime-requirements.txt
+mochi/.venv/bin/python mochi/scripts/restore_navigation_v23_assets.py
+PYTHONPATH=mochi/src mochi/.venv/bin/python -m pytest mochi/tests/test_navigation_v25_checks.py mochi/tests/test_navigation_tasks_v24_frames.py -q
+```
+
+To reproduce a fixed navigation attempt without provider credentials:
+
+```sh
+PYTHONPATH=mochi/src OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 mochi/.venv/bin/python - <<'PY'
+import json
+from pathlib import Path
+from mochi.navigation_v25.engine import run
+layout=json.loads(Path('mochi/configs/continuation-v25/development.json').read_text())[0]
+result=run(layout,251000,'buffered',record=False)
+print({k:result[k] for k in ['qualified','checks','steps','physical_seconds','failure']})
+PY
+```
+
+The same source is available through `navigation_v25.tasks.run` for a fixed four-task attempt using `tasks/development.json`. These are physical controller reproductions, not new learned-model results. CPU architecture is recorded because numerical differences can affect contacts.
+
+The authenticated study uses `scripts/train_navigation_v25.py`, `scripts/train_tasks_v25.py` and `scripts/evaluate_task_checkpoints_v25.py`. Original optimizer states and raw trajectories remain in the owner's Modal and Tinker storage. Reproducing the exact learned parent requires that access. New campaigns must use new identities, isolated service names, fresh final sets and a new budget ledger. Do not overwrite the archived campaign or rerun a final set as if it were unopened.
+
+Sponsor paths are explicit: Tinker optimizer and sampling calls are in the two training scripts; the shared physical worker and budget broker are in `src/mochi/navigation_v25/remote.py`; the existing source-verified Exa and past.dev adapter is `src/mochi/navigation_v23/services.py`. The public replay is deployed by `scripts/deploy_continuation_v25.py`; it serves only whitelisted, hash-checked recordings and contains no service keys.

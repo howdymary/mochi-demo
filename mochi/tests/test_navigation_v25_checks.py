@@ -1,5 +1,6 @@
 """Guard against overstated efficiency and weakened controls."""
 import copy
+import json
 import unittest
 
 from mochi.navigation_v25.baselines import comparison, tune
@@ -12,6 +13,10 @@ def outcome(layout,seed,steps,qualified=True):
 
 
 class ComparisonChecks(unittest.TestCase):
+    def test_comparison_can_be_persisted_as_json(self):
+        report=comparison([outcome('a',0,100)],[outcome('a',0,80)])
+        self.assertEqual(json.loads(json.dumps(report))['improved_layouts'],1)
+
     def test_a_short_failed_attempt_is_not_an_efficiency_gain(self):
         a=[outcome('a',0,100),outcome('b',0,100)]
         b=[outcome('a',0,50),outcome('b',0,1,False)]

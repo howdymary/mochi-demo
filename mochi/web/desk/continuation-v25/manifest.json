@@ -2,8 +2,53 @@
   "study": "mochi-continuation-v25",
   "run_id": "mochi-nav25-20261121a",
   "status": "running",
-  "default_case": "training-probe",
+  "default_case": "task-weight-development",
   "cases": [
+    {
+      "id": "task-weight-development",
+      "label": "Four tasks \u00b7 actual Tinker checkpoint comparison",
+      "kind": "sequence",
+      "split": "development",
+      "layout_sha256": "45777beed7cf775acf6a10a8de376da062fd7921296b29835a83ec9df732e431",
+      "runs": {
+        "parent": {
+          "file": "progress-task-dev-u0.json.gz",
+          "label": "Parent task weights \u00b7 update 0",
+          "sha256": "8289d3e9f4986ccacac00d02a472911f0e8f769b42cd0f0f99922e6bc378c156",
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": false,
+            "steps": 966,
+            "duration": 357.1908575474401,
+            "failure": null,
+            "action": "same fixed navigation; learned contact/recovery choices",
+            "selection": {
+              "checkpoint_id": "f95efaed18f152e9082c347a597b3a09b94eae2c0ffed34668cc38894a1523b2",
+              "optimizer_updates": 0
+            }
+          }
+        },
+        "selected": {
+          "file": "progress-task-dev-u4.json.gz",
+          "label": "Trained task weights \u00b7 update 4",
+          "sha256": "af78c4bb58d3501051b9876f763fa936955cc97c24cf73106112fa83c4cbe0a7",
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": true,
+            "steps": 848,
+            "duration": 341.62705521706977,
+            "failure": null,
+            "action": "same fixed navigation; learned contact/recovery choices",
+            "selection": {
+              "checkpoint_id": "6a44f35d772ed02c7a35adb9c7f5e1f6f5e5cc4b413f5f69747aac333f0d90a6",
+              "optimizer_updates": 4
+            }
+          }
+        }
+      },
+      "scope": "Same physical code, scene, reset and fixed navigation profile. Separate uninterrupted rollouts using actual saved task-model weights.",
+      "comparison_note": "The parent completed the tasks but missed laptop-leg sole clearance: 4.395 mm versus the frozen 4.5 mm limit. Update 4 qualified, with 4.818 mm. Failed runs do not count toward efficiency gains. Checkpoints 8 and 16 are still being evaluated; final task layouts remain unopened."
+    },
     {
       "id": "training-probe",
       "label": "Saved-weight physical probe \u00b7 training layout",
@@ -3724,14 +3769,24 @@
       "path": "mochi-nav25-20261121a/public/engineering-sequence-balanced-descent-r6.json.gz",
       "sha256": "251aac002221c0c10915b5b10f45cfa1a08916e597a65d322af0fe381261d22a",
       "bytes": 15467340
+    },
+    "progress-task-dev-u0.json.gz": {
+      "path": "mochi-nav25-20261121a/public/progress-task-dev-u0.json.gz",
+      "sha256": "8289d3e9f4986ccacac00d02a472911f0e8f769b42cd0f0f99922e6bc378c156",
+      "bytes": 16520767
+    },
+    "progress-task-dev-u4.json.gz": {
+      "path": "mochi-nav25-20261121a/public/progress-task-dev-u4.json.gz",
+      "sha256": "af78c4bb58d3501051b9876f763fa936955cc97c24cf73106112fa83c4cbe0a7",
+      "bytes": 15173067
     }
   },
-  "summary": "Saved Tinker weights now change a physical navigation outcome. A separate controller repair completes the four-task sequence. Fresh-layout evaluation is running.",
-  "claim": "Progress preview. The trained model has not yet demonstrated the fixed-strategy goal on fresh layouts. Three qualified controller-development sequences do not establish fresh-layout task reliability.",
-  "uncertainty": "One known training-layout checkpoint probe and two shared-controller comparisons. The final navigation and task layouts remain unopened.",
-  "training": "Tinker has completed 32 rank-16 LoRA optimizer updates on Qwen3.5-4B. Targets came from 144 physical requests across 24 training layouts and two physics seeds. Replay balances direct, buffered and wide_fast winners. The pretrained native gait network is fixed.",
+  "summary": "A saved Tinker task checkpoint completes the continuous four-task sequence under every quality check. Fresh-layout navigation evaluation continues.",
+  "claim": "Development preview. Update 4 qualified where the parent missed laptop-leg foot clearance. No advantage over the fixed navigation strategy or fresh-task reliability is claimed yet.",
+  "uncertainty": "One known training-layout navigation probe, one matched task-checkpoint development comparison and two shared-controller repair comparisons. These are development evidence. Final navigation and task layouts remain unopened.",
+  "training": "Tinker has completed 32 rank-16 LoRA optimizer updates on Qwen3.5-4B. Targets came from 144 physical requests across 24 training layouts and two physics seeds. Replay balances direct, buffered and wide_fast winners. The pretrained native gait network is fixed. A separate contact/recovery adapter completed 16 real optimizer updates. Its update-4 checkpoint is shown here; continuous selection is not finished.",
   "memory": "Source-verified past.dev recalls pass measured failures, research and replay allocation between application roles. A private-audience canary passed. Evaluation conclusions are pending.",
-  "execution": "Training data includes 24 Modal and 120 local CPU requests. These two checkpoint probes are new Modal physical runs. The shared ledger accounts for 225 physical attempts, including failed engineering and the separately preserved duplicate. Usage estimates are not invoices.",
+  "execution": "At this publication snapshot the ledger accounts for 332 physical attempts, 5.79 simulation wall hours including reservations, 48 completed or reserved optimizer updates, 2 Exa searches and 9 actual past.dev recalls. Physics concurrency is capped at three Modal and two local workers. Modeled costs are not invoices.",
   "totals": [
     [
       32,
@@ -3748,6 +3803,10 @@
     [
       3,
       "qualified controller-development sequences"
+    ],
+    [
+      16,
+      "completed task and recovery optimizer updates"
     ]
   ],
   "results": [
@@ -3792,6 +3851,20 @@
       "qualified": 1,
       "n": 1,
       "mean_steps": 870
+    },
+    {
+      "cohort": "Continuous task-model development",
+      "method": "Parent task weights \u00b7 update 0",
+      "qualified": 0,
+      "n": 1,
+      "mean_steps": null
+    },
+    {
+      "cohort": "Continuous task-model development",
+      "method": "Trained task weights \u00b7 update 4",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 848
     }
   ],
   "checkpoints": [
@@ -3833,6 +3906,562 @@
       "update": 32,
       "checkpoint_id": "bdbc662f26af24885e116c447d88ff670dc635cb7688236cd41f6e12ec6285fe",
       "at": "2026-11-21T20:12:25.814547+00:00"
+    },
+    {
+      "domain": "task and recovery",
+      "update": 0,
+      "checkpoint_id": "f95efaed18f152e9082c347a597b3a09b94eae2c0ffed34668cc38894a1523b2",
+      "at": "2026-11-21T20:40:43.495275+00:00",
+      "development_choices": [
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "action": "H0",
+          "distribution": {
+            "H0": 0.9964063763618469,
+            "F": 0.0035936026833951473
+          },
+          "valid": true,
+          "rank": [
+            5.141065857224589,
+            0.16016262603367235
+          ],
+          "snapshot_sha256": "bbb7fcb8f5c884fea128237e446748626908ea09ef1c998c622fedffff30ab0b",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.9914224743843079,
+            "R4": 0.008577484637498856
+          },
+          "valid": true,
+          "rank": [
+            3.790217656953391,
+            1.2139422480487383
+          ],
+          "snapshot_sha256": "33d5eefe6e496d1645ca4c8794f5164b8c8a856074c65035b2b3dc21bf1a5929",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "drawer",
+          "task": "drawer",
+          "action": "B",
+          "distribution": {
+            "B": 0.9933071732521057,
+            "C": 0.006692850962281227
+          },
+          "valid": true,
+          "rank": [
+            5.584951810551473,
+            0.3747996368935248
+          ],
+          "snapshot_sha256": "e6b5422e9820747dcf1556cc003c8a42ccc99a5a0e09c1ddb8525edc2ccf15ea",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "drawer",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.9840936064720154,
+            "R4": 0.01590639166533947
+          },
+          "valid": true,
+          "rank": [
+            2.4626330911934127,
+            0.8714225161077138
+          ],
+          "snapshot_sha256": "4e301ce3de8cbd772490ff87c3cc552680aea7d32cb878cb50c6461103a90718",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "laptop",
+          "task": "laptop",
+          "action": "P5",
+          "distribution": {
+            "P5": 0.8670358061790466,
+            "L0": 0.13296422362327576
+          },
+          "valid": true,
+          "rank": [
+            12.637261422616461,
+            0.5708568968052679
+          ],
+          "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "laptop",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.9940890073776245,
+            "R4": 0.005911069456487894
+          },
+          "valid": true,
+          "rank": [
+            6.458551298450199,
+            1.9946256466255363
+          ],
+          "snapshot_sha256": "cb3b55e1c4c03d291e6e5912eeaefc883992e69aaf2b6796ba4f00ceba003b80",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "globe",
+          "task": "globe",
+          "action": "G0",
+          "distribution": {
+            "G0": 0.7057850360870361,
+            "G1": 0.29421496391296387
+          },
+          "valid": true,
+          "rank": [
+            7.273026384437458,
+            0.09853826733407056
+          ],
+          "snapshot_sha256": "af149de278977d54e1891945bc3ef0c2ba3ed0e4edd00145df1a2ff7d721680e",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "globe",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.9820137619972229,
+            "R4": 0.01798621006309986
+          },
+          "valid": true,
+          "rank": [
+            3.9681194958876014,
+            1.5041439302422077
+          ],
+          "snapshot_sha256": "6ddd3c994b483fde7a1dc98d897221e9c644584e4b26ad1a964802e2a499eec4",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        }
+      ],
+      "valid_components": 8,
+      "recovery_arm_travel_rad": 16.679521542484604,
+      "task_seconds": 30.63630547482998
+    },
+    {
+      "domain": "task and recovery",
+      "update": 4,
+      "checkpoint_id": "6a44f35d772ed02c7a35adb9c7f5e1f6f5e5cc4b413f5f69747aac333f0d90a6",
+      "at": "2026-11-21T20:42:32.928344+00:00",
+      "development_choices": [
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "action": "H0",
+          "distribution": {
+            "H0": 0.6513549089431763,
+            "F": 0.3486451804637909
+          },
+          "valid": true,
+          "rank": [
+            5.141065857224589,
+            0.16016262603367235
+          ],
+          "snapshot_sha256": "bbb7fcb8f5c884fea128237e446748626908ea09ef1c998c622fedffff30ab0b",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            3.790217656953391,
+            1.2139422480487383
+          ],
+          "snapshot_sha256": "33d5eefe6e496d1645ca4c8794f5164b8c8a856074c65035b2b3dc21bf1a5929",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "drawer",
+          "task": "drawer",
+          "action": "C",
+          "distribution": {
+            "B": 0.16451646387577057,
+            "C": 0.8354835510253906
+          },
+          "valid": true,
+          "rank": [
+            4.384906544466929,
+            0.4678002743125689
+          ],
+          "snapshot_sha256": "e6b5422e9820747dcf1556cc003c8a42ccc99a5a0e09c1ddb8525edc2ccf15ea",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "drawer",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            2.4626330911934127,
+            0.8714225161077138
+          ],
+          "snapshot_sha256": "4e301ce3de8cbd772490ff87c3cc552680aea7d32cb878cb50c6461103a90718",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "laptop",
+          "task": "laptop",
+          "action": "P5",
+          "distribution": {
+            "P5": 0.7310585975646973,
+            "L0": 0.2689414322376251
+          },
+          "valid": true,
+          "rank": [
+            12.637261422616461,
+            0.5708568968052679
+          ],
+          "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "laptop",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.5926666259765625,
+            "R4": 0.4073334336280823
+          },
+          "valid": true,
+          "rank": [
+            6.458551298450199,
+            1.9946256466255363
+          ],
+          "snapshot_sha256": "cb3b55e1c4c03d291e6e5912eeaefc883992e69aaf2b6796ba4f00ceba003b80",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "globe",
+          "task": "globe",
+          "action": "G0",
+          "distribution": {
+            "G0": 0.7057850360870361,
+            "G1": 0.29421496391296387
+          },
+          "valid": true,
+          "rank": [
+            7.273026384437458,
+            0.09853826733407056
+          ],
+          "snapshot_sha256": "af149de278977d54e1891945bc3ef0c2ba3ed0e4edd00145df1a2ff7d721680e",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "globe",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            3.9681194958876014,
+            1.5041439302422077
+          ],
+          "snapshot_sha256": "6ddd3c994b483fde7a1dc98d897221e9c644584e4b26ad1a964802e2a499eec4",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        }
+      ],
+      "valid_components": 8,
+      "recovery_arm_travel_rad": 16.679521542484604,
+      "task_seconds": 29.436260208745438
+    },
+    {
+      "domain": "task and recovery",
+      "update": 8,
+      "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+      "at": "2026-11-21T20:44:05.367346+00:00",
+      "development_choices": [
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "action": "H0",
+          "distribution": {
+            "H0": 0.9399133324623108,
+            "F": 0.06008664891123772
+          },
+          "valid": true,
+          "rank": [
+            5.141065857224589,
+            0.16016262603367235
+          ],
+          "snapshot_sha256": "bbb7fcb8f5c884fea128237e446748626908ea09ef1c998c622fedffff30ab0b",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "action": "R4",
+          "distribution": {
+            "R0": 0.08509904891252518,
+            "R4": 0.9149009585380554
+          },
+          "valid": true,
+          "rank": [
+            3.7276055237797796,
+            1.742027562688122
+          ],
+          "snapshot_sha256": "33d5eefe6e496d1645ca4c8794f5164b8c8a856074c65035b2b3dc21bf1a5929",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "drawer",
+          "task": "drawer",
+          "action": "C",
+          "distribution": {
+            "B": 0.0004305570910219103,
+            "C": 0.9995694756507874
+          },
+          "valid": true,
+          "rank": [
+            4.384906544466929,
+            0.4678002743125689
+          ],
+          "snapshot_sha256": "e6b5422e9820747dcf1556cc003c8a42ccc99a5a0e09c1ddb8525edc2ccf15ea",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "drawer",
+          "action": "R4",
+          "distribution": {
+            "R0": 0.06754668802022934,
+            "R4": 0.9324532747268677
+          },
+          "valid": true,
+          "rank": [
+            2.42011901007175,
+            1.003035110003907
+          ],
+          "snapshot_sha256": "4e301ce3de8cbd772490ff87c3cc552680aea7d32cb878cb50c6461103a90718",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "laptop",
+          "task": "laptop",
+          "action": "P5",
+          "distribution": {
+            "P5": 0.9840936064720154,
+            "L0": 0.01590639166533947
+          },
+          "valid": true,
+          "rank": [
+            12.637261422616461,
+            0.5708568968052679
+          ],
+          "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "laptop",
+          "action": "R4",
+          "distribution": {
+            "R0": 0.04208773002028465,
+            "R4": 0.957912266254425
+          },
+          "valid": true,
+          "rank": [
+            6.460794864054869,
+            2.318343579438533
+          ],
+          "snapshot_sha256": "cb3b55e1c4c03d291e6e5912eeaefc883992e69aaf2b6796ba4f00ceba003b80",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "globe",
+          "task": "globe",
+          "action": "G0",
+          "distribution": {
+            "G0": 0.9669140577316284,
+            "G1": 0.03308597952127457
+          },
+          "valid": true,
+          "rank": [
+            7.273026384437458,
+            0.09853826733407056
+          ],
+          "snapshot_sha256": "af149de278977d54e1891945bc3ef0c2ba3ed0e4edd00145df1a2ff7d721680e",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "globe",
+          "action": "R4",
+          "distribution": {
+            "R0": 0.07585818320512772,
+            "R4": 0.9241418242454529
+          },
+          "valid": true,
+          "rank": [
+            3.9161452983744365,
+            1.7444799712700387
+          ],
+          "snapshot_sha256": "6ddd3c994b483fde7a1dc98d897221e9c644584e4b26ad1a964802e2a499eec4",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        }
+      ],
+      "valid_components": 8,
+      "recovery_arm_travel_rad": 16.524664696280837,
+      "task_seconds": 29.436260208745438
+    },
+    {
+      "domain": "task and recovery",
+      "update": 16,
+      "checkpoint_id": "d5eea6c58635c002cd56589e3d9fc7bf92ee97e609f5af616497e12fda8a1bc7",
+      "at": "2026-11-21T20:47:35.685966+00:00",
+      "development_choices": [
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "action": "H0",
+          "distribution": {
+            "H0": 0.9933071732521057,
+            "F": 0.006692850962281227
+          },
+          "valid": true,
+          "rank": [
+            5.141065857224589,
+            0.16016262603367235
+          ],
+          "snapshot_sha256": "bbb7fcb8f5c884fea128237e446748626908ea09ef1c998c622fedffff30ab0b",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            3.790217656953391,
+            1.2139422480487383
+          ],
+          "snapshot_sha256": "33d5eefe6e496d1645ca4c8794f5164b8c8a856074c65035b2b3dc21bf1a5929",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "drawer",
+          "task": "drawer",
+          "action": "C",
+          "distribution": {
+            "B": 0.07585818320512772,
+            "C": 0.9241418242454529
+          },
+          "valid": true,
+          "rank": [
+            4.384906544466929,
+            0.4678002743125689
+          ],
+          "snapshot_sha256": "e6b5422e9820747dcf1556cc003c8a42ccc99a5a0e09c1ddb8525edc2ccf15ea",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "drawer",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            2.4626330911934127,
+            0.8714225161077138
+          ],
+          "snapshot_sha256": "4e301ce3de8cbd772490ff87c3cc552680aea7d32cb878cb50c6461103a90718",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "laptop",
+          "task": "laptop",
+          "action": "P5",
+          "distribution": {
+            "P5": 0.9982993006706238,
+            "L0": 0.0017007224960252643
+          },
+          "valid": true,
+          "rank": [
+            12.637261422616461,
+            0.5708568968052679
+          ],
+          "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "laptop",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.6791787147521973,
+            "R4": 0.32082128524780273
+          },
+          "valid": true,
+          "rank": [
+            6.458551298450199,
+            1.9946256466255363
+          ],
+          "snapshot_sha256": "cb3b55e1c4c03d291e6e5912eeaefc883992e69aaf2b6796ba4f00ceba003b80",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "globe",
+          "task": "globe",
+          "action": "G0",
+          "distribution": {
+            "G0": 0.9968273043632507,
+            "G1": 0.0031726828310638666
+          },
+          "valid": true,
+          "rank": [
+            7.273026384437458,
+            0.09853826733407056
+          ],
+          "snapshot_sha256": "af149de278977d54e1891945bc3ef0c2ba3ed0e4edd00145df1a2ff7d721680e",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        },
+        {
+          "domain": "recovery",
+          "task": "globe",
+          "action": "R0",
+          "distribution": {
+            "R0": 0.622459352016449,
+            "R4": 0.3775406777858734
+          },
+          "valid": true,
+          "rank": [
+            3.9681194958876014,
+            1.5041439302422077
+          ],
+          "snapshot_sha256": "6ddd3c994b483fde7a1dc98d897221e9c644584e4b26ad1a964802e2a499eec4",
+          "scope": "Matched-state component outcome lookup; not a continuous checkpoint rollout."
+        }
+      ],
+      "valid_components": 8,
+      "recovery_arm_travel_rad": 16.679521542484604,
+      "task_seconds": 29.436260208745438
     }
   ],
   "sources": [
@@ -3869,5 +4498,6 @@
       "at": "2026-11-21T19:18:10.176589+00:00"
     }
   ],
-  "highlight_scope": "The training probe was selected in advance because the frozen parent missed a physical-quality check there. It does not enter checkpoint selection."
+  "highlight_scope": "The training probe was selected in advance because the frozen parent missed a physical-quality check there. It does not enter checkpoint selection.",
+  "publication_snapshot_at": "2026-11-21T20:58:53.884087+00:00"
 }

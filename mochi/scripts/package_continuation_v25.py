@@ -33,10 +33,10 @@ def sanitize(value):
 
 
 report=download('navigation-training.json')
-assert report['status']=='completed' or args.preview
+assert report['status'] in ['completed','development_goal_unmet'] or args.preview
 assert report['optimizer_updates_completed']>0
 is_final=report['status']=='completed' and report['final_opened']
-selected=report.get('selected_checkpoint',report['checkpoints'][-1])['update']
+selected=(report.get('selected_checkpoint') or report['checkpoints'][-1])['update']
 rows={}
 labels={'parent':'Parent · update 0','selected':f'Selected · update {selected}',
     'fixed':'Strongest fixed strategy','contextual':'Training-fitted contextual control','planner':'Collision-aware planner'}
@@ -51,17 +51,33 @@ else:
             labels[key]=f'Checkpoint · update {cp["update"]}'
     for name in ['fixed','contextual','planner']:rows[name]=download('development-'+name+'.json')
 cases=[];recordings={}
-for i,reference in enumerate(rows['parent']):
-    runs={}
-    for name,cohort in rows.items():
-        r=next(x for x in cohort if (x['layout_sha256'],x['seed'])==(reference['layout_sha256'],reference['seed']))
-        assert r['initial_physical_state_sha256']==reference['initial_physical_state_sha256']
-        entry=r['public_recording'];filename=Path(entry['path']).name
-        recordings[filename]={'path':entry['path'],'sha256':entry['sha256'],'bytes':entry['bytes']}
-        runs[name]={'file':filename,'label':labels[name],'row':r,'sha256':entry['sha256']}
-    cases.append({'id':str(i),'kind':'navigation','label':('Fresh layout' if is_final else 'Development layout')+f' {i//2+1} · seed {reference["seed"]}',
-        'split':'final' if is_final else 'development','scope':'Identical layout, sampled initial state, native gait, controller and verification. Model weights and selected commands may differ.',
-        'layout_sha256':reference['layout_sha256'],'runs':runs})
+def compact(row):
+    keys=['layout','seed','action','qualified','complete','checks','steps','physical_seconds','failure','fall','invalid_contact',
+        'selection','plans','envelope','obstacles','travel_metrics','balance_metrics','loaded_foot_sliding_m','arm_travel_rad',
+        'initial_physical_state_sha256','mechanics_sha256','receipt']
+    return {k:row[k] for k in keys if k in row}
+def append_cohort(cohort,split):
+    for i,reference in enumerate(cohort['parent']):
+        runs={}
+        for name,attempts in cohort.items():
+            r=next(x for x in attempts if (x['layout_sha256'],x['seed'])==(reference['layout_sha256'],reference['seed']))
+            assert r['initial_physical_state_sha256']==reference['initial_physical_state_sha256']
+            entry=r['public_recording'];filename=Path(entry['path']).name
+            recordings[filename]={'path':entry['path'],'sha256':entry['sha256'],'bytes':entry['bytes']}
+            runs[name]={'file':filename,'label':labels[name],'row':compact(r),'sha256':entry['sha256']}
+        cases.append({'id':split+'-'+str(i),'kind':'navigation','label':('Fresh layout' if split=='final' else 'Development layout')+f' {i//2+1} · seed {reference["seed"]}',
+            'split':split,'scope':'Identical layout, sampled initial state, native gait, controller and verification. Model weights and selected commands may differ.',
+            'layout_sha256':reference['layout_sha256'],'runs':runs})
+append_cohort(rows,'final' if is_final else 'development')
+if is_final:
+    development={'parent':download('development-u0.json')}
+    for cp in report['checkpoints']:
+        if cp['update']:
+            key='selected' if cp['update']==selected else 'u'+str(cp['update'])
+            development[key]=download('development-u'+str(cp['update'])+'.json')
+            labels[key]=f'Checkpoint · update {cp["update"]}'
+    for name in ['fixed','contextual','planner']:development[name]=download('development-'+name+'.json')
+    append_cohort(development,'development')
 from mochi.navigation_v23.baselines import summary
 results=[]
 for name,cohort in rows.items():
@@ -80,7 +96,7 @@ manifest={'study':'mochi-continuation-v25','run_id':run,'status':report['status'
     'uncertainty':'Paired layout comparison against the training-selected fixed strategy: '+json.dumps(comp),
     'training':f'Tinker completed {report["optimizer_updates_completed"]} optimizer updates to Qwen3.5-4B rank-16 LoRA weights. Training labels required both physics seeds to qualify. Replay balanced the measured winner classes. The parent and every checkpoint share the repaired actuator controller.',
     'memory':f'{eligibility.get("writers",0)} writing identities, {eligibility.get("readers",0)} reading identities, {eligibility.get("cross_agent_reads",0)} source-verified cross-role recalls. Audience isolation: {eligibility.get("isolation_passed",False)}. This campaign used memory to pass findings between research stages; a causal memory-performance comparison is not claimed.',
-    'execution':f'{usage["physical_rollouts"]} charged physical attempts; {usage["simulation_cpu_hours"]:.2f} simulation wall hours, including conservative reservations. Up to four Modal physics workers; serial local component engineering is accounted separately and could overlap those workers. Provider costs are modeled, not invoices.',
+    'execution':f'{usage["physical_rollouts"]} charged physical attempts; {usage["simulation_cpu_hours"]:.2f} simulation wall hours, including conservative reservations, at this publication snapshot. The amended cap is three Modal and two local physics workers. Provider costs are modeled, not invoices.',
     'totals':[[report['optimizer_updates_completed'],'completed navigation optimizer updates'],[len({c['layout_sha256'] for c in cases}), 'final layouts' if is_final else 'development layouts'],[usage['physical_rollouts'],'charged physical attempts'],[eligibility.get('cross_agent_reads',0),'verified memory handoffs']],
     'results':results,'checkpoints':[dict(domain='navigation',**cp) for cp in report['checkpoints']],
     'sources':services.get('sources',[]),'recordings':recordings,'comparison':comp,

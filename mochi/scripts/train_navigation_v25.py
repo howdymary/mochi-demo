@@ -32,6 +32,7 @@ async def train(resume=False,recover_evaluation=False):
         if isinstance(value,np.generic):return value.item()
         raise TypeError('Unexpected non-JSON value: '+type(value).__name__)
     def comparison(*args):return json.loads(json.dumps(numerical_comparison(*args),default=scalar))
+    await volume.reload.aio()
     directory=Path('/artifacts')/RUN
     directory.mkdir(exist_ok=True)
     target=directory/'navigation-training.json'

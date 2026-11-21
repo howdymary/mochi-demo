@@ -56,7 +56,7 @@ def comparison(reference,candidate):
     no_new_failures=all(not x['qualified'] or b[k]['qualified'] for k,x in a.items())
     ratio=float(np.mean(step_layout)) if step_layout else None
     time_ratio=float(np.mean(time_layout)) if time_layout else None
-    improved=sum(v<1 for v in step_layout)
+    improved=int(sum(v<1 for v in step_layout))
     rng=np.random.default_rng(251709)
     if step_layout:
         indices=rng.integers(0,len(step_layout),size=(10000,len(step_layout)))

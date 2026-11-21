@@ -9,5 +9,20 @@
   "reporting_fix": "Convert NumPy scalar values to native JSON scalars before reporting and memory ingestion. Resume immutable saved samplers and existing completed rollout caches. Settle original cache reservations idempotently.",
   "source_sha256": "ff67b733efcffdcb55889a054212181fbdc0954c3f843abbb6de29b25ce16a1c",
   "archived_orchestrator": "artifacts/continuation-v25/training-pre-serialization-recovery.py",
-  "final_opened": false
+  "final_opened": false,
+  "comparison_scalar_fix": {
+    "file": "src/mochi/navigation_v25/baselines.py",
+    "change": "Convert the count of improved layouts to Python int. Formula, thresholds, outcomes and selection are unchanged.",
+    "before_sha256": "ea0833dc7c6c18802a0bd36e5a84a5b69767700064d22cf2c0b4311f3e3d1056",
+    "after_sha256": "6a6fab0d256e318ddbaadaf976263f1dc2c6a85ee15f0d745d85859574465db6"
+  },
+  "interrupted_export_recovery": {
+    "receipt": "artifacts/continuation-v25/export-recovery-r3.json",
+    "original_call": "fc-01M7ZXEDQ6J6J1DBD8A03HZP1M",
+    "physical_rollouts_repeated": 0,
+    "optimizer_updates_repeated": 0,
+    "original_timing": "Conservative reservation retained because function-end receipt was interrupted. Known engine wall time preserved.",
+    "cache_visibility_fix": "Reload artifact volume before restoring the saved report and rollout caches."
+  },
+  "current_orchestrator_sha256": "649226dde3ffaea69b70e356bdf39990983ab2a69367554c4548ca0e2df577f7"
 }
