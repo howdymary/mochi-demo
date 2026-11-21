@@ -1,0 +1,3873 @@
+{
+  "study": "mochi-continuation-v25",
+  "run_id": "mochi-nav25-20261121a",
+  "status": "running",
+  "default_case": "training-probe",
+  "cases": [
+    {
+      "id": "training-probe",
+      "label": "Saved-weight physical probe \u00b7 training layout",
+      "kind": "navigation",
+      "split": "training",
+      "layout_sha256": "926f4a04e3f88a2168934f4f106fde3b5d06eb9b79b150db7fd12b41c1fd89a9",
+      "runs": {
+        "parent": {
+          "file": "first-training-probe-u0.json.gz",
+          "row": {
+            "study": "mochi-navigation-v25",
+            "layout_sha256": "926f4a04e3f88a2168934f4f106fde3b5d06eb9b79b150db7fd12b41c1fd89a9",
+            "layout_partition": "training",
+            "seed": 251001,
+            "layout": {
+              "scene": {
+                "version": "navigation-v25-full-initial-state",
+                "units": "metres",
+                "desk": [
+                  1.2,
+                  0.8
+                ],
+                "initial_pose": [
+                  -0.444397289918863,
+                  -0.2533040772700895,
+                  0.0
+                ],
+                "clock_offset": [
+                  0,
+                  0,
+                  0.024
+                ],
+                "globe_offset": [
+                  0,
+                  -0.37,
+                  0
+                ],
+                "book_height": 0.008,
+                "book_collision_scope": "Fixed, nonsliding book terrain; visual meshes and collision envelopes share the same placements. No root motion is authored.",
+                "props": [
+                  {
+                    "name": "book-step-1",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.02,
+                      0
+                    ],
+                    "size": [
+                      0.23,
+                      0.3,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#334d56",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "ROBOTICS"
+                  },
+                  {
+                    "name": "book-step-2",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.045,
+                      0.008
+                    ],
+                    "size": [
+                      0.22,
+                      0.23,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#8f5248",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "ROBOT MOTION"
+                  },
+                  {
+                    "name": "book-step-3",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.07,
+                      0.016
+                    ],
+                    "size": [
+                      0.2,
+                      0.18,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#777c55",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "PRACTICAL MECHANICS"
+                  },
+                  {
+                    "name": "printer",
+                    "asset": "printer",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.04430709551625839,
+                      0.0
+                    ],
+                    "size": [
+                      0.28,
+                      0.18,
+                      0.17
+                    ],
+                    "yaw": 0,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "coffee-mug",
+                    "asset": "mug",
+                    "pos": [
+                      -0.09510753186733477,
+                      -0.1623616368175736,
+                      0.0
+                    ],
+                    "size": [
+                      0.105,
+                      0.085,
+                      0.095
+                    ],
+                    "yaw": -0.3,
+                    "shape": "cylinder"
+                  },
+                  {
+                    "name": "spiral-notebook",
+                    "asset": "notebook",
+                    "pos": [
+                      -0.43,
+                      0.285,
+                      0.015
+                    ],
+                    "size": [
+                      0.2,
+                      0.145,
+                      0.007
+                    ],
+                    "yaw": -0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "pencil-1",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.4597700735154734,
+                      0.29453872280509474,
+                      0.023
+                    ],
+                    "size": [
+                      0.17,
+                      0.007,
+                      0.007
+                    ],
+                    "yaw": 0.22,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pencil-2",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.40873045142407494,
+                      0.2953658927388,
+                      0.023
+                    ],
+                    "size": [
+                      0.16,
+                      0.0065,
+                      0.0065
+                    ],
+                    "yaw": -0.46,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pencil-3",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.4795530263096291,
+                      0.28298413999821925,
+                      0.023
+                    ],
+                    "size": [
+                      0.15,
+                      0.007,
+                      0.007
+                    ],
+                    "yaw": 0.33,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pen-1",
+                    "asset": "pen",
+                    "pos": [
+                      -0.4303209144380692,
+                      0.2826397437200183,
+                      0.023
+                    ],
+                    "size": [
+                      0.145,
+                      0.009,
+                      0.009
+                    ],
+                    "yaw": -0.62,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pen-2",
+                    "asset": "pen",
+                    "pos": [
+                      -0.40599671646805063,
+                      0.2692616345847931,
+                      0.023
+                    ],
+                    "size": [
+                      0.14,
+                      0.009,
+                      0.009
+                    ],
+                    "yaw": 0.15,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "stapler",
+                    "asset": "stapler",
+                    "pos": [
+                      0.213,
+                      0.327,
+                      0
+                    ],
+                    "size": [
+                      0.11,
+                      0.035,
+                      0.04
+                    ],
+                    "yaw": 0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "reading-glasses",
+                    "asset": "glasses",
+                    "pos": [
+                      -0.44284307152158453,
+                      0.2743464630537138,
+                      0.023
+                    ],
+                    "size": [
+                      0.14,
+                      0.044,
+                      0.016
+                    ],
+                    "yaw": -0.1,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "reference-book",
+                    "asset": "book",
+                    "pos": [
+                      -0.43,
+                      0.285,
+                      0
+                    ],
+                    "size": [
+                      0.19,
+                      0.14,
+                      0.015
+                    ],
+                    "yaw": -0.08,
+                    "color": "#545755",
+                    "shape": "box",
+                    "title": "WORKSHOP HANDBOOK"
+                  },
+                  {
+                    "name": "loose-page-1",
+                    "asset": "paper",
+                    "pos": [
+                      -0.43,
+                      0.29,
+                      0.022
+                    ],
+                    "size": [
+                      0.15,
+                      0.105,
+                      0.0002
+                    ],
+                    "yaw": 0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "loose-page-2",
+                    "asset": "paper",
+                    "pos": [
+                      -0.43,
+                      0.29,
+                      0.022
+                    ],
+                    "size": [
+                      0.15,
+                      0.105,
+                      0.0002
+                    ],
+                    "yaw": 0.07,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "printer-output-tray",
+                    "asset": "tray",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.14930709551625837,
+                      0.048
+                    ],
+                    "size": [
+                      0.19,
+                      0.065,
+                      0.005
+                    ],
+                    "yaw": 0,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "printer-printout",
+                    "asset": "paper",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.15330709551625837,
+                      0.054
+                    ],
+                    "size": [
+                      0.17,
+                      0.085,
+                      0.0002
+                    ],
+                    "yaw": 0.03,
+                    "shape": "box"
+                  }
+                ],
+                "route": [
+                  {
+                    "name": "climb-to-alarm",
+                    "goal": [
+                      -0.375,
+                      0.025,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0.024
+                  },
+                  {
+                    "name": "descend-books",
+                    "goal": [
+                      -0.375,
+                      -0.19,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "clear-books",
+                    "goal": [
+                      -0.19,
+                      -0.17,
+                      0
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "drawer",
+                    "goal": [
+                      -0.13,
+                      0.02,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "laptop-corridor",
+                    "goal": [
+                      0.3,
+                      0.02,
+                      0
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "laptop",
+                    "goal": [
+                      0.3,
+                      0.16,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "globe-corridor",
+                    "goal": [
+                      0.35,
+                      0.02,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "globe",
+                    "goal": [
+                      0.35,
+                      -0.145,
+                      0
+                    ],
+                    "surface_height": 0
+                  }
+                ],
+                "revision_notes": "Post-it stack removed from physics and rendering. Drawer-to-laptop transit is ordinary flat walking.",
+                "station_offsets": {
+                  "drawer-cabinet": [
+                    -0.021758956855108962,
+                    0.15,
+                    0.0
+                  ],
+                  "drawer": [
+                    -0.021758956855108962,
+                    0.15,
+                    0.0
+                  ],
+                  "laptop-base": [
+                    0.021758956855108962,
+                    0.13,
+                    0.0
+                  ],
+                  "laptop-screen": [
+                    0.021758956855108962,
+                    0.13,
+                    0.0
+                  ],
+                  "globe-base": [
+                    0.01998779304331659,
+                    0.43,
+                    0.0
+                  ],
+                  "globe": [
+                    0.01998779304331659,
+                    0.43,
+                    0.0
+                  ]
+                }
+              },
+              "goal": [
+                0.4418375146123056,
+                -0.2012949861512403,
+                0.0
+              ],
+              "generation_seed": 261101,
+              "partition": "training",
+              "index": 1,
+              "family": "lower-mouth",
+              "scope": "V25 flat navigation. Full sampled physical initialization; shared arm-holding and direction-preserving alignment. No perception or native gait training.",
+              "layout_sha256": "926f4a04e3f88a2168934f4f106fde3b5d06eb9b79b150db7fd12b41c1fd89a9",
+              "geometric_validation": {
+                "both_physics_seed_resets_checked": true,
+                "all_profiles_feasible": true,
+                "physics_rollouts_executed": 0,
+                "family": 1,
+                "scope": "Static geometry only. No model, training labels, reward or dynamic outcome used for cohort filtering."
+              }
+            },
+            "initial_physical_state_sha256": "c91b283d7bebf660fe8a5f7b7ec78338709a0a3895a07c737089b0e572de57c7",
+            "mechanics_sha256": "75d9edc9d85f2f402fd6c8f7f9c2998eb336f438b18017f13b0501d09cf0188f",
+            "action": "direct",
+            "selection": {
+              "action": "direct",
+              "distribution": {
+                "direct": 0.9999902248382568,
+                "buffered": 8.93968899617903e-06,
+                "wide_fast": 8.851490633787762e-07
+              },
+              "checkpoint_id": "008d980c9960b8be8580dbff319c81ff84cb238eb96c50bc749a0787ee541958",
+              "optimizer_updates": 0,
+              "source": "Actual Tinker checkpoint sampling; native gait fixed",
+              "kind": "navigation",
+              "request_sha256": "301e1dc9e957e6ccdc3dc6fb3ebbc8a4c1fe689e80f7de5575b4948c5d99aa01",
+              "observation_sha256": "b59eac600b990c0220cef65c8a9b8055f804b782279816c11cc3e211b60dfe2a",
+              "inference_seconds": 4.524667620999999,
+              "input_plus_reserved_output_tokens": 2506
+            },
+            "observation": {
+              "domain": "navigation",
+              "information": "privileged simulation geometry; no sensors",
+              "target_body_mm": [
+                887.1,
+                50.3
+              ],
+              "target_heading_degrees": -0.2,
+              "robot_planning_radius_mm": 59.7,
+              "obstacles": [
+                {
+                  "centre_body_mm": [
+                    86.2,
+                    364.0
+                  ],
+                  "size_mm": [
+                    75.0,
+                    50.0,
+                    116.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    111.1,
+                    354.0
+                  ],
+                  "size_mm": [
+                    25.0,
+                    18.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    273.0,
+                    553.5
+                  ],
+                  "size_mm": [
+                    4.0,
+                    90.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    377.0,
+                    553.2
+                  ],
+                  "size_mm": [
+                    4.0,
+                    90.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.0,
+                    553.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    90.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.1,
+                    599.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    4.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.0,
+                    553.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    90.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    324.8,
+                    481.3
+                  ],
+                  "size_mm": [
+                    95.0,
+                    5.0,
+                    43.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    324.9,
+                    514.3
+                  ],
+                  "size_mm": [
+                    91.0,
+                    65.0,
+                    2.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    608.5,
+                    552.5
+                  ],
+                  "size_mm": [
+                    250.0,
+                    170.0,
+                    14.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    608.7,
+                    610.4
+                  ],
+                  "size_mm": [
+                    250.0,
+                    48.8,
+                    145.9
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    78.0,
+                    78.0,
+                    12.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    8.0,
+                    8.0,
+                    54.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    151.1,
+                    151.1,
+                    116.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    85.9,
+                    274.0
+                  ],
+                  "size_mm": [
+                    230.0,
+                    300.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    86.0,
+                    299.0
+                  ],
+                  "size_mm": [
+                    220.0,
+                    230.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    86.0,
+                    324.0
+                  ],
+                  "size_mm": [
+                    200.0,
+                    180.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    571.0,
+                    208.3
+                  ],
+                  "size_mm": [
+                    280.0,
+                    180.0,
+                    170.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    350.2,
+                    90.9
+                  ],
+                  "size_mm": [
+                    131.3,
+                    131.3,
+                    95.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    539.2
+                  ],
+                  "size_mm": [
+                    215.9,
+                    167.9,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    -13.0,
+                    548.9
+                  ],
+                  "size_mm": [
+                    167.4,
+                    43.9,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    38.0,
+                    549.6
+                  ],
+                  "size_mm": [
+                    146.3,
+                    76.9,
+                    6.5
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    -32.9,
+                    537.4
+                  ],
+                  "size_mm": [
+                    144.2,
+                    55.2,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.4,
+                    536.9
+                  ],
+                  "size_mm": [
+                    123.2,
+                    91.6,
+                    9.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    40.6,
+                    523.4
+                  ],
+                  "size_mm": [
+                    139.8,
+                    29.8,
+                    9.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    659.8,
+                    579.3
+                  ],
+                  "size_mm": [
+                    113.4,
+                    47.9,
+                    40.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    3.8,
+                    528.6
+                  ],
+                  "size_mm": [
+                    143.7,
+                    57.8,
+                    16.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    539.2
+                  ],
+                  "size_mm": [
+                    200.6,
+                    154.7,
+                    15.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    544.2
+                  ],
+                  "size_mm": [
+                    161.5,
+                    122.2,
+                    0.2
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    544.2
+                  ],
+                  "size_mm": [
+                    157.0,
+                    115.2,
+                    0.2
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    570.7,
+                    103.3
+                  ],
+                  "size_mm": [
+                    190.0,
+                    65.0,
+                    5.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    570.7,
+                    99.3
+                  ],
+                  "size_mm": [
+                    172.5,
+                    90.1,
+                    0.2
+                  ]
+                }
+              ],
+              "options": {
+                "direct": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.004,
+                    "risk": 0.0,
+                    "speed": 0.1,
+                    "yaw_rate": 1.0
+                  },
+                  "length_mm": 904.4,
+                  "minimum_planned_clearance_mm": 4.3,
+                  "turns_degrees": [
+                    -7.9,
+                    13.2,
+                    18.6,
+                    -24.0
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      334.9,
+                      -46.7
+                    ],
+                    [
+                      755.0,
+                      -8.0
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                },
+                "buffered": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.016,
+                    "risk": 0.012,
+                    "speed": 0.075,
+                    "yaw_rate": 0.75
+                  },
+                  "length_mm": 915.1,
+                  "minimum_planned_clearance_mm": 16.9,
+                  "turns_degrees": [
+                    -10.5,
+                    13.1,
+                    26.0,
+                    -28.7
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      304.9,
+                      -56.6
+                    ],
+                    [
+                      725.0,
+                      -37.9
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                },
+                "wide_fast": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.016,
+                    "risk": 0.012,
+                    "speed": 0.1,
+                    "yaw_rate": 0.75
+                  },
+                  "length_mm": 915.1,
+                  "minimum_planned_clearance_mm": 16.9,
+                  "turns_degrees": [
+                    -10.5,
+                    13.1,
+                    26.0,
+                    -28.7
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      304.9,
+                      -56.6
+                    ],
+                    [
+                      725.0,
+                      -37.9
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                }
+              },
+              "prior_findings": []
+            },
+            "plans": {
+              "direct": {
+                "feasible": true,
+                "profile": "direct",
+                "radius_m": 0.06369324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.10999999999999954,
+                    -0.29999999999999993
+                  ],
+                  [
+                    0.31000000000000083,
+                    -0.2599999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9043868829208942,
+                "minimum_envelope_clearance_m": 0.004315195849911788,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.004,
+                  "risk": 0.0,
+                  "speed": 0.1,
+                  "yaw_rate": 1.0
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "buffered": {
+                "feasible": true,
+                "profile": "buffered",
+                "radius_m": 0.07569324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.13999999999999957,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2800000000000008,
+                    -0.2899999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9151399353507792,
+                "minimum_envelope_clearance_m": 0.016926640682199554,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.016,
+                  "risk": 0.012,
+                  "speed": 0.075,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "wide_fast": {
+                "feasible": true,
+                "profile": "wide_fast",
+                "radius_m": 0.07569324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.13999999999999957,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2800000000000008,
+                    -0.2899999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9151399353507792,
+                "minimum_envelope_clearance_m": 0.016926640682199554,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.016,
+                  "risk": 0.012,
+                  "speed": 0.1,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "planner": {
+                "feasible": true,
+                "profile": "planner",
+                "radius_m": 0.07769324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.14999999999999958,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2500000000000008,
+                    -0.29999999999999993
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9161449129630097,
+                "minimum_envelope_clearance_m": 0.018875200267420567,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.018,
+                  "risk": 0.025,
+                  "speed": 0.075,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              }
+            },
+            "complete": true,
+            "qualified": false,
+            "checks": {
+              "arrival": true,
+              "roll_rms": true,
+              "roll_peak": true,
+              "supported": true,
+              "moving_foot_clearance": false,
+              "horizon": true
+            },
+            "failure": null,
+            "fall": false,
+            "invalid_contact": false,
+            "arrivals": [
+              {
+                "label": "corridor-0",
+                "goal": [
+                  -0.10999999999999954,
+                  -0.29999999999999993,
+                  0.09495170634275632
+                ],
+                "success": true,
+                "duration_s": 7.848524931628335,
+                "position_error_mm": 8.33710378608132,
+                "heading_error_degrees": 6.636546665441834,
+                "root": [
+                  -0.11551826885958627,
+                  -0.29375051935492175,
+                  0.13128990773089233
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7816404389457393,
+                  "right": 0.7916474297651077
+                }
+              },
+              {
+                "label": "corridor-1",
+                "goal": [
+                  0.31000000000000083,
+                  -0.2599999999999999,
+                  0.4189244109424349
+                ],
+                "success": true,
+                "duration_s": 22.118273000210078,
+                "position_error_mm": 11.300481088159138,
+                "heading_error_degrees": 2.8098451519273886,
+                "root": [
+                  0.30444399645190656,
+                  -0.25015969017777345,
+                  0.1313200738037083
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7770924901655452,
+                  "right": 0.7961874362408061
+                }
+              },
+              {
+                "label": "target",
+                "goal": [
+                  0.4418375146123056,
+                  -0.2012949861512403,
+                  0.0
+                ],
+                "success": true,
+                "duration_s": 5.52936388268763,
+                "position_error_mm": 8.54717688580204,
+                "heading_error_degrees": 2.027587937470606,
+                "root": [
+                  0.4368011021631821,
+                  -0.19438927964433586,
+                  0.13133468545992874
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7782623873538718,
+                  "right": 0.7950104878150186
+                }
+              }
+            ],
+            "steps": {
+              "attempts": 267,
+              "completed": 267,
+              "unfinished": 0,
+              "by_category": {
+                "flat_transit": 213,
+                "alignment": 52,
+                "turning": 2
+              },
+              "definition": "Measured unload, at least 30 ms and 2 mm sole motion or 8 degree rotation, followed by loaded touchdown with 40 ms dwell. Unfinished attempts retained."
+            },
+            "physical_seconds": 35.89672188290421,
+            "executed_distance_m": 1.87198121298188,
+            "reference_planned_distance_m": 0.9161449129630097,
+            "excess_distance_m": 0.9558363000188703,
+            "distance_scope": "Raw measured pelvis travel, including gait sway, minus the same geometrically feasible planner reference for every policy on this layout/seed. Dynamic execution success is reported separately.",
+            "minimum_envelope_clearance_m": -0.007825972598520692,
+            "travel_metrics": {
+              "moving_distance_m": 0.8729873818421813,
+              "forward_distance_m": 0.8396911695658351,
+              "lateral_travel_m": 0.10103234922662428,
+              "backward_distance_m": 0.0013030178352844437,
+              "distance_weighted_heading_error_degrees": 7.66884141701218,
+              "forward_facing_fraction": 0.9474410150507006,
+              "turning_seconds": 0.20028003418898876,
+              "scope": "Travel velocity averaged over one miniature gait cycle; turning and low-speed balance excluded. Raw rendered motion is unfiltered."
+            },
+            "arm_travel_rad": 77.43057985928006,
+            "envelope": {
+              "neutral_collision_radius_m": 0.047693244989420965,
+              "swing_and_tracking_allowance_m": 0.012,
+              "planning_radius_m": 0.05969324498942097,
+              "foot_collision_bounds": [
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4586740121970899,
+                    -0.23119818230058456,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.4569983386559936,
+                    -0.22952250875948824,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4586488118295074,
+                    -0.23955134963847358,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.4569731382884111,
+                    -0.23787567609737725,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4302757632850316,
+                    -0.23027718431700905,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.42860008974393526,
+                    -0.22860151077591273,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.43024552284393247,
+                    -0.24030098512248788,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.42856984930283615,
+                    -0.23862531158139155,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.4585545559480135,
+                    -0.2707943522701055,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.45687888240691715,
+                    -0.2691186787290092,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.45852935558043095,
+                    -0.2791475196079945,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.45685368203933463,
+                    -0.2774718460668982,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.43015630703595514,
+                    -0.26987335428653003,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.4284806334948588,
+                    -0.2681976807454337,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.430126066594856,
+                    -0.2798971550920088,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.4284503930537597,
+                    -0.2782214815509125,
+                    0.0030189676995939193
+                  ]
+                }
+              ],
+              "scope": "Conservative yaw-invariant disk enclosing measured neutral collision geometry plus a declared swing/tracking allowance. Physical trials remain necessary."
+            },
+            "obstacles": [
+              {
+                "name": "clock-case",
+                "minimum": [
+                  -0.39749999999999996,
+                  0.08499999999999999,
+                  0.024
+                ],
+                "maximum": [
+                  -0.3225,
+                  0.135,
+                  0.14
+                ],
+                "geom_id": 103
+              },
+              {
+                "name": "alarm-contact",
+                "minimum": [
+                  -0.3475,
+                  0.09100000000000001,
+                  0.14600000000000002
+                ],
+                "maximum": [
+                  -0.32249999999999995,
+                  0.109,
+                  0.15000000000000002
+                ],
+                "geom_id": 104
+              },
+              {
+                "name": "cabinet-left",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.17175895685510897,
+                  0.345,
+                  0.145
+                ],
+                "geom_id": 105
+              },
+              {
+                "name": "cabinet-right",
+                "minimum": [
+                  -0.07175895685510897,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.145
+                ],
+                "geom_id": 106
+              },
+              {
+                "name": "cabinet-top",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.145
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.149
+                ],
+                "geom_id": 107
+              },
+              {
+                "name": "cabinet-back",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.344,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.348,
+                  0.145
+                ],
+                "geom_id": 108
+              },
+              {
+                "name": "cabinet-bottom",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.004
+                ],
+                "geom_id": 109
+              },
+              {
+                "name": "drawer-contact",
+                "minimum": [
+                  -0.16925895685510897,
+                  0.22552822418690485,
+                  0.0985
+                ],
+                "maximum": [
+                  -0.07425895685510897,
+                  0.23052822418690486,
+                  0.1415
+                ],
+                "geom_id": 110
+              },
+              {
+                "name": "drawer-tray",
+                "minimum": [
+                  -0.16725895685510897,
+                  0.22852822418690485,
+                  0.09799999999999999
+                ],
+                "maximum": [
+                  -0.07625895685510897,
+                  0.29352822418690483,
+                  0.09999999999999999
+                ],
+                "geom_id": 111
+              },
+              {
+                "name": "laptop-base-contact",
+                "minimum": [
+                  0.036758956855108965,
+                  0.21500000000000002,
+                  0.0
+                ],
+                "maximum": [
+                  0.286758956855109,
+                  0.38500000000000006,
+                  0.014
+                ],
+                "geom_id": 112
+              },
+              {
+                "name": "laptop-contact",
+                "minimum": [
+                  0.036758956855108965,
+                  0.333529395311771,
+                  0.017517401514357864
+                ],
+                "maximum": [
+                  0.286758956855109,
+                  0.3823592410178512,
+                  0.16345007067926365
+                ],
+                "geom_id": 113
+              },
+              {
+                "name": null,
+                "minimum": [
+                  0.4509877930433166,
+                  0.24100000000000002,
+                  0.0
+                ],
+                "maximum": [
+                  0.5289877930433166,
+                  0.319,
+                  0.012
+                ],
+                "geom_id": 114
+              },
+              {
+                "name": null,
+                "minimum": [
+                  0.4859877930433166,
+                  0.276,
+                  0.011
+                ],
+                "maximum": [
+                  0.4939877930433166,
+                  0.28400000000000003,
+                  0.065
+                ],
+                "geom_id": 115
+              },
+              {
+                "name": "globe-contact",
+                "minimum": [
+                  0.41441541186314457,
+                  0.204427618819828,
+                  0.065
+                ],
+                "maximum": [
+                  0.5655601742234886,
+                  0.3555723811801721,
+                  0.181
+                ],
+                "geom_id": 116
+              },
+              {
+                "name": "book-step-1-contact",
+                "minimum": [
+                  -0.475,
+                  -0.13,
+                  0.0
+                ],
+                "maximum": [
+                  -0.245,
+                  0.16999999999999998,
+                  0.008
+                ],
+                "geom_id": 117
+              },
+              {
+                "name": "book-step-2-contact",
+                "minimum": [
+                  -0.47,
+                  -0.07,
+                  0.008
+                ],
+                "maximum": [
+                  -0.25,
+                  0.16,
+                  0.016
+                ],
+                "geom_id": 118
+              },
+              {
+                "name": "book-step-3-contact",
+                "minimum": [
+                  -0.45999999999999996,
+                  -0.01999999999999999,
+                  0.016
+                ],
+                "maximum": [
+                  -0.26,
+                  0.16,
+                  0.024
+                ],
+                "geom_id": 119
+              },
+              {
+                "name": "printer-contact",
+                "minimum": [
+                  -0.014693451228000004,
+                  -0.1343070955163,
+                  0.0
+                ],
+                "maximum": [
+                  0.265306548772,
+                  0.045692904483699996,
+                  0.17
+                ],
+                "geom_id": 120
+              },
+              {
+                "name": "coffee-mug-contact",
+                "minimum": [
+                  -0.16077750839614258,
+                  -0.22803161334684258,
+                  0.0
+                ],
+                "maximum": [
+                  -0.029437555338457447,
+                  -0.09669166028915745,
+                  0.09500000000000004
+                ],
+                "geom_id": 121
+              },
+              {
+                "name": "spiral-notebook-contact",
+                "minimum": [
+                  -0.5379599986138295,
+                  0.20105015317170857,
+                  0.014999999999999998
+                ],
+                "maximum": [
+                  -0.32204000138617056,
+                  0.36894984682829135,
+                  0.022
+                ],
+                "geom_id": 122
+              },
+              {
+                "name": "pencil-1-contact",
+                "minimum": [
+                  -0.5434851603888908,
+                  0.272573563770503,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3760549866411092,
+                  0.31650388183949696,
+                  0.030000000000000013
+                ],
+                "geom_id": 123
+              },
+              {
+                "name": "pencil-2-contact",
+                "minimum": [
+                  -0.4818574825736863,
+                  0.25693787356481423,
+                  0.022999999999999982
+                ],
+                "maximum": [
+                  -0.33560342027431367,
+                  0.33379391191318575,
+                  0.029500000000000016
+                ],
+                "geom_id": 124
+              },
+              {
+                "name": "pencil-3-contact",
+                "minimum": [
+                  -0.5516403526740286,
+                  0.2553697646660938,
+                  0.02299999999999999
+                ],
+                "maximum": [
+                  -0.4074656999459715,
+                  0.3105985153299062,
+                  0.03000000000000001
+                ],
+                "geom_id": 125
+              },
+              {
+                "name": "pen-1-contact",
+                "minimum": [
+                  -0.49194176076849083,
+                  0.23685224152612147,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3687000681075092,
+                  0.3284272459138785,
+                  0.032000000000000015
+                ],
+                "geom_id": 126
+              },
+              {
+                "name": "pen-2-contact",
+                "minimum": [
+                  -0.47588316351965454,
+                  0.25435149546113955,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3361102694163455,
+                  0.2841717737088605,
+                  0.032000000000000015
+                ],
+                "geom_id": 127
+              },
+              {
+                "name": "stapler-contact",
+                "minimum": [
+                  0.15630056140048196,
+                  0.30304167747167016,
+                  0.0
+                ],
+                "maximum": [
+                  0.26969943859951806,
+                  0.35095832252832987,
+                  0.04000000000000001
+                ],
+                "geom_id": 128
+              },
+              {
+                "name": "reading-glasses-contact",
+                "minimum": [
+                  -0.5146896982576926,
+                  0.24546803225260277,
+                  0.023
+                ],
+                "maximum": [
+                  -0.37099644478630733,
+                  0.30322489385539725,
+                  0.039
+                ],
+                "geom_id": 129
+              },
+              {
+                "name": "reference-book-contact",
+                "minimum": [
+                  -0.5302901906765866,
+                  0.20763198463175145,
+                  0.0
+                ],
+                "maximum": [
+                  -0.3297098093234134,
+                  0.3623680153682485,
+                  0.015
+                ],
+                "geom_id": 130
+              },
+              {
+                "name": "loose-page-1-contact",
+                "minimum": [
+                  -0.5107455385717055,
+                  0.22889913107100746,
+                  0.022
+                ],
+                "maximum": [
+                  -0.3492544614282945,
+                  0.3511008689289925,
+                  0.022199999999999998
+                ],
+                "geom_id": 131
+              },
+              {
+                "name": "loose-page-2-contact",
+                "minimum": [
+                  -0.5084883245042147,
+                  0.23238285893639055,
+                  0.022
+                ],
+                "maximum": [
+                  -0.3515116754957853,
+                  0.3476171410636094,
+                  0.022199999999999998
+                ],
+                "geom_id": 132
+              },
+              {
+                "name": "printer-output-tray-contact",
+                "minimum": [
+                  0.030306548772000008,
+                  -0.181807095516,
+                  0.048
+                ],
+                "maximum": [
+                  0.220306548772,
+                  -0.11680709551599999,
+                  0.053000000000000005
+                ],
+                "geom_id": 133
+              },
+              {
+                "name": "printer-printout-contact",
+                "minimum": [
+                  0.039069987144731796,
+                  -0.19833758946754032,
+                  0.054
+                ],
+                "maximum": [
+                  0.2115431103992682,
+                  -0.10827660156445969,
+                  0.054200000000000005
+                ],
+                "geom_id": 134
+              }
+            ],
+            "wall_seconds": 64.331500925,
+            "optimizer_updates": 0,
+            "scope": "One uninterrupted navigation attempt from reset, exact state information, fixed native gait and actuator control.",
+            "reward": -1000000.0,
+            "request_sha256": "8bbe8f934f583de21d5b5393c212d4ba0f2cb54660fb83afce9363a93d952a7c",
+            "artifact": {
+              "path": "mochi-nav25-20261121a/physics/first-training-probe-u0.json.gz",
+              "sha256": "25a9169730e86f27787303241d016dfab9a6d8e28b08d655110a883dad3853db"
+            },
+            "public_recording": {
+              "path": "mochi-nav25-20261121a/public/first-training-probe-u0.json.gz",
+              "sha256": "02b37c5aa652563fc7e82d372063a4265bebb81e45dd49036ba1fd4fa372cb3b",
+              "bytes": 3183141
+            },
+            "receipt": {
+              "provider": "Modal",
+              "cpu": 1,
+              "memory_mib": 4096,
+              "duration_seconds": 69.23803075599994,
+              "architecture": "x86_64",
+              "scope": "Function wall time, including import and export; not an invoice."
+            },
+            "balance_metrics": {
+              "samples": 3378,
+              "lateral_rms_m": 0.008725519601557472,
+              "lateral_peak_to_peak_m": 0.03310317269351521,
+              "roll_rms_deg": 0.6622108524012795,
+              "roll_peak_deg": 2.2911476110269695,
+              "sampled_joint_acceleration_rms_rad_s2": 144.58467868280377,
+              "sampled_torque_change_rms_nm": 0.0031081510106633326,
+              "progress_m": 0.14339316065815874,
+              "scope": "Straight approach in the declared path frame; report progress, duration, falls and invalid contacts alongside sway."
+            },
+            "loaded_foot_sliding_m": 0.24659115334631004,
+            "contact_failures": []
+          },
+          "label": "Parent \u00b7 update 0",
+          "sha256": "02b37c5aa652563fc7e82d372063a4265bebb81e45dd49036ba1fd4fa372cb3b"
+        },
+        "selected": {
+          "file": "first-training-probe-u8.json.gz",
+          "row": {
+            "study": "mochi-navigation-v25",
+            "layout_sha256": "926f4a04e3f88a2168934f4f106fde3b5d06eb9b79b150db7fd12b41c1fd89a9",
+            "layout_partition": "training",
+            "seed": 251001,
+            "layout": {
+              "scene": {
+                "version": "navigation-v25-full-initial-state",
+                "units": "metres",
+                "desk": [
+                  1.2,
+                  0.8
+                ],
+                "initial_pose": [
+                  -0.444397289918863,
+                  -0.2533040772700895,
+                  0.0
+                ],
+                "clock_offset": [
+                  0,
+                  0,
+                  0.024
+                ],
+                "globe_offset": [
+                  0,
+                  -0.37,
+                  0
+                ],
+                "book_height": 0.008,
+                "book_collision_scope": "Fixed, nonsliding book terrain; visual meshes and collision envelopes share the same placements. No root motion is authored.",
+                "props": [
+                  {
+                    "name": "book-step-1",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.02,
+                      0
+                    ],
+                    "size": [
+                      0.23,
+                      0.3,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#334d56",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "ROBOTICS"
+                  },
+                  {
+                    "name": "book-step-2",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.045,
+                      0.008
+                    ],
+                    "size": [
+                      0.22,
+                      0.23,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#8f5248",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "ROBOT MOTION"
+                  },
+                  {
+                    "name": "book-step-3",
+                    "asset": "book",
+                    "pos": [
+                      -0.36,
+                      0.07,
+                      0.016
+                    ],
+                    "size": [
+                      0.2,
+                      0.18,
+                      0.008
+                    ],
+                    "yaw": 0,
+                    "color": "#777c55",
+                    "shape": "box",
+                    "climb": true,
+                    "title": "PRACTICAL MECHANICS"
+                  },
+                  {
+                    "name": "printer",
+                    "asset": "printer",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.04430709551625839,
+                      0.0
+                    ],
+                    "size": [
+                      0.28,
+                      0.18,
+                      0.17
+                    ],
+                    "yaw": 0,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "coffee-mug",
+                    "asset": "mug",
+                    "pos": [
+                      -0.09510753186733477,
+                      -0.1623616368175736,
+                      0.0
+                    ],
+                    "size": [
+                      0.105,
+                      0.085,
+                      0.095
+                    ],
+                    "yaw": -0.3,
+                    "shape": "cylinder"
+                  },
+                  {
+                    "name": "spiral-notebook",
+                    "asset": "notebook",
+                    "pos": [
+                      -0.43,
+                      0.285,
+                      0.015
+                    ],
+                    "size": [
+                      0.2,
+                      0.145,
+                      0.007
+                    ],
+                    "yaw": -0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "pencil-1",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.4597700735154734,
+                      0.29453872280509474,
+                      0.023
+                    ],
+                    "size": [
+                      0.17,
+                      0.007,
+                      0.007
+                    ],
+                    "yaw": 0.22,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pencil-2",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.40873045142407494,
+                      0.2953658927388,
+                      0.023
+                    ],
+                    "size": [
+                      0.16,
+                      0.0065,
+                      0.0065
+                    ],
+                    "yaw": -0.46,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pencil-3",
+                    "asset": "pencil",
+                    "pos": [
+                      -0.4795530263096291,
+                      0.28298413999821925,
+                      0.023
+                    ],
+                    "size": [
+                      0.15,
+                      0.007,
+                      0.007
+                    ],
+                    "yaw": 0.33,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pen-1",
+                    "asset": "pen",
+                    "pos": [
+                      -0.4303209144380692,
+                      0.2826397437200183,
+                      0.023
+                    ],
+                    "size": [
+                      0.145,
+                      0.009,
+                      0.009
+                    ],
+                    "yaw": -0.62,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "pen-2",
+                    "asset": "pen",
+                    "pos": [
+                      -0.40599671646805063,
+                      0.2692616345847931,
+                      0.023
+                    ],
+                    "size": [
+                      0.14,
+                      0.009,
+                      0.009
+                    ],
+                    "yaw": 0.15,
+                    "shape": "capsule"
+                  },
+                  {
+                    "name": "stapler",
+                    "asset": "stapler",
+                    "pos": [
+                      0.213,
+                      0.327,
+                      0
+                    ],
+                    "size": [
+                      0.11,
+                      0.035,
+                      0.04
+                    ],
+                    "yaw": 0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "reading-glasses",
+                    "asset": "glasses",
+                    "pos": [
+                      -0.44284307152158453,
+                      0.2743464630537138,
+                      0.023
+                    ],
+                    "size": [
+                      0.14,
+                      0.044,
+                      0.016
+                    ],
+                    "yaw": -0.1,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "reference-book",
+                    "asset": "book",
+                    "pos": [
+                      -0.43,
+                      0.285,
+                      0
+                    ],
+                    "size": [
+                      0.19,
+                      0.14,
+                      0.015
+                    ],
+                    "yaw": -0.08,
+                    "color": "#545755",
+                    "shape": "box",
+                    "title": "WORKSHOP HANDBOOK"
+                  },
+                  {
+                    "name": "loose-page-1",
+                    "asset": "paper",
+                    "pos": [
+                      -0.43,
+                      0.29,
+                      0.022
+                    ],
+                    "size": [
+                      0.15,
+                      0.105,
+                      0.0002
+                    ],
+                    "yaw": 0.12,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "loose-page-2",
+                    "asset": "paper",
+                    "pos": [
+                      -0.43,
+                      0.29,
+                      0.022
+                    ],
+                    "size": [
+                      0.15,
+                      0.105,
+                      0.0002
+                    ],
+                    "yaw": 0.07,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "printer-output-tray",
+                    "asset": "tray",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.14930709551625837,
+                      0.048
+                    ],
+                    "size": [
+                      0.19,
+                      0.065,
+                      0.005
+                    ],
+                    "yaw": 0,
+                    "shape": "box"
+                  },
+                  {
+                    "name": "printer-printout",
+                    "asset": "paper",
+                    "pos": [
+                      0.12530654877215014,
+                      -0.15330709551625837,
+                      0.054
+                    ],
+                    "size": [
+                      0.17,
+                      0.085,
+                      0.0002
+                    ],
+                    "yaw": 0.03,
+                    "shape": "box"
+                  }
+                ],
+                "route": [
+                  {
+                    "name": "climb-to-alarm",
+                    "goal": [
+                      -0.375,
+                      0.025,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0.024
+                  },
+                  {
+                    "name": "descend-books",
+                    "goal": [
+                      -0.375,
+                      -0.19,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "clear-books",
+                    "goal": [
+                      -0.19,
+                      -0.17,
+                      0
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "drawer",
+                    "goal": [
+                      -0.13,
+                      0.02,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "laptop-corridor",
+                    "goal": [
+                      0.3,
+                      0.02,
+                      0
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "laptop",
+                    "goal": [
+                      0.3,
+                      0.16,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "globe-corridor",
+                    "goal": [
+                      0.35,
+                      0.02,
+                      1.5707963267948966
+                    ],
+                    "surface_height": 0
+                  },
+                  {
+                    "name": "globe",
+                    "goal": [
+                      0.35,
+                      -0.145,
+                      0
+                    ],
+                    "surface_height": 0
+                  }
+                ],
+                "revision_notes": "Post-it stack removed from physics and rendering. Drawer-to-laptop transit is ordinary flat walking.",
+                "station_offsets": {
+                  "drawer-cabinet": [
+                    -0.021758956855108962,
+                    0.15,
+                    0.0
+                  ],
+                  "drawer": [
+                    -0.021758956855108962,
+                    0.15,
+                    0.0
+                  ],
+                  "laptop-base": [
+                    0.021758956855108962,
+                    0.13,
+                    0.0
+                  ],
+                  "laptop-screen": [
+                    0.021758956855108962,
+                    0.13,
+                    0.0
+                  ],
+                  "globe-base": [
+                    0.01998779304331659,
+                    0.43,
+                    0.0
+                  ],
+                  "globe": [
+                    0.01998779304331659,
+                    0.43,
+                    0.0
+                  ]
+                }
+              },
+              "goal": [
+                0.4418375146123056,
+                -0.2012949861512403,
+                0.0
+              ],
+              "generation_seed": 261101,
+              "partition": "training",
+              "index": 1,
+              "family": "lower-mouth",
+              "scope": "V25 flat navigation. Full sampled physical initialization; shared arm-holding and direction-preserving alignment. No perception or native gait training.",
+              "layout_sha256": "926f4a04e3f88a2168934f4f106fde3b5d06eb9b79b150db7fd12b41c1fd89a9",
+              "geometric_validation": {
+                "both_physics_seed_resets_checked": true,
+                "all_profiles_feasible": true,
+                "physics_rollouts_executed": 0,
+                "family": 1,
+                "scope": "Static geometry only. No model, training labels, reward or dynamic outcome used for cohort filtering."
+              }
+            },
+            "initial_physical_state_sha256": "c91b283d7bebf660fe8a5f7b7ec78338709a0a3895a07c737089b0e572de57c7",
+            "mechanics_sha256": "75d9edc9d85f2f402fd6c8f7f9c2998eb336f438b18017f13b0501d09cf0188f",
+            "action": "wide_fast",
+            "selection": {
+              "action": "wide_fast",
+              "distribution": {
+                "direct": 0.3045043349266052,
+                "buffered": 0.3045043349266052,
+                "wide_fast": 0.39099133014678955
+              },
+              "checkpoint_id": "36c717c02277445508c71f03595843c60c2d7e0c29f42ce0f34bc9e6c92f7327",
+              "optimizer_updates": 8,
+              "source": "Actual Tinker checkpoint sampling; native gait fixed",
+              "kind": "navigation",
+              "request_sha256": "81bb785d1d0bebef8f8b9392356ccc9ec59f60a743a63697ac591750814331a8",
+              "observation_sha256": "b59eac600b990c0220cef65c8a9b8055f804b782279816c11cc3e211b60dfe2a",
+              "inference_seconds": 2.5714016089999987,
+              "input_plus_reserved_output_tokens": 2506
+            },
+            "observation": {
+              "domain": "navigation",
+              "information": "privileged simulation geometry; no sensors",
+              "target_body_mm": [
+                887.1,
+                50.3
+              ],
+              "target_heading_degrees": -0.2,
+              "robot_planning_radius_mm": 59.7,
+              "obstacles": [
+                {
+                  "centre_body_mm": [
+                    86.2,
+                    364.0
+                  ],
+                  "size_mm": [
+                    75.0,
+                    50.0,
+                    116.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    111.1,
+                    354.0
+                  ],
+                  "size_mm": [
+                    25.0,
+                    18.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    273.0,
+                    553.5
+                  ],
+                  "size_mm": [
+                    4.0,
+                    90.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    377.0,
+                    553.2
+                  ],
+                  "size_mm": [
+                    4.0,
+                    90.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.0,
+                    553.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    90.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.1,
+                    599.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    4.0,
+                    145.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    325.0,
+                    553.3
+                  ],
+                  "size_mm": [
+                    108.0,
+                    90.0,
+                    4.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    324.8,
+                    481.3
+                  ],
+                  "size_mm": [
+                    95.0,
+                    5.0,
+                    43.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    324.9,
+                    514.3
+                  ],
+                  "size_mm": [
+                    91.0,
+                    65.0,
+                    2.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    608.5,
+                    552.5
+                  ],
+                  "size_mm": [
+                    250.0,
+                    170.0,
+                    14.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    608.7,
+                    610.4
+                  ],
+                  "size_mm": [
+                    250.0,
+                    48.8,
+                    145.9
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    78.0,
+                    78.0,
+                    12.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    8.0,
+                    8.0,
+                    54.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    936.7,
+                    531.5
+                  ],
+                  "size_mm": [
+                    151.1,
+                    151.1,
+                    116.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    85.9,
+                    274.0
+                  ],
+                  "size_mm": [
+                    230.0,
+                    300.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    86.0,
+                    299.0
+                  ],
+                  "size_mm": [
+                    220.0,
+                    230.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    86.0,
+                    324.0
+                  ],
+                  "size_mm": [
+                    200.0,
+                    180.0,
+                    8.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    571.0,
+                    208.3
+                  ],
+                  "size_mm": [
+                    280.0,
+                    180.0,
+                    170.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    350.2,
+                    90.9
+                  ],
+                  "size_mm": [
+                    131.3,
+                    131.3,
+                    95.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    539.2
+                  ],
+                  "size_mm": [
+                    215.9,
+                    167.9,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    -13.0,
+                    548.9
+                  ],
+                  "size_mm": [
+                    167.4,
+                    43.9,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    38.0,
+                    549.6
+                  ],
+                  "size_mm": [
+                    146.3,
+                    76.9,
+                    6.5
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    -32.9,
+                    537.4
+                  ],
+                  "size_mm": [
+                    144.2,
+                    55.2,
+                    7.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.4,
+                    536.9
+                  ],
+                  "size_mm": [
+                    123.2,
+                    91.6,
+                    9.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    40.6,
+                    523.4
+                  ],
+                  "size_mm": [
+                    139.8,
+                    29.8,
+                    9.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    659.8,
+                    579.3
+                  ],
+                  "size_mm": [
+                    113.4,
+                    47.9,
+                    40.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    3.8,
+                    528.6
+                  ],
+                  "size_mm": [
+                    143.7,
+                    57.8,
+                    16.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    539.2
+                  ],
+                  "size_mm": [
+                    200.6,
+                    154.7,
+                    15.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    544.2
+                  ],
+                  "size_mm": [
+                    161.5,
+                    122.2,
+                    0.2
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    16.7,
+                    544.2
+                  ],
+                  "size_mm": [
+                    157.0,
+                    115.2,
+                    0.2
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    570.7,
+                    103.3
+                  ],
+                  "size_mm": [
+                    190.0,
+                    65.0,
+                    5.0
+                  ]
+                },
+                {
+                  "centre_body_mm": [
+                    570.7,
+                    99.3
+                  ],
+                  "size_mm": [
+                    172.5,
+                    90.1,
+                    0.2
+                  ]
+                }
+              ],
+              "options": {
+                "direct": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.004,
+                    "risk": 0.0,
+                    "speed": 0.1,
+                    "yaw_rate": 1.0
+                  },
+                  "length_mm": 904.4,
+                  "minimum_planned_clearance_mm": 4.3,
+                  "turns_degrees": [
+                    -7.9,
+                    13.2,
+                    18.6,
+                    -24.0
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      334.9,
+                      -46.7
+                    ],
+                    [
+                      755.0,
+                      -8.0
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                },
+                "buffered": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.016,
+                    "risk": 0.012,
+                    "speed": 0.075,
+                    "yaw_rate": 0.75
+                  },
+                  "length_mm": 915.1,
+                  "minimum_planned_clearance_mm": 16.9,
+                  "turns_degrees": [
+                    -10.5,
+                    13.1,
+                    26.0,
+                    -28.7
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      304.9,
+                      -56.6
+                    ],
+                    [
+                      725.0,
+                      -37.9
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                },
+                "wide_fast": {
+                  "feasible": true,
+                  "parameters": {
+                    "margin": 0.016,
+                    "risk": 0.012,
+                    "speed": 0.1,
+                    "yaw_rate": 0.75
+                  },
+                  "length_mm": 915.1,
+                  "minimum_planned_clearance_mm": 16.9,
+                  "turns_degrees": [
+                    -10.5,
+                    13.1,
+                    26.0,
+                    -28.7
+                  ],
+                  "waypoints_body_mm": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      304.9,
+                      -56.6
+                    ],
+                    [
+                      725.0,
+                      -37.9
+                    ],
+                    [
+                      887.1,
+                      50.3
+                    ]
+                  ]
+                }
+              },
+              "prior_findings": []
+            },
+            "plans": {
+              "direct": {
+                "feasible": true,
+                "profile": "direct",
+                "radius_m": 0.06369324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.10999999999999954,
+                    -0.29999999999999993
+                  ],
+                  [
+                    0.31000000000000083,
+                    -0.2599999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9043868829208942,
+                "minimum_envelope_clearance_m": 0.004315195849911788,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.004,
+                  "risk": 0.0,
+                  "speed": 0.1,
+                  "yaw_rate": 1.0
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "buffered": {
+                "feasible": true,
+                "profile": "buffered",
+                "radius_m": 0.07569324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.13999999999999957,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2800000000000008,
+                    -0.2899999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9151399353507792,
+                "minimum_envelope_clearance_m": 0.016926640682199554,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.016,
+                  "risk": 0.012,
+                  "speed": 0.075,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "wide_fast": {
+                "feasible": true,
+                "profile": "wide_fast",
+                "radius_m": 0.07569324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.13999999999999957,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2800000000000008,
+                    -0.2899999999999999
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9151399353507792,
+                "minimum_envelope_clearance_m": 0.016926640682199554,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.016,
+                  "risk": 0.012,
+                  "speed": 0.1,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              },
+              "planner": {
+                "feasible": true,
+                "profile": "planner",
+                "radius_m": 0.07769324498942097,
+                "points": [
+                  [
+                    -0.445066765263,
+                    -0.254296708818
+                  ],
+                  [
+                    -0.14999999999999958,
+                    -0.30999999999999994
+                  ],
+                  [
+                    0.2500000000000008,
+                    -0.29999999999999993
+                  ],
+                  [
+                    0.4418375146123056,
+                    -0.2012949861512403
+                  ]
+                ],
+                "length_m": 0.9161449129630097,
+                "minimum_envelope_clearance_m": 0.018875200267420567,
+                "turns": 2,
+                "parameters": {
+                  "margin": 0.018,
+                  "risk": 0.025,
+                  "speed": 0.075,
+                  "yaw_rate": 0.75
+                },
+                "scope": "Geometrically feasible conservative swept disk; successful dynamic execution is evaluated separately."
+              }
+            },
+            "complete": true,
+            "qualified": true,
+            "checks": {
+              "arrival": true,
+              "roll_rms": true,
+              "roll_peak": true,
+              "supported": true,
+              "moving_foot_clearance": true,
+              "horizon": true
+            },
+            "failure": null,
+            "fall": false,
+            "invalid_contact": false,
+            "arrivals": [
+              {
+                "label": "corridor-0",
+                "goal": [
+                  -0.13999999999999957,
+                  -0.30999999999999994,
+                  0.047583103276983396
+                ],
+                "success": true,
+                "duration_s": 8.738749246860207,
+                "position_error_mm": 9.54695620990713,
+                "heading_error_degrees": 2.801040740853797,
+                "root": [
+                  -0.14210637954702232,
+                  -0.3006883117493244,
+                  0.1313078178305188
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7770287099276975,
+                  "right": 0.7962597942470662
+                }
+              },
+              {
+                "label": "corridor-1",
+                "goal": [
+                  0.2800000000000008,
+                  -0.2899999999999999,
+                  0.5013922028399544
+                ],
+                "success": true,
+                "duration_s": 15.393768668623867,
+                "position_error_mm": 8.851829564411966,
+                "heading_error_degrees": 2.828266462357377,
+                "root": [
+                  0.27482182513154585,
+                  -0.2828207666377878,
+                  0.13131182919964626
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7770647535684128,
+                  "right": 0.7962227993267179
+                }
+              },
+              {
+                "label": "target",
+                "goal": [
+                  0.4418375146123056,
+                  -0.2012949861512403,
+                  0.0
+                ],
+                "success": true,
+                "duration_s": 5.782779436134312,
+                "position_error_mm": 9.40503110554149,
+                "heading_error_degrees": 2.4613990790587015,
+                "root": [
+                  0.4348160460639511,
+                  -0.1950377032328586,
+                  0.13133296574369907
+                ],
+                "dwell_s": 0.4005600683781674,
+                "navigation": "latched final-heading alignment with geometric exit hysteresis and position-valid supported dwell",
+                "loads_n": {
+                  "left": 0.7785211067099833,
+                  "right": 0.7947555366962813
+                }
+              }
+            ],
+            "steps": {
+              "attempts": 221,
+              "completed": 221,
+              "unfinished": 0,
+              "by_category": {
+                "flat_transit": 164,
+                "alignment": 54,
+                "turning": 3
+              },
+              "definition": "Measured unload, at least 30 ms and 2 mm sole motion or 8 degree rotation, followed by loaded touchdown with 40 ms dwell. Unfinished attempts retained."
+            },
+            "physical_seconds": 30.315857419996554,
+            "executed_distance_m": 1.7024350598853821,
+            "reference_planned_distance_m": 0.9161449129630097,
+            "excess_distance_m": 0.7862901469223724,
+            "distance_scope": "Raw measured pelvis travel, including gait sway, minus the same geometrically feasible planner reference for every policy on this layout/seed. Dynamic execution success is reported separately.",
+            "minimum_envelope_clearance_m": 0.003910114188490688,
+            "travel_metrics": {
+              "moving_distance_m": 0.9279224613095626,
+              "forward_distance_m": 0.8556508774124982,
+              "lateral_travel_m": 0.13930402083464652,
+              "backward_distance_m": 0.014656499379481458,
+              "distance_weighted_heading_error_degrees": 12.332733905360122,
+              "forward_facing_fraction": 0.8986473575728772,
+              "turning_seconds": 0.4406160752157753,
+              "scope": "Travel velocity averaged over one miniature gait cycle; turning and low-speed balance excluded. Raw rendered motion is unfiltered."
+            },
+            "arm_travel_rad": 67.05587324962735,
+            "envelope": {
+              "neutral_collision_radius_m": 0.047693244989420965,
+              "swing_and_tracking_allowance_m": 0.012,
+              "planning_radius_m": 0.05969324498942097,
+              "foot_collision_bounds": [
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4586740121970899,
+                    -0.23119818230058456,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.4569983386559936,
+                    -0.22952250875948824,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4586488118295074,
+                    -0.23955134963847358,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.4569731382884111,
+                    -0.23787567609737725,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.4302757632850316,
+                    -0.23027718431700905,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.42860008974393526,
+                    -0.22860151077591273,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "left_ankle_roll_link",
+                  "minimum": [
+                    -0.43024552284393247,
+                    -0.24030098512248788,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.42856984930283615,
+                    -0.23862531158139155,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.4585545559480135,
+                    -0.2707943522701055,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.45687888240691715,
+                    -0.2691186787290092,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.45852935558043095,
+                    -0.2791475196079945,
+                    0.0013483266294239194
+                  ],
+                  "maximum": [
+                    -0.45685368203933463,
+                    -0.2774718460668982,
+                    0.00301896769959392
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.43015630703595514,
+                    -0.26987335428653003,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.4284806334948588,
+                    -0.2681976807454337,
+                    0.0030189676995939193
+                  ]
+                },
+                {
+                  "body": "right_ankle_roll_link",
+                  "minimum": [
+                    -0.430126066594856,
+                    -0.2798971550920088,
+                    0.0013483266294239185
+                  ],
+                  "maximum": [
+                    -0.4284503930537597,
+                    -0.2782214815509125,
+                    0.0030189676995939193
+                  ]
+                }
+              ],
+              "scope": "Conservative yaw-invariant disk enclosing measured neutral collision geometry plus a declared swing/tracking allowance. Physical trials remain necessary."
+            },
+            "obstacles": [
+              {
+                "name": "clock-case",
+                "minimum": [
+                  -0.39749999999999996,
+                  0.08499999999999999,
+                  0.024
+                ],
+                "maximum": [
+                  -0.3225,
+                  0.135,
+                  0.14
+                ],
+                "geom_id": 103
+              },
+              {
+                "name": "alarm-contact",
+                "minimum": [
+                  -0.3475,
+                  0.09100000000000001,
+                  0.14600000000000002
+                ],
+                "maximum": [
+                  -0.32249999999999995,
+                  0.109,
+                  0.15000000000000002
+                ],
+                "geom_id": 104
+              },
+              {
+                "name": "cabinet-left",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.17175895685510897,
+                  0.345,
+                  0.145
+                ],
+                "geom_id": 105
+              },
+              {
+                "name": "cabinet-right",
+                "minimum": [
+                  -0.07175895685510897,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.145
+                ],
+                "geom_id": 106
+              },
+              {
+                "name": "cabinet-top",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.145
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.149
+                ],
+                "geom_id": 107
+              },
+              {
+                "name": "cabinet-back",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.344,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.348,
+                  0.145
+                ],
+                "geom_id": 108
+              },
+              {
+                "name": "cabinet-bottom",
+                "minimum": [
+                  -0.17575895685510898,
+                  0.255,
+                  0.0
+                ],
+                "maximum": [
+                  -0.06775895685510896,
+                  0.345,
+                  0.004
+                ],
+                "geom_id": 109
+              },
+              {
+                "name": "drawer-contact",
+                "minimum": [
+                  -0.16925895685510897,
+                  0.22552822418690485,
+                  0.0985
+                ],
+                "maximum": [
+                  -0.07425895685510897,
+                  0.23052822418690486,
+                  0.1415
+                ],
+                "geom_id": 110
+              },
+              {
+                "name": "drawer-tray",
+                "minimum": [
+                  -0.16725895685510897,
+                  0.22852822418690485,
+                  0.09799999999999999
+                ],
+                "maximum": [
+                  -0.07625895685510897,
+                  0.29352822418690483,
+                  0.09999999999999999
+                ],
+                "geom_id": 111
+              },
+              {
+                "name": "laptop-base-contact",
+                "minimum": [
+                  0.036758956855108965,
+                  0.21500000000000002,
+                  0.0
+                ],
+                "maximum": [
+                  0.286758956855109,
+                  0.38500000000000006,
+                  0.014
+                ],
+                "geom_id": 112
+              },
+              {
+                "name": "laptop-contact",
+                "minimum": [
+                  0.036758956855108965,
+                  0.333529395311771,
+                  0.017517401514357864
+                ],
+                "maximum": [
+                  0.286758956855109,
+                  0.3823592410178512,
+                  0.16345007067926365
+                ],
+                "geom_id": 113
+              },
+              {
+                "name": null,
+                "minimum": [
+                  0.4509877930433166,
+                  0.24100000000000002,
+                  0.0
+                ],
+                "maximum": [
+                  0.5289877930433166,
+                  0.319,
+                  0.012
+                ],
+                "geom_id": 114
+              },
+              {
+                "name": null,
+                "minimum": [
+                  0.4859877930433166,
+                  0.276,
+                  0.011
+                ],
+                "maximum": [
+                  0.4939877930433166,
+                  0.28400000000000003,
+                  0.065
+                ],
+                "geom_id": 115
+              },
+              {
+                "name": "globe-contact",
+                "minimum": [
+                  0.41441541186314457,
+                  0.204427618819828,
+                  0.065
+                ],
+                "maximum": [
+                  0.5655601742234886,
+                  0.3555723811801721,
+                  0.181
+                ],
+                "geom_id": 116
+              },
+              {
+                "name": "book-step-1-contact",
+                "minimum": [
+                  -0.475,
+                  -0.13,
+                  0.0
+                ],
+                "maximum": [
+                  -0.245,
+                  0.16999999999999998,
+                  0.008
+                ],
+                "geom_id": 117
+              },
+              {
+                "name": "book-step-2-contact",
+                "minimum": [
+                  -0.47,
+                  -0.07,
+                  0.008
+                ],
+                "maximum": [
+                  -0.25,
+                  0.16,
+                  0.016
+                ],
+                "geom_id": 118
+              },
+              {
+                "name": "book-step-3-contact",
+                "minimum": [
+                  -0.45999999999999996,
+                  -0.01999999999999999,
+                  0.016
+                ],
+                "maximum": [
+                  -0.26,
+                  0.16,
+                  0.024
+                ],
+                "geom_id": 119
+              },
+              {
+                "name": "printer-contact",
+                "minimum": [
+                  -0.014693451228000004,
+                  -0.1343070955163,
+                  0.0
+                ],
+                "maximum": [
+                  0.265306548772,
+                  0.045692904483699996,
+                  0.17
+                ],
+                "geom_id": 120
+              },
+              {
+                "name": "coffee-mug-contact",
+                "minimum": [
+                  -0.16077750839614258,
+                  -0.22803161334684258,
+                  0.0
+                ],
+                "maximum": [
+                  -0.029437555338457447,
+                  -0.09669166028915745,
+                  0.09500000000000004
+                ],
+                "geom_id": 121
+              },
+              {
+                "name": "spiral-notebook-contact",
+                "minimum": [
+                  -0.5379599986138295,
+                  0.20105015317170857,
+                  0.014999999999999998
+                ],
+                "maximum": [
+                  -0.32204000138617056,
+                  0.36894984682829135,
+                  0.022
+                ],
+                "geom_id": 122
+              },
+              {
+                "name": "pencil-1-contact",
+                "minimum": [
+                  -0.5434851603888908,
+                  0.272573563770503,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3760549866411092,
+                  0.31650388183949696,
+                  0.030000000000000013
+                ],
+                "geom_id": 123
+              },
+              {
+                "name": "pencil-2-contact",
+                "minimum": [
+                  -0.4818574825736863,
+                  0.25693787356481423,
+                  0.022999999999999982
+                ],
+                "maximum": [
+                  -0.33560342027431367,
+                  0.33379391191318575,
+                  0.029500000000000016
+                ],
+                "geom_id": 124
+              },
+              {
+                "name": "pencil-3-contact",
+                "minimum": [
+                  -0.5516403526740286,
+                  0.2553697646660938,
+                  0.02299999999999999
+                ],
+                "maximum": [
+                  -0.4074656999459715,
+                  0.3105985153299062,
+                  0.03000000000000001
+                ],
+                "geom_id": 125
+              },
+              {
+                "name": "pen-1-contact",
+                "minimum": [
+                  -0.49194176076849083,
+                  0.23685224152612147,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3687000681075092,
+                  0.3284272459138785,
+                  0.032000000000000015
+                ],
+                "geom_id": 126
+              },
+              {
+                "name": "pen-2-contact",
+                "minimum": [
+                  -0.47588316351965454,
+                  0.25435149546113955,
+                  0.022999999999999986
+                ],
+                "maximum": [
+                  -0.3361102694163455,
+                  0.2841717737088605,
+                  0.032000000000000015
+                ],
+                "geom_id": 127
+              },
+              {
+                "name": "stapler-contact",
+                "minimum": [
+                  0.15630056140048196,
+                  0.30304167747167016,
+                  0.0
+                ],
+                "maximum": [
+                  0.26969943859951806,
+                  0.35095832252832987,
+                  0.04000000000000001
+                ],
+                "geom_id": 128
+              },
+              {
+                "name": "reading-glasses-contact",
+                "minimum": [
+                  -0.5146896982576926,
+                  0.24546803225260277,
+                  0.023
+                ],
+                "maximum": [
+                  -0.37099644478630733,
+                  0.30322489385539725,
+                  0.039
+                ],
+                "geom_id": 129
+              },
+              {
+                "name": "reference-book-contact",
+                "minimum": [
+                  -0.5302901906765866,
+                  0.20763198463175145,
+                  0.0
+                ],
+                "maximum": [
+                  -0.3297098093234134,
+                  0.3623680153682485,
+                  0.015
+                ],
+                "geom_id": 130
+              },
+              {
+                "name": "loose-page-1-contact",
+                "minimum": [
+                  -0.5107455385717055,
+                  0.22889913107100746,
+                  0.022
+                ],
+                "maximum": [
+                  -0.3492544614282945,
+                  0.3511008689289925,
+                  0.022199999999999998
+                ],
+                "geom_id": 131
+              },
+              {
+                "name": "loose-page-2-contact",
+                "minimum": [
+                  -0.5084883245042147,
+                  0.23238285893639055,
+                  0.022
+                ],
+                "maximum": [
+                  -0.3515116754957853,
+                  0.3476171410636094,
+                  0.022199999999999998
+                ],
+                "geom_id": 132
+              },
+              {
+                "name": "printer-output-tray-contact",
+                "minimum": [
+                  0.030306548772000008,
+                  -0.181807095516,
+                  0.048
+                ],
+                "maximum": [
+                  0.220306548772,
+                  -0.11680709551599999,
+                  0.053000000000000005
+                ],
+                "geom_id": 133
+              },
+              {
+                "name": "printer-printout-contact",
+                "minimum": [
+                  0.039069987144731796,
+                  -0.19833758946754032,
+                  0.054
+                ],
+                "maximum": [
+                  0.2115431103992682,
+                  -0.10827660156445969,
+                  0.054200000000000005
+                ],
+                "geom_id": 134
+              }
+            ],
+            "wall_seconds": 60.98306431000003,
+            "optimizer_updates": 8,
+            "scope": "One uninterrupted navigation attempt from reset, exact state information, fixed native gait and actuator control.",
+            "reward": 778.7994406365915,
+            "request_sha256": "e881d2e969a7272c84d88819ca73d8f1cfff1963e4d569bff63e4f37443a5fb9",
+            "artifact": {
+              "path": "mochi-nav25-20261121a/physics/first-training-probe-u8.json.gz",
+              "sha256": "1d7f2845737e2194592356ceea98e7ff54a2c9c226b9c9f571e48bac69857d6e"
+            },
+            "public_recording": {
+              "path": "mochi-nav25-20261121a/public/first-training-probe-u8.json.gz",
+              "sha256": "b4a50a3cbc45208e9ef5ce0d56f0432100728902a849373126c4ada1ed9ba4a7",
+              "bytes": 2680029
+            },
+            "receipt": {
+              "provider": "Modal",
+              "cpu": 1,
+              "memory_mib": 4096,
+              "duration_seconds": 65.68590032700001,
+              "architecture": "x86_64",
+              "scope": "Function wall time, including import and export; not an invoice."
+            },
+            "balance_metrics": {
+              "samples": 2853,
+              "lateral_rms_m": 0.008698310573371735,
+              "lateral_peak_to_peak_m": 0.04162780498832395,
+              "roll_rms_deg": 0.7121664168574644,
+              "roll_peak_deg": 2.295484495032529,
+              "sampled_joint_acceleration_rms_rad_s2": 147.81618214767013,
+              "sampled_torque_change_rms_nm": 0.0031328904116405803,
+              "progress_m": 0.1822862358731651,
+              "scope": "Straight approach in the declared path frame; report progress, duration, falls and invalid contacts alongside sway."
+            },
+            "loaded_foot_sliding_m": 0.2874060999609377,
+            "contact_failures": []
+          },
+          "label": "Checkpoint \u00b7 update 8",
+          "sha256": "b4a50a3cbc45208e9ef5ce0d56f0432100728902a849373126c4ada1ed9ba4a7"
+        }
+      },
+      "scope": "Physically executed saved-checkpoint probe on a known training layout. Not held-out evidence and not used for checkpoint selection.",
+      "comparison_note": "Both checkpoints were sampled through Tinker before new physical rollouts. The parent arrived but missed the foot-clearance check. Update 8 selected wide_fast and qualified. This known training layout is not fresh-test evidence."
+    },
+    {
+      "id": "globe-engineering",
+      "label": "Four-task sequence \u00b7 globe controller repair",
+      "kind": "sequence",
+      "split": "engineering",
+      "layout_sha256": "072fb8adf5b43d5b0c419200e48df8f48c2c7ac20ea1380f325c0d6e7fd20867",
+      "runs": {
+        "parent": {
+          "file": "engineering-sequence-native-r3.json.gz",
+          "label": "Before globe repair \u00b7 engineering",
+          "sha256": "6ca95ea7bc2caeed4425eeab7e4f1adbf193ab49e5a361d5d77b0b3f746e4cba",
+          "fingerprint": "e22f65d466d390e459ff12789b1b326e9ba24c77807fb5d33d3657f8331df24a",
+          "updates": 0,
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": false,
+            "steps": 858,
+            "duration": 341.3997986884788,
+            "failure": null,
+            "action": "fixed task profiles; shared controller engineering"
+          }
+        },
+        "selected": {
+          "file": "engineering-sequence-clearance-r4.json.gz",
+          "label": "After globe repair \u00b7 engineering",
+          "sha256": "ec191f79b0c88e89382533d8999071096a6b061603e09d300187cb57e86be652",
+          "fingerprint": "202997a18c0e5642a8afd3c24beb6b362d6ec67449cba0481ca394ddde8eb8b3",
+          "updates": 0,
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": true,
+            "steps": 752,
+            "duration": 326.9673741838994,
+            "failure": null,
+            "action": "fixed task profiles; shared controller engineering"
+          }
+        }
+      },
+      "scope": "Two complete, uninterrupted runs in the same scene. This comparison changes controller code and credits zero Tinker updates.",
+      "comparison_note": "The earlier run completed the tasks but missed the globe-leg sole-clearance limit. The repaired run qualified in 752 steps. A separate matched descent comparison preserves the subsequent fall and its repair."
+    },
+    {
+      "id": "descent-engineering",
+      "label": "Four-task sequence \u00b7 book-descent repair",
+      "kind": "sequence",
+      "split": "engineering",
+      "layout_sha256": "82155c9a47be9e29e9c27041cae70a155ec08a721f38b1ab67837803b1fdbf48",
+      "runs": {
+        "parent": {
+          "file": "engineering-sequence-train-firm-r5.json.gz",
+          "label": "Earlier descent timing \u00b7 engineering",
+          "sha256": "0d2d8963305ff60c40fcecc4500a7c9c07f1e9cf6ec4a1e3ccf73b80db33e442",
+          "fingerprint": "202997a18c0e5642a8afd3c24beb6b362d6ec67449cba0481ca394ddde8eb8b3",
+          "updates": 0,
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": false,
+            "steps": 93,
+            "duration": 167.62376151292014,
+            "failure": "fall",
+            "action": "fixed task profiles; shared descent repair"
+          }
+        },
+        "selected": {
+          "file": "engineering-sequence-balanced-descent-r6.json.gz",
+          "label": "Slower support transfer \u00b7 engineering",
+          "sha256": "251aac002221c0c10915b5b10f45cfa1a08916e597a65d322af0fe381261d22a",
+          "fingerprint": "b4c9935fc03f362df6fbeec5c28603ccdf92c9ea420a2929ecd39dbf81d96548",
+          "updates": 0,
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": true,
+            "steps": 870,
+            "duration": 345.2010319904496,
+            "failure": null,
+            "action": "fixed task profiles; shared descent repair"
+          }
+        }
+      },
+      "scope": "Same arrangement and physics seed, uninterrupted runs from reset. Only descent timing changes; zero training updates credited.",
+      "comparison_note": "The earlier run fell during book descent. Slower support transfer completed all four tasks and passed the unchanged quality checks. Failed attempts are retained; their short duration is not an efficiency gain."
+    }
+  ],
+  "recordings": {
+    "first-training-probe-u0.json.gz": {
+      "path": "mochi-nav25-20261121a/public/first-training-probe-u0.json.gz",
+      "sha256": "02b37c5aa652563fc7e82d372063a4265bebb81e45dd49036ba1fd4fa372cb3b",
+      "bytes": 3183141
+    },
+    "first-training-probe-u8.json.gz": {
+      "path": "mochi-nav25-20261121a/public/first-training-probe-u8.json.gz",
+      "sha256": "b4a50a3cbc45208e9ef5ce0d56f0432100728902a849373126c4ada1ed9ba4a7",
+      "bytes": 2680029
+    },
+    "engineering-sequence-native-r3.json.gz": {
+      "path": "mochi-nav25-20261121a/public/engineering-sequence-native-r3.json.gz",
+      "sha256": "6ca95ea7bc2caeed4425eeab7e4f1adbf193ab49e5a361d5d77b0b3f746e4cba",
+      "bytes": 15223559
+    },
+    "engineering-sequence-clearance-r4.json.gz": {
+      "path": "mochi-nav25-20261121a/public/engineering-sequence-clearance-r4.json.gz",
+      "sha256": "ec191f79b0c88e89382533d8999071096a6b061603e09d300187cb57e86be652",
+      "bytes": 14010958
+    },
+    "engineering-sequence-train-firm-r5.json.gz": {
+      "path": "mochi-nav25-20261121a/public/engineering-sequence-train-firm-r5.json.gz",
+      "sha256": "0d2d8963305ff60c40fcecc4500a7c9c07f1e9cf6ec4a1e3ccf73b80db33e442",
+      "bytes": 4389467
+    },
+    "engineering-sequence-balanced-descent-r6.json.gz": {
+      "path": "mochi-nav25-20261121a/public/engineering-sequence-balanced-descent-r6.json.gz",
+      "sha256": "251aac002221c0c10915b5b10f45cfa1a08916e597a65d322af0fe381261d22a",
+      "bytes": 15467340
+    }
+  },
+  "summary": "Saved Tinker weights now change a physical navigation outcome. A separate controller repair completes the four-task sequence. Fresh-layout evaluation is running.",
+  "claim": "Progress preview. The trained model has not yet demonstrated the fixed-strategy goal on fresh layouts. Three qualified controller-development sequences do not establish fresh-layout task reliability.",
+  "uncertainty": "One known training-layout checkpoint probe and two shared-controller comparisons. The final navigation and task layouts remain unopened.",
+  "training": "Tinker has completed 32 rank-16 LoRA optimizer updates on Qwen3.5-4B. Targets came from 144 physical requests across 24 training layouts and two physics seeds. Replay balances direct, buffered and wide_fast winners. The pretrained native gait network is fixed.",
+  "memory": "Source-verified past.dev recalls pass measured failures, research and replay allocation between application roles. A private-audience canary passed. Evaluation conclusions are pending.",
+  "execution": "Training data includes 24 Modal and 120 local CPU requests. These two checkpoint probes are new Modal physical runs. The shared ledger accounts for 225 physical attempts, including failed engineering and the separately preserved duplicate. Usage estimates are not invoices.",
+  "totals": [
+    [
+      32,
+      "completed navigation optimizer updates"
+    ],
+    [
+      24,
+      "training layouts"
+    ],
+    [
+      144,
+      "measured training requests"
+    ],
+    [
+      3,
+      "qualified controller-development sequences"
+    ]
+  ],
+  "results": [
+    {
+      "cohort": "Known training-layout probe",
+      "method": "Parent \u00b7 update 0",
+      "qualified": 0,
+      "n": 1,
+      "mean_steps": null
+    },
+    {
+      "cohort": "Known training-layout probe",
+      "method": "Checkpoint \u00b7 update 8",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 221
+    },
+    {
+      "cohort": "Continuous controller-development run",
+      "method": "Before globe repair \u00b7 engineering",
+      "qualified": 0,
+      "n": 1,
+      "mean_steps": null
+    },
+    {
+      "cohort": "Continuous controller-development run",
+      "method": "After globe repair \u00b7 engineering",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 752
+    },
+    {
+      "cohort": "Matched book-descent repair",
+      "method": "Earlier descent timing \u00b7 engineering",
+      "qualified": 0,
+      "n": 1,
+      "mean_steps": null
+    },
+    {
+      "cohort": "Matched book-descent repair",
+      "method": "Slower support transfer \u00b7 engineering",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 870
+    }
+  ],
+  "checkpoints": [
+    {
+      "domain": "navigation",
+      "update": 0,
+      "checkpoint_id": "008d980c9960b8be8580dbff319c81ff84cb238eb96c50bc749a0787ee541958",
+      "at": "2026-11-21T20:02:42.960167+00:00",
+      "probe_distribution": {
+        "direct": 0.9999959468841553,
+        "buffered": 3.7266381696099415e-06,
+        "wide_fast": 3.927847558315989e-07
+      }
+    },
+    {
+      "domain": "navigation",
+      "update": 8,
+      "checkpoint_id": "36c717c02277445508c71f03595843c60c2d7e0c29f42ce0f34bc9e6c92f7327",
+      "at": "2026-11-21T20:05:10.425731+00:00",
+      "probe_distribution": {
+        "direct": 0.3158038556575775,
+        "buffered": 0.2786959111690521,
+        "wide_fast": 0.405500203371048
+      }
+    },
+    {
+      "domain": "navigation",
+      "update": 16,
+      "checkpoint_id": "a021a63355cd4cbf3170f48c9c2315046bd59e4040732435a02a6a19d4279a6c",
+      "at": "2026-11-21T20:07:57.060070+00:00",
+      "probe_distribution": {
+        "direct": 0.31916776299476624,
+        "buffered": 0.36166447401046753,
+        "wide_fast": 0.31916776299476624
+      }
+    },
+    {
+      "domain": "navigation",
+      "update": 32,
+      "checkpoint_id": "bdbc662f26af24885e116c447d88ff670dc635cb7688236cd41f6e12ec6285fe",
+      "at": "2026-11-21T20:12:25.814547+00:00"
+    }
+  ],
+  "sources": [
+    {
+      "query": "cost sensitive imitation learning class imbalance rare safety failures robot policy selection dataset balancing",
+      "request_id": "7e757db9c6286543deed16cd06dd0c3c",
+      "cost_dollars": {
+        "total": 0.007,
+        "search": {
+          "neural": 0.007
+        }
+      },
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2511.08136",
+          "title": "SafeMIL: Learning Offline Safe Imitation Policy from Non-Preferred Trajectories",
+          "excerpt": "Alternatively, instead of applying a hard threshold, $\\hat{b}$, to select trajectories, we can take a soft ... : $\\displaystyle w(\\tau)=\\exp\\left(-\\sum_{t=0}^{{T}- ... hat{c}_{\\theta}(s_{t},a_{t})\\;/\\;\\beta\\right",
+          "retrieved_at": "2026-11-21T19:18:10.176344+00:00"
+        },
+        {
+          "url": "https://arxiv.org/html/2503.01650",
+          "title": "CAPS: Context-Aware Priority Sampling for Enhanced Imitation Learning in Autonomous Driving",
+          "excerpt": "Meanwhile, edge cases, such as parking cut-ins, sudden stops, and near-accident incidents, are rare and challenging to handle, and they might be overshadowed by",
+          "retrieved_at": "2026-11-21T19:18:10.176388+00:00"
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.17709",
+          "title": "Where Small Mistakes Matter: Quantifying State Criticality for Imitation Learning",
+          "excerpt": "###### Abstract Imitation learning typically treats every demonstration state as equally important, optimizing a behavior-cloning objective uniformly across the dataset. Yet not all states",
+          "retrieved_at": "2026-11-21T19:18:10.176462+00:00"
+        }
+      ],
+      "response_sha256": "72df8c47a141dbb5a5b15c7874fe176894b6b53674146e9daae03dc63bc1496b",
+      "at": "2026-11-21T19:18:10.176589+00:00"
+    }
+  ],
+  "highlight_scope": "The training probe was selected in advance because the frozen parent missed a physical-quality check there. It does not enter checkpoint selection."
+}

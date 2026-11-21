@@ -1,0 +1,14 @@
+{
+  "change": "Reload completed artifact caches before each physics request. Permit a temporary cloud worker cap while local training collection uses the identical frozen evaluator.",
+  "physical_source_changed": false,
+  "optimizer_updates_before_change": 0,
+  "final_layouts_opened": false,
+  "comparison_rule": "All final model comparisons execute on Modal under the identical physical source. Local training candidates retain their actual Local CPU receipts.",
+  "concurrency": "One Modal worker, two local navigation workers and one serial task engineering worker; at most four simultaneous physical workers.",
+  "later_parallel_phase": {
+    "modal_worker_ceiling": 3,
+    "local_physics_worker_ceiling": 2,
+    "total_physics_worker_ceiling": 5,
+    "reason": "Independent task-component data collection alongside the frozen navigation cohort. This changes execution concurrency, not per-trial resources, physical code or selection rules. Shared 512-attempt, 16-wall-hour, token and $50 ceilings remain unchanged."
+  }
+}

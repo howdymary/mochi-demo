@@ -1,0 +1,28 @@
+{
+  "training": {
+    "layouts": 1,
+    "physics_seeds": [
+      231000,
+      231001
+    ],
+    "sha256": "080d3e663155d7a6d71900f50029957cc93ff76ad0ee4cb73d06b39ad84574e4"
+  },
+  "development": {
+    "layouts": 1,
+    "physics_seeds": [
+      252000
+    ],
+    "sha256": "eb0ccbb2ab3c85eb024caf14dab7c7f8db80dccd72d94db6c44efd1086e3b45b"
+  },
+  "final": {
+    "layouts": 3,
+    "physics_seeds": [
+      253000,
+      253001
+    ],
+    "sha256": "e18d8964bf3ca4b6e85cbaab92dbef7a05aeac2b510c6615adea2d7b18f24658",
+    "opened": false
+  },
+  "scope": "Small task-control pilot: every declared final arrangement is evaluated under both seeds. Separate from the eight-layout final navigation cohort and the earlier unopened V23 sequence cohort.",
+  "selection": "Train on reached component states from two training physics seeds; select on measured alternatives in a separate development arrangement. Validate parent and selected weights in new continuous final attempts."
+}

@@ -1,0 +1,38 @@
+{
+  "training": {
+    "count": 40,
+    "sha256": "8b0d4b51750c8457a0f19f0457885e2f26b436ffee3169a48febae47e8b87297",
+    "family_counts": [
+      10,
+      10,
+      10,
+      10
+    ],
+    "static_rejections": 13,
+    "path": "configs/continuation-v25/training.json"
+  },
+  "development": {
+    "count": 8,
+    "sha256": "90369b86d59d47374fe3ad4d2ad63ba73bd5a220ef22df8649085c82f18f0520",
+    "family_counts": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "static_rejections": 6,
+    "path": "configs/continuation-v25/development.json"
+  },
+  "final_navigation": {
+    "count": 8,
+    "sha256": "1dab7c7f692299c86f0174bf02dd2f01287951e7a3dbc572b7fd43dd56100740",
+    "family_counts": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "static_rejections": 2,
+    "path": "artifacts/continuation-v25/sealed/final_navigation.json"
+  }
+}

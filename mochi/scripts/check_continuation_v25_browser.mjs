@@ -1,0 +1,19 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const url=process.argv[2]||'https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/',port=9355;
+const tabs=await(await fetch(`http://127.0.0.1:${port}/json/list`)).json(),tab=tabs.find(t=>t.type==='page');
+const ws=new WebSocket(tab.webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));
+let serial=0;const pending=new Map(),errors=[];
+ws.addEventListener('message',event=>{const d=JSON.parse(event.data);if(d.id){const p=pending.get(d.id);if(p){pending.delete(d.id);clearTimeout(p.timer);d.error?p.reject(Error(JSON.stringify(d.error))):p.resolve(d.result)}}else if(d.method==='Runtime.exceptionThrown')errors.push(d.params.exceptionDetails.exception?.description||d.params.exceptionDetails.text)});
+function call(method,params={}){const id=++serial;return new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error(method+' timeout')),60000);pending.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params}))})}
+async function run(expression){const r=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value}
+async function until(expression){for(let i=0;i<480;i++){if(await run(expression))return;await new Promise(r=>setTimeout(r,250))}throw Error('Viewer readiness timeout')}
+await call('Page.enable');await call('Runtime.enable');await call('Emulation.setDeviceMetricsOverride',{width:1680,height:1380,deviceScaleFactor:1,mobile:false});await call('Page.navigate',{url});await until('!!window.__mochiV25&&!__mochiV25.loading');
+const cases=await run('__mochiV25.manifest.cases.map(c=>({id:c.id,kind:c.kind}))'),checks=[];
+for(const c of cases){await run(`(async()=>{document.querySelector('#scenario').value=${JSON.stringify(c.id)};await __mochiV25.scenario();const s=document.querySelector('#scrub');s.value=+s.max*.72;s.dispatchEvent(new Event('input',{bubbles:true}))})()`);await new Promise(r=>setTimeout(r,150));
+ const result=await run(`(()=>{const d=__mochiV25,out=[];for(let side=0;side<2;side++){const e=d.episodes[side],t=Math.min(d.time,e.duration),frames=e.trajectory.frames;let i=0;while(i+1<frames.length&&frames[i+1].t<=t)i++;const a=frames[i],b=frames[Math.min(i+1,frames.length-1)],u=Math.min(1,Math.max(0,(t-a.t)/Math.max(.0001,b.t-a.t)));let error=0,count=0;for(let k=0;k<e.trajectory.body_names.length;k++){const o=d.stages[side].bindings[e.trajectory.body_names[k]];if(!o)continue;o.updateWorldMatrix(true,false);for(let j=0;j<3;j++)error=Math.max(error,Math.abs(o.matrixWorld.elements[12+j]-(a.positions[k][j]+u*(b.positions[k][j]-a.positions[k][j]))));count++}out.push({bodies:count,error_m:error,frames:frames.length})}return {id:d.chosen.id,kind:d.chosen.kind,same_scene:JSON.stringify(d.episodes[0].scene)===JSON.stringify(d.episodes[1].scene),checks:out,canvases:document.querySelectorAll('.stage canvas').length}})()`);
+ assert(result.same_scene);assert.equal(result.canvases,2);result.checks.forEach(r=>{assert(r.bodies>=44);assert(r.error_m<1e-6);assert(r.frames>1)});checks.push(result);
+}
+await run(`(async()=>{document.querySelector('#scenario').value='globe-engineering';await __mochiV25.scenario();const s=document.querySelector('#scrub');s.value=320;s.dispatchEvent(new Event('input',{bubbles:true}))})()`);await new Promise(r=>setTimeout(r,300));
+const shot=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});const out='mochi/evidence/continuation-v25';fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/preview.png',Buffer.from(shot.data,'base64'));
+assert.equal(errors.length,0,errors.join('\n'));fs.writeFileSync(out+'/browser-qa-preview.json',JSON.stringify({url,checks,errors},null,2)+'\n');console.log(JSON.stringify({verified:true,cases:checks.length}));ws.close();

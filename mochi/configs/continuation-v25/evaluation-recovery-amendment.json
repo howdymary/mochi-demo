@@ -1,0 +1,13 @@
+{
+  "reason": "NumPy int64 in a comparison report stopped JSON publication after 32 completed optimizer updates.",
+  "prior_call_id": "fc-01M7ZV60819AN476KHSK36GBN2",
+  "optimizer_updates_repeated": 0,
+  "restore_optimizer": true,
+  "native_gait_changed": false,
+  "physical_source_changed": false,
+  "evaluation_or_selection_changed": false,
+  "reporting_fix": "Convert NumPy scalar values to native JSON scalars before reporting and memory ingestion. Resume immutable saved samplers and existing completed rollout caches. Settle original cache reservations idempotently.",
+  "source_sha256": "ff67b733efcffdcb55889a054212181fbdc0954c3f843abbb6de29b25ce16a1c",
+  "archived_orchestrator": "artifacts/continuation-v25/training-pre-serialization-recovery.py",
+  "final_opened": false
+}

@@ -1,5 +1,15 @@
 # MOCHI: Navigation Policy Learning on Cluttered Desks
 
+## V25: balanced navigation training and the globe transition
+
+[Current progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) · [Methods](docs/continuation-v25-methods.md)
+
+The continuation study has completed 32 real Tinker navigation optimizer updates using measured outcomes from 144 candidate requests across 24 training layouts. The controlled development comparison is running. No fresh-layout advantage over the strongest fixed strategy is claimed yet. The parent is the earlier V23 selected checkpoint, not an untrained model.
+
+Shared engineering repairs now complete the continuous clock, drawer, laptop and globe sequence under the original contact, balance and foot-clearance checks. The replay separates those controller changes from saved-weight training comparisons and retains the book-descent failure. Task and arm-recovery post-training uses alternatives executed from physically reached states; complete-sequence checkpoint selection and unopened-layout evaluation follow separately.
+
+The original native gait network remains fixed. Tinker trains navigation and task-controller selection weights. Exa supplies failure-driven sources, past.dev passes source-verified findings between workflow stages, and Modal executes physical evaluation batches and authenticated training. Existing studies and deployments remain available below.
+
 ## V23: unseen layouts, measured controls
 
 [Latest paired demo](https://howdymary--mochi-navigation-v23-demo-web.us-east.modal.run/) · [Findings](docs/navigation-v23-findings.md) · [Methods and setup](docs/navigation-v23-methods.md) · [Numerical evidence](evidence/navigation-v23/results.json)

@@ -1,0 +1,60 @@
+{
+  "url": "https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/",
+  "checks": [
+    {
+      "id": "training-probe",
+      "kind": "navigation",
+      "same_scene": true,
+      "checks": [
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 3351
+        },
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 2826
+        }
+      ],
+      "canvases": 2
+    },
+    {
+      "id": "globe-engineering",
+      "kind": "sequence",
+      "same_scene": true,
+      "checks": [
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 16111
+        },
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 14847
+        }
+      ],
+      "canvases": 2
+    },
+    {
+      "id": "descent-engineering",
+      "kind": "sequence",
+      "same_scene": true,
+      "checks": [
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 4643
+        },
+        {
+          "bodies": 70,
+          "error_m": 0,
+          "frames": 16362
+        }
+      ],
+      "canvases": 2
+    }
+  ],
+  "errors": []
+}

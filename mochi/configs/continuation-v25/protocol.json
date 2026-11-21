@@ -1,0 +1,73 @@
+{
+  "id": "mochi-nav25-20261121a",
+  "question": "Can a balanced, physically trained navigation selector match the strongest fixed strategy qualification and reduce steps on new layouts, then support a smooth uninterrupted four-task sequence?",
+  "limits": {
+    "physical_attempts": 512,
+    "simulation_wall_hours": 16,
+    "optimizer_updates": 64,
+    "training_token_presentations": 2000000,
+    "inference_input_plus_reserved_output_tokens": 2000000,
+    "exa_searches": 4,
+    "past_writes": 64,
+    "past_actual_recalls": 128,
+    "modeled_provider_usd": 50,
+    "physics_workers": 4
+  },
+  "navigation_win": {
+    "qualification": "Selected model must meet or exceed training-selected fixed strategy on paired fresh final layouts. No relaxed physical checks.",
+    "efficiency": "At least 5% lower mean paired-layout step count on jointly qualified attempts, with no more than 5% slower mean physical completion time. Report uncertainty and all failures.",
+    "selection": "Development only. Final navigation opened once after checkpoint selection. Never tune against it."
+  },
+  "splits": {
+    "training_pool": 40,
+    "development": 8,
+    "final_navigation": 8,
+    "final_sequence": 8,
+    "physics_seeds": [
+      251000,
+      251001
+    ]
+  },
+  "training": "Real Tinker LoRA updates with balanced action classes and failure examples from measured rollouts. Native gait remains fixed. Freeze the new input/action contract before comparing checkpoints.",
+  "task_goal": "Six qualified continuous four-task attempts across at least three fresh task layouts, with frozen support, contact and smoothness checks. No branch splicing.",
+  "engineering": "Globe approach and shared physical controllers are repaired separately, then frozen and rerun for all controls.",
+  "model": "Qwen/Qwen3.5-4B",
+  "lora_rank": 16,
+  "parent": {
+    "study": "mochi-nav23-20261121c",
+    "update": 4,
+    "checkpoint_id": "d1946697a06b3159539e384897a1509d7da440ab7250a1f87c5bcf87434b822f"
+  },
+  "navigation_updates": [
+    0,
+    8,
+    16,
+    32
+  ],
+  "maximum_navigation_updates": 48,
+  "reserved_task_updates": 16,
+  "training_initial_layouts": 24,
+  "training_seeds_per_layout": 2,
+  "training_profiles": [
+    "direct",
+    "buffered",
+    "wide_fast"
+  ],
+  "replay": "Balance actual measured winner classes. A label requires both seeds to qualify. Preserve unlabeled failures and report unique data versus repeated presentations.",
+  "common_engineering": [
+    "Preserve sampled generalized coordinates after MuJoCo constants rebuild.",
+    "Retain native whole-body arm control for navigation. The arm-masked pilot failed; one paired training-geometry diagnosis passed after restoring the native arm controller.",
+    "Preserve translation direction when bounding final-alignment velocity.",
+    "Add a 16 mm-margin fast profile with the same speed as direct and the same turn cap as buffered."
+  ],
+  "attribution": "Every baseline and checkpoint shares this implementation. Engineering changes are not credited to Tinker. Old final layouts remain closed; no old final outcome is used as a fresh test.",
+  "physical_revision": "navigation-r1-native-arm-control",
+  "pretraining_amendment": {
+    "reason": "Twelve pilot attempts failed physical qualification; restoring native arm control qualified the same training route. No Tinker optimizer updates or final evaluations preceded this amendment.",
+    "pilot": "collection-pilot.json",
+    "diagnostic": "nav-native-arms-r0.json.gz",
+    "archived_revision": "artifacts/continuation-v25/controller-r0",
+    "at": "2026-11-21",
+    "evaluation_checks": "unchanged"
+  }
+}

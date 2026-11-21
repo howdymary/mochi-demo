@@ -1,0 +1,13 @@
+{
+  "scope": "Training and control selection code frozen before the first V25 Tinker update. Physical source has its independent r1 freeze.",
+  "sha256": {
+    "scripts/train_navigation_v25.py": "d36adfdb50d32d6c1674da7576f0efb8d54e49457cb21889db325fca0e0829a5",
+    "scripts/collect_navigation_v25.py": "4c2ba78677ca2f782fa8748bbc88f04cb60b83c33f67cd6daf79cd88a73e0df1",
+    "src/mochi/navigation_v25/baselines.py": "ea0833dc7c6c18802a0bd36e5a84a5b69767700064d22cf2c0b4311f3e3d1056",
+    "src/mochi/navigation_v23/services.py": "2ea5c2a1ea55e110f7a0b8c508f6678df19ef35c76f65141e086c47181efa6d4",
+    "src/mochi/smooth_v17/finalize_memory.py": "e2e0792e3728848ada0e10bf23a31807d32adc210df4575167c458da1c0907c5",
+    "src/mochi/integrations.py": "3de45d8370d4ebe6dd195860cdc8ab4e4f930da51dbc47dd5f3a1b54de629f89"
+  },
+  "recovery_amendment": "Resume cache/data collection before optimizer update zero. Learning algorithm, physical source, cohorts, reward and model-selection rule unchanged.",
+  "evaluation_schedule_amendment": "Before the first optimizer update: immutable checkpoint evaluations overlap SFT optimizer work. Same snapshots, training data, actions, physical cohort, budget and selection criterion. All development results finish before final selection. No evaluator result becomes a training label."
+}

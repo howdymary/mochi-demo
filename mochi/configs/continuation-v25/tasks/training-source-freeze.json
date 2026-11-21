@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "scripts/train_tasks_v25.py": "3297693915935a5a8a75950b140c2ee42207f56568accfbae71b842e636b13a9",
+    "scripts/probe_sequence_v25.py": "25a81e659234f66de9eb0b554577639e0420164334a5609fdcfe8df4887a47f9",
+    "scripts/collect_task_components_v25.py": "647bcd184f1e5b45c4aa3211be5994690ff0160cc96704ceac2429bf1ab7068b",
+    "configs/continuation-v25/tasks/study.json": "dee679f23039e2cea6b7f1b931c3c4e3b6e96e64dc91f4ec04bfcf3d89b22d2c",
+    "configs/continuation-v25/tasks/physical-freeze-r2.json": "97e5b4b2b838c71b9eaaa060ef66a572db5fd631dbbd490996d6f0d531e8b5df"
+  },
+  "data_sha256": "627d9cedd917058cf01a8ba858783ca51c58fff699de195e266ca161d3b78b0b",
+  "final_opened": false,
+  "task_optimizer_updates_before_freeze": 0
+}
