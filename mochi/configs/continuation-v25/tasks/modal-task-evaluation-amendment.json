@@ -1,0 +1,23 @@
+{
+  "reason": "Use identical Modal CPU runtime for both complete-sequence model sides and validate it on development geometry before opening finals. Local component evidence is not assumed to transfer exactly across CPU architectures. After navigation finishes, reallocate the same five-worker ceiling to the final task cohort.",
+  "navigation_workers_max": 3,
+  "task_development_workers_max": 1,
+  "task_final_workers_max": 5,
+  "local_capture_workers_max_during_development": 1,
+  "local_capture_must_end_before_final_concurrency": 2,
+  "global_physics_workers_max": 5,
+  "weights_frozen": {
+    "navigation": 48,
+    "task": 8
+  },
+  "final_tasks_unopened": true,
+  "limits_unchanged": true,
+  "failed_candidates_preserved": [
+    "r2",
+    "r3",
+    "r4"
+  ],
+  "candidate_revision": "r5",
+  "task_final_workers_max_after_navigation_completed": 5,
+  "task_final_waits_for_navigation_completion": true
+}

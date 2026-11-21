@@ -9,6 +9,40 @@ app=modal.App('mochi-task-control-v25')
 previous=modal.Volume.from_name('mochi-navigation-v23-artifacts')
 mounts={'/artifacts':volume,'/previous':previous.with_mount_options(read_only=True,sub_path='/mochi-nav23-20261121c')}
 
+@app.function(image=image,secrets=existing_secrets,serialized=True,cpu=1,memory=4096,timeout=900,
+    max_containers=1,retries=0,volumes=mounts)
+async def prepare_serving(nav_update,task_update,compact=False):
+    import tinker
+    from mochi.integrations import digest
+    await volume.reload.aio();directory=Path('/artifacts')/RUN
+    file=directory/'private-serving-paths.json'
+    registry=json.loads(file.read_text()) if file.exists() else {}
+    requests=[('task',0),('task',task_update)]
+    if nav_update is not None:
+        kind='compact_navigation' if compact else 'navigation'
+        requests += [(kind,0),(kind,nav_update)]
+    receipts=[]
+    for kind,update in dict.fromkeys(requests):
+        filename='compact/private-navigation-paths.json' if kind=='compact_navigation' else 'private-navigation-paths.json' if kind=='navigation' else 'private-task-paths.json'
+        optimizer=json.loads((directory/filename).read_text())[str(update)]['optimizer']
+        records=registry.setdefault(kind,{})
+        if str(update) not in records:
+            service=tinker.ServiceClient(display_name=RUN+'-serving-export-'+kind+'-'+str(update))
+            finish='errored'
+            try:
+                trainer=await service.create_training_client_from_state(optimizer)
+                saved=await trainer.save_weights_for_sampler(name='mochi25-serving-'+kind+'-'+str(update),ttl_seconds=86400)
+                records[str(update)]={'sampler':saved.path,'optimizer_sha256':digest(optimizer),'ttl_seconds':86400}
+                file.write_text(json.dumps(registry,indent=2)+'\n');await volume.commit.aio()
+                finish='success'
+            finally:await service.close(finish,detail='Owned serving export ended; canonical optimizer states retained')
+        assert records[str(update)]['optimizer_sha256']==digest(optimizer)
+        receipts.append({'kind':kind,'update':update,'optimizer_sha256':digest(optimizer),
+            'sampler_weights_sha256':digest(records[str(update)]['sampler']),'ttl_seconds':86400})
+    report={'status':'completed','optimizer_updates':0,'exports':receipts,'canonical_checkpoints_deleted':False,
+        'scope':'Named inference copies of frozen model weights, avoiding a new training client for each serving call.'}
+    (directory/'serving-preparation.json').write_text(json.dumps(report,indent=2)+'\n');await volume.commit.aio();return report
+
 
 @app.function(image=image,secrets=existing_secrets,serialized=True,cpu=.25,memory=1024,timeout=120,retries=0)
 async def inventory():
@@ -130,10 +164,12 @@ async def train():
 @app.function(image=image,secrets=existing_secrets,serialized=True,cpu=1,memory=4096,timeout=600,
     max_containers=1,retries=0,volumes=mounts)
 async def choose(kind,update,observed,ident):
+    import asyncio
     import time
+    import torch
     import tinker
     from tinker_cookbook import model_info,renderers
-    from tinker_cookbook.recipes.decisions import DecisionRenderer,sample_decision
+    from tinker_cookbook.recipes.decisions import DecisionRenderer,sample_decision,decision_choice_datums
     from mochi.integrations import digest
     global _mochi_inference_cache
     if '_mochi_inference_cache' not in globals():_mochi_inference_cache={}
@@ -147,12 +183,21 @@ async def choose(kind,update,observed,ident):
         value=json.loads(target.read_text());assert value['request_sha256']==request;return value
     filename='compact/private-navigation-paths.json' if kind=='compact_navigation' else 'private-navigation-paths.json' if kind=='navigation' else 'private-task-paths.json'
     path=json.loads((directory/filename).read_text())[str(update)]['optimizer']
-    key=digest(path)
+    serving=directory/'private-serving-paths.json'
+    registry=json.loads(serving.read_text()) if serving.exists() else {}
+    named=registry.get(kind,{}).get(str(update))
+    if named:assert named['optimizer_sha256']==digest(path)
+    key=digest([path,named['sampler']]) if named else digest(path)
     if key not in _mochi_inference_cache:
         service=tinker.ServiceClient(display_name=RUN+'-sequence-inference')
-        trainer=await service.create_training_client_from_state(path)
-        sampler=await trainer.save_weights_and_get_sampling_client(kind='snapshot')
-        renderer=DecisionRenderer(renderers.get_renderer(model_info.get_recommended_renderer_name('Qwen/Qwen3.5-4B'),trainer.get_tokenizer()))
+        if named:
+            sampler=await service.create_sampling_client(model_path=named['sampler'])
+            tokenizer=sampler.get_tokenizer()
+        else:
+            trainer=await service.create_training_client_from_state(path)
+            sampler=await trainer.save_weights_and_get_sampling_client(kind='snapshot')
+            tokenizer=trainer.get_tokenizer()
+        renderer=DecisionRenderer(renderers.get_renderer(model_info.get_recommended_renderer_name('Qwen/Qwen3.5-4B'),tokenizer))
         _mochi_inference_cache[key]=(sampler,renderer)
     sampler,renderer=_mochi_inference_cache[key]
     if kind=='compact_navigation':from mochi.navigation_v25.compact import decision
@@ -161,15 +206,40 @@ async def choose(kind,update,observed,ident):
     rendered=renderer.render(decision(observed));tokens=len(rendered.tokens)+1
     broker=modal.Function.from_name('mochi-continuation-v25','budget')
     await broker.remote.aio(RUN,'sequence-inference-'+ident,{'inference_input_plus_max_output_tokens':tokens,'modeled_provider_usd':tokens*1.01/1e6})
-    start=time.perf_counter();distribution=await sample_decision(sampler,rendered)
+    start=time.perf_counter();inference_route='sampling'
+    try:
+        distribution=await asyncio.wait_for(sample_decision(sampler,rendered),timeout=30)
+    except TimeoutError:
+        # A read-only forward pass scores the same causal answer tokens. The
+        # route was checked against a completed sampler result before use.
+        inference_route='read_only_forward_after_sampling_timeout'
+        service=tinker.ServiceClient(display_name=RUN+'-readonly-serving')
+        try:
+            trainer=await service.create_training_client_from_state(path)
+            labels=list(distribution) if 'distribution' in locals() else list(rendered.labels)
+            datums=decision_choice_datums(renderer,[(decision(observed),a) for a in labels])
+            extra=sum(d.model_input.length for d in datums)
+            await broker.remote.aio(RUN,'sequence-forward-inference-'+ident,{'inference_input_plus_max_output_tokens':extra,'modeled_provider_usd':extra*1.01/1e6})
+            result=await asyncio.wait_for(trainer.forward(datums,loss_fn='cross_entropy'),timeout=90)
+            scores=[]
+            for datum,output in zip(datums,result.loss_fn_outputs,strict=True):
+                indices=torch.nonzero(datum.loss_fn_inputs['weights'].to_torch()).reshape(-1)
+                assert len(indices)==1
+                scores.append(float(output['logprobs'].to_torch()[int(indices[0])]))
+            probabilities=torch.softmax(torch.tensor(scores,dtype=torch.float64),0).tolist()
+            assert all(__import__('math').isfinite(p) for p in probabilities)
+            distribution=dict(zip(labels,probabilities,strict=True))
+        finally:await service.close('success',detail='Read-only inference ended; no backward or optimizer call')
     allowed=[a for a in distribution if kind=='task' or observed['options'][a]['feasible']]
     assert allowed,'No geometrically feasible model action'
     raw_choice=max(distribution,key=distribution.get)
     selected=max(allowed,key=distribution.get)
-    value={'action':selected,'distribution':distribution,'checkpoint_id':key,'optimizer_updates':update,
+    value={'action':selected,'distribution':distribution,'checkpoint_id':digest(path),'optimizer_updates':update,
         'source':'Actual Tinker checkpoint sampling; native gait fixed','kind':kind,'request_sha256':request,
         'observation_sha256':digest(observed),'inference_seconds':time.perf_counter()-start,'input_plus_reserved_output_tokens':tokens,
         'geometrically_available_actions':allowed,'raw_preference':raw_choice,'geometric_mask_changed_choice':raw_choice!=selected,
-        'single_feasible_profile':len(allowed)==1}
+        'single_feasible_profile':len(allowed)==1,'serving_mode':'named_checkpoint' if named else 'ephemeral_snapshot',
+        'sampler_weights_sha256':digest(named['sampler']) if named else None,'inference_route':inference_route,
+        'optimizer_updates_in_inference':0}
     target.write_text(json.dumps(value,indent=2)+'\n');await volume.commit.aio()
     return value

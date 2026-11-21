@@ -6,11 +6,11 @@ import hashlib
 import json
 from pathlib import Path
 import pickle
+import platform
 import signal
 import time
 
 import modal
-from mochi.navigation_v25.tasks import run
 from mochi.navigation_v23.layouts import fingerprint
 
 root=Path(__file__).resolve().parents[1]
@@ -20,9 +20,17 @@ p.add_argument('--seed',type=int,default=231000)
 p.add_argument('--layout',type=Path)
 p.add_argument('--capture',action='store_true')
 p.add_argument('--policy-config',type=Path)
+p.add_argument('--engineering-revision',choices=['r2','r3','r5'],default='r2')
 args=p.parse_args()
+if args.engineering_revision=='r5':
+    from mochi.navigation_v25.tasks_r5 import run
+elif args.engineering_revision=='r3':
+    from mochi.navigation_v25.tasks_r3 import run
+else:
+    from mochi.navigation_v25.tasks import run
 if args.policy_config:
-    freeze=json.loads((root/'configs/continuation-v25/tasks/physical-freeze-r2.json').read_text())
+    freeze_path=root/f'configs/continuation-v25/tasks/physical-freeze-{args.engineering_revision}.json'
+    freeze=json.loads(freeze_path.read_text())
     for name,expected in freeze['sha256'].items():
         assert hashlib.sha256((root/name).read_bytes()).hexdigest()==expected,name
 directory=root/'artifacts/continuation-v25'
@@ -78,12 +86,15 @@ try:
     b=gzip.compress(json.dumps(row,separators=(',',':')).encode(),compresslevel=1,mtime=0)
     out.write_bytes(b)
     episode=row['episode']
-    report={'id':args.id,'failure':row['failure'],'qualified_complete':row['qualified_complete'],
+    report={'id':args.id,'status':'completed','failure':row['failure'],'qualified_complete':row['qualified_complete'],
         'complete_sequence_success':row['complete_sequence_success'],'tasks':{k:v['success'] for k,v in episode['results'].items()},
         'steps':episode['steps']['attempts'],'physical_seconds':episode['duration'],'fall':episode['fall'],
         'invalid_contact':episode['invalid_contact'],'contacts':episode['contact_failures'],
         'snapshots':snapshots,'sha256':hashlib.sha256(b).hexdigest(),'layout_sha256':layout['layout_sha256'],
         'source_sha256':hashlib.sha256((root/'src/mochi/navigation_v25/tasks.py').read_bytes()).hexdigest(),'evaluation_partition':layout.get('partition'),
+        'engineering_revision':args.engineering_revision,
+        'source_freeze_sha256':hashlib.sha256(freeze_path.read_bytes()).hexdigest() if args.policy_config else None,
+        'receipt':{'provider':'local','architecture':platform.machine(),'physical_rollouts':1,'cpu_threads':1},
         'scope':row['scope'],'policy_settings':settings,'checkpoint_decisions':decisions}
 except BaseException as error:
     report={'id':args.id,'status':'incomplete','error_type':type(error).__name__,'error':str(error)[:160],'snapshots':snapshots,'scope':'Interrupted software attempt; no complete-sequence outcome inferred.'}

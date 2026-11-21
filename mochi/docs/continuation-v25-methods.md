@@ -56,6 +56,40 @@ Navigation makes one discrete choice before physics advances. Development theref
 
 The new protocol and source freeze precede all compact optimizer updates. Its budget uses the original shared ledger: 32 original navigation updates, sixteen task updates, and at most sixteen compact navigation updates, totaling 64. The task adapter is frozen at development-selected update eight. Once compact navigation selection is frozen, its final navigation and task cohorts may execute concurrently under the same three-Modal/two-local physics cap. Neither final cohort supplies training labels or changes checkpoint selection.
 
+The combined models first execute the task development arrangement together. The selected combination must qualify before any final task layout is opened. The parent integration attempt is retained too. Task-final execution uses named sampler copies of the frozen optimizer checkpoints. Copies expire after one day; canonical optimizer states remain available. A sampling timeout may use Tinker's read-only `forward` API to score the same answer tokens, with no backward pass or optimizer step. A paired diagnostic reproduced an earlier sampler distribution within 4.97e-8. This is an inference fallback, not additional training.
+
+Model and API waits pause simulation time. Displayed completion times are simulated physical time and exclude those waits. Wall time and inference latency are recorded separately. This study does not establish a real-time hardware control system.
+
+### Task-controller integration revisions
+
+The initial combined-model development preflight completed all four tasks but failed the unchanged per-leg clearance check. No final task layout was opened. R2 and all of its frozen sources remain intact. R3 applies the existing sole-pad residual to drawer and laptop transits. One reached-state laptop test arrived but measured 4.064 mm median moving clearance, so it was rejected. R4's larger targets measured 5.786 mm but failed to capture the target pose within 45 simulated seconds. Its arrival timeout is retained. Neither is a successful repair.
+
+R5 tests an intermediate residual: 10 mm turn and 8.5 mm straight swing-pad targets, bounded vertical errors of 5/4 mm, joint offsets of 0.14/0.12 radians and reference rates of 2.5/2.25 radians per second. Contact gating requires support from the other foot. Original actuator force limits remain active. The existing globe residual is retained. The native gait, base dynamics and physical verifiers remain fixed.
+
+The local reached-state probes screen this engineering candidate. A fresh complete development preflight on Modal is required before assuming it works under the remote CPU runtime. Both parent and selected models share that implementation and runtime. The preflight uses one task worker alongside the three navigation workers. Final task execution waits until navigation and the local capture have ended, then reallocates the same five-worker ceiling to task rollouts. This is a controller-engineering comparison around frozen trained selectors, not additional optimizer training.
+
+```mermaid
+flowchart TD
+  Fail[Measured failure] --> Search[Exa evidence]
+  Search --> Memory[past.dev source-verified handoff]
+  Memory --> Data[Measured controller alternatives]
+  Data --> Train[Tinker LoRA updates]
+  Train --> Dev[Fixed development layouts]
+  Dev --> Freeze[Freeze selected checkpoint]
+  Freeze --> Nav[New Modal navigation rollouts]
+  Freeze --> Joint[Combined-model development preflight]
+  Task[Tinker task and recovery training] --> Sequence[Continuous development checkpoint runs]
+  Sequence --> TaskFreeze[Freeze task checkpoint 8]
+  TaskFreeze --> Joint
+  Joint --> TaskFinal[New continuous final task pairs]
+  Nav --> Evidence[Full trajectories and numerical outcomes]
+  TaskFinal --> Evidence
+  Evidence --> Viewer[Synchronized recorded replay]
+  Controller[Fixed native gait and actuator controllers] --> Nav
+  Controller --> Joint
+  Controller --> TaskFinal
+```
+
 ## Setup and reproduction
 
 Run commands from the repository root. Reuse the existing environment when available. The continuation pins its provider SDKs separately because the original project's optional dependency versions predate this study.

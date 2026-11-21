@@ -1,10 +1,12 @@
 # V25 continuation findings
 
-Status: development evaluation in progress. Final navigation and task layouts have not been opened. The progress replay is [available here](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/).
+Status: the complete 64-rollout final navigation comparison is finished. The fixed-reference goal passed. The earlier trained parent remains more efficient than checkpoint 48. Final task layouts remain unopened while the combined-model preflight runs. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains full checkpoint and engineering attempts.
 
 ## What is trained
 
-Tinker completed 32 navigation and 16 separate task/recovery optimizer updates. Both adapters start from the exact V23 update-4 Qwen3.5-4B weights and use rank-16 LoRA. Navigation selects among three physically executed route/controller profiles. Task control selects bounded contact and recovery primitives. The native Unitree gait network remains fixed.
+Tinker completed 48 navigation and 16 separate task/recovery optimizer updates. Both adapters start from the exact V23 update-4 Qwen3.5-4B weights and use rank-16 LoRA. The navigation campaign began with three physically executed route/controller profiles; its final continuation selects between direct and buffered control. Task control selects bounded contact and recovery primitives. The native Unitree gait network remains fixed.
+
+A separate numerical audit compared navigation updates 32 and 48. It found changes in all 498 exported adapter tensors, with maximum absolute change 0.00345411 and L2 change 4.95889. That confirms the compact continuation changed model parameters. It does not establish an improvement in physical performance.
 
 The task update-16 tensor audit found changes in 498 adapter tensors, with maximum absolute change 0.00159891 and L2 change 4.03317. The original saved states are intact. Expiring exports provide numerical evidence of weight changes, not evidence of better performance by themselves. The earlier failed audit is preserved alongside the successful retry.
 
@@ -41,9 +43,23 @@ The remaining continuous attempts have now finished. Update eight qualified in 8
 
 The raw update-16 model also qualified on 14/16 development attempts and introduced new failures. A separate update-32 physical diagnosis failed sole clearance on a fixed-qualified reset. Remaining raw update-32 evaluation was stopped because that checkpoint cannot meet the monotone reliability gate. No full update-32 cohort result is reported.
 
-The compact continuation retains direct and buffered control, uses shorter outcome-free planner summaries, and adds eight physically evaluated training layouts. The 32-layout corpus contains 26 direct and six buffered teacher choices. Sixteen further actual optimizer updates are planned from the saved update-32 state. All compact checkpoints, including parent zero and representation-control update 32, receive the same input contract.
+The compact continuation retains direct and buffered control, uses shorter outcome-free planner summaries, and adds eight physically evaluated training layouts. The 32-layout corpus contains 26 direct and six buffered teacher choices. Sixteen further actual optimizer updates were completed from the saved update-32 state. All compact checkpoints, including parent zero and representation-control update 32, receive the same input contract.
 
-Two duplicate development executions matched exactly in trajectories, controls, step events and balance samples. The compact development comparison uses those frozen physical action outcomes and labels this reuse explicitly. The training-fitted two-profile rule qualifies on 15/16 development attempts and uses 13.6% fewer mean paired-layout steps than the fixed strategy, with no new fixed-strategy failures. That is a conventional control result, not a trained-model result. Fresh final layouts remain unopened.
+Those sixteen updates have now completed. Compact checkpoint zero and the unchanged update-32 weights retain the earlier clearance failure. Update 40 matches the fixed profile's outcomes without reducing steps. Update 48 passes the development gate: 15/16 qualified attempts, no newly failed fixed successes, and 8.7% fewer mean paired-layout steps. It is frozen for the eight-layout final cohort. This is a development result, not yet a fresh-layout win.
+
+Two duplicate development executions matched exactly in trajectories, controls, step events and balance samples. The compact development comparison uses those frozen physical action outcomes and labels this reuse explicitly. The training-fitted two-profile rule qualifies on 15/16 development attempts and uses 13.6% fewer mean paired-layout steps than the fixed strategy, with no new fixed-strategy failures. That is a conventional control result, not a trained-model result. Fresh navigation layouts were opened after checkpoint 48 was frozen; execution is in progress.
+
+## Combined-model preflight
+
+Task checkpoint eight was selected under fixed buffered navigation. Combining it with navigation checkpoint 48 completed all four tasks, without falls or forbidden contact, but missed laptop-leg median moving-sole clearance: 4.485 mm against the unchanged 4.5 mm requirement. The combined parent also completed all tasks but measured 4.311 mm on the drawer leg. Neither qualifies. Their 928 and 826 steps do not establish an efficiency improvement.
+
+The final task layouts remain unopened. Extending the existing sole correction to station transits measured 4.064 mm on a reached-state laptop test and was rejected. A higher target reached 5.786 mm but timed out during pose capture. An intermediate target reached the station with 4.640 mm and no fall or forbidden contact. The full Modal development preflight is now testing that R5 revision under the same implementation for both frozen model sides. It retains the existing globe correction and leaves the navigation experiment, native gait and quality thresholds unchanged. These changes receive engineering credit, not training credit.
+
+## Fresh navigation results
+
+All sixteen parent, selected and training-selected fixed attempts now qualify across eight fresh layouts and two physics seeds, with no falls or forbidden contacts. Checkpoint 48 uses 16.0% fewer mean paired-layout steps and 14.2% less physical time than the fixed profile. Seven of eight layouts improve. The step-ratio layout bootstrap interval is 0.7855 to 0.8995. It passes the declared fixed-reference gate.
+
+The earlier parent is stronger on this cohort: checkpoint 48 uses 9.7% more mean paired-layout steps and takes 8.7% more physical time than the parent. The parent always selected direct control; checkpoint 48 selected direct thirteen times and buffered three times. The additional training has not demonstrated an improvement over the earlier parent. The training-fitted contextual control also qualifies on 16/16 attempts. Checkpoint 48 uses 4.65% fewer mean paired-layout steps than that control, with a ratio interval of 0.8413 to 1.0878. This misses the five-percent gate and the interval includes parity. The complete comparison retains all four controls.
 
 ## Shared engineering, reported separately
 

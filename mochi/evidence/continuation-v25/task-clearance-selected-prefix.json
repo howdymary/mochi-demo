@@ -1,0 +1,17 @@
+{
+  "id": "station-laptop-selected-prefix-r5-probe",
+  "revision": "r5",
+  "task": "laptop",
+  "snapshot_sha256": "c3b07d5cab27ce046443c793fe94673ed0f8ba86f491987859a924d0d6e19020",
+  "scope": "Component branch from a verified reached development state; not a continuous demonstration. Zero optimizer updates.",
+  "status": "completed",
+  "wall_seconds": 139.75561554078013,
+  "moving_swings": 210,
+  "moving_median_peak_m": 0.0046439922188948905,
+  "fall": false,
+  "invalid_contact": false,
+  "steps": 961,
+  "physical_seconds": 80.28041239856859,
+  "qualified": true,
+  "artifact_sha256": "e0b918e3155980c5e1f7207f95fd6b8a5c88424836095de532467995add87bfe"
+}

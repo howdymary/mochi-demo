@@ -1,0 +1,13 @@
+{
+  "reason": "Use named frozen sampler weights for deployment, with a bounded sampling wait and a read-only forward fallback. A named-weight probe returned successfully after the ephemeral request stalled. The forward route matched a prior sampler result within 4.97e-8.",
+  "physical_controller_changed": false,
+  "model_weights_changed_by_serving": false,
+  "inference_optimizer_updates": 0,
+  "sampler_weight_ttl_seconds": 86400,
+  "canonical_optimizer_states_preserved": true,
+  "source_sha256": "b5d030dd9a9cceb55602c7c81bfa10cab90190e0bbda7a07c2d2221079c2a4b7",
+  "diagnostics": [
+    "artifacts/continuation-v25/persistent-sampling-probe.json",
+    "artifacts/continuation-v25/forward-inference-probe.json"
+  ]
+}

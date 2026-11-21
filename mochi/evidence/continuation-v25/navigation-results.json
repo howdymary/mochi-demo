@@ -1,0 +1,1325 @@
+{
+  "run_id": "mochi-nav25-compact-20261121a",
+  "status": "completed",
+  "phase": "Compact navigation cohort completed",
+  "optimizer_updates_completed": 16,
+  "total_navigation_optimizer_updates": 48,
+  "checkpoints": [
+    {
+      "update": 0,
+      "checkpoint_id": "008d980c9960b8be8580dbff319c81ff84cb238eb96c50bc749a0787ee541958",
+      "at": "2026-11-21T21:23:25.701408+00:00",
+      "representation": "compact_two_profile"
+    },
+    {
+      "update": 32,
+      "checkpoint_id": "bdbc662f26af24885e116c447d88ff670dc635cb7688236cd41f6e12ec6285fe",
+      "at": "2026-11-21T21:34:07.538718+00:00",
+      "representation": "compact_two_profile"
+    },
+    {
+      "update": 40,
+      "checkpoint_id": "4d0240a74f4117bd12b63aa5382b2c05ff6f75cfeb949e326aef5d62a24c8d94",
+      "at": "2026-11-21T21:38:06.657796+00:00",
+      "representation": "compact_two_profile"
+    },
+    {
+      "update": 48,
+      "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+      "at": "2026-11-21T21:42:16.502594+00:00",
+      "representation": "compact_two_profile"
+    }
+  ],
+  "training_log": [
+    {
+      "global_update": 33,
+      "new_update": 1,
+      "tokens": 17899,
+      "batch_sha256": "d1f24b4f46ec2c502b4f940cbdf6a93c57e3a3a2e8109b6ac759d16d37bd100e",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918459.0,
+        "loss:sum": 31.033128891140223
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 307455913543118105354406128495947645042,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:35:57.194202+00:00"
+    },
+    {
+      "global_update": 34,
+      "new_update": 2,
+      "tokens": 17903,
+      "batch_sha256": "cf9c525d8ba5980fbc0a0a14c520525e3ac2c6480a47fd0739d76a49dce0639a",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918462.0,
+        "loss:sum": 28.299864277243614
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 320499626928990382660378001061109260490,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:36:10.433799+00:00"
+    },
+    {
+      "global_update": 35,
+      "new_update": 3,
+      "tokens": 17903,
+      "batch_sha256": "f382c4f9c77335d7362960a99b2b897fde3a452fc9df1f78e82d749b603cb3c8",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918466.0,
+        "loss:sum": 16.988693445920944
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 320210060756835431080939566040110809122,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:36:22.969576+00:00"
+    },
+    {
+      "global_update": 36,
+      "new_update": 4,
+      "tokens": 17929,
+      "batch_sha256": "a4844abf0b20a2c0b51a0ac8fc48773fca9393588a12ec4e4fa90f8ec8650741",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918469.0,
+        "loss:sum": 16.60661992430687
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 304486852410938079416921296193313275514,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:36:35.065451+00:00"
+    },
+    {
+      "global_update": 37,
+      "new_update": 5,
+      "tokens": 17848,
+      "batch_sha256": "884f86df2b7158983afaf8fee3a1ba9b209050b43583a3f866ef5019de76d5d2",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918472.0,
+        "loss:sum": 17.79659926891327
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 335346871590166117885759196748316441554,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:36:47.795310+00:00"
+    },
+    {
+      "global_update": 38,
+      "new_update": 6,
+      "tokens": 17893,
+      "batch_sha256": "e7e3d982804844e43d5667699303115097c5f46141e3750feb3dda1ba48fa5a8",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918475.0,
+        "loss:sum": 17.839868485927582
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 202721929883050148659877917766942103594,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:37:14.709477+00:00"
+    },
+    {
+      "global_update": 39,
+      "new_update": 7,
+      "tokens": 17870,
+      "batch_sha256": "b66f3765902ba05943b1fd982b430445944d8ab18830b806f4d39371690890ca",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918479.0,
+        "loss:sum": 16.783025085926056
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 128327394892686534767201889234760119170,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:37:28.883464+00:00"
+    },
+    {
+      "global_update": 40,
+      "new_update": 8,
+      "tokens": 17876,
+      "batch_sha256": "524bd14fac17f061987b85ad79b15eda3b2e1592b14591617b87d14c8eed91ff",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918482.0,
+        "loss:sum": 16.373956561088562
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 85164929245383794068316668508346494426,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:37:42.773661+00:00"
+    },
+    {
+      "global_update": 41,
+      "new_update": 9,
+      "tokens": 17899,
+      "batch_sha256": "f3207ade7cda58f397978a61ff5bb053486a7a2ad6612efe7e6ff5af969f5f34",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 8918509.0,
+        "loss:sum": 16.470129191875458
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 228260060206963160055613275681408116530,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:39:51.105511+00:00"
+    },
+    {
+      "global_update": 42,
+      "new_update": 10,
+      "tokens": 17893,
+      "batch_sha256": "d3cdef571fb0c1474dec9a2e859f01162ecced174722194925059a14b8726814",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204422.0,
+        "loss:sum": 17.011281430721283
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 108331803249586035869705444665436258186,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:40:18.485093+00:00"
+    },
+    {
+      "global_update": 43,
+      "new_update": 11,
+      "tokens": 17899,
+      "batch_sha256": "3c83d862e8d3b68bd3bdb57dff82d13da5f9e21a64eda27fcdf1a4a336e0bfae",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204427.0,
+        "loss:sum": 16.311750650405884
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 20070503093289337965370251752440796898,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:40:32.302704+00:00"
+    },
+    {
+      "global_update": 44,
+      "new_update": 12,
+      "tokens": 17896,
+      "batch_sha256": "4b4d69b9fb191f921ba57b8f7795fdd86d5310eae034194764014b2a14c31fa0",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204431.0,
+        "loss:sum": 15.069222450256348
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 323602170925852310632388828453697211706,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:40:47.099180+00:00"
+    },
+    {
+      "global_update": 45,
+      "new_update": 13,
+      "tokens": 17838,
+      "batch_sha256": "c0c585d88d315732eaf917251f9a0a8eb9e5f8181aec45d1327a3a44c32954a8",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204434.0,
+        "loss:sum": 15.88627678155899
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 37448760580340361649080510323894796946,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:41:10.206985+00:00"
+    },
+    {
+      "global_update": 46,
+      "new_update": 14,
+      "tokens": 17868,
+      "batch_sha256": "48881967719fabc2e3878d58a2e990c634d8b3cd65b917726500866a7f2583bf",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204439.0,
+        "loss:sum": 13.854548528790474
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 31327483393873959786379815268369094378,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:41:21.587315+00:00"
+    },
+    {
+      "global_update": 47,
+      "new_update": 15,
+      "tokens": 17885,
+      "batch_sha256": "943697937952714e7956924ba6fafec33803355911028d1da53c3fa21db12a07",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204442.0,
+        "loss:sum": 13.966842859983444
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 207288643221874448534807667479272090178,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:41:35.737113+00:00"
+    },
+    {
+      "global_update": 48,
+      "new_update": 16,
+      "tokens": 17870,
+      "batch_sha256": "11b08f84056b87936e63f2e517fa747eb14fade61a86717be762bdfe4c90ea35",
+      "forward_backward_completed": true,
+      "optimizer_completed": true,
+      "metrics": {
+        "clock_cycle:unique": 3204446.0,
+        "loss:sum": 13.686361081898212
+      },
+      "rng_state": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 25061611248470947770520141609774865562,
+          "inc": 191457906017695980379329618561498243119
+        },
+        "has_uint32": 0,
+        "uinteger": 0
+      },
+      "at": "2026-11-21T21:41:47.644838+00:00"
+    }
+  ],
+  "development": {
+    "0": {
+      "summary": {
+        "n": 16,
+        "qualified": 15,
+        "complete": 16,
+        "falls": 0,
+        "contacts": 0,
+        "qualified_mean_steps": 241.73333333333332,
+        "qualified_mean_distance_m": 1.8237903330718335,
+        "qualified_mean_seconds": 33.473524212106874
+      },
+      "against_fixed": {
+        "layouts": 8,
+        "reference_qualified": 15,
+        "candidate_qualified": 15,
+        "newly_failed_reference_successes": true,
+        "mean_layout_step_ratio": 0.8308500490898133,
+        "mean_layout_time_ratio": 0.8545317375756897,
+        "improved_layouts": 6,
+        "step_ratio_layout_bootstrap_95_percent_interval": [
+          0.7079743591046176,
+          0.9524342703419094
+        ],
+        "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+        "win": false,
+        "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+      },
+      "physical_rollouts_in_this_checkpoint_evaluation": 0,
+      "evidence_mode": "Audited complete physical outcome table, one initial discrete decision."
+    },
+    "32": {
+      "summary": {
+        "n": 16,
+        "qualified": 15,
+        "complete": 16,
+        "falls": 0,
+        "contacts": 0,
+        "qualified_mean_steps": 241.73333333333332,
+        "qualified_mean_distance_m": 1.8237903330718335,
+        "qualified_mean_seconds": 33.473524212106874
+      },
+      "against_fixed": {
+        "layouts": 8,
+        "reference_qualified": 15,
+        "candidate_qualified": 15,
+        "newly_failed_reference_successes": true,
+        "mean_layout_step_ratio": 0.8308500490898133,
+        "mean_layout_time_ratio": 0.8545317375756897,
+        "improved_layouts": 6,
+        "step_ratio_layout_bootstrap_95_percent_interval": [
+          0.7079743591046176,
+          0.9524342703419094
+        ],
+        "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+        "win": false,
+        "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+      },
+      "physical_rollouts_in_this_checkpoint_evaluation": 0,
+      "evidence_mode": "Audited complete physical outcome table, one initial discrete decision."
+    },
+    "40": {
+      "summary": {
+        "n": 16,
+        "qualified": 15,
+        "complete": 16,
+        "falls": 0,
+        "contacts": 0,
+        "qualified_mean_steps": 302.2,
+        "qualified_mean_distance_m": 2.107291610790609,
+        "qualified_mean_seconds": 40.55313730637576
+      },
+      "against_fixed": {
+        "layouts": 8,
+        "reference_qualified": 15,
+        "candidate_qualified": 15,
+        "newly_failed_reference_successes": false,
+        "mean_layout_step_ratio": 1.0,
+        "mean_layout_time_ratio": 1.0,
+        "improved_layouts": 0,
+        "step_ratio_layout_bootstrap_95_percent_interval": [
+          1.0,
+          1.0
+        ],
+        "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+        "win": false,
+        "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+      },
+      "physical_rollouts_in_this_checkpoint_evaluation": 0,
+      "evidence_mode": "Audited complete physical outcome table, one initial discrete decision."
+    },
+    "48": {
+      "summary": {
+        "n": 16,
+        "qualified": 15,
+        "complete": 16,
+        "falls": 0,
+        "contacts": 0,
+        "qualified_mean_steps": 266.53333333333336,
+        "qualified_mean_distance_m": 1.9303256190510925,
+        "qualified_mean_seconds": 36.54404875259935
+      },
+      "against_fixed": {
+        "layouts": 8,
+        "reference_qualified": 15,
+        "candidate_qualified": 15,
+        "newly_failed_reference_successes": false,
+        "mean_layout_step_ratio": 0.912520801587843,
+        "mean_layout_time_ratio": 0.9272479351049789,
+        "improved_layouts": 5,
+        "step_ratio_layout_bootstrap_95_percent_interval": [
+          0.8109490567225708,
+          1.0019760931389974
+        ],
+        "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+        "win": true,
+        "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+      },
+      "physical_rollouts_in_this_checkpoint_evaluation": 0,
+      "evidence_mode": "Audited complete physical outcome table, one initial discrete decision."
+    }
+  },
+  "final": {
+    "parent": {
+      "n": 16,
+      "qualified": 16,
+      "complete": 16,
+      "falls": 0,
+      "contacts": 0,
+      "qualified_mean_steps": 224.5,
+      "qualified_mean_distance_m": 1.7282040068475097,
+      "qualified_mean_seconds": 31.000283781744862
+    },
+    "selected": {
+      "n": 16,
+      "qualified": 16,
+      "complete": 16,
+      "falls": 0,
+      "contacts": 0,
+      "qualified_mean_steps": 244.6875,
+      "qualified_mean_distance_m": 1.8144443923793654,
+      "qualified_mean_seconds": 33.465363141331295
+    },
+    "fixed": {
+      "n": 16,
+      "qualified": 16,
+      "complete": 16,
+      "falls": 0,
+      "contacts": 0,
+      "qualified_mean_steps": 289.625,
+      "qualified_mean_distance_m": 2.018627137465525,
+      "qualified_mean_seconds": 38.739983082567015
+    },
+    "contextual": {
+      "n": 16,
+      "qualified": 16,
+      "complete": 16,
+      "falls": 0,
+      "contacts": 0,
+      "qualified_mean_steps": 257.8125,
+      "qualified_mean_distance_m": 1.875598513752393,
+      "qualified_mean_seconds": 35.13054856844521
+    }
+  },
+  "final_opened": true,
+  "protocol": {
+    "id": "mochi-nav25-compact-20261121a",
+    "parent_global_update": 32,
+    "parent_origin": "Exact saved V25 update-32 weights and optimizer; original parent at V25 update zero remains a control.",
+    "reason": "The three-profile policy misses reliability-critical clearance cases. Test a shorter outcome-free representation and two existing controllers before more broad three-way training.",
+    "actions": [
+      "direct",
+      "buffered"
+    ],
+    "engineering_attribution": "Representation and action-set changes are separate from weight changes. Both compact parent and trained checkpoints share them. Native gait and physical source stay fixed.",
+    "training_layouts": 32,
+    "extra_training_layout_indices": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "new_optimizer_updates": 16,
+    "global_navigation_checkpoints": [
+      0,
+      32,
+      40,
+      48
+    ],
+    "batch": 24,
+    "learning_rate": 0.0002,
+    "seed": 251932,
+    "development": "Same eight development layouts and both seeds. Single initial choice; complete deterministic action-outcome table from actual Modal rollouts, allowed only after exact duplicate-trajectory audit. This is offline development lookup, not new rollout execution.",
+    "selection": "Choose the best update among 32, 40 and 48 satisfying the original reliability and paired-efficiency gate. Update 32 is the representation-control checkpoint. Retain it if further training regresses. Report gains against compact parent zero and against compact 32 separately; representation changes are not weight gains. Freeze once before final layouts.",
+    "final": "Original unopened eight-layout final navigation cohort, two seeds, parent/selected/fixed/contextual. Every final result is a new uninterrupted Modal rollout.",
+    "budget": "Shares the unchanged parent 512-episode / 16-hour / 64-total-update / 2M-token / $50 ledger. Original three-way updates 33-48 must not run. Sixteen task updates are already completed.",
+    "role_services": "New compact-specific memory identities and audiences. Actual Exa search tied to reliability failures; source-verified past.dev handoffs.",
+    "physical_source_sha256": "55a4eb59512e1c16e3535924ba3ce4fced00230d51a8c87f7bfbd528ae708204",
+    "final_opened_before_freeze": false
+  },
+  "data_sha256": "996929be9c4cab84a1c37a09f3a0915f3db7e4db774343cec15fd1dabd7c5233",
+  "charge_ordinal": 286,
+  "native_gait_weights_trained": false,
+  "baselines": {
+    "fixed": "buffered",
+    "contextual": {
+      "feature": 11,
+      "threshold": 16.700000000000003,
+      "left": "direct",
+      "right": "buffered",
+      "reward": 48467.549703176985
+    },
+    "scope": "Same measured training data and two-profile action space as the compact learned policy."
+  },
+  "scope": "Two-profile compact selector. New weight updates and representation changes are assessed separately.",
+  "services": {
+    "actors": {
+      "researcher": "mochi-nav25-20261121a-compact-researcher",
+      "designer": "mochi-nav25-20261121a-compact-designer",
+      "experimenter": "mochi-nav25-20261121a-compact-experimenter",
+      "critic": "mochi-nav25-20261121a-compact-critic"
+    },
+    "audiences": {
+      "shared": "mochi-nav25-20261121a-compact-shared",
+      "critic_private": "mochi-nav25-20261121a-compact-critic"
+    },
+    "records": [
+      {
+        "id": "mochi-nav25-20261121a-compact-r1",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-compact-experimenter",
+        "audience": "mochi-nav25-20261121a-compact-shared",
+        "at": "2026-11-21T21:21:00.559374+00:00",
+        "sha256": "8c6c33bdcd1d3ce69415bdc9734a710e15c27a5b9541ad477369aee3fa869693",
+        "ingestion_id": "e543e0b4-39b6-4ac7-abe6-22a9bbfc1154",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-compact-r1",
+          "author": "mochi-nav25-20261121a-compact-experimenter",
+          "occurred_at": "2026-11-21T21:21:00.559374+00:00",
+          "content": {
+            "kind": "measured-clearance-failure",
+            "raw_campaign_updates": 32,
+            "finding": "Raw checkpoints 8 and 16 fail fixed-qualified development cases. A new physical checkpoint-32 diagnostic selects direct and misses sole clearance on a fixed-qualified reset.",
+            "training_audit": "Raw update 32 agrees with 19/24 measured teachers but misses the sole buffered target. No final layout was opened.",
+            "artifacts": [
+              "critical-development-u32.json",
+              "training-action-audit-u32.json"
+            ]
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 22.987747197999994
+      },
+      {
+        "id": "mochi-nav25-20261121a-compact-r2",
+        "role": "researcher",
+        "author": "mochi-nav25-20261121a-compact-researcher",
+        "audience": "mochi-nav25-20261121a-compact-shared",
+        "at": "2026-11-21T21:21:36.616309+00:00",
+        "sha256": "16d3faf973d6bb486b1c56e807439246168e3b38281eca083572635a3ba7cde8",
+        "ingestion_id": "8a937acb-d97c-401b-9e32-c7e17a141a92",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-compact-r2",
+          "author": "mochi-nav25-20261121a-compact-researcher",
+          "occurred_at": "2026-11-21T21:21:36.616309+00:00",
+          "content": {
+            "kind": "compact-selector-hypothesis",
+            "sources": [
+              {
+                "url": "https://arxiv.org/abs/2610.17709",
+                "title": "Where Small Mistakes Matter: Quantifying State Criticality for Imitation Learning",
+                "excerpt": "###### Abstract Imitation learning typically treats every demonstration state as equally important, optimizing a behavior-cloning objective uniformly across the dataset. Yet not all states",
+                "retrieved_at": "2026-11-21T21:21:34.422786+00:00"
+              },
+              {
+                "url": "https://proceedings.mlr.press/v205/nair23a/nair23a.pdf",
+                "title": "Proceedings of the 6th Conference on Robot Learning (CoRL 2022)",
+                "excerpt": "Finally, we hypothesize that sparse and compact representations benefit control, particularly in low data imitation learning. State-distribution shift is a well studied failure mode",
+                "retrieved_at": "2026-11-21T21:21:34.422811+00:00"
+              },
+              {
+                "url": "https://arxiv.org/html/2404.05249",
+                "title": "SAFE-GIL: SAFEty Guided Imitation Learning for Robotic Systems",
+                "excerpt": "Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the",
+                "retrieved_at": "2026-11-21T21:21:34.422847+00:00"
+              }
+            ],
+            "prior_observation": "mochi-nav25-20261121a-compact-r1",
+            "mechanism": "Remove redundant raw geometry from the language-model prompt while retaining planner clearance and turn summaries; learn two measured speed/clearance alternatives.",
+            "caveat": "The representation may help the parent too. Compare identical compact inputs before and after new weight updates."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 15.597011222999996
+      },
+      {
+        "id": "mochi-nav25-20261121a-compact-r3",
+        "role": "designer",
+        "author": "mochi-nav25-20261121a-compact-designer",
+        "audience": "mochi-nav25-20261121a-compact-shared",
+        "at": "2026-11-21T21:22:06.910766+00:00",
+        "sha256": "dfa01447f87da2c66d27c2819817342dcbf46ef621b8365cc0958362f3199fa6",
+        "ingestion_id": "2030fdca-254d-4bb4-84f0-45a3c60ae4b0",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-compact-r3",
+          "author": "mochi-nav25-20261121a-compact-designer",
+          "occurred_at": "2026-11-21T21:22:06.910766+00:00",
+          "content": {
+            "kind": "compact-training-plan",
+            "allocation": "balanced_safety_weighted_compact",
+            "source": "mochi-nav25-20261121a-compact-r2",
+            "training_layouts": 32,
+            "new_updates": 16,
+            "global_checkpoints": [
+              0,
+              32,
+              40,
+              48
+            ],
+            "development": "Exact-trajectory-audited action lookup; full fresh final execution is required."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 15.651395389000015
+      },
+      {
+        "id": "mochi-nav25-20261121a-compact-r4",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-compact-experimenter",
+        "audience": "mochi-nav25-20261121a-compact-shared",
+        "at": "2026-11-21T21:43:49.453301+00:00",
+        "sha256": "7d5629b47623b0f57ab4a6ac1d777291eb5343d21b129e304dd2081d553d7709",
+        "ingestion_id": "1e3aaf4e-9459-4e11-bb9f-11feffc1d173",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-compact-r4",
+          "author": "mochi-nav25-20261121a-compact-experimenter",
+          "occurred_at": "2026-11-21T21:43:49.453301+00:00",
+          "content": {
+            "kind": "compact-development-results",
+            "selected": {
+              "update": 48,
+              "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+              "at": "2026-11-21T21:42:16.502594+00:00",
+              "representation": "compact_two_profile"
+            },
+            "results": {
+              "0": {
+                "layouts": 8,
+                "reference_qualified": 15,
+                "candidate_qualified": 15,
+                "newly_failed_reference_successes": true,
+                "mean_layout_step_ratio": 0.8308500490898133,
+                "mean_layout_time_ratio": 0.8545317375756897,
+                "improved_layouts": 6,
+                "step_ratio_layout_bootstrap_95_percent_interval": [
+                  0.7079743591046176,
+                  0.9524342703419094
+                ],
+                "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+                "win": false,
+                "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+              },
+              "32": {
+                "layouts": 8,
+                "reference_qualified": 15,
+                "candidate_qualified": 15,
+                "newly_failed_reference_successes": true,
+                "mean_layout_step_ratio": 0.8308500490898133,
+                "mean_layout_time_ratio": 0.8545317375756897,
+                "improved_layouts": 6,
+                "step_ratio_layout_bootstrap_95_percent_interval": [
+                  0.7079743591046176,
+                  0.9524342703419094
+                ],
+                "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+                "win": false,
+                "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+              },
+              "40": {
+                "layouts": 8,
+                "reference_qualified": 15,
+                "candidate_qualified": 15,
+                "newly_failed_reference_successes": false,
+                "mean_layout_step_ratio": 1.0,
+                "mean_layout_time_ratio": 1.0,
+                "improved_layouts": 0,
+                "step_ratio_layout_bootstrap_95_percent_interval": [
+                  1.0,
+                  1.0
+                ],
+                "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+                "win": false,
+                "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+              },
+              "48": {
+                "layouts": 8,
+                "reference_qualified": 15,
+                "candidate_qualified": 15,
+                "newly_failed_reference_successes": false,
+                "mean_layout_step_ratio": 0.912520801587843,
+                "mean_layout_time_ratio": 0.9272479351049789,
+                "improved_layouts": 5,
+                "step_ratio_layout_bootstrap_95_percent_interval": [
+                  0.8109490567225708,
+                  1.0019760931389974
+                ],
+                "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+                "win": true,
+                "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+              }
+            },
+            "caveat": "Development outcomes are exact audited physical lookups. Fresh final physical episodes are still required."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 45.48102020500005
+      },
+      {
+        "id": "mochi-nav25-20261121a-compact-r5",
+        "role": "critic",
+        "author": "mochi-nav25-20261121a-compact-critic",
+        "audience": "mochi-nav25-20261121a-compact-shared",
+        "at": "2026-11-21T21:44:42.431701+00:00",
+        "sha256": "5b2d14c2d34bb2b887fcd1d03458c31ab63948d17d853cb7bc1f25042d8a61db",
+        "ingestion_id": "e5f550d8-6380-4afc-bdd0-c2e7fc16bc4e",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-compact-r5",
+          "author": "mochi-nav25-20261121a-compact-critic",
+          "occurred_at": "2026-11-21T21:44:42.431701+00:00",
+          "content": {
+            "kind": "compact-qualified-freeze",
+            "evidence": "mochi-nav25-20261121a-compact-r4",
+            "conclusion": "Freeze the selected compact weights. Evaluate every declared final layout without further tuning. Separate representation changes from incremental weight gains."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 15.524504391999926
+      }
+    ],
+    "reads": [
+      {
+        "reader": "mochi-nav25-20261121a-compact-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-compact-critic",
+        "record_id": "mochi-nav25-20261121a-compact-r0",
+        "source_id_verified": false,
+        "expected_access": false,
+        "cross_agent_use": false,
+        "sha256": null,
+        "at": "2026-11-21T21:21:00.559299+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:21:00.558382+00:00",
+            "returned_documents": 80,
+            "used_evidence_tokens": 7995,
+            "required_source_verified": false
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-compact-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-compact-experimenter",
+        "record_id": "mochi-nav25-20261121a-compact-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "8c6c33bdcd1d3ce69415bdc9734a710e15c27a5b9541ad477369aee3fa869693",
+        "at": "2026-11-21T21:21:30.943373+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:21:30.943343+00:00",
+            "returned_documents": 88,
+            "used_evidence_tokens": 7991,
+            "required_source_verified": true
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-compact-designer",
+        "reader_role": "designer",
+        "author": "mochi-nav25-20261121a-compact-researcher",
+        "record_id": "mochi-nav25-20261121a-compact-r2",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "16d3faf973d6bb486b1c56e807439246168e3b38281eca083572635a3ba7cde8",
+        "at": "2026-11-21T21:21:59.113630+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:21:59.113613+00:00",
+            "returned_documents": 71,
+            "used_evidence_tokens": 8000,
+            "required_source_verified": true
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-compact-experimenter",
+        "reader_role": "experimenter",
+        "author": "mochi-nav25-20261121a-compact-designer",
+        "record_id": "mochi-nav25-20261121a-compact-r3",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "dfa01447f87da2c66d27c2819817342dcbf46ef621b8365cc0958362f3199fa6",
+        "at": "2026-11-21T21:22:29.607694+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:22:29.607671+00:00",
+            "returned_documents": 72,
+            "used_evidence_tokens": 7981,
+            "required_source_verified": true
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-compact-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-compact-experimenter",
+        "record_id": "mochi-nav25-20261121a-compact-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "7d5629b47623b0f57ab4a6ac1d777291eb5343d21b129e304dd2081d553d7709",
+        "at": "2026-11-21T21:44:42.431652+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:44:42.431638+00:00",
+            "returned_documents": 74,
+            "used_evidence_tokens": 7992,
+            "required_source_verified": true
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-compact-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-compact-critic",
+        "record_id": "mochi-nav25-20261121a-compact-r5",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "5b2d14c2d34bb2b887fcd1d03458c31ab63948d17d853cb7bc1f25042d8a61db",
+        "at": "2026-11-21T21:45:05.147390+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T21:45:05.147374+00:00",
+            "returned_documents": 72,
+            "used_evidence_tokens": 7988,
+            "required_source_verified": true
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "role": "designer",
+        "question": "Choose replay within each of two equally represented measured winner classes. Final layouts remain unopened.",
+        "selected": "balanced_safety_weighted_compact",
+        "distribution": {
+          "balanced_compact": 0.4378235340118408,
+          "balanced_safety_weighted_compact": 0.562176525592804
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-compact-r2"
+        ],
+        "context_sha256": "45f84228c27968deea264be66751456df5a6074005cc77311a6076415b4e2a3b",
+        "at": "2026-11-21T21:22:04.861022+00:00"
+      }
+    ],
+    "calls": [
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T21:20:22.409976+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T21:20:22.665947+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T21:20:22.880817+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T21:20:23.095977+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T21:20:23.341554+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T21:20:23.560056+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:20:41.628914+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:20:44.192487+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:20:52.523460+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:21:00.557623+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:21:05.631100+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:21:08.074055+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:21:15.953920+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:21:23.547070+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:21:30.942671+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:21:41.659252+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:21:44.223352+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:21:52.213272+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:21:59.113098+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:22:12.087337+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:22:14.344068+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:22:22.562102+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:22:29.605062+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:43:55.627793+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:43:58.005637+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:05.589975+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:13.549346+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:20.582561+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:27.774160+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:34.934292+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:44:42.431089+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T21:44:47.069070+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:49.411524+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T21:44:57.956132+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T21:45:05.146879+00:00"
+      }
+    ],
+    "sources": [
+      {
+        "query": "robot imitation learning compact state representation safety critical rare failure examples balanced behavior cloning",
+        "request_id": "04f86582b0f6d1cea373b42e0e682c3b",
+        "cost_dollars": {
+          "total": 0.007,
+          "search": {
+            "neural": 0.007
+          }
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2610.17709",
+            "title": "Where Small Mistakes Matter: Quantifying State Criticality for Imitation Learning",
+            "excerpt": "###### Abstract Imitation learning typically treats every demonstration state as equally important, optimizing a behavior-cloning objective uniformly across the dataset. Yet not all states",
+            "retrieved_at": "2026-11-21T21:21:34.422786+00:00"
+          },
+          {
+            "url": "https://proceedings.mlr.press/v205/nair23a/nair23a.pdf",
+            "title": "Proceedings of the 6th Conference on Robot Learning (CoRL 2022)",
+            "excerpt": "Finally, we hypothesize that sparse and compact representations benefit control, particularly in low data imitation learning. State-distribution shift is a well studied failure mode",
+            "retrieved_at": "2026-11-21T21:21:34.422811+00:00"
+          },
+          {
+            "url": "https://arxiv.org/html/2404.05249",
+            "title": "SAFE-GIL: SAFEty Guided Imitation Learning for Robotic Systems",
+            "excerpt": "Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the",
+            "retrieved_at": "2026-11-21T21:21:34.422847+00:00"
+          }
+        ],
+        "response_sha256": "52d3beeaf119e466e94323efc2ae4cc201d6ac39c6703294175a1b5999fa7d98",
+        "at": "2026-11-21T21:21:34.422971+00:00"
+      }
+    ],
+    "eligibility": {
+      "writers": 4,
+      "readers": 4,
+      "cross_agent_reads": 5,
+      "isolation_passed": true
+    },
+    "pending_ingestions": []
+  },
+  "usage_actual_or_reserved": {
+    "physical_rollouts": 417,
+    "simulation_cpu_hours": 8.202487941236134,
+    "optimizer_updates": 64,
+    "training_token_presentations": 1311959,
+    "inference_input_plus_max_output_tokens": 379289,
+    "exa_searches": 3,
+    "past_writes": 15,
+    "past_actual_recalls": 15,
+    "modeled_provider_usd": 7.937831062999938,
+    "physics_workers": 0,
+    "past_ingested_bytes": 13535,
+    "past_estimated_credits": 61
+  },
+  "selected_checkpoint": {
+    "update": 48,
+    "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+    "at": "2026-11-21T21:42:16.502594+00:00",
+    "representation": "compact_two_profile"
+  },
+  "final_against_fixed": {
+    "layouts": 8,
+    "reference_qualified": 16,
+    "candidate_qualified": 16,
+    "newly_failed_reference_successes": false,
+    "mean_layout_step_ratio": 0.8398534591093321,
+    "mean_layout_time_ratio": 0.8578737063685465,
+    "improved_layouts": 7,
+    "step_ratio_layout_bootstrap_95_percent_interval": [
+      0.785479694191288,
+      0.8994750463708161
+    ],
+    "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+    "win": true,
+    "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+  },
+  "final_against_parent": {
+    "layouts": 8,
+    "reference_qualified": 16,
+    "candidate_qualified": 16,
+    "newly_failed_reference_successes": false,
+    "mean_layout_step_ratio": 1.0967099964985993,
+    "mean_layout_time_ratio": 1.086714831195798,
+    "improved_layouts": 0,
+    "step_ratio_layout_bootstrap_95_percent_interval": [
+      1.0005580357142856,
+      1.23203431372549
+    ],
+    "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+    "win": false,
+    "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+  },
+  "final_against_contextual": {
+    "layouts": 8,
+    "reference_qualified": 16,
+    "candidate_qualified": 16,
+    "newly_failed_reference_successes": false,
+    "mean_layout_step_ratio": 0.9534565673300697,
+    "mean_layout_time_ratio": 0.9540283064998176,
+    "improved_layouts": 5,
+    "step_ratio_layout_bootstrap_95_percent_interval": [
+      0.8413136426026434,
+      1.087790979610016
+    ],
+    "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+    "win": false,
+    "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+  }
+}

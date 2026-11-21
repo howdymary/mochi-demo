@@ -1,0 +1,9 @@
+{
+  "reason": "Task checkpoint selection used the fixed navigation wrapper. Validate the new frozen navigation/task combination on development geometry before opening final task layouts.",
+  "weights_or_physics_changed": false,
+  "task_checkpoint": 8,
+  "selected_combination_must_qualify": true,
+  "parent_integration_retained": true,
+  "final_layouts_opened": false,
+  "source_sha256": "13c2a719884acb8af5e615fc3d708bbc2614e28cd4276e5dc9cec665b6aed657"
+}

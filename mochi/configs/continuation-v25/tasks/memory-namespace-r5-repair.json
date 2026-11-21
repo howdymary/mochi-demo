@@ -1,0 +1,7 @@
+{
+  "failure": "Audience slug exceeded existing 40-character limit after four role identity-registration requests. Setup stopped before audience creation, ingestion, recall, model sampling or physics.",
+  "repair": "Reuse the study run plus r5 as a shorter Mochi namespace. Keep shared and private audience controls unchanged.",
+  "initial_log": "task-remote-r5-initial-namespace-failure.log",
+  "physical_attempts_repeated": 0,
+  "optimizer_updates_repeated": 0
+}

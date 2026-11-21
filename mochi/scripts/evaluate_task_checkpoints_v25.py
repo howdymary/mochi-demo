@@ -13,7 +13,11 @@ from mochi.navigation_v23.layouts import fingerprint
 root=Path(__file__).resolve().parents[1]
 directory=root/'artifacts/continuation-v25'
 config=root/'configs/continuation-v25/tasks'
-p=argparse.ArgumentParser();p.add_argument('--phase',choices=['development','final'],required=True);args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--phase',choices=['development','final'],required=True)
+p.add_argument('--allow-fixed-navigation',action='store_true')
+p.add_argument('--engineering-revision',choices=['r2','r3','r5'],default='r2')
+p.add_argument('--workers',type=int,default=2);args=p.parse_args()
+assert 1<=args.workers<=5
 run=json.loads((root/'configs/continuation-v25/protocol.json').read_text())['id']
 volume=modal.Volume.from_name('mochi-continuation-v25-artifacts')
 def remote(name):return json.loads(b''.join(volume.read_file(run+'/'+name+'.json')))
@@ -21,7 +25,7 @@ def save(name,value):
     target=directory/(name+'.json');assert not target.exists();target.write_text(json.dumps(value,indent=2)+'\n')
     with volume.batch_upload() as batch:batch.put_file(target,'/'+run+'/'+name+'.json')
 report=remote('task-training');assert report['status']=='completed' and report['optimizer_updates_completed']==16
-frozen=config/'physical-freeze-r2.json'
+frozen=config/f'physical-freeze-{args.engineering_revision}.json'
 for name,expected in json.loads(frozen.read_text())['sha256'].items():
     assert hashlib.sha256((root/name).read_bytes()).hexdigest()==expected,name
 jobs=[]
@@ -39,12 +43,53 @@ else:
         navigation=remote('navigation-training');compact=False
     assert navigation['status'] in ['completed','development_goal_unmet'] or (navigation.get('selected_checkpoint') and navigation['final_opened']),'Wait for navigation selection to be frozen'
     nav_update=navigation['selected_checkpoint']['update'] if navigation.get('selected_checkpoint') else None
+    if nav_update is None and not args.allow_fixed_navigation:
+        raise RuntimeError('Navigation selection has not passed its gate; preserve unopened final task layouts while navigation work continues')
+    prepared=modal.Function.from_name('mochi-task-control-v25','prepare_serving').remote(nav_update,selected['selected_update'],compact)
+    preparation=directory/'serving-preparation.json'
+    if not preparation.exists():preparation.write_text(json.dumps(prepared,indent=2)+'\n')
+    # The task adapter was selected with a fixed navigation wrapper. Validate
+    # the newly combined navigation/task models before opening any final task layout.
+    def integration(side):
+        update=0 if side=='parent' else selected['selected_update']
+        nav={'mode':'tinker','update':0 if side=='parent' else nav_update} if nav_update is not None else {'mode':'fixed','action':'buffered'}
+        if compact and nav_update is not None:nav['representation']='compact'
+        settings={'navigation':nav,'task':{'update':update}}
+        if nav_update is None:
+            existing=json.loads((directory/f'task-dev-u{update}.metadata.json').read_text())
+            assert existing['policy_settings']==settings
+            return dict(existing,integration_evidence='Identical already-executed fixed-navigation development configuration; no new episode.')
+        revision_prefix='' if args.engineering_revision=='r2' else args.engineering_revision+'-'
+        ident='task-integration-'+revision_prefix+('local-' if args.engineering_revision=='r5' else '')+side
+        policy=directory/(ident+'-policy.json');raw=json.dumps(settings,indent=2)+'\n'
+        if policy.exists():assert policy.read_text()==raw
+        else:policy.write_text(raw)
+        metadata=directory/(ident+'.metadata.json')
+        if not metadata.exists():
+            with (directory/(ident+'.log')).open('w') as log:
+                command=[sys.executable,str(root/'scripts/probe_sequence_v25.py'),'--id',ident,'--seed','252000',
+                    '--layout',str(config/'development.json'),'--policy-config',str(policy),
+                    '--engineering-revision',args.engineering_revision]
+                completed=subprocess.run(command,env={**os.environ,'OPENBLAS_NUM_THREADS':'1','OMP_NUM_THREADS':'1'},stdout=log,stderr=subprocess.STDOUT)
+            assert completed.returncode==0,(ident,'Inspect retained incomplete integration attempt')
+        row=json.loads(metadata.read_text())
+        print(json.dumps({'integration':side,'qualified':row.get('qualified_complete'),'steps':row.get('steps')}),flush=True)
+        return row
+    integration_name='task-integration-'+('' if args.engineering_revision=='r2' else args.engineering_revision+'-')+('local-' if args.engineering_revision=='r5' else '')+'continuous'
+    integration_file=directory/(integration_name+'.json')
+    if not integration_file.exists():
+        with ThreadPoolExecutor(max_workers=2) as pool:integrated=list(pool.map(integration,['parent','selected']))
+        save(integration_name,{'results':integrated,'selected_qualified':integrated[1].get('qualified_complete',False),
+            'engineering_revision':args.engineering_revision,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
+            'scope':'Combined frozen models on development geometry, before opening final task layouts. No checkpoint tuning uses final outcomes.'})
+    assert json.loads(integration_file.read_text())['selected_qualified'],'Combined development sequence failed; final task layouts remain unopened'
     sealed=directory/'sealed/final_tasks.json';layouts=json.loads(sealed.read_text())
     splits=json.loads((config/'splits.json').read_text())
     assert fingerprint(layouts)==splits['final']['sha256']
     marker=directory/'task-final-opened.json'
     if not marker.exists():save('task-final-opened',{'selection_sha256':fingerprint(selected),'set_sha256':fingerprint(layouts),
         'navigation_selected_update':nav_update,'task_selected_update':selected['selected_update'],
+        'engineering_revision':args.engineering_revision,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
         'qualification':'Final outcomes cannot become training labels. All declared layouts and both seeds are included.'})
     for i,layout in enumerate(layouts):
         path=directory/('task-final-layout-'+str(i)+'.json')
@@ -65,7 +110,7 @@ def attempt(job):
     else:policy.write_text(raw)
     if not metadata.exists():
         command=[sys.executable,str(root/'scripts/probe_sequence_v25.py'),'--id',ident,'--seed',str(job['seed']),
-            '--layout',str(job['layout']),'--policy-config',str(policy)]
+            '--layout',str(job['layout']),'--policy-config',str(policy),'--engineering-revision',args.engineering_revision]
         with (directory/(ident+'.log')).open('w') as log:
             completed=subprocess.run(command,env={**os.environ,'OPENBLAS_NUM_THREADS':'1','OMP_NUM_THREADS':'1'},stdout=log,stderr=subprocess.STDOUT)
         assert completed.returncode==0,(ident,'Inspect retained log and interrupted attempt; do not overwrite')
@@ -74,9 +119,10 @@ def attempt(job):
     print(json.dumps({k:result[k] for k in ['id','qualified_complete','steps','physical_seconds','task_checkpoint_update']}),flush=True)
     return result
 
-with ThreadPoolExecutor(max_workers=2) as pool:results=list(pool.map(attempt,jobs))
+with ThreadPoolExecutor(max_workers=args.workers) as pool:results=list(pool.map(attempt,jobs))
 save('task-'+args.phase+'-continuous',{'phase':args.phase,'results':results,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
-    'scope':'Each row is one uninterrupted physical rollout from reset. Two local CPU workers; no branch splicing. Matched source, layout, reset and playback time.'})
+    'engineering_revision':args.engineering_revision,
+    'scope':f'Each row is one uninterrupted physical rollout from reset. At most {args.workers} local CPU workers; no branch splicing. Matched source, layout, reset and playback time.'})
 if args.phase=='development':
     qualified=[r for r in results if r['qualified_complete']]
     if not qualified:

@@ -1,0 +1,14 @@
+{
+  "reason": "Combined frozen selectors completed all four tasks but missed unchanged per-leg sole clearance. Test the existing bounded contact-gated sole feedback on station transits, then rerun both sides before opening final task layouts.",
+  "parent_physical_freeze_sha256": "97e5b4b2b838c71b9eaaa060ef66a572db5fd631dbbd490996d6f0d531e8b5df",
+  "native_gait_weights_changed": false,
+  "model_weights_changed": false,
+  "threshold_changed": false,
+  "navigation_final_engine_changed": false,
+  "new_task_revision": "r3",
+  "preserved_failure_ids": [
+    "task-integration-parent",
+    "task-integration-selected"
+  ],
+  "final_tasks_opened": false
+}

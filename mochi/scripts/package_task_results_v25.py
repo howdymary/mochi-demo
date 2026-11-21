@@ -9,6 +9,9 @@ from mochi.smooth_v16.public import rounded
 root=Path(__file__).resolve().parents[1];directory=root/'artifacts/continuation-v25'
 web=root/'web/desk/continuation-v25';target=web/'manifest.json'
 manifest=json.loads(target.read_text());run=manifest['run_id']
+manifest['cases']=[c for c in manifest['cases'] if c['id'] not in ['task-weight-development','task-development']]
+manifest['claim']=manifest['claim'].replace(' Four-task checkpoint replays below are development evidence; the new combined-model cohort is separate.','')
+manifest['training']=manifest['training'].replace(' Four-task final results are pending.','')
 volume=modal.Volume.from_name('mochi-continuation-v25-artifacts')
 report=json.loads(b''.join(volume.read_file(run+'/task-training.json')))
 assert report['status']=='completed'
@@ -60,7 +63,7 @@ for i in range(3):
             runs[side]=recording(row,'Parent models' if side=='parent' else 'Selected models')
         manifest['cases'].append({'id':f'task-final-{i}-{seed}','label':f'Fresh four-task layout {i+1} · seed {seed}',
             'kind':'sequence','split':'final','layout_sha256':pair[0]['layout_sha256'],'runs':runs,
-            'scope':'One continuous clock, drawer, laptop and globe rollout per side. Same scene, reset, physical controller and checks. Models frozen before this cohort.',
+            'scope':'One continuous clock, drawer, laptop and globe rollout per side. Same scene, reset, R5 controller, Modal CPU runtime and checks. Models frozen before this cohort.',
             'comparison_note':'All six fresh scenario pairs remain available, including failures. A successful example does not replace the complete cohort.'})
 for side in ['parent','selected']:
     rows=[r for r in final['results'] if r['id'].endswith('-'+side)];valid=[r for r in rows if r['qualified_complete']]
@@ -68,10 +71,10 @@ for side in ['parent','selected']:
         'mean_steps':sum(r['steps'] for r in valid)/len(valid) if valid else None})
 preview=json.loads((directory/'preview-manifest-r2.json').read_text())
 for case in preview['cases']:
-    if case['split']=='engineering':manifest['cases'].append(case)
+    if case['split']=='engineering' and not any(c['id']==case['id'] for c in manifest['cases']):manifest['cases'].append(case)
 for name,entry in preview['recordings'].items():
     if name.startswith('engineering-'):manifest['recordings'][name]=entry
-manifest['checkpoints'] += [dict(c,domain='task and recovery') for c in report['checkpoints']]
+manifest['checkpoints']=[c for c in manifest['checkpoints'] if c['domain']!='task and recovery']+[dict(c,domain='task and recovery') for c in report['checkpoints']]
 selected_rows=[r for r in final['results'] if r['id'].endswith('-selected')]
 n=sum(r['qualified_complete'] for r in selected_rows)
 manifest['claim']+=f' The selected models qualified on {n}/6 uninterrupted four-task attempts across three fresh arrangements.'
@@ -85,10 +88,14 @@ for query in report['services']['sources']:
     if unique:manifest['sources'].append(dict(query,sources=unique))
 manifest['task_selection']={'selected_update':selection['selected_update'],'qualified_final':n,'n_final':6,
     'scope':'Three task arrangements, two seeds each. Layouts are the independent sampling units.'}
-manifest['totals'].append([16,'completed task and recovery optimizer updates'])
+usage=modal.Dict.from_name('mochi-continuation-v25-budget')[run]['usage']
+manifest['execution']=f'{usage["physical_rollouts"]} charged physical attempts; {usage["simulation_cpu_hours"]:.2f} summed simulation wall hours, including any conservative reservations, at this snapshot. Final task workers started after navigation completed, with a maximum of five physical workers. Costs are modeled, not invoices.'
+for total in manifest['totals']:
+    if total[1]=='charged physical attempts':total[0]=usage['physical_rollouts']
+if not any(row[1]=='completed task and recovery optimizer updates' for row in manifest['totals']):manifest['totals'].append([16,'completed task and recovery optimizer updates'])
 with volume.batch_upload() as batch:
     for path,destination in uploads:batch.put_file(path,destination)
-target.write_text(json.dumps(manifest,indent=2)+'\n')
+target.write_text(json.dumps(manifest,separators=(',',':'))+'\n')
 evidence=root/'evidence/continuation-v25'
 (evidence/'task-continuous-results.json').write_text(json.dumps({'selection':selection,'development':development,'final':final},indent=2)+'\n')
 print(json.dumps({'fresh_selected_qualified':n,'n':6,'cases':len(manifest['cases']),'recordings':len(manifest['recordings'])}))

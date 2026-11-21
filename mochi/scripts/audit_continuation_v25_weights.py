@@ -22,6 +22,7 @@ secrets = [modal.Secret.from_name(n) for n in ['compute-forecast-signals-v6', 'c
 @app.function(image=image, secrets=secrets, serialized=True, cpu=1, memory=4096,
               timeout=1200, max_containers=1, retries=0, volumes={'/artifacts': volume})
 async def audit(run,kind,update):
+    owned=[];finish='errored'
     async def perform():
         import hashlib
         import httpx
@@ -30,17 +31,20 @@ async def audit(run,kind,update):
         from safetensors.torch import load_file
         directory = Path('/artifacts') / run
         await volume.reload.aio()
-        assert kind in ['navigation','task']
-        report = json.loads((directory / (kind+'-training.json')).read_text())
-        assert report['optimizer_updates_completed'] >= update > 0
+        assert kind in ['navigation','task','compact_navigation']
+        report_path='compact/navigation-training.json' if kind=='compact_navigation' else kind+'-training.json'
+        report = json.loads((directory / report_path).read_text())
+        assert report.get('total_navigation_optimizer_updates',report['optimizer_updates_completed']) >= update > 0
         target = directory / (kind+'-weight-tensor-audit-u'+str(update)+'-r2.json')
         assert not target.exists(), 'Preserve the first weight audit'
-        paths = json.loads((directory / ('private-'+kind+'-paths.json')).read_text())
+        paths_name='compact/private-navigation-paths.json' if kind=='compact_navigation' else 'private-'+kind+'-paths.json'
+        paths = json.loads((directory / paths_name).read_text())
         rest, service = tinker.RestClient(), tinker.ServiceClient(display_name=run + '-weight-audit')
+        owned.append(service)
         exports, arrays = [], []
         async with httpx.AsyncClient(timeout=180) as http:
             target_update = update
-            for checkpoint_update in [0, target_update]:
+            for checkpoint_update in [32 if kind=='compact_navigation' else 0, target_update]:
                 trainer = await service.create_training_client_from_state(paths[str(checkpoint_update)]['optimizer'])
                 saved = await trainer.save_weights_external('mochi25-'+kind+'-tensor-audit-u'+str(checkpoint_update), ttl_seconds=86400)
                 links = await rest.get_external_weights_urls(saved.path)
@@ -82,7 +86,7 @@ async def audit(run,kind,update):
         await volume.commit.aio()
         return result
     try:
-        return await perform()
+        result=await perform();finish='success';return result
     except BaseException as error:
         # Never expose a signed download URL or private state path in errors.
         result = {"status": "incomplete", "run_id": run, "error_type": type(error).__name__,
@@ -92,6 +96,9 @@ async def audit(run,kind,update):
             target.write_text(json.dumps(result, indent=2) + "\n")
             await volume.commit.aio()
         return result
+    finally:
+        for service in owned:
+            await service.close(finish,detail='Owned read-only tensor audit ended; original optimizer states retained')
 
 
 @app.local_entrypoint()

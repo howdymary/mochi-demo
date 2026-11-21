@@ -1,0 +1,57 @@
+{
+  "scope": "Matched reached-state physical component probes on development geometry. All use the same measured prefix and direct profile. Step counters include captured prefix history, so they are not component-only efficiency measurements. No new optimizer update.",
+  "results": [
+    {
+      "id": "station-laptop-feedback-r3-probe",
+      "revision": "r3",
+      "task": "laptop",
+      "snapshot_sha256": "7fb3304cce7041b44290ec34176962f5c939b7f8c53bb438d37b086540d4d808",
+      "scope": "Component branch from a verified reached development state; not a continuous demonstration. Zero optimizer updates.",
+      "status": "completed",
+      "wall_seconds": 106.66237216535956,
+      "moving_swings": 216,
+      "moving_median_peak_m": 0.004064072244549884,
+      "fall": false,
+      "invalid_contact": false,
+      "steps": 758,
+      "physical_seconds": 51.467063969629976,
+      "qualified": false,
+      "artifact_sha256": "128bb4fd92690df17f58fe35d26fe0f796f61bba3304934f8a70d0811f625100"
+    },
+    {
+      "id": "station-laptop-feedback-r4-probe",
+      "revision": "r4",
+      "task": "laptop",
+      "snapshot_sha256": "7fb3304cce7041b44290ec34176962f5c939b7f8c53bb438d37b086540d4d808",
+      "scope": "Component branch from a verified reached development state; not a continuous demonstration. Zero optimizer updates.",
+      "status": "completed",
+      "physical_failure": "directional-navigation-timeout:laptop-transit-0",
+      "wall_seconds": 76.9494461659342,
+      "moving_swings": 68,
+      "moving_median_peak_m": 0.005785662534470579,
+      "fall": false,
+      "invalid_contact": false,
+      "steps": 751,
+      "physical_seconds": 45.00006253911579,
+      "qualified": false,
+      "artifact_sha256": "8e04815501bf731d70ee17b25a44f656383297c24b829c0dd0adbf8970e07f83"
+    },
+    {
+      "id": "station-laptop-feedback-r5-probe",
+      "revision": "r5",
+      "task": "laptop",
+      "snapshot_sha256": "7fb3304cce7041b44290ec34176962f5c939b7f8c53bb438d37b086540d4d808",
+      "scope": "Component branch from a verified reached development state; not a continuous demonstration. Zero optimizer updates.",
+      "status": "completed",
+      "wall_seconds": 159.80599991697818,
+      "moving_swings": 210,
+      "moving_median_peak_m": 0.004640408050510112,
+      "fall": false,
+      "invalid_contact": false,
+      "steps": 964,
+      "physical_seconds": 76.35655866750199,
+      "qualified": true,
+      "artifact_sha256": "b4c6ee730e12ec36133dd6027f9356e716d8e4974e100b45badc7e6b1e0bf23d"
+    }
+  ]
+}

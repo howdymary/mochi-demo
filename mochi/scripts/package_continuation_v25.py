@@ -41,7 +41,7 @@ is_final=report['status']=='completed' and report['final_opened']
 selected=(report.get('selected_checkpoint') or report['checkpoints'][-1])['update']
 rows={}
 labels={'parent':'Parent · update 0','selected':f'Selected · update {selected}',
-    'fixed':'Strongest fixed strategy','contextual':'Training-fitted contextual control','planner':'Collision-aware planner'}
+    'fixed':'Training-selected fixed strategy','contextual':'Training-fitted contextual control','planner':'Collision-aware planner'}
 if is_final:
     for name in ['parent','selected','fixed','contextual']:rows[name]=download(prefix+'final-'+name+'.json')
 else:
@@ -78,6 +78,7 @@ def append_cohort(cohort,split):
         if args.compact and split=='development':scope='Audited deterministic action-table lookup. The model choice is new; the physical recording comes from the matching controller, layout and reset. This is not a new checkpoint rollout.'
         cases.append({'id':split+'-'+str(i),'kind':'navigation','label':('Fresh layout' if split=='final' else 'Development layout')+f' {i//2+1} · seed {reference["seed"]}',
             'split':split,'scope':scope,
+            'default_reference':'fixed' if split=='final' else 'parent',
             'layout_sha256':reference['layout_sha256'],'runs':runs})
 append_cohort(rows,'final' if is_final else 'development')
 if is_final:
@@ -103,9 +104,12 @@ for name,cohort in rows.items():
         'qualified':s['qualified'],'n':s['n'],'mean_steps':s['qualified_mean_steps']})
 from mochi.navigation_v25.baselines import comparison
 comp=comparison(rows['fixed'],rows.get('selected',rows['parent']))
-claim=('The trained selector met the predeclared fixed-strategy comparison goal.' if comp['win'] else 'The trained selector has not demonstrated the predeclared improvement over the strongest fixed strategy.')
-default=next((c['id'] for c in cases if c['runs'].get('selected') and c['runs']['selected']['row']['qualified'] and c['runs']['parent']['row']['qualified']
-    and c['runs']['selected']['row']['steps']['attempts']<c['runs']['parent']['row']['steps']['attempts']),cases[0]['id'])
+claim=('The trained selector met the predeclared comparison against the training-selected fixed strategy.' if comp['win'] else 'The trained selector has not demonstrated the predeclared improvement over the training-selected fixed strategy.')
+default=next((c['id'] for c in cases if c['runs'].get('selected') and c['runs']['selected']['row']['qualified'] and c['runs']['fixed']['row']['qualified']
+    and c['runs']['selected']['row']['steps']['attempts']<c['runs']['fixed']['row']['steps']['attempts']),cases[0]['id'])
+parent_comparison=comparison(rows['parent'],rows.get('selected',rows['parent']))
+if is_final and parent_comparison['mean_layout_step_ratio'] is not None and parent_comparison['mean_layout_step_ratio']>1:
+    claim+=' The earlier trained parent was more efficient than this selected checkpoint on the fresh cohort; additional training has not demonstrated a gain over that parent.'
 services=report.get('services',{});eligibility=services.get('eligibility',{})
 usage=modal.Dict.from_name('mochi-continuation-v25-budget')[run]['usage']
 navigation_updates=report.get('total_navigation_optimizer_updates',report['optimizer_updates_completed'])
@@ -118,8 +122,10 @@ manifest={'study':'mochi-continuation-v25','run_id':run,'status':report['status'
     'totals':[[navigation_updates,'completed navigation optimizer updates'],[len({r['layout_sha256'] for r in rows['parent']}), 'final layouts' if is_final else 'development layouts'],[usage['physical_rollouts'],'charged physical attempts'],[eligibility.get('cross_agent_reads',0),'verified memory handoffs']],
     'results':results,'checkpoints':[dict(domain='navigation',**cp) for cp in report['checkpoints']],
     'sources':services.get('sources',[]),'recordings':recordings,'comparison':comp,
+    'comparison_against_parent':parent_comparison,
+    'comparison_against_contextual':comparison(rows['contextual'],rows.get('selected',rows['parent'])),
     'highlight_scope':'Default case is selected for inspectability after evaluation; it is not the aggregate result.'}
-(web/'manifest.json').write_text(json.dumps(sanitize(manifest),indent=2)+'\n')
+(web/'manifest.json').write_text(json.dumps(sanitize(manifest),separators=(',',':'))+'\n')
 (evidence/'navigation-results.json').write_text(json.dumps(sanitize(report),indent=2)+'\n')
 (evidence/'recordings.json').write_text(json.dumps(recordings,indent=2)+'\n')
 print(json.dumps({'status':report['status'],'cases':len(cases),'recordings':len(recordings),'comparison':comp}),flush=True)

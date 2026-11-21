@@ -1,0 +1,18 @@
+{
+  "navigation": "buffered",
+  "task_actions": {
+    "alarm:alarm": "H0",
+    "recovery:alarm": "R4",
+    "drawer:drawer": "C",
+    "recovery:drawer": "R4",
+    "laptop:laptop": "P5",
+    "recovery:laptop": "R0",
+    "globe:globe": "G0",
+    "recovery:globe": "R4"
+  },
+  "source_sha256": "627d9cedd917058cf01a8ba858783ca51c58fff699de195e266ca161d3b78b0b",
+  "source_scope": "Training components only, no development or final outcome used.",
+  "selection": "Each task/domain mapping must qualify in both training prefixes, then minimize summed component rank.",
+  "final_task_opened_at_freeze": false,
+  "purpose": "Optional competent control if the original neural parent provides insufficient jointly qualified efficiency pairs."
+}
