@@ -19,6 +19,9 @@ selection=json.loads((directory/'task-selection-freeze.json').read_text())
 development=json.loads((directory/'task-development-continuous.json').read_text())
 final=json.loads((directory/'task-final-continuous.json').read_text())
 assert len(final['results'])==12
+runtime=final.get('runtime','matched Modal CPU runtime')
+fixed_navigation=final.get('fixed_navigation',False)
+revision=final['engineering_revision'].upper()
 uploads=[]
 def recording(metadata,label):
     ident=metadata['id'];raw=(directory/(ident+'.json.gz')).read_bytes()
@@ -60,10 +63,11 @@ for i in range(3):
         runs={}
         for row in pair:
             side=row['id'].rsplit('-',1)[1]
-            runs[side]=recording(row,'Parent models' if side=='parent' else 'Selected models')
+            name=('Parent task weights' if side=='parent' else 'Selected task weights') if fixed_navigation else ('Parent models' if side=='parent' else 'Selected models')
+            runs[side]=recording(row,name)
         manifest['cases'].append({'id':f'task-final-{i}-{seed}','label':f'Fresh four-task layout {i+1} · seed {seed}',
             'kind':'sequence','split':'final','layout_sha256':pair[0]['layout_sha256'],'runs':runs,
-            'scope':'One continuous clock, drawer, laptop and globe rollout per side. Same scene, reset, R5 controller, Modal CPU runtime and checks. Models frozen before this cohort.',
+            'scope':f'One continuous clock, drawer, laptop and globe rollout per side. Same scene, reset, {revision} controller, {runtime} and checks. '+('Only task/recovery weights differ; navigation is fixed on both sides. ' if fixed_navigation else '')+'Models frozen before this cohort.',
             'comparison_note':'All six fresh scenario pairs remain available, including failures. A successful example does not replace the complete cohort.'})
 for side in ['parent','selected']:
     rows=[r for r in final['results'] if r['id'].endswith('-'+side)];valid=[r for r in rows if r['qualified_complete']]
@@ -77,7 +81,7 @@ for name,entry in preview['recordings'].items():
 manifest['checkpoints']=[c for c in manifest['checkpoints'] if c['domain']!='task and recovery']+[dict(c,domain='task and recovery') for c in report['checkpoints']]
 selected_rows=[r for r in final['results'] if r['id'].endswith('-selected')]
 n=sum(r['qualified_complete'] for r in selected_rows)
-manifest['claim']+=f' The selected models qualified on {n}/6 uninterrupted four-task attempts across three fresh arrangements.'
+manifest['claim']+=f' The selected task weights qualified on {n}/6 uninterrupted four-task attempts across three fresh arrangements.'+(' These task pairs use fixed navigation; combined learned navigation/manipulation remains unqualified.' if fixed_navigation else '')
 manifest['training']+=' A separate task and recovery adapter completed 16 actual optimizer updates from measured component alternatives. Continuous development rollouts selected its checkpoint.'
 seen={s['url'] for query in manifest['sources'] for s in query['sources']}
 for query in report['services']['sources']:
@@ -87,6 +91,7 @@ for query in report['services']['sources']:
             seen.add(source['url']);unique.append(source)
     if unique:manifest['sources'].append(dict(query,sources=unique))
 manifest['task_selection']={'selected_update':selection['selected_update'],'qualified_final':n,'n_final':6,
+    'fixed_navigation':fixed_navigation,'engineering_revision':revision,
     'scope':'Three task arrangements, two seeds each. Layouts are the independent sampling units.'}
 usage=modal.Dict.from_name('mochi-continuation-v25-budget')[run]['usage']
 manifest['execution']=f'{usage["physical_rollouts"]} charged physical attempts; {usage["simulation_cpu_hours"]:.2f} summed simulation wall hours, including any conservative reservations, at this snapshot. Final task workers started after navigation completed, with a maximum of five physical workers. Costs are modeled, not invoices.'

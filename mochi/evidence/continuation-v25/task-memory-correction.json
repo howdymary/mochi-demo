@@ -1,0 +1,898 @@
+{
+  "status": "completed",
+  "optimizer_updates_added": 0,
+  "physical_rollouts_added": 0,
+  "superseded_hypothesis": "mochi-nav25-20261121a-r5-r1",
+  "services": {
+    "actors": {
+      "researcher": "mochi-nav25-20261121a-r5-researcher",
+      "designer": "mochi-nav25-20261121a-r5-designer",
+      "experimenter": "mochi-nav25-20261121a-r5-experimenter",
+      "critic": "mochi-nav25-20261121a-r5-critic"
+    },
+    "audiences": {
+      "shared": "mochi-nav25-20261121a-r5-shared",
+      "critic_private": "mochi-nav25-20261121a-r5-critic"
+    },
+    "records": [
+      {
+        "id": "mochi-nav25-20261121a-r5-r0",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-r5-experimenter",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:12:26.339916+00:00",
+        "sha256": "705afdfaa7eef8bb0c2cbd2ea9983479ed2492b412705ee9cf8d3ab3ce43e3da",
+        "ingestion_id": "cf426c25-ac27-4f0a-b8a9-9d45a8db145d",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r0",
+          "author": "mochi-nav25-20261121a-r5-experimenter",
+          "occurred_at": "2026-11-21T22:12:26.339916+00:00",
+          "content": {
+            "kind": "combined-controller-clearance-failures",
+            "observations": [
+              {
+                "id": "task-integration-parent",
+                "qualified_complete": false,
+                "qualified": null,
+                "physical_failure": null,
+                "moving_median_peak_m": null,
+                "complete_sequence_success": true
+              },
+              {
+                "id": "task-integration-selected",
+                "qualified_complete": false,
+                "qualified": null,
+                "physical_failure": null,
+                "moving_median_peak_m": null,
+                "complete_sequence_success": true
+              },
+              {
+                "id": "station-laptop-feedback-r3-probe",
+                "qualified_complete": null,
+                "qualified": false,
+                "physical_failure": null,
+                "moving_median_peak_m": 0.004064072244549884,
+                "complete_sequence_success": null
+              },
+              {
+                "id": "station-laptop-feedback-r4-probe",
+                "qualified_complete": null,
+                "qualified": false,
+                "physical_failure": "directional-navigation-timeout:laptop-transit-0",
+                "moving_median_peak_m": 0.005785662534470579,
+                "complete_sequence_success": null
+              }
+            ],
+            "source_artifacts": [
+              {
+                "file": "task-integration-parent.metadata.json",
+                "sha256": "c816a07bdfb6937558c2e34b26ef8241598c5e72bc1ac14cace7192e28cefbf0"
+              },
+              {
+                "file": "task-integration-selected.metadata.json",
+                "sha256": "20d5b6bd2853b25d5dfade75133cf861b2a0241c69d5bcca3f55d6eb6ca6e2b6"
+              },
+              {
+                "file": "station-laptop-feedback-r3-probe.metadata.json",
+                "sha256": "2e8341c68f5d8fa682ceb774a0023529bc6c0e916cfb6a8e8d0e46e4f1deb91b"
+              },
+              {
+                "file": "station-laptop-feedback-r4-probe.metadata.json",
+                "sha256": "8c6d3c56fc18bbb132f173e2338b9dc18f32ef3cfaa0144e2f1cf52e567f17e8"
+              }
+            ],
+            "qualification": "Development observations only. No final task layout opened."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 16.399767689999997
+      },
+      {
+        "id": "mochi-nav25-20261121a-r5-r1",
+        "role": "researcher",
+        "author": "mochi-nav25-20261121a-r5-researcher",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:12:46.851904+00:00",
+        "sha256": "ffcd804dec4e711bc0549ce9ac1fa6e37274705a187ead78eeb5761400af12b7",
+        "ingestion_id": "e0d53909-42e7-4352-802e-881100399ac0",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r1",
+          "author": "mochi-nav25-20261121a-r5-researcher",
+          "occurred_at": "2026-11-21T22:12:46.851904+00:00",
+          "content": {
+            "kind": "bounded-station-clearance-hypothesis",
+            "evidence": "mochi-nav25-20261121a-r5-r0",
+            "mechanism": "Increase swing-pad clearance moderately; excessive lift can prevent final pose capture.",
+            "component_observation": {
+              "id": "station-laptop-feedback-r5-probe",
+              "qualified": true,
+              "moving_median_peak_m": 0.004640408050510112,
+              "snapshot_sha256": "7fb3304cce7041b44290ec34176962f5c939b7f8c53bb438d37b086540d4d808",
+              "artifact_sha256": "b4c6ee730e12ec36133dd6027f9356e716d8e4974e100b45badc7e6b1e0bf23d"
+            },
+            "hypothesis": "The intermediate lift may retain arrival and sole clearance; full uninterrupted development execution is required."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 16.996610387000004
+      },
+      {
+        "id": "mochi-nav25-20261121a-r5-r2",
+        "role": "designer",
+        "author": "mochi-nav25-20261121a-r5-designer",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:13:07.891277+00:00",
+        "sha256": "1745b57773f0c0502db40ca43568c7d5a1b0e4b3d6e0f038a72cae3d32af9cf9",
+        "ingestion_id": "143ffdf6-63bc-48a2-ba0a-9f39e01a0579",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r2",
+          "author": "mochi-nav25-20261121a-r5-designer",
+          "occurred_at": "2026-11-21T22:13:07.891277+00:00",
+          "content": {
+            "kind": "shared-task-controller-preflight-plan",
+            "source": "mochi-nav25-20261121a-r5-r1",
+            "revision": "r5",
+            "navigation_checkpoint": 48,
+            "task_checkpoint": 8,
+            "plan": "Execute both frozen weight sets on development geometry under identical Modal physics. Open the sealed task cohort only if the selected combination qualifies.",
+            "native_gait_weights_trained": false,
+            "engineering_credit_only": true
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 17.160900339
+      },
+      {
+        "id": "mochi-nav25-20261121a-r5-r4",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-r5-experimenter",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:48:09.885969+00:00",
+        "sha256": "85a142f4ce743189c0e18144e00c351da9819824a5f22a5d30412943dba24e1a",
+        "ingestion_id": "36c792fe-d953-43c1-a061-7ad2d0d6308b",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r4",
+          "author": "mochi-nav25-20261121a-r5-experimenter",
+          "occurred_at": "2026-11-21T22:48:09.885969+00:00",
+          "content": {
+            "kind": "full-controller-quality-correction",
+            "supersedes": "mochi-nav25-20261121a-r5-r1",
+            "measured_evidence": [
+              {
+                "id": "task-integration-r5-local-parent",
+                "sha256": "7caa56ddf821fc324db30356712c2631829f74f16f88b57717cce297ba7fc988",
+                "complete_sequence_success": true,
+                "qualified_complete": false,
+                "native_smoothness": {
+                  "sampled_acceleration_rms_rad_s2": 165.60076586942012,
+                  "sampled_torque_change_rms_nm": 0.003312182732434584,
+                  "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+                },
+                "object_checks": {
+                  "alarm": true,
+                  "drawer": true,
+                  "laptop": true,
+                  "globe": true
+                },
+                "fall": false,
+                "invalid_contact": false
+              },
+              {
+                "id": "task-integration-r5-local-selected",
+                "sha256": "e79a09462aafd1323879ea0b01d5609fd71709e0b02bb16caa94bf8a7813ddfa",
+                "complete_sequence_success": false,
+                "qualified_complete": false,
+                "native_smoothness": {
+                  "sampled_acceleration_rms_rad_s2": 165.5631693771455,
+                  "sampled_torque_change_rms_nm": 0.003313972481066149,
+                  "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+                },
+                "object_checks": {
+                  "alarm": true,
+                  "drawer": true,
+                  "laptop": true,
+                  "globe": true
+                },
+                "fall": false,
+                "invalid_contact": false
+              },
+              {
+                "id": "task-integration-r5-modal-parent",
+                "sha256": "c5db5d6e29c4726f4520304c0566508c4cb7291af73d34811d2485da03f2e7e5",
+                "complete_sequence_success": true,
+                "qualified_complete": false,
+                "native_smoothness": {
+                  "sampled_acceleration_rms_rad_s2": 165.68263838845425,
+                  "sampled_torque_change_rms_nm": 0.003314453284554193,
+                  "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+                },
+                "object_checks": {
+                  "alarm": true,
+                  "drawer": true,
+                  "laptop": true,
+                  "globe": true
+                },
+                "fall": false,
+                "invalid_contact": false
+              }
+            ],
+            "finding": "Clearance-only component flags were insufficient. Full R5 sequences fail native acceleration; the selected local run also fails final sole support. R6/R7/R8 variants are rejected. No acceptance threshold changed."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 27.692733343000004
+      },
+      {
+        "id": "mochi-nav25-20261121a-r5-r5",
+        "role": "critic",
+        "author": "mochi-nav25-20261121a-r5-critic",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:48:46.579351+00:00",
+        "sha256": "7dd12575719ea1506a451e12ac50e21254b26bc09ed56f04721db70529576d68",
+        "ingestion_id": "ba049e51-fcf9-4fd1-859c-d03a12a53498",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r5",
+          "author": "mochi-nav25-20261121a-r5-critic",
+          "occurred_at": "2026-11-21T22:48:46.579351+00:00",
+          "content": {
+            "kind": "rejected-controller-verdict",
+            "source": "mochi-nav25-20261121a-r5-r4",
+            "model_classification": "reject_r5_quality_failure",
+            "numerically_verified_classification": "reject_r5_quality_failure",
+            "accepted": false,
+            "qualification": "Preserve the negative result. Current final task study uses the original fully qualified R2 source and fixed navigation; it does not demonstrate combined learned navigation/manipulation."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 10.218131305
+      },
+      {
+        "id": "mochi-nav25-20261121a-r5-r6",
+        "role": "researcher",
+        "author": "mochi-nav25-20261121a-r5-researcher",
+        "audience": "mochi-nav25-20261121a-r5-shared",
+        "at": "2026-11-21T22:49:00.743273+00:00",
+        "sha256": "d3ce145bcc76efc0bb9e92e4917b9d4fdb54230aec2cfffcba046b98fc36e4f5",
+        "ingestion_id": "fd21f8b0-1a49-41ff-a24d-0c1c9255bfc7",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-r5-r6",
+          "author": "mochi-nav25-20261121a-r5-researcher",
+          "occurred_at": "2026-11-21T22:49:00.743273+00:00",
+          "content": {
+            "kind": "qualified-next-study-scope",
+            "source": "mochi-nav25-20261121a-r5-r5",
+            "decision": "Keep navigation final results and fixed-navigation task results separate. Do not promote R5 or its rejected refinements. Any later combined-controller study needs new unopened final scenarios."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 17.072089860999995
+      }
+    ],
+    "reads": [
+      {
+        "reader": "mochi-nav25-20261121a-r5-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-r5-experimenter",
+        "record_id": "mochi-nav25-20261121a-r5-r0",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "705afdfaa7eef8bb0c2cbd2ea9983479ed2492b412705ee9cf8d3ab3ce43e3da",
+        "at": "2026-11-21T22:12:46.851863+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:12:46.851848+00:00",
+            "returned_documents": 87,
+            "used_evidence_tokens": 7985,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-designer",
+        "reader_role": "designer",
+        "author": "mochi-nav25-20261121a-r5-researcher",
+        "record_id": "mochi-nav25-20261121a-r5-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "ffcd804dec4e711bc0549ce9ac1fa6e37274705a187ead78eeb5761400af12b7",
+        "at": "2026-11-21T22:13:07.891237+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:13:07.891223+00:00",
+            "returned_documents": 84,
+            "used_evidence_tokens": 7996,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671444344-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-experimenter",
+        "reader_role": "experimenter",
+        "author": "mochi-nav25-20261121a-r5-designer",
+        "record_id": "mochi-nav25-20261121a-r5-r2",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "1745b57773f0c0502db40ca43568c7d5a1b0e4b3d6e0f038a72cae3d32af9cf9",
+        "at": "2026-11-21T22:13:29.042333+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:13:29.042310+00:00",
+            "returned_documents": 84,
+            "used_evidence_tokens": 7968,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-2",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1",
+              "mochi-nav25-20261121a-r5-r2"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-r5-critic",
+        "record_id": "mochi-nav25-20261121a-r5-r3",
+        "source_id_verified": false,
+        "expected_access": false,
+        "cross_agent_use": false,
+        "sha256": null,
+        "at": "2026-11-21T22:48:09.885912+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:48:09.885269+00:00",
+            "returned_documents": 80,
+            "used_evidence_tokens": 7994,
+            "required_source_verified": false,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1",
+              "mochi-nav25-20261121a-r5-r2"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-r5-experimenter",
+        "record_id": "mochi-nav25-20261121a-r5-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "85a142f4ce743189c0e18144e00c351da9819824a5f22a5d30412943dba24e1a",
+        "at": "2026-11-21T22:48:41.152196+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:48:41.152183+00:00",
+            "returned_documents": 64,
+            "used_evidence_tokens": 7989,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1",
+              "mochi-nav25-20261121a-r5-r2",
+              "mochi-nav25-20261121a-r5-r3",
+              "mochi-nav25-20261121a-r5-r4"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-r5-critic",
+        "record_id": "mochi-nav25-20261121a-r5-r5",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "7dd12575719ea1506a451e12ac50e21254b26bc09ed56f04721db70529576d68",
+        "at": "2026-11-21T22:49:00.743245+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:49:00.743233+00:00",
+            "returned_documents": 62,
+            "used_evidence_tokens": 7986,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1",
+              "mochi-nav25-20261121a-r5-r2",
+              "mochi-nav25-20261121a-r5-r4",
+              "mochi-nav25-20261121a-r5-r5"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-r5-designer",
+        "reader_role": "designer",
+        "author": "mochi-nav25-20261121a-r5-researcher",
+        "record_id": "mochi-nav25-20261121a-r5-r6",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "d3ce145bcc76efc0bb9e92e4917b9d4fdb54230aec2cfffcba046b98fc36e4f5",
+        "at": "2026-11-21T22:49:22.446095+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:49:22.446080+00:00",
+            "returned_documents": 65,
+            "used_evidence_tokens": 7998,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-r5-r0",
+              "mochi-nav25-20261121a-r5-r1",
+              "mochi-nav25-20261121a-r5-r2",
+              "mochi-nav25-20261121a-r5-r4",
+              "mochi-nav25-20261121a-r5-r5",
+              "mochi-nav25-20261121a-r5-r6"
+            ]
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "role": "critic",
+        "question": "Classify the R5 controller. Every quality constraint is mandatory. Object completion and clearance alone cannot establish qualified success.",
+        "selected": "reject_r5_quality_failure",
+        "distribution": {
+          "reject_r5_quality_failure": 0.9875683188438416,
+          "qualified_r5_success": 0.012431650422513485
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-r5-r4"
+        ],
+        "context_sha256": "9fa9d3803c5ea34328df3e96892c62c4826b96f6314c64801223a2f1d1563c6f",
+        "at": "2026-11-21T22:48:45.750939+00:00"
+      }
+    ],
+    "calls": [
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:12:15.193273+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:12:15.267228+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:12:15.301691+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:12:15.338716+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T22:12:15.404063+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T22:12:15.443331+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:12:30.564462+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:12:31.314491+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:12:37.148260+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:12:42.739661+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:12:46.851263+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:12:51.768081+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:12:52.555140+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:12:58.175209+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:13:03.848475+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:13:07.890710+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:13:12.888039+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:13:13.546810+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:13:19.389678+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:13:25.052138+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:13:29.041280+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:47:41.808902+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:47:41.873949+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:47:41.906315+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:47:41.937985+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 200,
+        "at": "2026-11-21T22:47:41.995891+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 200,
+        "at": "2026-11-21T22:47:42.033748+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:47:59.040615+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:47:59.754098+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:05.448428+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:48:09.884768+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:48:13.804832+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:14.873968+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:20.574296+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:26.231954+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:31.943998+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:37.578664+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:48:41.151831+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:48:50.382042+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:51.228313+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:48:56.797456+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:49:00.742902+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:49:05.467523+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:49:06.145889+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:49:12.078840+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:49:17.815326+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:49:22.445644+00:00"
+      }
+    ],
+    "sources": [],
+    "eligibility": {
+      "writers": 4,
+      "readers": 4,
+      "cross_agent_reads": 6,
+      "isolation_passed": true
+    },
+    "pending_ingestions": []
+  }
+}

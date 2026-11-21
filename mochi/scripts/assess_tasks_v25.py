@@ -1,4 +1,5 @@
 """Summarize all frozen final task attempts, pairing within layout and seed."""
+import argparse
 import gzip
 import hashlib
 import json
@@ -7,7 +8,12 @@ import numpy as np
 
 root=Path(__file__).resolve().parents[1]
 d=root/'artifacts/continuation-v25'
-source=d/'task-final-continuous.json'
+parser=argparse.ArgumentParser()
+parser.add_argument('--source',default='task-final-continuous.json')
+parser.add_argument('--output',default='task-final-assessment.json')
+args=parser.parse_args()
+assert Path(args.source).name==args.source and Path(args.output).name==args.output
+source=d/args.source
 cohort=json.loads(source.read_text())
 assert len(cohort['results'])==12
 models={s:[] for s in ['parent','selected']}
@@ -16,7 +22,7 @@ for metadata in cohort['results']:
     assert hashlib.sha256(raw).hexdigest()==metadata['sha256']
     row=json.loads(gzip.decompress(raw));e=row['episode']
     models[metadata['id'].rsplit('-',1)[1]].append(dict(metadata,
-        seed=row['seed'],recovery_arm_travel_rad=sum(r['arm_joint_travel_rad'] for r in e['recoveries']),
+        seed=row['seed'],flat_legs=e.get('flat_legs',[]),recovery_arm_travel_rad=sum(r['arm_joint_travel_rad'] for r in e['recoveries']),
         intertask_arm_travel_rad=sum(e['intertask_arm_joint_travel_rad'].values()),
         moving_distance_m=row['direction_metrics']['moving_distance_m'],
         forward_facing_fraction=row['direction_metrics']['forward_facing_fraction']))
@@ -54,6 +60,6 @@ for field in ['steps','physical_seconds','recovery_arm_travel_rad','intertask_ar
 result['paired']={'jointly_qualified_pairs':pairs,'layouts':len(paired),'metrics':metrics,
     'scope':'Ratios use jointly qualified attempts only, averaged within layout. Three layouts are a small pilot; repeated seeds are not independent layouts. Early failures never count as efficient.'}
 result['selected_completed_all_six_smoothly']=result['models']['selected']['qualified']==6
-out=root/'evidence/continuation-v25/task-final-assessment.json'
+out=root/'evidence/continuation-v25'/args.output
 assert not out.exists();out.write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps({k:result[k] for k in ['selected_completed_all_six_smoothly','paired']}))

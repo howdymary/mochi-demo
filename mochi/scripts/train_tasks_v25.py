@@ -202,6 +202,7 @@ async def choose(kind,update,observed,ident):
     sampler,renderer=_mochi_inference_cache[key]
     if kind=='compact_navigation':from mochi.navigation_v25.compact import decision
     elif kind=='navigation':from mochi.navigation_v25.engine import decision
+    elif observed.get('control_revision')=='contact-v26':from mochi.navigation_v25.policy_contact_v26 import decision
     else:from mochi.navigation_tasks_v24.policy import decision
     rendered=renderer.render(decision(observed));tokens=len(rendered.tokens)+1
     broker=modal.Function.from_name('mochi-continuation-v25','budget')

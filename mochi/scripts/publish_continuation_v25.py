@@ -22,6 +22,8 @@ paths=['mochi/README.md','mochi/src/mochi/navigation_v25','mochi/configs/continu
     'mochi/docs/continuation-v25-methods.md','mochi/tests/test_navigation_v25_checks.py','mochi/tests/test_navigation_v25_compact.py']
 paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v25*.py')]
 paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v25*.mjs')]
+paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v26*.py')]
+if (root/'mochi/configs/laptop-contact-v26').exists():paths.append('mochi/configs/laptop-contact-v26')
 if (root/'mochi/docs/continuation-v25-findings.md').exists():paths.append('mochi/docs/continuation-v25-findings.md')
 if (root/'mochi/evidence/continuation-v25').exists():paths.append('mochi/evidence/continuation-v25')
 git('add','--',*paths)

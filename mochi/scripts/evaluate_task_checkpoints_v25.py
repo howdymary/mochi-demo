@@ -16,7 +16,8 @@ config=root/'configs/continuation-v25/tasks'
 p=argparse.ArgumentParser();p.add_argument('--phase',choices=['development','final'],required=True)
 p.add_argument('--allow-fixed-navigation',action='store_true')
 p.add_argument('--engineering-revision',choices=['r2','r3','r5'],default='r2')
-p.add_argument('--workers',type=int,default=2);args=p.parse_args()
+p.add_argument('--workers',type=int,default=2)
+p.add_argument('--fixed-navigation-study',action='store_true');args=p.parse_args()
 assert 1<=args.workers<=5
 run=json.loads((root/'configs/continuation-v25/protocol.json').read_text())['id']
 volume=modal.Volume.from_name('mochi-continuation-v25-artifacts')
@@ -43,6 +44,10 @@ else:
         navigation=remote('navigation-training');compact=False
     assert navigation['status'] in ['completed','development_goal_unmet'] or (navigation.get('selected_checkpoint') and navigation['final_opened']),'Wait for navigation selection to be frozen'
     nav_update=navigation['selected_checkpoint']['update'] if navigation.get('selected_checkpoint') else None
+    if args.fixed_navigation_study:
+        assert args.engineering_revision=='r2'
+        assert (config/'fixed-navigation-task-study-amendment.json').exists()
+        nav_update=None
     if nav_update is None and not args.allow_fixed_navigation:
         raise RuntimeError('Navigation selection has not passed its gate; preserve unopened final task layouts while navigation work continues')
     prepared=modal.Function.from_name('mochi-task-control-v25','prepare_serving').remote(nav_update,selected['selected_update'],compact)
@@ -75,7 +80,7 @@ else:
         row=json.loads(metadata.read_text())
         print(json.dumps({'integration':side,'qualified':row.get('qualified_complete'),'steps':row.get('steps')}),flush=True)
         return row
-    integration_name='task-integration-'+('' if args.engineering_revision=='r2' else args.engineering_revision+'-')+('local-' if args.engineering_revision=='r5' else '')+'continuous'
+    integration_name='task-integration-'+('fixed-navigation-' if args.fixed_navigation_study else '')+('' if args.engineering_revision=='r2' else args.engineering_revision+'-')+('local-' if args.engineering_revision=='r5' else '')+'continuous'
     integration_file=directory/(integration_name+'.json')
     if not integration_file.exists():
         with ThreadPoolExecutor(max_workers=2) as pool:integrated=list(pool.map(integration,['parent','selected']))
@@ -83,6 +88,11 @@ else:
             'engineering_revision':args.engineering_revision,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
             'scope':'Combined frozen models on development geometry, before opening final task layouts. No checkpoint tuning uses final outcomes.'})
     assert json.loads(integration_file.read_text())['selected_qualified'],'Combined development sequence failed; final task layouts remain unopened'
+    if args.workers>2:
+        assert navigation['status']=='completed','Five task workers require navigation to have ended'
+        stopped=json.loads((directory/'task-remote-r5-stop.json').read_text())
+        assert stopped['status']=='stopped' and stopped['app_id']=='ap-8ifaPG5AzCWumEJXvM5LA8','Preserve the global physical-worker ceiling'
+        assert (config/'local-runtime-r5-amendment.json').exists()
     sealed=directory/'sealed/final_tasks.json';layouts=json.loads(sealed.read_text())
     splits=json.loads((config/'splits.json').read_text())
     assert fingerprint(layouts)==splits['final']['sha256']
@@ -90,6 +100,8 @@ else:
     if not marker.exists():save('task-final-opened',{'selection_sha256':fingerprint(selected),'set_sha256':fingerprint(layouts),
         'navigation_selected_update':nav_update,'task_selected_update':selected['selected_update'],
         'engineering_revision':args.engineering_revision,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
+        'runtime':'local single-thread arm64; identical for both model sides',
+        'study_scope':'Task/recovery weight comparison with the same training-selected fixed navigation wrapper.' if args.fixed_navigation_study else 'Combined learned navigation and task models.',
         'qualification':'Final outcomes cannot become training labels. All declared layouts and both seeds are included.'})
     for i,layout in enumerate(layouts):
         path=directory/('task-final-layout-'+str(i)+'.json')
@@ -122,6 +134,8 @@ def attempt(job):
 with ThreadPoolExecutor(max_workers=args.workers) as pool:results=list(pool.map(attempt,jobs))
 save('task-'+args.phase+'-continuous',{'phase':args.phase,'results':results,'physical_source_sha256':hashlib.sha256(frozen.read_bytes()).hexdigest(),
     'engineering_revision':args.engineering_revision,
+    'runtime':'local single-thread arm64; identical for both model sides',
+    'fixed_navigation':args.fixed_navigation_study,
     'scope':f'Each row is one uninterrupted physical rollout from reset. At most {args.workers} local CPU workers; no branch splicing. Matched source, layout, reset and playback time.'})
 if args.phase=='development':
     qualified=[r for r in results if r['qualified_complete']]

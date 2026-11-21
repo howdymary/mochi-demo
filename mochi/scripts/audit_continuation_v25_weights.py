@@ -48,7 +48,7 @@ async def audit(run,kind,update):
                 trainer = await service.create_training_client_from_state(paths[str(checkpoint_update)]['optimizer'])
                 saved = await trainer.save_weights_external('mochi25-'+kind+'-tensor-audit-u'+str(checkpoint_update), ttl_seconds=86400)
                 links = await rest.get_external_weights_urls(saved.path)
-                dest = directory / 'private-weight-exports' / kind / str(checkpoint_update)
+                dest = directory / 'private-weight-exports' / (kind+'-comparison-'+str(target_update)) / str(checkpoint_update)
                 dest.mkdir(parents=True, exist_ok=False)
                 tensors, files = {}, []
                 for name, url in links.urls.items():

@@ -1,0 +1,18 @@
+{
+  "reason": "The remote full-sequence preflight uses much more wall time than local development. Validate both frozen model sides locally before choosing the final runtime. Reuse the architecture of the original continuous task-development comparisons.",
+  "physical_source_revision": "r5",
+  "weights_changed": false,
+  "quality_thresholds_changed": false,
+  "final_tasks_still_unopened": true,
+  "local_runtime": "arm64, 48 GiB host memory, 18 physical cores; one numerical thread per physical rollout",
+  "maximum_physics_workers": 5,
+  "conditions_before_five_local_final_workers": [
+    "navigation final cohort completed",
+    "own remote task evaluation app stopped and receipt retained",
+    "both local combined-model development attempts retained",
+    "selected local combined model qualifies"
+  ],
+  "budget_limits_unchanged": true,
+  "remote_attempts_preserved": true,
+  "uncompleted_remote_attempts_have_no_inferred_physical_outcome": true
+}

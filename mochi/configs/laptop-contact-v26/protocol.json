@@ -1,0 +1,30 @@
+{
+  "id": "mochi-contact26-20261121a",
+  "final": {
+    "layouts": 3,
+    "physics_seeds": [
+      254000,
+      254001
+    ],
+    "sha256": "2dc7332286924530e0a8d7eb2e6d27b2a125a04c8cc1102a61185ac078bc4bfe",
+    "opened": false
+  },
+  "development": {
+    "physics_seeds": [
+      252000
+    ],
+    "layout_sha256": "45777beed7cf775acf6a10a8de376da062fd7921296b29835a83ec9df732e431",
+    "declared_hinge_friction_Nm": 0.075
+  },
+  "geometry_rejections": [
+    {
+      "candidate": 0,
+      "reason": "cup AABB overlap with printer-contact",
+      "dynamic_trials": 0
+    }
+  ],
+  "weights": "Existing frozen V25 task checkpoint 8 and navigation checkpoint 48; no new optimizer update in this contact-engineering study.",
+  "selection": "Choose a contact repair on development physics. Require a qualified continuous development run before opening the new final set. Retain all original V25 final failures.",
+  "comparison": "Parent and selected models share the same new source, controller, mechanics and verification. Any controller change is engineering, not a Tinker gain.",
+  "limits": "Shares the unchanged V25 512-attempt, 16-summed-wall-hour, 64-optimizer-update and token/spending ledger. Bounded local concurrency at most six."
+}

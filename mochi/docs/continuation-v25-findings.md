@@ -1,6 +1,6 @@
 # V25 continuation findings
 
-Status: the complete 64-rollout final navigation comparison is finished. The fixed-reference goal passed. The earlier trained parent remains more efficient than checkpoint 48. Final task layouts remain unopened while the combined-model preflight runs. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains full checkpoint and engineering attempts.
+Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison is complete and negative: neither task model completed the laptop in any of its six attempts. A separate contact-controller repair is being evaluated on development physics before a newly sealed cohort can be opened. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
 
 ## What is trained
 
@@ -20,7 +20,7 @@ The task update-16 tensor audit found changes in 498 adapter tensors, with maxim
 | Parent | 15/16 | Fails a case the fixed profile passes |
 | Update 8 | 14/16 | Not promoted |
 
-The parent and update 8 use fewer steps on jointly qualified attempts, but introduce new quality failures. Neither meets the predeclared reliability gate. Later checkpoints and any predeclared training extension are still being evaluated. No final-layout advantage is established.
+The parent and raw update 8 use fewer steps on jointly qualified development attempts, but introduce new quality failures. Neither meets the development reliability gate. A compact continuation subsequently passed that gate and was evaluated on fresh layouts, as reported below.
 
 A training-only audit of update 32 found 13 direct choices and 11 wide-fast choices, agreeing with the measured teacher on 19 of 24 training layouts. It missed the sole training layout requiring buffered control. This demonstrates conditional choices on training geometry, not successful generalization or a learned safety rule.
 
@@ -32,12 +32,14 @@ These are separate uninterrupted runs from reset, using the same scene, physics 
 | --- | --- | --- | ---: | ---: |
 | Parent, update 0 | Yes | No | 966 | 357.19 |
 | Update 4 | Yes | Yes | 848 | 341.63 |
+| Update 8 | Yes | Yes | 817 | 339.07 |
+| Update 16 | Yes | Yes | 848 | 341.63 |
 
 The parent missed laptop-leg sole clearance: 4.395 mm against the frozen 4.5 mm requirement. Update 4 measured 4.818 mm and passed. Its earlier drawer choice changed from B to C. Subsequent navigation receives the resulting physical state; no new starting pose is inserted between tasks.
 
 The step and time counts are descriptive. Because the parent did not qualify, this pair is a quality conversion rather than a qualified efficiency comparison. Continuous development runs, rather than matched component tests alone, determine final checkpoint selection.
 
-The remaining continuous attempts have now finished. Update eight qualified in 817 steps and 339.07 seconds. Update sixteen qualified in 848 steps and 341.63 seconds, matching update four. Update eight is the frozen task selection. On this one jointly qualified development pair, it uses 31 fewer steps than update four, a 3.7% reduction. Final task outcomes remain pending.
+Update eight is the frozen task selection. On this one jointly qualified development pair, it uses 31 fewer steps than update four, a 3.7% reduction. This result did not generalize to the original fresh task cohort.
 
 ## Navigation continuation
 
@@ -45,15 +47,25 @@ The raw update-16 model also qualified on 14/16 development attempts and introdu
 
 The compact continuation retains direct and buffered control, uses shorter outcome-free planner summaries, and adds eight physically evaluated training layouts. The 32-layout corpus contains 26 direct and six buffered teacher choices. Sixteen further actual optimizer updates were completed from the saved update-32 state. All compact checkpoints, including parent zero and representation-control update 32, receive the same input contract.
 
-Those sixteen updates have now completed. Compact checkpoint zero and the unchanged update-32 weights retain the earlier clearance failure. Update 40 matches the fixed profile's outcomes without reducing steps. Update 48 passes the development gate: 15/16 qualified attempts, no newly failed fixed successes, and 8.7% fewer mean paired-layout steps. It is frozen for the eight-layout final cohort. This is a development result, not yet a fresh-layout win.
+Compact checkpoint zero and the unchanged update-32 weights retain the earlier clearance failure. Update 40 matches the fixed profile's outcomes without reducing steps. Update 48 passed the development gate: 15/16 qualified attempts, no newly failed fixed successes, and 8.7% fewer mean paired-layout steps. It was frozen before the eight-layout final cohort was opened.
 
-Two duplicate development executions matched exactly in trajectories, controls, step events and balance samples. The compact development comparison uses those frozen physical action outcomes and labels this reuse explicitly. The training-fitted two-profile rule qualifies on 15/16 development attempts and uses 13.6% fewer mean paired-layout steps than the fixed strategy, with no new fixed-strategy failures. That is a conventional control result, not a trained-model result. Fresh navigation layouts were opened after checkpoint 48 was frozen; execution is in progress.
+Two duplicate development executions matched exactly in trajectories, controls, step events and balance samples. The compact development comparison uses those frozen physical action outcomes and labels this reuse explicitly. The training-fitted two-profile rule qualifies on 15/16 development attempts and uses 13.6% fewer mean paired-layout steps than the fixed strategy, with no new fixed-strategy failures. That is a conventional control result, not a trained-model result.
 
 ## Combined-model preflight
 
 Task checkpoint eight was selected under fixed buffered navigation. Combining it with navigation checkpoint 48 completed all four tasks, without falls or forbidden contact, but missed laptop-leg median moving-sole clearance: 4.485 mm against the unchanged 4.5 mm requirement. The combined parent also completed all tasks but measured 4.311 mm on the drawer leg. Neither qualifies. Their 928 and 826 steps do not establish an efficiency improvement.
 
-The final task layouts remain unopened. Extending the existing sole correction to station transits measured 4.064 mm on a reached-state laptop test and was rejected. A higher target reached 5.786 mm but timed out during pose capture. An intermediate target reached the station with 4.640 mm and no fall or forbidden contact. The full Modal development preflight is now testing that R5 revision under the same implementation for both frozen model sides. It retains the existing globe correction and leaves the navigation experiment, native gait and quality thresholds unchanged. These changes receive engineering credit, not training credit.
+Extending the existing sole correction to station transits measured 4.064 mm on a reached-state laptop test and was rejected. A higher target reached 5.786 mm but timed out during pose capture. An intermediate target reached the station with 4.640 mm, but the full R5 attempt exceeded the unchanged native joint-acceleration limit. R6, R7 and R8 alternatives also failed qualification. A component check initially omitted the acceleration and torque gates; the later audit corrected that omission and retained the raw results. No such candidate was promoted.
+
+## Original fresh task results
+
+The declared task-only comparison used the same fixed buffered navigation on both sides, matching continuous task development. Three new furniture arrangements and two physics seeds produced six attempts per model. The parent and selected task models each completed the clock and drawer in all six attempts, then stalled at the laptop. Neither reached the globe. Both models have zero qualified complete sequences. No efficiency advantage is calculated from early failures.
+
+Higher sampled hinge friction exposed a contact-controller limitation. Raising force alone, reapproaching after lost contact, and two hinge-space position-projection variants failed controlled development tests. One 64-second bounded-pulse attempt closed a 0.075 Nm friction laptop in 36.676 seconds with peak measured force 0.78445 N, below the unchanged 0.8 N limit. Its narrow safety margin and restored development starting state prevent treating it as a robust full-sequence result.
+
+The contact-v26 continuation uses a new final-layout hash, new physics seeds, shared source for both model sides, and the already frozen navigation-48/task-8 weights. It must pass an uninterrupted development sequence before the new final set is opened. The original task-final failures remain part of the public record. Contact repair, a later final-heading transition, a modest swing reference increase, and a physically executed neutral-stance dwell are engineering changes. They are not additional Tinker training.
+
+The first contact-v26 full attempts both collided with the clock case during the book-top turn, after completing the alarm. Applying the station-transit change to book entry altered the subsequent terrain approach. Contact-v26r2 retains the original terrain transit and restricts that refinement to the drawer, laptop and globe. The failed R1 source and recordings remain frozen separately. Final layouts are still unopened at this stage.
 
 ## Fresh navigation results
 

@@ -1,0 +1,105 @@
+{
+  "correction": "The initial standalone station probes gated arrival, clearance and collisions but omitted the existing native-smoothness limits. Their original raw flags are retained. This common-limit audit rejects every candidate; none is promoted to the final task study. Future component probes enforce both gates.",
+  "limits": {
+    "native_acceleration_rms_max": 161.4,
+    "native_torque_change_rms_max": 0.00371
+  },
+  "results": [
+    {
+      "id": "station-laptop-feedback-r3-probe",
+      "original_clearance_only_flag": false,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 167.37063293257745,
+        "sampled_torque_change_rms_nm": 0.00331983389892432,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.004064072244549884,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-feedback-r4-probe",
+      "original_clearance_only_flag": false,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 172.20606537686598,
+        "sampled_torque_change_rms_nm": 0.003424288784372141,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.005785662534470579,
+      "rechecked_component_qualified": false,
+      "physical_failure": "directional-navigation-timeout:laptop-transit-0"
+    },
+    {
+      "id": "station-laptop-feedback-r5-probe",
+      "original_clearance_only_flag": true,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 166.5166248129904,
+        "sampled_torque_change_rms_nm": 0.0033249607142895894,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.004640408050510112,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-selected-prefix-r5-probe",
+      "original_clearance_only_flag": true,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 165.60489146599377,
+        "sampled_torque_change_rms_nm": 0.0033143715385080498,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.0046439922188948905,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-selected-prefix-r6-probe",
+      "original_clearance_only_flag": true,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 172.19689586974985,
+        "sampled_torque_change_rms_nm": 0.0033810522547950955,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.004772771920271368,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-selected-prefix-r7-probe",
+      "original_clearance_only_flag": true,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 169.07022015557058,
+        "sampled_torque_change_rms_nm": 0.003336077549964218,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.004654055486409058,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-selected-prefix-r8-tau4-probe",
+      "original_clearance_only_flag": true,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 210.15574554181555,
+        "sampled_torque_change_rms_nm": 0.003722287699205541,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.004550892631005937,
+      "rechecked_component_qualified": false,
+      "physical_failure": null
+    },
+    {
+      "id": "station-laptop-selected-prefix-r8-tau6-probe",
+      "original_clearance_only_flag": false,
+      "native_smoothness": {
+        "sampled_acceleration_rms_rad_s2": 366.74978083772385,
+        "sampled_torque_change_rms_nm": 0.004921302055921009,
+        "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+      },
+      "moving_median_peak_m": 0.00442132286099394,
+      "rechecked_component_qualified": false,
+      "physical_failure": "invalid_fixture_contact"
+    }
+  ]
+}

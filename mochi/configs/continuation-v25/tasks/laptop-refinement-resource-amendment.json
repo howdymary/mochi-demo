@@ -1,0 +1,12 @@
+{
+  "reason": "The first five fresh task attempts stall at laptop closure. Reproduce the failure with a controlled development-only hinge-friction intervention while finishing all twelve original final attempts unchanged.",
+  "global_physics_workers_max": 6,
+  "allocation": "Five frozen final-cohort workers plus one development component worker.",
+  "host_capacity": {
+    "physical_cores": 18,
+    "memory_gib": 48
+  },
+  "episode_and_summed_simulation_wall_hour_limits_unchanged": true,
+  "original_final_outcomes_are_not_training_labels": true,
+  "any_repaired_controller_requires_new_unopened_final_set": true
+}

@@ -1,0 +1,20 @@
+{
+  "reason": "The combined navigation/task preflights failed frozen quality checks. Preserve them. Evaluate the task adapter under the exact navigation wrapper and R2 source used for its frozen continuous development selection. This separates the demonstrated navigation result from task-control performance.",
+  "declared_before_final_tasks_opened": true,
+  "final_layouts_opened": false,
+  "task_checkpoints": {
+    "parent": 0,
+    "selected": 8
+  },
+  "navigation_wrapper": "Fixed buffered preference with the shared geometric-feasibility fallback; identical for both task models.",
+  "physical_revision": "r2",
+  "native_gait_weights_updated": false,
+  "task_weights_changed_after_selection": false,
+  "comparison_scope": "Task/recovery selection under fixed navigation, not combined learned navigation/manipulation.",
+  "reuse_of_development": "Reuse the exact already-executed Task0/8 development runs; identical source, scenario, navigation and model weights. No new physical rollout claimed.",
+  "final_cohort": "All three original unopened task layouts and both declared physics seeds; twelve new continuous physical attempts.",
+  "worker_ceiling": 5,
+  "nav_final_finished": true,
+  "remote_task_app_stopped": true,
+  "shared_budget_unchanged": true
+}

@@ -1,0 +1,385 @@
+{
+  "status": "completed",
+  "source_sha256": "b64edfb22f76aba934da494a3c982c1842e047c88a47baa208bfadc1a7ccf3c1",
+  "optimizer_updates_added": 0,
+  "physical_rollouts_added": 0,
+  "numerical_classification": "gain_over_fixed_only",
+  "model_interpretation": "no_fixed_gain",
+  "services": {
+    "actors": {
+      "researcher": "mochi-nav25-20261121a-review-researcher",
+      "designer": "mochi-nav25-20261121a-review-designer",
+      "experimenter": "mochi-nav25-20261121a-review-experimenter",
+      "critic": "mochi-nav25-20261121a-review-critic"
+    },
+    "audiences": {
+      "shared": "mochi-nav25-20261121a-review-shared",
+      "critic_private": "mochi-nav25-20261121a-review-critic"
+    },
+    "records": [
+      {
+        "id": "mochi-nav25-20261121a-review-r0",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-review-experimenter",
+        "audience": "mochi-nav25-20261121a-review-shared",
+        "at": "2026-11-21T22:29:39.294165+00:00",
+        "sha256": "c15840941161ec945f7a69df646d6215a916886213e312a6e2c3f58dcdf6a1fe",
+        "ingestion_id": "3d2d4c66-884b-4d77-a140-606c40d628c5",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-review-r0",
+          "author": "mochi-nav25-20261121a-review-experimenter",
+          "occurred_at": "2026-11-21T22:29:39.294165+00:00",
+          "content": {
+            "kind": "fresh-navigation-observation",
+            "source_artifact": "compact/navigation-training.json",
+            "source_sha256": "b64edfb22f76aba934da494a3c982c1842e047c88a47baa208bfadc1a7ccf3c1",
+            "layouts": 8,
+            "seeds_per_layout": 2,
+            "selected_checkpoint": {
+              "update": 48,
+              "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+              "at": "2026-11-21T21:42:16.502594+00:00",
+              "representation": "compact_two_profile"
+            },
+            "cohorts": {
+              "parent": {
+                "n": 16,
+                "qualified": 16,
+                "complete": 16,
+                "falls": 0,
+                "contacts": 0,
+                "qualified_mean_steps": 224.5,
+                "qualified_mean_distance_m": 1.7282040068475097,
+                "qualified_mean_seconds": 31.000283781744862
+              },
+              "selected": {
+                "n": 16,
+                "qualified": 16,
+                "complete": 16,
+                "falls": 0,
+                "contacts": 0,
+                "qualified_mean_steps": 244.6875,
+                "qualified_mean_distance_m": 1.8144443923793654,
+                "qualified_mean_seconds": 33.465363141331295
+              },
+              "fixed": {
+                "n": 16,
+                "qualified": 16,
+                "complete": 16,
+                "falls": 0,
+                "contacts": 0,
+                "qualified_mean_steps": 289.625,
+                "qualified_mean_distance_m": 2.018627137465525,
+                "qualified_mean_seconds": 38.739983082567015
+              },
+              "contextual": {
+                "n": 16,
+                "qualified": 16,
+                "complete": 16,
+                "falls": 0,
+                "contacts": 0,
+                "qualified_mean_steps": 257.8125,
+                "qualified_mean_distance_m": 1.875598513752393,
+                "qualified_mean_seconds": 35.13054856844521
+              }
+            },
+            "against_fixed": {
+              "layouts": 8,
+              "reference_qualified": 16,
+              "candidate_qualified": 16,
+              "newly_failed_reference_successes": false,
+              "mean_layout_step_ratio": 0.8398534591093321,
+              "mean_layout_time_ratio": 0.8578737063685465,
+              "improved_layouts": 7,
+              "step_ratio_layout_bootstrap_95_percent_interval": [
+                0.785479694191288,
+                0.8994750463708161
+              ],
+              "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+              "win": true,
+              "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+            },
+            "against_parent": {
+              "layouts": 8,
+              "reference_qualified": 16,
+              "candidate_qualified": 16,
+              "newly_failed_reference_successes": false,
+              "mean_layout_step_ratio": 1.0967099964985993,
+              "mean_layout_time_ratio": 1.086714831195798,
+              "improved_layouts": 0,
+              "step_ratio_layout_bootstrap_95_percent_interval": [
+                1.0005580357142856,
+                1.23203431372549
+              ],
+              "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+              "win": false,
+              "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+            },
+            "against_contextual": {
+              "layouts": 8,
+              "reference_qualified": 16,
+              "candidate_qualified": 16,
+              "newly_failed_reference_successes": false,
+              "mean_layout_step_ratio": 0.9534565673300697,
+              "mean_layout_time_ratio": 0.9540283064998176,
+              "improved_layouts": 5,
+              "step_ratio_layout_bootstrap_95_percent_interval": [
+                0.8413136426026434,
+                1.087790979610016
+              ],
+              "uncertainty_scope": "Paired layout bootstrap, 10,000 resamples; seeds within a layout are not independent layouts. Descriptive interval for the jointly qualified subset.",
+              "win": false,
+              "scope": "Matched source, layouts and physical resets. Efficiency uses only jointly qualified attempts, averaged within layout."
+            },
+            "qualification": "Every outcome is a fresh physical rollout after selection; no final result is a training label."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 39.871757423000005
+      },
+      {
+        "id": "mochi-nav25-20261121a-review-r1",
+        "role": "critic",
+        "author": "mochi-nav25-20261121a-review-critic",
+        "audience": "mochi-nav25-20261121a-review-shared",
+        "at": "2026-11-21T22:30:30.880902+00:00",
+        "sha256": "ca8c283f45448cdef77a500ccb05ea6ff4fe8c427f823a7cd2b11bf30bb73088",
+        "ingestion_id": "10e41ff0-0a6e-408c-ae81-c5d531d1bd60",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-review-r1",
+          "author": "mochi-nav25-20261121a-review-critic",
+          "occurred_at": "2026-11-21T22:30:30.880902+00:00",
+          "content": {
+            "kind": "qualified-fresh-navigation-conclusion",
+            "evidence": "mochi-nav25-20261121a-review-r0",
+            "model_interpretation": "no_fixed_gain",
+            "numerical_classification": "gain_over_fixed_only",
+            "conclusion": "The fixed-reference goal passed. The earlier parent remains more efficient. Further training has not established an incremental gain over that parent; the contextual comparison is uncertain.",
+            "native_gait_weights_trained": false,
+            "memory_benefit_established": false
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 12.713445109000006
+      }
+    ],
+    "reads": [
+      {
+        "reader": "mochi-nav25-20261121a-review-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-review-experimenter",
+        "record_id": "mochi-nav25-20261121a-review-r0",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "c15840941161ec945f7a69df646d6215a916886213e312a6e2c3f58dcdf6a1fe",
+        "at": "2026-11-21T22:30:24.193566+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:30:24.193550+00:00",
+            "returned_documents": 74,
+            "used_evidence_tokens": 7997,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-review-r0"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-review-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-review-critic",
+        "record_id": "mochi-nav25-20261121a-review-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "ca8c283f45448cdef77a500ccb05ea6ff4fe8c427f823a7cd2b11bf30bb73088",
+        "at": "2026-11-21T22:30:48.723161+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-21T22:30:48.723148+00:00",
+            "returned_documents": 72,
+            "used_evidence_tokens": 7992,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-review-r0",
+              "mochi-nav25-20261121a-review-r1"
+            ]
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "role": "critic",
+        "question": "Classify the additional training evidence. Passing the training-selected fixed control does not establish a gain over an earlier trained parent. Treat a contextual-control interval including one as uncertain. Do not infer native gait learning or a causal memory effect.",
+        "selected": "no_fixed_gain",
+        "distribution": {
+          "gain_over_fixed_only": 0.14780418574810028,
+          "gain_over_fixed_and_parent": 0.10158422589302063,
+          "no_fixed_gain": 0.7506115436553955
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-review-r0"
+        ],
+        "context_sha256": "9c03d3c2422c6863baa7fbe255cc86d195de929909503c5146ba139af3fd316e",
+        "at": "2026-11-21T22:30:29.353637+00:00"
+      }
+    ],
+    "calls": [
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:29:22.128183+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:29:22.268255+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:29:22.376523+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-21T22:29:22.480529+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T22:29:22.593297+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-21T22:29:22.699373+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:29:45.444332+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:29:47.364088+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:29:53.963299+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:00.182088+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:06.468003+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:12.781308+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:19.165880+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:30:24.192936+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-21T22:30:35.433630+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:36.981558+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-21T22:30:43.594320+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-21T22:30:48.722611+00:00"
+      }
+    ],
+    "sources": [],
+    "eligibility": {
+      "writers": 2,
+      "readers": 2,
+      "cross_agent_reads": 2,
+      "isolation_passed": false
+    },
+    "pending_ingestions": []
+  }
+}

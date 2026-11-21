@@ -1,5 +1,23 @@
 # Navigation and contact control, continuation study V25
 
+## Contact continuation after the original task-final failure
+
+All twelve original final task attempts stalled at laptop closure. Those layouts are now development evidence and cannot serve as a fresh validation set. `configs/laptop-contact-v26/protocol.json` declares three new furniture layouts, two new seeds, and final set hash `2dc7332286924530e0a8d7eb2e6d27b2a125a04c8cc1102a61185ac078bc4bfe`. The set stays sealed until the frozen selected models qualify in an uninterrupted development rollout.
+
+The development contact intervention changes hinge friction to 0.075 Nm at reset, retaining the measured robot state and original mechanics elsewhere. Component tests restore an exact measured development state and are labelled as component tests. Full sequences start from reset with no state restoration. The repair uses bounded pulse recovery, a later transition to final heading, a modest 6.5 mm native swing reference for non-globe station transit, and a physically executed final neutral stance. R1 also changed book entry and both full attempts hit the clock while turning. R2 restores original terrain transit and limits the refinement to desk-level task approaches. Each source freeze and failed recording is retained. The original 0.8 N contact limit, foot-clearance, acceleration, support, object and time checks are unchanged.
+
+Both model sides receive identical revised controllers, observations and accurately described laptop options. The trained side uses already-frozen navigation checkpoint 48 and task checkpoint 8. The parent uses checkpoint zero for both adapters. No optimizer updates are added by this engineering continuation. The overall 512-attempt, 16-summed-wall-hour and 64-optimizer-update ceilings remain unchanged.
+
+Root-relative commands:
+
+```sh
+PYTHONPATH=mochi/src mochi/.venv/bin/modal deploy mochi/scripts/train_tasks_v25.py
+PYTHONPATH=mochi/src OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 mochi/.venv/bin/python mochi/scripts/probe_sequence_v25.py --id contact26r2-dev-selected --seed 252000 --layout mochi/configs/laptop-contact-v26/development.json --policy-config mochi/artifacts/continuation-v25/contact26r2-dev-selected-policy.json --engineering-revision contact-v26r2
+PYTHONPATH=mochi/src mochi/.venv/bin/python mochi/scripts/evaluate_contact_v26.py --workers 5
+```
+
+The evaluator refuses to open final layouts without a qualified development result and checks source hashes before execution. Existing artifact IDs are immutable; reproduction requires new IDs and an explicitly declared budget. The commands need backend credentials and retained Tinker states. The public replay does not.
+
 This study continues the V23 navigation experiment and V24 task preflight. V23's selected model did not beat its strongest fixed strategy. V24 completed the clock, drawer and laptop, then made an unintended wrist contact on its approach to the globe.
 
 The new navigation comparison asks whether a post-trained selector can preserve the fixed strategy's qualified completions while reducing measured steps on fresh layouts. The physical gait network is fixed. Tinker updates rank-16 LoRA weights in Qwen3.5-4B, which selects a route and controller profile from privileged geometry.
