@@ -27,6 +27,7 @@ p.add_argument('--reapproach',action='store_true');p.add_argument('--pulse-degre
 p.add_argument('--horizon',type=float,default=32.);p.add_argument('--pulse-force',type=float,default=.60)
 p.add_argument('--pulse-ramp',type=float,default=0.)
 p.add_argument('--hinge-projection',action='store_true');p.add_argument('--project-damping',action='store_true')
+p.add_argument('--face-contact',action='store_true');p.add_argument('--contact-x',type=float);p.add_argument('--radius',type=float)
 args=p.parse_args();assert .4<=args.force<=.74 and args.force<=args.backoff<=.76
 target=d/(args.id+'.json.gz');assert not target.exists()
 meta=json.loads((d/'sequence-task-development-r7.metadata.json').read_text())
@@ -44,6 +45,10 @@ signal.signal(signal.SIGALRM,lambda *_:(_ for _ in ()).throw(TimeoutError('Conta
 signal.setitimer(signal.ITIMER_REAL,360)
 try:
     profile=replace(PRESSES['P5'],code='P7' if args.force>.65 else 'P5',force=args.force)
+    if args.contact_x is not None:profile=replace(profile,contact_x=args.contact_x)
+    if args.radius is not None:profile=replace(profile,radius=args.radius)
+    if args.face_contact:
+        from mochi.navigation_v25.laptop_contact_face_v26 import adaptive_laptop
     if args.original_controller:
         from mochi.navigation_tasks_v24 import policy
         assert args.force==.65 and args.backoff==.65

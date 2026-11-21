@@ -1,6 +1,6 @@
 # V25 continuation findings
 
-Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison is complete and negative: neither task model completed the laptop in any of its six attempts. A separate contact-controller repair is being evaluated on development physics before a newly sealed cohort can be opened. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
+Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison is complete and negative: neither task model completed the laptop in any of its six attempts. The shared contact-v26r2 repair subsequently qualified with the selected models in development. Its new final cohort is now executing. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
 
 ## What is trained
 
@@ -65,7 +65,9 @@ Higher sampled hinge friction exposed a contact-controller limitation. Raising f
 
 The contact-v26 continuation uses a new final-layout hash, new physics seeds, shared source for both model sides, and the already frozen navigation-48/task-8 weights. It must pass an uninterrupted development sequence before the new final set is opened. The original task-final failures remain part of the public record. Contact repair, a later final-heading transition, a modest swing reference increase, and a physically executed neutral-stance dwell are engineering changes. They are not additional Tinker training.
 
-The first contact-v26 full attempts both collided with the clock case during the book-top turn, after completing the alarm. Applying the station-transit change to book entry altered the subsequent terrain approach. Contact-v26r2 retains the original terrain transit and restricts that refinement to the drawer, laptop and globe. The failed R1 source and recordings remain frozen separately. Final layouts are still unopened at this stage.
+The first contact-v26 full attempts both collided with the clock case during the book-top turn, after completing the alarm. Applying the station-transit change to book entry altered the subsequent terrain approach. Contact-v26r2 retains the original terrain transit and restricts that refinement to the drawer, laptop and globe. The failed R1 source and recordings remain frozen separately.
+
+The selected navigation-48/task-8 pair then qualified on the 0.075 Nm development intervention: all four objects, book traversal, physical support, contact and smoothness checks passed in 805 measured steps and 344.236 seconds. The parent reached the laptop but exceeded the unchanged 0.8 N force limit, peaking at 0.92215 N. Its 732 steps therefore do not count as an efficiency advantage. Both receive the same revised controller. This result is development evidence; a new twelve-attempt final cohort was opened only after the selected run passed. Two separate broad-face contact variants were rejected for unintended contact and a fall.
 
 ## Fresh navigation results
 

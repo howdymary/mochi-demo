@@ -1,0 +1,428 @@
+{
+  "scope": "Development components only. Includes fixture-friction counterfactuals, rejected variants and one bounded-pulse success. No fresh full-sequence claim.",
+  "rows": [
+    {
+      "id": "laptop-development-friction075-backoff072",
+      "parameters": {
+        "id": "laptop-development-friction075-backoff072",
+        "force": 0.72,
+        "backoff": 0.72,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4,
+        "horizon": 64.0,
+        "pulse_force": 0.72,
+        "pulse_ramp": 0.0
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "80356fb1f8032c847985d0e89e08f3a2a4a0f6ed34c4a275cab3ddb6d52228ad",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.1386303366594543,
+        "duration": 7.957248378792201,
+        "max_force_n": 0.8079673128776299,
+        "max_tilt_deg": 5.194328333110238,
+        "abort": "force_limit",
+        "contact_progress": 0.08269111880677316
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-early-pulse",
+      "parameters": {
+        "id": "laptop-development-friction075-early-pulse",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "9bc6d580153c487011707cce274f0a5f53a603a8b6f721ec42af7ab7ee8199e0",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 0.9954099773580376,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.6612552821903164,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.22591185337805153
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-early-pulse64",
+      "parameters": {
+        "id": "laptop-development-friction075-early-pulse64",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4,
+        "horizon": 64.0,
+        "pulse_force": 0.6
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "45914f4cf19c36494795a25a5b80926b535b21c53bc2d08891319d3b6be77cfa",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 0.977068432368879,
+        "duration": 64.00050676227863,
+        "max_force_n": 0.6612552821903164,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.24425341325467986
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-face250",
+      "parameters": {
+        "id": "laptop-development-friction075-face250",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 68.0,
+        "pulse_delay": 1.2,
+        "horizon": 32.0,
+        "pulse_force": 0.6,
+        "pulse_ramp": 0.0,
+        "hinge_projection": false,
+        "project_damping": false,
+        "face_contact": true,
+        "contact_x": 0.25,
+        "radius": 0.14
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "de05d8257cdb8c9ca2eb51b0575ff03c07e68d27dfc1ddb4c79d24af683c87f5",
+      "status": "completed",
+      "physical_failure": "invalid_fixture_contact",
+      "fall": false,
+      "invalid_contact": true,
+      "result": {
+        "success": null,
+        "value": null,
+        "duration": null,
+        "max_force_n": null,
+        "max_tilt_deg": null,
+        "abort": null,
+        "contact_progress": null
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-face255",
+      "parameters": {
+        "id": "laptop-development-friction075-face255",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 68.0,
+        "pulse_delay": 1.2,
+        "horizon": 32.0,
+        "pulse_force": 0.6,
+        "pulse_ramp": 0.0,
+        "hinge_projection": false,
+        "project_damping": false,
+        "face_contact": true,
+        "contact_x": 0.255,
+        "radius": 0.14
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "5ce075a0a101ed98db4a26c0a9b8db6de0223d10e910f755dc222598a3226e87",
+      "status": "completed",
+      "physical_failure": "fall",
+      "fall": true,
+      "invalid_contact": false,
+      "result": {
+        "success": null,
+        "value": null,
+        "duration": null,
+        "max_force_n": null,
+        "max_tilt_deg": null,
+        "abort": null,
+        "contact_progress": null
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-force070-pulse64",
+      "parameters": {
+        "id": "laptop-development-friction075-force070-pulse64",
+        "force": 0.7,
+        "backoff": 0.74,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4,
+        "horizon": 64.0,
+        "pulse_force": 0.7,
+        "pulse_ramp": 0.0
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "21df72a62080bb7b3c4173bd98dc6a0469a29c6bb81deca6cfa50d32dbe59bb7",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.1673254302882294,
+        "duration": 7.585299743868177,
+        "max_force_n": 0.8684791411121981,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": "force_limit",
+        "contact_progress": 0.05398747525253711
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-force072",
+      "parameters": {
+        "id": "laptop-development-friction075-force072",
+        "force": 0.72,
+        "backoff": 0.74,
+        "friction": 0.075
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "34c5f64f9231a6ee55d2cb830e75821febae402591f35042a4d46e365d53ec67",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.2090466711648415,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.6880481443037598,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.012275285300947125
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-hybrid-position-damping",
+      "parameters": {
+        "id": "laptop-development-friction075-hybrid-position-damping",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 68.0,
+        "pulse_delay": 1.2,
+        "horizon": 32.0,
+        "pulse_force": 0.6,
+        "pulse_ramp": 0.0,
+        "hinge_projection": true,
+        "project_damping": true
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "e8e66f0dc87a6879e7a0a534d49147d9ad1b304bc364f35f71263f9a8c33cd9e",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.192308825946634,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.5637301698666413,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.0290131202067212
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-hybrid-position",
+      "parameters": {
+        "id": "laptop-development-friction075-hybrid-position",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 68.0,
+        "pulse_delay": 1.2,
+        "horizon": 32.0,
+        "pulse_force": 0.6,
+        "pulse_ramp": 0.0,
+        "hinge_projection": true,
+        "project_damping": false
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "1934f804b43fd542753ea9e8d9a3e3ebe1849193a8423443b250c57918ddbc9f",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.204971941926755,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.585596399055856,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.01635001202238806
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-original-diagnostic",
+      "parameters": {
+        "id": "laptop-development-friction075-original-diagnostic",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "925c5e7adba109260885b08bedf58a4ef6ebda0b9ad7c3671a9937c2969139d9",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.2083883469065686,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.6617591780116547,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.01293360915235997
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-ramp030",
+      "parameters": {
+        "id": "laptop-development-friction075-ramp030",
+        "force": 0.72,
+        "backoff": 0.74,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4,
+        "horizon": 64.0,
+        "pulse_force": 0.72,
+        "pulse_ramp": 0.03
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "f91405c27df11a92e8f0fa602f9342f95776447dfb1d227d0bd460cc6e2d92e2",
+      "status": "completed",
+      "physical_failure": "invalid_fixture_contact",
+      "fall": false,
+      "invalid_contact": true,
+      "result": {
+        "success": null,
+        "value": null,
+        "duration": null,
+        "max_force_n": null,
+        "max_tilt_deg": null,
+        "abort": null,
+        "contact_progress": null
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-reapproach",
+      "parameters": {
+        "id": "laptop-development-friction075-reapproach",
+        "force": 0.65,
+        "backoff": 0.65,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": true,
+        "pulse_degrees": 68.0,
+        "pulse_delay": 1.2
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "f661b046311436e6f4faa0cd5394482730361307e6bade69f3ccd32f176fca79",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": false,
+        "value": 1.205875179307998,
+        "duration": 32.00066211590297,
+        "max_force_n": 0.6594586127393072,
+        "max_tilt_deg": 4.605552690395124,
+        "abort": null,
+        "contact_progress": 0.01525365803801959
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    },
+    {
+      "id": "laptop-development-friction075-strong-pulse64",
+      "parameters": {
+        "id": "laptop-development-friction075-strong-pulse64",
+        "force": 0.72,
+        "backoff": 0.74,
+        "friction": 0.075,
+        "keep_friction": false,
+        "original_controller": false,
+        "reapproach": false,
+        "pulse_degrees": 78.0,
+        "pulse_delay": 0.4,
+        "horizon": 64.0,
+        "pulse_force": 0.72
+      },
+      "snapshot_sha256": "0dc933ba3f98ee5774374612caae57a99e52b88b922ec294ec0e21184e4cb17a",
+      "artifact_sha256": "bf1ef582e3967f3ce7fb04660dadaa463a16305d22f747f880733f40a9d3bea8",
+      "status": "completed",
+      "physical_failure": null,
+      "fall": false,
+      "invalid_contact": false,
+      "result": {
+        "success": true,
+        "value": -0.003093497720325411,
+        "duration": 36.675770342563396,
+        "max_force_n": 0.7844544831231233,
+        "max_tilt_deg": 5.403339787405498,
+        "abort": null,
+        "contact_progress": 1.2244160637379782
+      },
+      "scope": "Development-only counterfactual component. Measured robot state; fixture-friction intervention at reset. No robot teleport or invented trajectory. Not a complete sequence."
+    }
+  ],
+  "source_sha256": {
+    "src/mochi/navigation_v25/laptop_contact_v26.py": "32c4c31271955cfdb8fe1bbca469686c847f086898a82d89e45e98067c91c510",
+    "src/mochi/navigation_v25/laptop_contact_face_v26.py": "02d8625040dc76b48993ee7bea794b930dff2a7171abe72ea69fb8f81f85c570"
+  }
+}

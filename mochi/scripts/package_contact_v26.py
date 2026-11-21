@@ -100,6 +100,8 @@ if cohort:
 else:
     manifest['contact_continuation'] = {'final_opened': (directory / 'contact26-final-opened.json').exists(),
         'development_qualified': development[1]['qualified_complete'], 'scope': 'Development only; no fresh complete-sequence claim.'}
+    if development[1]['qualified_complete']:
+        manifest['default_case']='contact26-r2-development'
 
 for query in manifest['sources']:
     for source in query['sources']:
