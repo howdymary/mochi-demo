@@ -33,9 +33,12 @@ if args.phase=='development':
 else:
     selected=json.loads((directory/'task-selection-freeze.json').read_text())
     assert selected['qualified_complete']
-    navigation=remote('navigation-training')
-    assert navigation['status'] in ['completed','development_goal_unmet'],'Wait for the bounded navigation study to finish'
-    nav_update=navigation['selected_checkpoint']['update'] if navigation['status']=='completed' else None
+    try:
+        navigation=remote('compact/navigation-training');compact=True
+    except (modal.exception.NotFoundError,FileNotFoundError):
+        navigation=remote('navigation-training');compact=False
+    assert navigation['status'] in ['completed','development_goal_unmet'] or (navigation.get('selected_checkpoint') and navigation['final_opened']),'Wait for navigation selection to be frozen'
+    nav_update=navigation['selected_checkpoint']['update'] if navigation.get('selected_checkpoint') else None
     sealed=directory/'sealed/final_tasks.json';layouts=json.loads(sealed.read_text())
     splits=json.loads((config/'splits.json').read_text())
     assert fingerprint(layouts)==splits['final']['sha256']
@@ -51,6 +54,7 @@ else:
         for seed in splits['final']['physics_seeds']:
             for side,update in [('parent',0),('selected',selected['selected_update'])]:
                 nav={'mode':'tinker','update':0 if side=='parent' else nav_update} if nav_update is not None else {'mode':'fixed','action':'buffered'}
+                if compact and nav_update is not None:nav['representation']='compact'
                 jobs.append({'id':f'task-final-{i}-{seed}-{side}','update':update,'seed':seed,'layout':path,
                     'settings':{'navigation':nav,'task':{'update':update}}})
 

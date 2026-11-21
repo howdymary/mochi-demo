@@ -1,0 +1,14 @@
+{
+  "scope": "Compact source frozen before its first optimizer update. Data freeze follows completed physical collection.",
+  "sha256": {
+    "src/mochi/navigation_v25/compact.py": "38ee127a55959a7a038b0b8624f280a79ad90618bcab01b8db51b9b254f01247",
+    "src/mochi/navigation_v25/compact_baselines.py": "140a38eab0c9df8f6bb16ae9fc599f8fffc4b18e9abf8877857eb1d377c2f3ea",
+    "scripts/train_compact_navigation_v25.py": "58e7923a853a9a52e909b39d36f932149c9fc8fdae5a7dd98f2db6703847d8a7",
+    "scripts/prepare_compact_study_v25.py": "f3bc843f916c2b4fa6cbd97f4029beb2c184f09fe3013ffd926a651400a7f460",
+    "scripts/collect_compact_training_v25.py": "a98e32bfb1288b2b8979bd883cb8460e62e67832c6820bba175858549cbcbb2e",
+    "configs/continuation-v25/compact/protocol.json": "2169ee4c0a949a0ed4ff0e92636954bff8e38d339f3b9f649baeb1a3aaef4955",
+    "configs/continuation-v25/nav-source-freeze.json": "55a4eb59512e1c16e3535924ba3ce4fced00230d51a8c87f7bfbd528ae708204"
+  },
+  "new_optimizer_updates_before_freeze": 0,
+  "final_opened": false
+}

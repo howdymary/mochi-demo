@@ -62,7 +62,8 @@ def choose(domain,task,observed,prompt):
             'preferred_action':preferred,'geometric_mask_changed_choice':preferred!=action}
     else:
         key='navigation' if domain=='navigation' else 'task'
-        picked=modal.Function.from_name('mochi-task-control-v25','choose').remote(key,settings[key]['update'],observed,ident)
+        kind='compact_navigation' if key=='navigation' and settings[key].get('representation')=='compact' else key
+        picked=modal.Function.from_name('mochi-task-control-v25','choose').remote(kind,settings[key]['update'],observed,ident)
     decisions.append({'domain':domain,'task':task,'selection':picked})
     return picked
 def capture(w,domain,task):
@@ -82,7 +83,7 @@ try:
         'steps':episode['steps']['attempts'],'physical_seconds':episode['duration'],'fall':episode['fall'],
         'invalid_contact':episode['invalid_contact'],'contacts':episode['contact_failures'],
         'snapshots':snapshots,'sha256':hashlib.sha256(b).hexdigest(),'layout_sha256':layout['layout_sha256'],
-        'source_sha256':hashlib.sha256((root/'src/mochi/navigation_v25/tasks.py').read_bytes()).hexdigest(),
+        'source_sha256':hashlib.sha256((root/'src/mochi/navigation_v25/tasks.py').read_bytes()).hexdigest(),'evaluation_partition':layout.get('partition'),
         'scope':row['scope'],'policy_settings':settings,'checkpoint_decisions':decisions}
 except BaseException as error:
     report={'id':args.id,'status':'incomplete','error_type':type(error).__name__,'error':str(error)[:160],'snapshots':snapshots,'scope':'Interrupted software attempt; no complete-sequence outcome inferred.'}

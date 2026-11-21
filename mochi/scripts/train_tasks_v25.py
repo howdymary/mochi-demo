@@ -137,7 +137,7 @@ async def choose(kind,update,observed,ident):
     from mochi.integrations import digest
     global _mochi_inference_cache
     if '_mochi_inference_cache' not in globals():_mochi_inference_cache={}
-    assert kind in ['navigation','task'] and ident.replace('-','').isalnum()
+    assert kind in ['navigation','compact_navigation','task'] and ident.replace('-','').isalnum()
     await volume.reload.aio()
     directory=Path('/artifacts')/RUN
     receipts=directory/'sequence-inferences';receipts.mkdir(exist_ok=True)
@@ -145,7 +145,8 @@ async def choose(kind,update,observed,ident):
     request=digest([kind,update,observed])
     if target.exists():
         value=json.loads(target.read_text());assert value['request_sha256']==request;return value
-    path=json.loads((directory/('private-navigation-paths.json' if kind=='navigation' else 'private-task-paths.json')).read_text())[str(update)]['optimizer']
+    filename='compact/private-navigation-paths.json' if kind=='compact_navigation' else 'private-navigation-paths.json' if kind=='navigation' else 'private-task-paths.json'
+    path=json.loads((directory/filename).read_text())[str(update)]['optimizer']
     key=digest(path)
     if key not in _mochi_inference_cache:
         service=tinker.ServiceClient(display_name=RUN+'-sequence-inference')
@@ -154,13 +155,14 @@ async def choose(kind,update,observed,ident):
         renderer=DecisionRenderer(renderers.get_renderer(model_info.get_recommended_renderer_name('Qwen/Qwen3.5-4B'),trainer.get_tokenizer()))
         _mochi_inference_cache[key]=(sampler,renderer)
     sampler,renderer=_mochi_inference_cache[key]
-    if kind=='navigation':from mochi.navigation_v25.engine import decision
+    if kind=='compact_navigation':from mochi.navigation_v25.compact import decision
+    elif kind=='navigation':from mochi.navigation_v25.engine import decision
     else:from mochi.navigation_tasks_v24.policy import decision
     rendered=renderer.render(decision(observed));tokens=len(rendered.tokens)+1
     broker=modal.Function.from_name('mochi-continuation-v25','budget')
     await broker.remote.aio(RUN,'sequence-inference-'+ident,{'inference_input_plus_max_output_tokens':tokens,'modeled_provider_usd':tokens*1.01/1e6})
     start=time.perf_counter();distribution=await sample_decision(sampler,rendered)
-    allowed=[a for a in distribution if kind!='navigation' or observed['options'][a]['feasible']]
+    allowed=[a for a in distribution if kind=='task' or observed['options'][a]['feasible']]
     assert allowed,'No geometrically feasible model action'
     raw_choice=max(distribution,key=distribution.get)
     selected=max(allowed,key=distribution.get)

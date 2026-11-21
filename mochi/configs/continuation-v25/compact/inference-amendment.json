@@ -1,0 +1,15 @@
+{
+  "reason": "Allow the frozen task runner to call the compact navigation representation once its checkpoint is selected. Navigation action semantics, model task weights, physics and verifiers are unchanged.",
+  "task_optimizer_updates_before_api_extension": 16,
+  "final_task_opened": false,
+  "files": {
+    "train_tasks_v25.py": {
+      "before_sha256": "3297693915935a5a8a75950b140c2ee42207f56568accfbae71b842e636b13a9",
+      "after_sha256": "c5daf2b76f12e6c1e6f0791f8cc903e395c5dc895e9590c469d22f41e066ef90"
+    },
+    "probe_sequence_v25.py": {
+      "before_sha256": "25a81e659234f66de9eb0b554577639e0420164334a5609fdcfe8df4887a47f9",
+      "after_sha256": "2959388350654cd61d01269f99960f391fcb34c38fabbcdf256c207ea7232414"
+    }
+  }
+}

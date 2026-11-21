@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-21T21:11:10.672752+00:00",
+  "call_id": "fc-01M7ZYDHSTFHY82406J0NGHFDV",
+  "reason": "Raw checkpoint 32 fails a fixed-qualified development case. The monotone no-new-failure gate cannot be met. Stop remaining evaluation and redirect the remaining 16 updates before any raw update 33.",
+  "completed_optimizer_updates": 32,
+  "raw32_full_development_cohort_completed": false,
+  "fresh_final_opened": false,
+  "physical_checks_changed": false,
+  "negative_results_preserved": true,
+  "next_protocol": "configs/continuation-v25/compact/protocol.json"
+}

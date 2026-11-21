@@ -44,6 +44,18 @@ Exact measurements, rejected candidates, trajectories and optimizer receipts rem
 
 No final-layout outcome may become a training label. No engineering change is attributed to weight training. This study does not establish visual perception, low-level gait learning, hardware transfer, a robotics benchmark record or a causal memory advantage.
 
+## Compact continuation
+
+The three-profile study was stopped before update 33. Updates 8 and 16 failed the reliability gate on the full development cohort. An additional physical update-32 test also failed a fixed-qualified clearance case, making that checkpoint ineligible regardless of its remaining outcomes. Its full development cohort was not completed and no aggregate result is invented for it. Original weights, partial evaluations and the targeted failure are retained.
+
+The remaining sixteen navigation updates use the two existing direct and buffered controllers. This is a new decision interface, shared by its parent and trained models. Planner summaries replace redundant raw obstacle and waypoint lists: path length, clearance, turns, speed and explicitly qualified timing proxies. A static five-millimetre clearance band is a geometric feature. No development outcome, teacher label, split identifier or fitted control rule enters the observation.
+
+Eight additional training layouts were executed under both seeds and both retained controllers, adding 32 real physical attempts. The original 24 layouts are retargeted using their already measured direct/buffered alternatives. The resulting 32-layout corpus has 26 direct and six buffered robust teacher choices. The next updates resume the saved update-32 weights and optimizer. Checkpoints zero, 32, 40 and 48 share the compact representation, separating representation effects from further weight updates.
+
+Navigation makes one discrete choice before physics advances. Development therefore uses the complete physical direct/buffered outcome table for the same eight layouts and two seeds. Two independently executed duplicate cases matched exactly in trajectory, controls, step events and balance samples. Lookup-based checkpoint evaluation is labeled as such and does not count as a new rollout. Every final comparison requires a new uninterrupted physical execution. The tuned two-profile rule is a separate control, not an observation or an undisclosed safety filter.
+
+The new protocol and source freeze precede all compact optimizer updates. Its budget uses the original shared ledger: 32 original navigation updates, sixteen task updates, and at most sixteen compact navigation updates, totaling 64. The task adapter is frozen at development-selected update eight. Once compact navigation selection is frozen, its final navigation and task cohorts may execute concurrently under the same three-Modal/two-local physics cap. Neither final cohort supplies training labels or changes checkpoint selection.
+
 ## Setup and reproduction
 
 Run commands from the repository root. Reuse the existing environment when available. The continuation pins its provider SDKs separately because the original project's optional dependency versions predate this study.

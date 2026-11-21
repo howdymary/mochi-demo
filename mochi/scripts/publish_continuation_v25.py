@@ -19,7 +19,7 @@ except subprocess.CalledProcessError:parent=base;old='0'*40
 git('read-tree',parent)
 paths=['mochi/README.md','mochi/src/mochi/navigation_v25','mochi/configs/continuation-v25',
     'mochi/web/desk/continuation-v25.html','mochi/web/desk/continuation-v25.js','mochi/web/desk/continuation-v25',
-    'mochi/docs/continuation-v25-methods.md','mochi/tests/test_navigation_v25_checks.py']
+    'mochi/docs/continuation-v25-methods.md','mochi/tests/test_navigation_v25_checks.py','mochi/tests/test_navigation_v25_compact.py']
 paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v25*.py')]
 paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v25*.mjs')]
 if (root/'mochi/docs/continuation-v25-findings.md').exists():paths.append('mochi/docs/continuation-v25-findings.md')

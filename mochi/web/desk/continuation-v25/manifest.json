@@ -29,6 +29,23 @@
           }
         },
         "selected": {
+          "file": "progress-task-dev-u8.json.gz",
+          "label": "Development-selected task weights \u00b7 update 8",
+          "sha256": "da57c512c7e59001e84aa812aad1b497f1075255f5caae6f79ec32e62aaca09f",
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": true,
+            "steps": 817,
+            "duration": 339.07409788329454,
+            "failure": null,
+            "action": "same fixed navigation; learned contact/recovery choices",
+            "selection": {
+              "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+              "optimizer_updates": 8
+            }
+          }
+        },
+        "u4": {
           "file": "progress-task-dev-u4.json.gz",
           "label": "Trained task weights \u00b7 update 4",
           "sha256": "af78c4bb58d3501051b9876f763fa936955cc97c24cf73106112fa83c4cbe0a7",
@@ -44,10 +61,27 @@
               "optimizer_updates": 4
             }
           }
+        },
+        "u16": {
+          "file": "progress-task-dev-u16.json.gz",
+          "label": "Task weights \u00b7 update 16",
+          "sha256": "475880cecb33a09fd2ad60bfaf4e2f8f1df40a0017c510e48281cb4e10244886",
+          "row": {
+            "kind": "sequence",
+            "qualified_complete": true,
+            "steps": 848,
+            "duration": 341.62705521706977,
+            "failure": null,
+            "action": "same fixed navigation; learned contact/recovery choices",
+            "selection": {
+              "checkpoint_id": "d5eea6c58635c002cd56589e3d9fc7bf92ee97e609f5af616497e12fda8a1bc7",
+              "optimizer_updates": 16
+            }
+          }
         }
       },
       "scope": "Same physical code, scene, reset and fixed navigation profile. Separate uninterrupted rollouts using actual saved task-model weights.",
-      "comparison_note": "The parent completed the tasks but missed laptop-leg sole clearance: 4.395 mm versus the frozen 4.5 mm limit. Update 4 qualified, with 4.818 mm. Failed runs do not count toward efficiency gains. Checkpoints 8 and 16 are still being evaluated; final task layouts remain unopened."
+      "comparison_note": "All four saved task checkpoints are available in the selectors. Update 8 qualified in 817 steps; updates 4 and 16 qualified in 848. The parent missed laptop-leg sole clearance. These are controlled development results; final layouts remain unopened."
     },
     {
       "id": "training-probe",
@@ -3779,12 +3813,22 @@
       "path": "mochi-nav25-20261121a/public/progress-task-dev-u4.json.gz",
       "sha256": "af78c4bb58d3501051b9876f763fa936955cc97c24cf73106112fa83c4cbe0a7",
       "bytes": 15173067
+    },
+    "progress-task-dev-u8.json.gz": {
+      "path": "mochi-nav25-20261121a/public/progress-task-dev-u8.json.gz",
+      "sha256": "da57c512c7e59001e84aa812aad1b497f1075255f5caae6f79ec32e62aaca09f",
+      "bytes": 14868145
+    },
+    "progress-task-dev-u16.json.gz": {
+      "path": "mochi-nav25-20261121a/public/progress-task-dev-u16.json.gz",
+      "sha256": "475880cecb33a09fd2ad60bfaf4e2f8f1df40a0017c510e48281cb4e10244886",
+      "bytes": 15173117
     }
   },
   "summary": "A saved Tinker task checkpoint completes the continuous four-task sequence under every quality check. Fresh-layout navigation evaluation continues.",
-  "claim": "Development preview. Update 4 qualified where the parent missed laptop-leg foot clearance. No advantage over the fixed navigation strategy or fresh-task reliability is claimed yet.",
+  "claim": "Development preview. Selected task checkpoint 8 qualifies in the continuous four-task sequence; the parent misses a quality limit. Navigation training continues with a compact two-profile interface. No fresh-layout advantage is claimed yet.",
   "uncertainty": "One known training-layout navigation probe, one matched task-checkpoint development comparison and two shared-controller repair comparisons. These are development evidence. Final navigation and task layouts remain unopened.",
-  "training": "Tinker has completed 32 rank-16 LoRA optimizer updates on Qwen3.5-4B. Targets came from 144 physical requests across 24 training layouts and two physics seeds. Replay balances direct, buffered and wide_fast winners. The pretrained native gait network is fixed. A separate contact/recovery adapter completed 16 real optimizer updates. Its update-4 checkpoint is shown here; continuous selection is not finished.",
+  "training": "32 original navigation and 16 separate task/recovery optimizer updates are completed. Task checkpoint 8 was selected using actual uninterrupted development runs. The next navigation curriculum uses compact planner summaries and the direct/buffered controllers; its remaining 16 updates have not started.",
   "memory": "Source-verified past.dev recalls pass measured failures, research and replay allocation between application roles. A private-audience canary passed. Evaluation conclusions are pending.",
   "execution": "At this publication snapshot the ledger accounts for 332 physical attempts, 5.79 simulation wall hours including reservations, 48 completed or reserved optimizer updates, 2 Exa searches and 9 actual past.dev recalls. Physics concurrency is capped at three Modal and two local workers. Modeled costs are not invoices.",
   "totals": [
@@ -3862,6 +3906,20 @@
     {
       "cohort": "Continuous task-model development",
       "method": "Trained task weights \u00b7 update 4",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 848
+    },
+    {
+      "cohort": "Continuous task-model development",
+      "method": "Development-selected task weights \u00b7 update 8",
+      "qualified": 1,
+      "n": 1,
+      "mean_steps": 817
+    },
+    {
+      "cohort": "Continuous task-model development",
+      "method": "Task weights \u00b7 update 16",
       "qualified": 1,
       "n": 1,
       "mean_steps": 848

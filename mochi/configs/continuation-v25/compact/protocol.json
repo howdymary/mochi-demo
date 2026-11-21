@@ -1,0 +1,39 @@
+{
+  "id": "mochi-nav25-compact-20261121a",
+  "parent_global_update": 32,
+  "parent_origin": "Exact saved V25 update-32 weights and optimizer; original parent at V25 update zero remains a control.",
+  "reason": "The three-profile policy misses reliability-critical clearance cases. Test a shorter outcome-free representation and two existing controllers before more broad three-way training.",
+  "actions": [
+    "direct",
+    "buffered"
+  ],
+  "engineering_attribution": "Representation and action-set changes are separate from weight changes. Both compact parent and trained checkpoints share them. Native gait and physical source stay fixed.",
+  "training_layouts": 32,
+  "extra_training_layout_indices": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "new_optimizer_updates": 16,
+  "global_navigation_checkpoints": [
+    0,
+    32,
+    40,
+    48
+  ],
+  "batch": 24,
+  "learning_rate": 0.0002,
+  "seed": 251932,
+  "development": "Same eight development layouts and both seeds. Single initial choice; complete deterministic action-outcome table from actual Modal rollouts, allowed only after exact duplicate-trajectory audit. This is offline development lookup, not new rollout execution.",
+  "selection": "Choose the best update among 32, 40 and 48 satisfying the original reliability and paired-efficiency gate. Update 32 is the representation-control checkpoint. Retain it if further training regresses. Report gains against compact parent zero and against compact 32 separately; representation changes are not weight gains. Freeze once before final layouts.",
+  "final": "Original unopened eight-layout final navigation cohort, two seeds, parent/selected/fixed/contextual. Every final result is a new uninterrupted Modal rollout.",
+  "budget": "Shares the unchanged parent 512-episode / 16-hour / 64-total-update / 2M-token / $50 ledger. Original three-way updates 33-48 must not run. Sixteen task updates are already completed.",
+  "role_services": "New compact-specific memory identities and audiences. Actual Exa search tied to reliability failures; source-verified past.dev handoffs.",
+  "physical_source_sha256": "55a4eb59512e1c16e3535924ba3ce4fced00230d51a8c87f7bfbd528ae708204",
+  "final_opened_before_freeze": false
+}
