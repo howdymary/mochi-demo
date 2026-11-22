@@ -8,7 +8,7 @@ ws.addEventListener('message',event=>{const d=JSON.parse(event.data);if(d.id){co
 function call(method,params={}){const id=++serial;return new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error(method+' timeout')),60000);pending.set(id,{resolve,reject,timer});ws.send(JSON.stringify({id,method,params}))})}
 async function run(expression){const r=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value}
 async function until(expression){for(let i=0;i<480;i++){if(await run(expression))return;await new Promise(r=>setTimeout(r,250))}throw Error('Viewer readiness timeout')}
-await call('Page.enable');await call('Runtime.enable');await call('Emulation.setDeviceMetricsOverride',{width:1680,height:1380,deviceScaleFactor:1,mobile:false});await call('Page.navigate',{url});await until('!!window.__mochiV25&&!__mochiV25.loading');
+await call('Page.enable');await call('Runtime.enable');await call('Emulation.setDeviceMetricsOverride',{width:1680,height:1380,deviceScaleFactor:1,mobile:false});await call('Page.navigate',{url});await until(`!!window.__mochiV25&&!__mochiV25.loading&&__mochiV25.manifest.cases.length>=${Number(process.argv[5]||0)}`);
 const allCases=await run('__mochiV25.manifest.cases.map(c=>({id:c.id,kind:c.kind}))');
 const cases=process.argv[4]?allCases.filter(c=>new RegExp(process.argv[4]).test(c.id)):allCases,checks=[];
 assert(cases.length>0,'No matching scenarios');
