@@ -1,0 +1,13 @@
+{
+  "scope": "Two measured development component runs, original fixture friction. Verifies the default copied contact controller against the original API before revised options. No fresh-task success claim.",
+  "artifacts": {
+    "laptop-original-state-original-api-reference": "3474a8d0dc31ac6057ae149cfaaed40df5095496747262f2ebb4a655cfb33086",
+    "laptop-original-state-copied-api-reference": "5fe2b399b2132cc97cb20d613c77eb4b208ad1cc4cf196278efc95228dfa20d5"
+  },
+  "exact_equality": {
+    "trajectory": true,
+    "control_telemetry": true,
+    "balance_measurements": true,
+    "steps": true
+  }
+}

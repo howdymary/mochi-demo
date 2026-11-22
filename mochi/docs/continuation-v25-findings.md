@@ -1,6 +1,6 @@
 # V25 continuation findings
 
-Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison is complete and negative: neither task model completed the laptop in any of its six attempts. The shared contact-v26r2 repair subsequently qualified with the selected models in development. Its new final cohort is now executing. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
+Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison was negative. After shared contact repair, both models qualified on one of six new complete-sequence attempts, on different scenario pairs. A later heading-aware engineering candidate is in development. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
 
 ## What is trained
 
@@ -68,6 +68,20 @@ The contact-v26 continuation uses a new final-layout hash, new physics seeds, sh
 The first contact-v26 full attempts both collided with the clock case during the book-top turn, after completing the alarm. Applying the station-transit change to book entry altered the subsequent terrain approach. Contact-v26r2 retains the original terrain transit and restricts that refinement to the drawer, laptop and globe. The failed R1 source and recordings remain frozen separately.
 
 The selected navigation-48/task-8 pair then qualified on the 0.075 Nm development intervention: all four objects, book traversal, physical support, contact and smoothness checks passed in 805 measured steps and 344.236 seconds. The parent reached the laptop but exceeded the unchanged 0.8 N force limit, peaking at 0.92215 N. Its 732 steps therefore do not count as an efficiency advantage. Both receive the same revised controller. This result is development evidence; a new twelve-attempt final cohort was opened only after the selected run passed. Two separate broad-face contact variants were rejected for unintended contact and a fall.
+
+## Contact-v26r2 final results
+
+All twelve new attempts are complete. Parent and selected models each qualified on 1/6 attempts across three layouts and two new physics seeds. The parent passed all four object checks in 3/6 attempts; the selected models did so in 2/6. Their qualified attempts occur on different pairs, so no paired efficiency reduction is defined. There is no demonstrated task-model reliability gain.
+
+The selected qualified case completed the continuous sequence in 873 steps and 345.174 seconds. It is a real fresh-layout recording, selected after evaluation as a demo highlight. The full cohort remains available. Four attempts on the first layout stopped because the shared planner found no validated drawer approach. Other failures include laptop contact, an unintended fixture contact, and forward-facing travel below the unchanged 90% gate. Object completion alone is not smooth qualified completion.
+
+The default copied laptop controller was checked against the original API under the original development friction. Recorded body trajectories, control telemetry, balance samples and step records matched exactly. The revised pulse options remain separate engineering changes. Exact raw physical records, including failures and controls, have been archived in Mochi's dedicated Modal volume with a public hash index.
+
+## Subsequent heading-aware development
+
+An offline reconstruction of the failed robot pose matched its recorded body positions to numerical precision. The existing circular-envelope planner rejected the station approach. A bounded search found 90 routes passing the original oriented body, heading-sweep and foot-clearance checks, with no physics steps executed. This is geometric feasibility evidence, not physical success.
+
+The R3 development candidate adds a bounded oriented fallback and prefers approaches that permit forward travel. It also physically settles into a supported neutral stance before laptop contact. Body movement still uses the existing joint actuators and free base. No success threshold, native gait weight or selection-model weight changes. A subsequent selected-model validation set is being sealed using geometric checks only. Its results cannot establish a model-weight gain because the comparison is engineering validation with fixed selected weights.
 
 ## Fresh navigation results
 

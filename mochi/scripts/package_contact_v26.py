@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import modal
 from mochi.smooth_v16.public import rounded
+from mochi.navigation_v25.qualification_report_v26 import quality_misses
 
 root = Path(__file__).resolve().parents[1]
 directory = root / 'artifacts/continuation-v25'
@@ -14,9 +15,11 @@ run = manifest['run_id']
 volume = modal.Volume.from_name('mochi-continuation-v25-artifacts')
 training = json.loads(b''.join(volume.read_file(run + '/task-training.json')))
 uploads = []
+quality_config=json.loads((root/'configs/paperfree-v19-training.json').read_text())
 cohort_file = directory / 'contact26-final-continuous.json'
 cohort = json.loads(cohort_file.read_text()) if cohort_file.exists() else None
 manifest.setdefault('claim_before_contact_continuation',manifest['claim'])
+manifest['claim_before_contact_continuation']=manifest['claim_before_contact_continuation'].replace('combined learned navigation/manipulation remains unqualified.','the original V25 combined-model preflight did not qualify.')
 manifest['claim']=manifest['claim_before_contact_continuation']
 manifest['cases'] = [c for c in manifest['cases'] if not c['id'].startswith('contact26-')]
 manifest['results'] = [r for r in manifest['results'] if r['cohort'] != 'Fresh four-task contact continuation']
@@ -46,9 +49,16 @@ def recording(metadata, label):
     update = settings['task']['update']
     checkpoint = next(c for c in training['checkpoints'] if c['update'] == update)
     nav = settings['navigation']['update']
+    laptop=episode['results'].get('laptop',{})
+    display_failure=row['failure']
+    misses=quality_misses(row,quality_config)
+    if display_failure=='laptop-failed:laptop' and laptop.get('abort')=='force_limit':
+        display_failure='laptop contact exceeded the 0.8 N limit'
+    if not display_failure and misses:display_failure='; '.join(misses[:2])
     return {'file': name, 'sha256': sha, 'label': label, 'updates': f'navigation {nav}; task {update}',
         'row': {'kind': 'sequence', 'qualified_complete': row['qualified_complete'], 'steps': metadata['steps'],
             'duration': metadata['physical_seconds'], 'failure': row['failure'],
+            'display_failure':display_failure,'laptop_peak_force_n':laptop.get('max_force_n'),'quality_misses':misses,
             'action': f'navigation {nav}; task checkpoint {update}',
             'selection': {'checkpoint_id': checkpoint['checkpoint_id'], 'optimizer_updates': f'nav {nav}, task {update}'},
             'checkpoint_decisions': metadata['checkpoint_decisions']}}

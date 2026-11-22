@@ -1,0 +1,32 @@
+{
+  "id": "mochi-heading26-20261121a",
+  "final_set_sha256": "cbc1f0b7d2bfcfd51f83477187c9addc4bbc89316c122821ee42134f649a855f",
+  "n_layouts": 3,
+  "physics_seed_by_layout": [
+    255000,
+    255001,
+    255002
+  ],
+  "selected_weights": {
+    "navigation": 48,
+    "task": 8
+  },
+  "reference_geometry_sha256": "e1701e34e8ce2a9e7eed0330c240cf9f3cd828a61091eb9b4e330be05afb5915",
+  "reference_fk_error_m": 1.3877787807814457e-17,
+  "geometric_rejections": [
+    {
+      "candidate": 1,
+      "reason": "cup AABB overlap",
+      "dynamic_trials": 0
+    },
+    {
+      "candidate": 3,
+      "reason": "no-validated-heading-aware-task-approach",
+      "dynamic_trials": 0
+    }
+  ],
+  "physics_rollouts_during_sealing": 0,
+  "eligibility": "Require a qualified R3 development run before opening. No further checkpoint selection. This is selected-model product validation, not a paired model-weight study.",
+  "limits": "Original 512 physical attempts, 16 summed simulation wall-hours and 64 actual optimizer updates remain unchanged. At most six simultaneous physical workers.",
+  "metadata_recovery_without_rollouts": true
+}

@@ -1,0 +1,575 @@
+{
+  "scene": {
+    "version": "contact-v26-new-arrangement",
+    "units": "metres",
+    "desk": [
+      1.2,
+      0.8
+    ],
+    "initial_pose": [
+      -0.43994627896055827,
+      -0.24854364580081897,
+      0.0
+    ],
+    "clock_offset": [
+      0,
+      0,
+      0.024
+    ],
+    "globe_offset": [
+      0,
+      -0.37,
+      0
+    ],
+    "book_height": 0.008,
+    "book_collision_scope": "Fixed, nonsliding book terrain; visual meshes and collision envelopes share the same placements. No root motion is authored.",
+    "props": [
+      {
+        "name": "book-step-1",
+        "asset": "book",
+        "pos": [
+          -0.36,
+          0.02,
+          0
+        ],
+        "size": [
+          0.23,
+          0.3,
+          0.008
+        ],
+        "yaw": 0,
+        "color": "#334d56",
+        "shape": "box",
+        "climb": true,
+        "title": "ROBOTICS"
+      },
+      {
+        "name": "book-step-2",
+        "asset": "book",
+        "pos": [
+          -0.36,
+          0.045,
+          0.008
+        ],
+        "size": [
+          0.22,
+          0.23,
+          0.008
+        ],
+        "yaw": 0,
+        "color": "#8f5248",
+        "shape": "box",
+        "climb": true,
+        "title": "ROBOT MOTION"
+      },
+      {
+        "name": "book-step-3",
+        "asset": "book",
+        "pos": [
+          -0.36,
+          0.07,
+          0.016
+        ],
+        "size": [
+          0.2,
+          0.18,
+          0.008
+        ],
+        "yaw": 0,
+        "color": "#777c55",
+        "shape": "box",
+        "climb": true,
+        "title": "PRACTICAL MECHANICS"
+      },
+      {
+        "name": "printer",
+        "asset": "printer",
+        "pos": [
+          0.049895157467400725,
+          -0.0364226775588531,
+          0.0
+        ],
+        "size": [
+          0.28,
+          0.18,
+          0.17
+        ],
+        "yaw": 0,
+        "shape": "box"
+      },
+      {
+        "name": "coffee-mug",
+        "asset": "mug",
+        "pos": [
+          -0.04,
+          -0.245,
+          0.0
+        ],
+        "size": [
+          0.105,
+          0.085,
+          0.095
+        ],
+        "yaw": -0.3,
+        "shape": "cylinder"
+      },
+      {
+        "name": "spiral-notebook",
+        "asset": "notebook",
+        "pos": [
+          -0.43,
+          0.285,
+          0.015
+        ],
+        "size": [
+          0.2,
+          0.145,
+          0.007
+        ],
+        "yaw": -0.12,
+        "shape": "box"
+      },
+      {
+        "name": "pencil-1",
+        "asset": "pencil",
+        "pos": [
+          -0.47263163763087046,
+          0.28238209111577667,
+          0.023
+        ],
+        "size": [
+          0.17,
+          0.007,
+          0.007
+        ],
+        "yaw": 0.22,
+        "shape": "capsule"
+      },
+      {
+        "name": "pencil-2",
+        "asset": "pencil",
+        "pos": [
+          -0.4646657092900375,
+          0.29009979427679566,
+          0.023
+        ],
+        "size": [
+          0.16,
+          0.0065,
+          0.0065
+        ],
+        "yaw": -0.46,
+        "shape": "capsule"
+      },
+      {
+        "name": "pencil-3",
+        "asset": "pencil",
+        "pos": [
+          -0.4072521450588045,
+          0.28981929479897206,
+          0.023
+        ],
+        "size": [
+          0.15,
+          0.007,
+          0.007
+        ],
+        "yaw": 0.33,
+        "shape": "capsule"
+      },
+      {
+        "name": "pen-1",
+        "asset": "pen",
+        "pos": [
+          -0.41254327622457115,
+          0.30096440985075135,
+          0.023
+        ],
+        "size": [
+          0.145,
+          0.009,
+          0.009
+        ],
+        "yaw": -0.62,
+        "shape": "capsule"
+      },
+      {
+        "name": "pen-2",
+        "asset": "pen",
+        "pos": [
+          -0.4297345112036877,
+          0.3019935119210636,
+          0.023
+        ],
+        "size": [
+          0.14,
+          0.009,
+          0.009
+        ],
+        "yaw": 0.15,
+        "shape": "capsule"
+      },
+      {
+        "name": "stapler",
+        "asset": "stapler",
+        "pos": [
+          -0.47,
+          0.335,
+          0.022
+        ],
+        "size": [
+          0.11,
+          0.035,
+          0.04
+        ],
+        "yaw": 0.12,
+        "shape": "box"
+      },
+      {
+        "name": "reading-glasses",
+        "asset": "glasses",
+        "pos": [
+          -0.49387215058091605,
+          0.3019888022384592,
+          0.023
+        ],
+        "size": [
+          0.14,
+          0.044,
+          0.016
+        ],
+        "yaw": -0.1,
+        "shape": "box"
+      },
+      {
+        "name": "reference-book",
+        "asset": "book",
+        "pos": [
+          -0.43,
+          0.285,
+          0
+        ],
+        "size": [
+          0.19,
+          0.14,
+          0.015
+        ],
+        "yaw": -0.08,
+        "color": "#545755",
+        "shape": "box",
+        "title": "WORKSHOP HANDBOOK"
+      },
+      {
+        "name": "loose-page-1",
+        "asset": "paper",
+        "pos": [
+          -0.43,
+          0.29,
+          0.022
+        ],
+        "size": [
+          0.15,
+          0.105,
+          0.0002
+        ],
+        "yaw": 0.12,
+        "shape": "box"
+      },
+      {
+        "name": "loose-page-2",
+        "asset": "paper",
+        "pos": [
+          -0.43,
+          0.29,
+          0.022
+        ],
+        "size": [
+          0.15,
+          0.105,
+          0.0002
+        ],
+        "yaw": 0.07,
+        "shape": "box"
+      },
+      {
+        "name": "printer-output-tray",
+        "asset": "tray",
+        "pos": [
+          0.049895157467400725,
+          -0.1414226775588531,
+          0.048
+        ],
+        "size": [
+          0.19,
+          0.065,
+          0.005
+        ],
+        "yaw": 0,
+        "shape": "box"
+      },
+      {
+        "name": "printer-printout",
+        "asset": "paper",
+        "pos": [
+          0.049895157467400725,
+          -0.1454226775588531,
+          0.054
+        ],
+        "size": [
+          0.17,
+          0.085,
+          0.0002
+        ],
+        "yaw": 0.03,
+        "shape": "box"
+      }
+    ],
+    "route": [
+      {
+        "name": "climb-to-alarm",
+        "goal": [
+          -0.375,
+          0.025,
+          1.5707963267948966
+        ],
+        "surface_height": 0.024
+      },
+      {
+        "name": "descend-books",
+        "goal": [
+          -0.375,
+          -0.19,
+          1.5707963267948966
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "clear-books",
+        "goal": [
+          -0.19,
+          -0.17,
+          0
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "drawer",
+        "goal": [
+          -0.13,
+          0.02,
+          1.5707963267948966
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "laptop-corridor",
+        "goal": [
+          0.3,
+          0.02,
+          0
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "laptop",
+        "goal": [
+          0.3,
+          0.16,
+          1.5707963267948966
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "globe-corridor",
+        "goal": [
+          0.35,
+          0.02,
+          1.5707963267948966
+        ],
+        "surface_height": 0
+      },
+      {
+        "name": "globe",
+        "goal": [
+          0.35,
+          -0.145,
+          0
+        ],
+        "surface_height": 0
+      }
+    ],
+    "revision_notes": "Post-it stack removed from physics and rendering. Drawer-to-laptop transit is ordinary flat walking.",
+    "station_offsets": {
+      "drawer-cabinet": [
+        -0.028683526038733052,
+        0.15,
+        0.0
+      ],
+      "drawer": [
+        -0.028683526038733052,
+        0.15,
+        0.0
+      ],
+      "laptop-base": [
+        0.028683526038733052,
+        0.13,
+        0.0
+      ],
+      "laptop-screen": [
+        0.028683526038733052,
+        0.13,
+        0.0
+      ],
+      "globe-base": [
+        0.03325989002638503,
+        0.43,
+        0.0
+      ],
+      "globe": [
+        0.03325989002638503,
+        0.43,
+        0.0
+      ]
+    },
+    "task_workspace_revision": "Stapler on notebook, outside the relocated laptop closing volume."
+  },
+  "goal": [
+    0.40594695732556374,
+    -0.22430227859915658,
+    0.0
+  ],
+  "generation_seed": 231000,
+  "partition": "contact_v26r3_development",
+  "index": 0,
+  "family": "upper-mouth",
+  "scope": "Previously opened R2 final failure geometry, now development evidence for a subsequent engineering revision. Not a new final layout.",
+  "layout_sha256": "ed27155e11861ed2090b66a30f52c6559a5fa7d764132f69ae5839ca28ace119",
+  "geometric_validation": {
+    "envelope": {
+      "neutral_collision_radius_m": 0.0477443785415953,
+      "swing_and_tracking_allowance_m": 0.012,
+      "planning_radius_m": 0.0597443785415953,
+      "foot_collision_bounds": [
+        {
+          "body": "left_ankle_roll_link",
+          "minimum": [
+            -0.45041962305169253,
+            -0.224562813444221,
+            6.835327453302224e-05
+          ],
+          "maximum": [
+            -0.4487255878883402,
+            -0.22286877828086868,
+            0.0017389943447030229
+          ]
+        },
+        {
+          "body": "left_ankle_roll_link",
+          "minimum": [
+            -0.45030182189856965,
+            -0.2329151881078496,
+            6.835327453302224e-05
+          ],
+          "maximum": [
+            -0.44860778673521734,
+            -0.2312211529444973,
+            0.0017389943447030229
+          ]
+        },
+        {
+          "body": "left_ankle_roll_link",
+          "minimum": [
+            -0.42203332931067367,
+            -0.2233270520572345,
+            6.835327453302137e-05
+          ],
+          "maximum": [
+            -0.42033929414732135,
+            -0.22163301689388218,
+            0.001738994344703022
+          ]
+        },
+        {
+          "body": "left_ankle_roll_link",
+          "minimum": [
+            -0.42189196792692607,
+            -0.2333499016536008,
+            6.835327453302137e-05
+          ],
+          "maximum": [
+            -0.42019793276357376,
+            -0.2316558664902485,
+            0.001738994344703022
+          ]
+        },
+        {
+          "body": "right_ankle_roll_link",
+          "minimum": [
+            -0.4498612151696307,
+            -0.2641552259330791,
+            6.835327453302224e-05
+          ],
+          "maximum": [
+            -0.44816718000627837,
+            -0.2624611907697268,
+            0.0017389943447030229
+          ]
+        },
+        {
+          "body": "right_ankle_roll_link",
+          "minimum": [
+            -0.4497434140165078,
+            -0.2725076005967077,
+            6.835327453302224e-05
+          ],
+          "maximum": [
+            -0.4480493788531555,
+            -0.2708135654333554,
+            0.0017389943447030229
+          ]
+        },
+        {
+          "body": "right_ankle_roll_link",
+          "minimum": [
+            -0.4214749214286118,
+            -0.2629194645460926,
+            6.835327453302137e-05
+          ],
+          "maximum": [
+            -0.4197808862652595,
+            -0.2612254293827403,
+            0.001738994344703022
+          ]
+        },
+        {
+          "body": "right_ankle_roll_link",
+          "minimum": [
+            -0.4213335600448642,
+            -0.27294231414245895,
+            6.835327453302137e-05
+          ],
+          "maximum": [
+            -0.4196395248815119,
+            -0.27124827897910664,
+            0.001738994344703022
+          ]
+        }
+      ],
+      "scope": "Conservative yaw-invariant disk enclosing measured neutral collision geometry plus a declared swing/tracking allowance. Physical trials remain necessary."
+    },
+    "feasible_actions": [
+      "direct",
+      "buffered",
+      "careful",
+      "planner"
+    ],
+    "physics_executed": false,
+    "scope": "Frozen geometric filter only; no learned policy or execution outcome used."
+  },
+  "parent_navigation_layout_sha256": "68df733629fb21758d635346057f9f8b9b6d82c098d577793754993fd69dd7b8",
+  "static_validation": {
+    "articulated_sweeps_clear": true,
+    "mug_aabb_nonoverlap": true,
+    "dynamic_trials": 0
+  }
+}

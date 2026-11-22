@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-21T23:41:39.683632+00:00",
+  "source_freeze_sha256": "63f08518dc589b6d59bd9f4794ad3be9e724cc9824d2b024dc07cccb216ef88f",
+  "final_set_sha256": "2dc7332286924530e0a8d7eb2e6d27b2a125a04c8cc1102a61185ac078bc4bfe",
+  "weights": {
+    "parent": {
+      "navigation": 0,
+      "task": 0
+    },
+    "selected": {
+      "navigation": 48,
+      "task": 8
+    }
+  },
+  "scope": "New final cohort after original V25 task-final laptop failures. Controller engineering shared by both sides. No final outcomes used as labels. Native gait fixed."
+}

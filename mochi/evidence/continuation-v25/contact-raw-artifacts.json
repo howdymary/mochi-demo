@@ -1,0 +1,264 @@
+{
+  "volume": "mochi-continuation-v25-artifacts",
+  "records": [
+    {
+      "file": "contact26-dev-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-dev-parent.json.gz",
+      "sha256": "a84683b143d21816ffce14a038adf75c1b027a071aeba958720548935e533cc9",
+      "bytes": 24684166
+    },
+    {
+      "file": "contact26-dev-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-dev-selected.json.gz",
+      "sha256": "999bae3439c32e3839b3503c885305e0d7ada59677706a3accebba5454981cd8",
+      "bytes": 24773020
+    },
+    {
+      "file": "contact26-final-0-254000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-0-254000-parent.json.gz",
+      "sha256": "e8b657ba200e57aee118e806bfdfc2c16eebf61237eed3928ddbab82fb5233fb",
+      "bytes": 39430925
+    },
+    {
+      "file": "contact26-final-0-254000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-0-254000-selected.json.gz",
+      "sha256": "e1701e34e8ce2a9e7eed0330c240cf9f3cd828a61091eb9b4e330be05afb5915",
+      "bytes": 39965642
+    },
+    {
+      "file": "contact26-final-0-254001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-0-254001-parent.json.gz",
+      "sha256": "42ccc94e9097541edb99904b2d22f0ed1985144110abb0c0508d83a5933a6650",
+      "bytes": 39597460
+    },
+    {
+      "file": "contact26-final-0-254001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-0-254001-selected.json.gz",
+      "sha256": "63519406e5118c1484fcf9aeb70005183adc87ef3ab426de488098fb2ea8fade",
+      "bytes": 39601095
+    },
+    {
+      "file": "contact26-final-1-254000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-1-254000-parent.json.gz",
+      "sha256": "6837f6992f322e8cd61a7c47e58d714ce15478684bff2fff0bf6027ebe41b7d8",
+      "bytes": 70384653
+    },
+    {
+      "file": "contact26-final-1-254000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-1-254000-selected.json.gz",
+      "sha256": "ed28f0cdbb9188fa19c65f1c02be386eef47588b7445cced41678e5627cad959",
+      "bytes": 69028732
+    },
+    {
+      "file": "contact26-final-1-254001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-1-254001-parent.json.gz",
+      "sha256": "6cd218725bbb5ead1b67bb6919b1e835d10efdf7ed5ed5f0ee0b93509609e4c3",
+      "bytes": 66779198
+    },
+    {
+      "file": "contact26-final-1-254001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-1-254001-selected.json.gz",
+      "sha256": "bb162dafcfad612a8aec0b14dd9c6b930eadd70319f5db421dc46f4a16519d02",
+      "bytes": 61591775
+    },
+    {
+      "file": "contact26-final-2-254000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-2-254000-parent.json.gz",
+      "sha256": "f32bc6374e2ae0b4e5ce1086b6512ef36a00dd32fec509740666f11c8bec1d0b",
+      "bytes": 78152900
+    },
+    {
+      "file": "contact26-final-2-254000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-2-254000-selected.json.gz",
+      "sha256": "7f1692a5a74e7ddc8266ad1790242cd9a80e015abf259d672baafa1394fc14dc",
+      "bytes": 80684356
+    },
+    {
+      "file": "contact26-final-2-254001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-2-254001-parent.json.gz",
+      "sha256": "20f47887267aff346f9c940db8b2b1418e4b078d3e24ca8cbc4d10b55d36a630",
+      "bytes": 79390185
+    },
+    {
+      "file": "contact26-final-2-254001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26-final-2-254001-selected.json.gz",
+      "sha256": "ab496daf0bfeec9ee5d6ec192841df7c9183500fbf45a94c64b50208f97f4420",
+      "bytes": 72992850
+    },
+    {
+      "file": "contact26r2-dev-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26r2-dev-parent.json.gz",
+      "sha256": "97b7fd51cce6ed086b5a7ae5b4353623fe67b4217f4b7be54664c00224f1dda2",
+      "bytes": 71957221
+    },
+    {
+      "file": "contact26r2-dev-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/contact26r2-dev-selected.json.gz",
+      "sha256": "eb681bff90b5fd442cba1cecbd81d8a7c1f211ae27af0db85aa30f717064ac28",
+      "bytes": 78829400
+    },
+    {
+      "file": "laptop-development-friction075-backoff072.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-backoff072.json.gz",
+      "sha256": "80356fb1f8032c847985d0e89e08f3a2a4a0f6ed34c4a275cab3ddb6d52228ad",
+      "bytes": 2044375
+    },
+    {
+      "file": "laptop-development-friction075-early-pulse.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-early-pulse.json.gz",
+      "sha256": "9bc6d580153c487011707cce274f0a5f53a603a8b6f721ec42af7ab7ee8199e0",
+      "bytes": 5798196
+    },
+    {
+      "file": "laptop-development-friction075-early-pulse64.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-early-pulse64.json.gz",
+      "sha256": "45914f4cf19c36494795a25a5b80926b535b21c53bc2d08891319d3b6be77cfa",
+      "bytes": 10747616
+    },
+    {
+      "file": "laptop-development-friction075-face250.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-face250.json.gz",
+      "sha256": "de05d8257cdb8c9ca2eb51b0575ff03c07e68d27dfc1ddb4c79d24af683c87f5",
+      "bytes": 3552605
+    },
+    {
+      "file": "laptop-development-friction075-face255.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-face255.json.gz",
+      "sha256": "5ce075a0a101ed98db4a26c0a9b8db6de0223d10e910f755dc222598a3226e87",
+      "bytes": 3975798
+    },
+    {
+      "file": "laptop-development-friction075-force070-pulse64.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-force070-pulse64.json.gz",
+      "sha256": "21df72a62080bb7b3c4173bd98dc6a0469a29c6bb81deca6cfa50d32dbe59bb7",
+      "bytes": 1990606
+    },
+    {
+      "file": "laptop-development-friction075-force072.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-force072.json.gz",
+      "sha256": "34c5f64f9231a6ee55d2cb830e75821febae402591f35042a4d46e365d53ec67",
+      "bytes": 5611673
+    },
+    {
+      "file": "laptop-development-friction075-hybrid-position-damping.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-hybrid-position-damping.json.gz",
+      "sha256": "e8e66f0dc87a6879e7a0a534d49147d9ad1b304bc364f35f71263f9a8c33cd9e",
+      "bytes": 5637088
+    },
+    {
+      "file": "laptop-development-friction075-hybrid-position.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-hybrid-position.json.gz",
+      "sha256": "1934f804b43fd542753ea9e8d9a3e3ebe1849193a8423443b250c57918ddbc9f",
+      "bytes": 5623800
+    },
+    {
+      "file": "laptop-development-friction075-original-diagnostic.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-original-diagnostic.json.gz",
+      "sha256": "925c5e7adba109260885b08bedf58a4ef6ebda0b9ad7c3671a9937c2969139d9",
+      "bytes": 5624332
+    },
+    {
+      "file": "laptop-development-friction075-ramp030.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-ramp030.json.gz",
+      "sha256": "f91405c27df11a92e8f0fa602f9342f95776447dfb1d227d0bd460cc6e2d92e2",
+      "bytes": 2094125
+    },
+    {
+      "file": "laptop-development-friction075-reapproach.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-reapproach.json.gz",
+      "sha256": "f661b046311436e6f4faa0cd5394482730361307e6bade69f3ccd32f176fca79",
+      "bytes": 5649972
+    },
+    {
+      "file": "laptop-development-friction075-strong-pulse64.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-development-friction075-strong-pulse64.json.gz",
+      "sha256": "bf1ef582e3967f3ce7fb04660dadaa463a16305d22f747f880733f40a9d3bea8",
+      "bytes": 6500228
+    },
+    {
+      "file": "laptop-original-state-copied-api-reference.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-original-state-copied-api-reference.json.gz",
+      "sha256": "5fe2b399b2132cc97cb20d613c77eb4b208ad1cc4cf196278efc95228dfa20d5",
+      "bytes": 2401921
+    },
+    {
+      "file": "laptop-original-state-original-api-reference.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/laptop-original-state-original-api-reference.json.gz",
+      "sha256": "3474a8d0dc31ac6057ae149cfaaed40df5095496747262f2ebb4a655cfb33086",
+      "bytes": 2387467
+    },
+    {
+      "file": "task-final-0-253000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-0-253000-parent.json.gz",
+      "sha256": "998ad045a33a4766bcd2a71c326a4957323e7811440e425fd72579b2b485f49a",
+      "bytes": 79762075
+    },
+    {
+      "file": "task-final-0-253000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-0-253000-selected.json.gz",
+      "sha256": "db99e83c3dc83bdfa4a9d17b793c1770d62fb4f14d219ae80b657d55d3f020fc",
+      "bytes": 78322920
+    },
+    {
+      "file": "task-final-0-253001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-0-253001-parent.json.gz",
+      "sha256": "6e0adabceb576492a7d40fae0b8abd9bb5b288ba09cad74d5050de97550382e8",
+      "bytes": 78440857
+    },
+    {
+      "file": "task-final-0-253001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-0-253001-selected.json.gz",
+      "sha256": "e030713cf6acdcff3ad1481caf00300155a29363cdba620fb2a160afd86db2d3",
+      "bytes": 81390629
+    },
+    {
+      "file": "task-final-1-253000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-1-253000-parent.json.gz",
+      "sha256": "71981493213997e356bf2f34e198d0cbcb92b307ae6b02964ddd662f8146df74",
+      "bytes": 77095879
+    },
+    {
+      "file": "task-final-1-253000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-1-253000-selected.json.gz",
+      "sha256": "1db3954c089f544a96e21d155258a5762d1883db7d243a2750bcf405385a2328",
+      "bytes": 71274417
+    },
+    {
+      "file": "task-final-1-253001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-1-253001-parent.json.gz",
+      "sha256": "ed5a8bea1173b110a0474276baf6acaab4a59bab9149f92fe15df65f6a591576",
+      "bytes": 67632124
+    },
+    {
+      "file": "task-final-1-253001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-1-253001-selected.json.gz",
+      "sha256": "20ff8f098e7551e643bbaf381bb4b69097db0903a00dfdf640b2a96fa3fac26d",
+      "bytes": 69913831
+    },
+    {
+      "file": "task-final-2-253000-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-2-253000-parent.json.gz",
+      "sha256": "3efc5115e344a7a5ac44fddfb342977cb010d3d91a78bfcf2d715c610d40da57",
+      "bytes": 75277620
+    },
+    {
+      "file": "task-final-2-253000-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-2-253000-selected.json.gz",
+      "sha256": "cf4cb4b2bb246f86bc0eb3600892f83cdb99cd9e4239236e5be47a5bb43bc534",
+      "bytes": 70348836
+    },
+    {
+      "file": "task-final-2-253001-parent.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-2-253001-parent.json.gz",
+      "sha256": "f691ed9a039a2af6dae01096be7789d1fb330b5800449c5f7ed33269e95566f8",
+      "bytes": 69378220
+    },
+    {
+      "file": "task-final-2-253001-selected.json.gz",
+      "path": "mochi-nav25-20261121a/contact-continuation/raw/task-final-2-253001-selected.json.gz",
+      "sha256": "7a31f613e313690d65c62ffa79ee05b9ca5aa70434664961d7718983655e1c15",
+      "bytes": 68036911
+    }
+  ],
+  "scope": "Exact full physical records and companion metadata. Public replay files are separate. No pickle snapshots, model-state paths, logs or credentials are included."
+}

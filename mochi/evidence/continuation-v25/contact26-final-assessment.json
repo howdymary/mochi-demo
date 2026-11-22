@@ -1,0 +1,371 @@
+{
+  "scope": "Three final task layouts, two seeds each. All attempts included. These are controller-selection weights around a shared engineered controller. Native gait fixed.",
+  "source_sha256": "fd8f42f78d45182d06bc9c518c59f48380c59213a8380ff15d627ffa049687fa",
+  "engineering_revision": "contact-v26r2",
+  "models": {
+    "parent": {
+      "n": 6,
+      "layouts": 3,
+      "all_tasks_completed": 3,
+      "all_four_object_checks_passed": 3,
+      "qualified": 1,
+      "falls": 0,
+      "forbidden_contacts": 0,
+      "per_task_completed": {
+        "alarm": 6,
+        "drawer": 4,
+        "laptop": 3,
+        "globe": 3
+      },
+      "attempts": [
+        {
+          "id": "contact26-final-0-254000-parent",
+          "qualified_complete": false,
+          "failure": "no-validated-task-approach",
+          "steps": 127,
+          "physical_seconds": 218.2194029664424,
+          "recovery_arm_travel_rad": 3.7896115193881066,
+          "intertask_arm_travel_rad": 25.324927345286106,
+          "flat_legs": [],
+          "quality_misses": [
+            "no-validated-task-approach",
+            "forward-facing travel 60.2% below 90%",
+            "only 0/3 walking legs completed"
+          ]
+        },
+        {
+          "id": "contact26-final-0-254001-parent",
+          "qualified_complete": false,
+          "failure": "no-validated-task-approach",
+          "steps": 130,
+          "physical_seconds": 218.66492385882393,
+          "recovery_arm_travel_rad": 3.6713346836717022,
+          "intertask_arm_travel_rad": 26.44230463922309,
+          "flat_legs": [],
+          "quality_misses": [
+            "no-validated-task-approach",
+            "forward-facing travel 59.6% below 90%",
+            "only 0/3 walking legs completed"
+          ]
+        },
+        {
+          "id": "contact26-final-1-254000-parent",
+          "qualified_complete": false,
+          "failure": null,
+          "steps": 654,
+          "physical_seconds": 316.90677671135,
+          "recovery_arm_travel_rad": 16.261545037439177,
+          "intertask_arm_travel_rad": 191.21756888841776,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 143,
+              "moving_minimum_sole_clearance_m": 0.004811560796894148
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 235,
+              "moving_minimum_sole_clearance_m": 0.004503420669766008
+            },
+            {
+              "task": "globe",
+              "success": true,
+              "moving_swings": 27,
+              "moving_minimum_sole_clearance_m": 0.005122247789292014
+            }
+          ],
+          "quality_misses": [
+            "forward-facing travel 85.6% below 90%"
+          ]
+        },
+        {
+          "id": "contact26-final-1-254001-parent",
+          "qualified_complete": false,
+          "failure": "laptop-failed:laptop",
+          "steps": 631,
+          "physical_seconds": 300.36364588726764,
+          "recovery_arm_travel_rad": 6.301951707257699,
+          "intertask_arm_travel_rad": 170.1417225204961,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 136,
+              "moving_minimum_sole_clearance_m": 0.004824106211836102
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 243,
+              "moving_minimum_sole_clearance_m": 0.004317838997352766
+            }
+          ],
+          "quality_misses": [
+            "laptop-failed:laptop",
+            "forward-facing travel 87.5% below 90%",
+            "only 2/3 walking legs completed",
+            "laptop sole clearance 4.318 mm below 4.5 mm"
+          ]
+        },
+        {
+          "id": "contact26-final-2-254000-parent",
+          "qualified_complete": false,
+          "failure": null,
+          "steps": 811,
+          "physical_seconds": 338.4193047919228,
+          "recovery_arm_travel_rad": 15.901770321807492,
+          "intertask_arm_travel_rad": 240.65989682411714,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 143,
+              "moving_minimum_sole_clearance_m": 0.004811560796894148
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 362,
+              "moving_minimum_sole_clearance_m": 0.004826464650775457
+            },
+            {
+              "task": "globe",
+              "success": true,
+              "moving_swings": 26,
+              "moving_minimum_sole_clearance_m": 0.005148752799599018
+            }
+          ],
+          "quality_misses": [
+            "forward-facing travel 89.8% below 90%"
+          ]
+        },
+        {
+          "id": "contact26-final-2-254001-parent",
+          "qualified_complete": true,
+          "failure": null,
+          "steps": 829,
+          "physical_seconds": 343.0878732623648,
+          "recovery_arm_travel_rad": 15.464635978838695,
+          "intertask_arm_travel_rad": 246.8876726451198,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 136,
+              "moving_minimum_sole_clearance_m": 0.004824106211836102
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 348,
+              "moving_minimum_sole_clearance_m": 0.0048688101483511225
+            },
+            {
+              "task": "globe",
+              "success": true,
+              "moving_swings": 29,
+              "moving_minimum_sole_clearance_m": 0.0051341982654621275
+            }
+          ],
+          "quality_misses": []
+        }
+      ]
+    },
+    "selected": {
+      "n": 6,
+      "layouts": 3,
+      "all_tasks_completed": 2,
+      "all_four_object_checks_passed": 2,
+      "qualified": 1,
+      "falls": 0,
+      "forbidden_contacts": 1,
+      "per_task_completed": {
+        "alarm": 6,
+        "drawer": 4,
+        "laptop": 2,
+        "globe": 2
+      },
+      "attempts": [
+        {
+          "id": "contact26-final-0-254000-selected",
+          "qualified_complete": false,
+          "failure": "no-validated-task-approach",
+          "steps": 136,
+          "physical_seconds": 219.96797028534897,
+          "recovery_arm_travel_rad": 3.727300863276062,
+          "intertask_arm_travel_rad": 28.3623451398094,
+          "flat_legs": [],
+          "quality_misses": [
+            "no-validated-task-approach",
+            "forward-facing travel 59.3% below 90%",
+            "only 0/3 walking legs completed"
+          ]
+        },
+        {
+          "id": "contact26-final-0-254001-selected",
+          "qualified_complete": false,
+          "failure": "no-validated-task-approach",
+          "steps": 129,
+          "physical_seconds": 218.96411770581776,
+          "recovery_arm_travel_rad": 3.633498342100342,
+          "intertask_arm_travel_rad": 25.91786441304427,
+          "flat_legs": [],
+          "quality_misses": [
+            "no-validated-task-approach",
+            "forward-facing travel 60.9% below 90%",
+            "only 0/3 walking legs completed"
+          ]
+        },
+        {
+          "id": "contact26-final-1-254000-selected",
+          "qualified_complete": false,
+          "failure": null,
+          "steps": 624,
+          "physical_seconds": 313.6679624441654,
+          "recovery_arm_travel_rad": 16.23048117968749,
+          "intertask_arm_travel_rad": 183.94629036642448,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 175,
+              "moving_minimum_sole_clearance_m": 0.004696684914666889
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 144,
+              "moving_minimum_sole_clearance_m": 0.0048452507565061465
+            },
+            {
+              "task": "globe",
+              "success": true,
+              "moving_swings": 27,
+              "moving_minimum_sole_clearance_m": 0.005160524381702644
+            }
+          ],
+          "quality_misses": [
+            "forward-facing travel 88.7% below 90%"
+          ]
+        },
+        {
+          "id": "contact26-final-1-254001-selected",
+          "qualified_complete": false,
+          "failure": "laptop-failed:laptop",
+          "steps": 520,
+          "physical_seconds": 285.91078464450555,
+          "recovery_arm_travel_rad": 6.216210472963162,
+          "intertask_arm_travel_rad": 144.13085936833392,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 122,
+              "moving_minimum_sole_clearance_m": 0.00489170545516149
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 142,
+              "moving_minimum_sole_clearance_m": 0.0048432487249344975
+            }
+          ],
+          "quality_misses": [
+            "laptop-failed:laptop",
+            "forward-facing travel 89.1% below 90%",
+            "only 2/3 walking legs completed"
+          ]
+        },
+        {
+          "id": "contact26-final-2-254000-selected",
+          "qualified_complete": true,
+          "failure": null,
+          "steps": 873,
+          "physical_seconds": 345.17405549604854,
+          "recovery_arm_travel_rad": 15.681438887973282,
+          "intertask_arm_travel_rad": 257.1788650797064,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 175,
+              "moving_minimum_sole_clearance_m": 0.004696684914666889
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 370,
+              "moving_minimum_sole_clearance_m": 0.004827637760616501
+            },
+            {
+              "task": "globe",
+              "success": true,
+              "moving_swings": 27,
+              "moving_minimum_sole_clearance_m": 0.0051300510446332884
+            }
+          ],
+          "quality_misses": []
+        },
+        {
+          "id": "contact26-final-2-254001-selected",
+          "qualified_complete": false,
+          "failure": "invalid_fixture_contact",
+          "steps": 750,
+          "physical_seconds": 318.16813219198247,
+          "recovery_arm_travel_rad": 6.216210472963162,
+          "intertask_arm_travel_rad": 212.8947959950312,
+          "flat_legs": [
+            {
+              "task": "drawer",
+              "success": true,
+              "moving_swings": 122,
+              "moving_minimum_sole_clearance_m": 0.00489170545516149
+            },
+            {
+              "task": "laptop",
+              "success": true,
+              "moving_swings": 348,
+              "moving_minimum_sole_clearance_m": 0.004845422546791235
+            }
+          ],
+          "quality_misses": [
+            "invalid_fixture_contact",
+            "peak body roll 25.52716718282764 degrees exceeds 12",
+            "lateral path range 0.07340928662657106 m exceeds 0.06",
+            "only 2/3 walking legs completed"
+          ]
+        }
+      ]
+    }
+  },
+  "paired": {
+    "jointly_qualified_pairs": 0,
+    "layouts": 0,
+    "metrics": {
+      "steps": {
+        "mean_layout_ratio": null,
+        "layout_bootstrap_95_percent_interval": null
+      },
+      "physical_seconds": {
+        "mean_layout_ratio": null,
+        "layout_bootstrap_95_percent_interval": null
+      },
+      "recovery_arm_travel_rad": {
+        "mean_layout_ratio": null,
+        "layout_bootstrap_95_percent_interval": null
+      },
+      "intertask_arm_travel_rad": {
+        "mean_layout_ratio": null,
+        "layout_bootstrap_95_percent_interval": null
+      },
+      "moving_distance_m": {
+        "mean_layout_ratio": null,
+        "layout_bootstrap_95_percent_interval": null
+      }
+    },
+    "scope": "Ratios use jointly qualified attempts only, averaged within layout. Three layouts are a small pilot; repeated seeds are not independent layouts. Early failures never count as efficient."
+  },
+  "selected_completed_all_six_smoothly": false
+}

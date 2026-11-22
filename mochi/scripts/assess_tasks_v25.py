@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
+from mochi.navigation_v25.qualification_report_v26 import quality_misses
 
 root=Path(__file__).resolve().parents[1]
 d=root/'artifacts/continuation-v25'
@@ -17,12 +18,13 @@ source=d/args.source
 cohort=json.loads(source.read_text())
 assert len(cohort['results'])==12
 models={s:[] for s in ['parent','selected']}
+quality_config=json.loads((root/'configs/paperfree-v19-training.json').read_text())
 for metadata in cohort['results']:
     raw=(d/(metadata['id']+'.json.gz')).read_bytes()
     assert hashlib.sha256(raw).hexdigest()==metadata['sha256']
     row=json.loads(gzip.decompress(raw));e=row['episode']
     models[metadata['id'].rsplit('-',1)[1]].append(dict(metadata,
-        seed=row['seed'],flat_legs=e.get('flat_legs',[]),recovery_arm_travel_rad=sum(r['arm_joint_travel_rad'] for r in e['recoveries']),
+        seed=row['seed'],flat_legs=e.get('flat_legs',[]),quality_misses=quality_misses(row,quality_config),recovery_arm_travel_rad=sum(r['arm_joint_travel_rad'] for r in e['recoveries']),
         intertask_arm_travel_rad=sum(e['intertask_arm_joint_travel_rad'].values()),
         moving_distance_m=row['direction_metrics']['moving_distance_m'],
         forward_facing_fraction=row['direction_metrics']['forward_facing_fraction']))
@@ -32,10 +34,11 @@ for side,rows in models.items():
     assert len(rows)==6
     result['models'][side]={'n':6,'layouts':len({r['layout_sha256'] for r in rows}),
         'all_tasks_completed':sum(r['complete_sequence_success'] for r in rows),
+        'all_four_object_checks_passed':sum(all(r['tasks'].get(t,False) for t in ['alarm','drawer','laptop','globe']) for r in rows),
         'qualified':sum(r['qualified_complete'] for r in rows),'falls':sum(r['fall'] for r in rows),
         'forbidden_contacts':sum(r['invalid_contact'] for r in rows),
         'per_task_completed':{task:sum(r['tasks'].get(task,False) for r in rows) for task in ['alarm','drawer','laptop','globe']},
-        'attempts':[{k:r[k] for k in ['id','qualified_complete','failure','steps','physical_seconds','recovery_arm_travel_rad','intertask_arm_travel_rad','flat_legs']} for r in rows]}
+        'attempts':[{k:r[k] for k in ['id','qualified_complete','failure','steps','physical_seconds','recovery_arm_travel_rad','intertask_arm_travel_rad','flat_legs','quality_misses']} for r in rows]}
 a={(r['layout_sha256'],r['seed']):r for r in models['parent']}
 b={(r['layout_sha256'],r['seed']):r for r in models['selected']}
 assert a.keys()==b.keys()
