@@ -1,0 +1,190 @@
+{
+  "project": "MOCHI",
+  "created_date": "2026-11-21",
+  "videos": [
+    {
+      "id": "first",
+      "title": "The first environment",
+      "file": "01-first.mp4",
+      "poster": "01-first.jpg",
+      "duration_seconds": 84.7,
+      "playback_speed": null,
+      "width": 1280,
+      "height": 922,
+      "scope": "Unmodified archived screen recording"
+    },
+    {
+      "id": "training",
+      "title": "What post-training changed",
+      "file": "02-training.mp4",
+      "poster": "02-training.jpg",
+      "duration_seconds": 134.666667,
+      "playback_speed": 2,
+      "width": 1280,
+      "height": 720,
+      "scope": "Continuous recorded MuJoCo trajectory rendered in Three.js; no cuts or resets"
+    },
+    {
+      "id": "final",
+      "title": "The final corner-desk run",
+      "file": "03-final.mp4",
+      "poster": "03-final.jpg",
+      "duration_seconds": 139.833333,
+      "playback_speed": 2,
+      "width": 1280,
+      "height": 720,
+      "scope": "Continuous recorded MuJoCo trajectory rendered in Three.js; no cuts or resets"
+    }
+  ],
+  "files": {
+    "01-first.mp4": {
+      "sha256": "cd4716a0926a40f5e5d074be0ed45f001b88fa0d7182c879d692acb7f3e7a0c9",
+      "bytes": 10262054
+    },
+    "01-first.jpg": {
+      "sha256": "a1943b84ceb5c0fa162d374f6b02baea4444e191d639cc8b04884eb1c2686e05",
+      "bytes": 49146
+    },
+    "02-training.mp4": {
+      "sha256": "e1573669791d860faa889b9e0d2f8a1cc267234a90ccd4b019c2bb48c3a1de6b",
+      "bytes": 24553128
+    },
+    "02-training.jpg": {
+      "sha256": "3f45c3396620b0d236587c28599e86ac17465be1cf63980b57e4f981eab41526",
+      "bytes": 70247
+    },
+    "03-final.mp4": {
+      "sha256": "ca135b17cfbd7ce0d03463518a94d39e8ea80ebc3c0e8e60117ed29260cb2818",
+      "bytes": 19357460
+    },
+    "03-final.jpg": {
+      "sha256": "461c5be63ffb9f1e6b96ad65ed16e483c196c202256600007942122d22931780",
+      "bytes": 53203
+    }
+  },
+  "training_comparison": {
+    "study": "mochi-efficient-v15",
+    "scenario": 93001,
+    "sources": [
+      {
+        "file": "efficient-v15/held-out-parent-93001-0.json.gz",
+        "sha256": "8d78621a7dc10b806a6188bdad6035577037feccaf66fe10b079f1f3b65ddf5b",
+        "checkpoint_update": 0,
+        "steps": 804,
+        "physical_seconds": 267.294551,
+        "qualified_complete": true
+      },
+      {
+        "file": "efficient-v15/held-out-selected-93001-16.json.gz",
+        "sha256": "4f5f70a85a40ceb0582d34c1855545f48b7dfc2f448946c8304888e295d58b35",
+        "checkpoint_update": 16,
+        "steps": 470,
+        "physical_seconds": 216.917991,
+        "qualified_complete": true
+      }
+    ],
+    "optimizer_updates": 16,
+    "step_reduction_percent": 41.54228855721393,
+    "native_gait_weights_trained": false,
+    "same_initial_state": true,
+    "same_scene": true,
+    "scope": "One matched evaluation pair; later engineering gains are separate"
+  },
+  "final": {
+    "id": "mochi-showcase-20261121-corner-repeat-226003",
+    "seed": 226003,
+    "steps": 399,
+    "physical_seconds": 277.5905797955897,
+    "qualified": true,
+    "complete": true,
+    "tasks": {
+      "alarm": true,
+      "drawer": true,
+      "laptop": true,
+      "globe": true
+    },
+    "new_optimizer_updates": 0,
+    "native_gait_weights_trained": false,
+    "artifact_sha256": "92a27640f891985b0fee1752045b208fc2f3996ba78f9d3f63d7380c718eaebe",
+    "native_weights_sha256": "2ee446c8d7fb718d9479db0f82fe5659d382158d347fdacd5ffc35831e1d642c",
+    "public_recording_sha256": "9a9b2878a28dc0189c5385f300fe091e9d1d305ace6a9e96b25b1871727cba70",
+    "printer_position_m": [
+      0.435,
+      0.29,
+      0
+    ],
+    "quality_checks": [
+      {
+        "name": "roll_rms",
+        "value": 0.40676872485711413,
+        "maximum": 2,
+        "passed": true
+      },
+      {
+        "name": "roll_peak",
+        "value": 3.274285406105948,
+        "maximum": 12,
+        "passed": true
+      },
+      {
+        "name": "lateral_rms",
+        "value": 0.010296295982347657,
+        "maximum": 0.015,
+        "passed": true
+      },
+      {
+        "name": "lateral_range",
+        "value": 0.05074660019317732,
+        "maximum": 0.06,
+        "passed": true
+      },
+      {
+        "name": "sequence_time",
+        "value": 277.5905797955897,
+        "maximum": 420,
+        "passed": true
+      },
+      {
+        "name": "loaded_foot_travel",
+        "value": 0.5606296385646354,
+        "maximum": 1.25,
+        "passed": true
+      },
+      {
+        "name": "native_acceleration",
+        "value": 160.58055040022532,
+        "maximum": 161.4,
+        "passed": true
+      },
+      {
+        "name": "native_torque_change",
+        "value": 0.0033005889758779684,
+        "maximum": 0.00371,
+        "passed": true
+      },
+      {
+        "name": "forward_facing_fraction",
+        "value": 0.9063497027789935,
+        "minimum": 0.9,
+        "passed": true
+      },
+      {
+        "name": "three_clearance_qualified_flat_legs",
+        "passed": true
+      }
+    ],
+    "wall_seconds": 310.328118249774,
+    "scope": "Known-scenario reproducibility run of the best qualified corner-desk reference. Not a new held-out evaluation or training gain."
+  },
+  "selection_note": "The final product demonstration reproduces the V22 fresh-scenario reference with the fewest qualified steps in that comparison. It is a known-case demonstration, not a new training advantage or generalization result.",
+  "rendering": {
+    "fps": 24,
+    "new_videos": [
+      "training",
+      "final"
+    ],
+    "camera_and_material_changes_only": true,
+    "trajectory_motion": "Recorded MuJoCo body positions and rotations; task-relevant movement is not animated"
+  },
+  "limits": "One additional physical rollout, maximum 1080 local wall seconds, zero new optimizer updates, zero Exa calls and zero past.dev calls. Media rendering is local."
+}

@@ -26,6 +26,11 @@ paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v26*.p
 if (root/'mochi/configs/laptop-contact-v26').exists():paths.append('mochi/configs/laptop-contact-v26')
 if (root/'mochi/docs/continuation-v25-findings.md').exists():paths.append('mochi/docs/continuation-v25-findings.md')
 if (root/'mochi/evidence/continuation-v25').exists():paths.append('mochi/evidence/continuation-v25')
+paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v27*.py')]
+paths += [str(x.relative_to(root)) for x in (root/'mochi/scripts').glob('*v27*.mjs')]
+paths += ['mochi/web/desk/showcase-v27.html','mochi/web/desk/showcase-v27-export.html',
+    'mochi/web/desk/showcase-v27-export.js','mochi/web/desk/showcase-v27/manifest.json',
+    'mochi/docs/showcase-v27.md','mochi/evidence/showcase-v27']
 git('add','--',*paths)
 changed=git('diff','--cached','--name-only',parent).splitlines()
 assert changed

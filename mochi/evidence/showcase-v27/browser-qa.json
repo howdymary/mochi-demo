@@ -1,0 +1,31 @@
+{
+  "url": "https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/",
+  "verified": true,
+  "videos": [
+    {
+      "src": "https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/showcase-v27/01-first.mp4",
+      "duration": 84.7,
+      "videoWidth": 1280,
+      "videoHeight": 922,
+      "hasControls": true
+    },
+    {
+      "src": "https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/showcase-v27/02-training.mp4",
+      "duration": 134.666667,
+      "videoWidth": 1280,
+      "videoHeight": 720,
+      "hasControls": true
+    },
+    {
+      "src": "https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/showcase-v27/03-final.mp4",
+      "duration": 139.833333,
+      "videoWidth": 1280,
+      "videoHeight": 720,
+      "hasControls": true
+    }
+  ],
+  "playback_verified": true,
+  "one_video_at_a_time": true,
+  "mobile_overflow": false,
+  "errors": []
+}

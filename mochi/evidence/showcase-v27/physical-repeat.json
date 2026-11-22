@@ -1,0 +1,101 @@
+{
+  "id": "mochi-showcase-20261121-corner-repeat-226003",
+  "seed": 226003,
+  "new_optimizer_updates": 0,
+  "scope": "Known-scenario reproducibility run of the best qualified corner-desk reference. Not a new held-out evaluation or training gain.",
+  "native_gait_weights_trained": false,
+  "status": "completed",
+  "complete": true,
+  "qualified": true,
+  "failure": null,
+  "steps": 399,
+  "physical_seconds": 277.5905797955897,
+  "tasks": {
+    "alarm": true,
+    "drawer": true,
+    "laptop": true,
+    "globe": true
+  },
+  "arm_smoothness": {
+    "samples": 13583,
+    "sample_interval_mean_s": 0.020436738182628606,
+    "velocity_rms_rad_s": 0.1434626303876849,
+    "acceleration_rms_rad_s2": 3.0457469828939145,
+    "jerk_rms_rad_s3": 132.04672839831142,
+    "travel_rad": 170.6455222241477,
+    "scope": "Finite differences of actual measured joint positions at the recorded telemetry timestamps; both arms, entire declared component."
+  },
+  "maximum_applied_base_force": 0.0,
+  "artifact_sha256": "92a27640f891985b0fee1752045b208fc2f3996ba78f9d3f63d7380c718eaebe",
+  "native_weights_sha256": "2ee446c8d7fb718d9479db0f82fe5659d382158d347fdacd5ffc35831e1d642c",
+  "wall_seconds": 310.328118249774,
+  "quality_checks": [
+    {
+      "name": "roll_rms",
+      "value": 0.40676872485711413,
+      "maximum": 2,
+      "passed": true
+    },
+    {
+      "name": "roll_peak",
+      "value": 3.274285406105948,
+      "maximum": 12,
+      "passed": true
+    },
+    {
+      "name": "lateral_rms",
+      "value": 0.010296295982347657,
+      "maximum": 0.015,
+      "passed": true
+    },
+    {
+      "name": "lateral_range",
+      "value": 0.05074660019317732,
+      "maximum": 0.06,
+      "passed": true
+    },
+    {
+      "name": "sequence_time",
+      "value": 277.5905797955897,
+      "maximum": 420,
+      "passed": true
+    },
+    {
+      "name": "loaded_foot_travel",
+      "value": 0.5606296385646354,
+      "maximum": 1.25,
+      "passed": true
+    },
+    {
+      "name": "native_acceleration",
+      "value": 160.58055040022532,
+      "maximum": 161.4,
+      "passed": true
+    },
+    {
+      "name": "native_torque_change",
+      "value": 0.0033005889758779684,
+      "maximum": 0.00371,
+      "passed": true
+    },
+    {
+      "name": "forward_facing_fraction",
+      "value": 0.9063497027789935,
+      "minimum": 0.9,
+      "passed": true
+    },
+    {
+      "name": "three_clearance_qualified_flat_legs",
+      "passed": true
+    }
+  ],
+  "printer_position_m": [
+    0.435,
+    0.29,
+    0
+  ],
+  "public_recording_sha256": "9a9b2878a28dc0189c5385f300fe091e9d1d305ace6a9e96b25b1871727cba70",
+  "reference": "visual-motion-v22/full-parent-fresh-226003.json.gz",
+  "selection_scope": "Post-evaluation choice for a product demonstration. Known scenario reproduction; not a new benchmark.",
+  "replay_scope": "Full uninterrupted from-reset physical run. No splicing, state restoration or root animation."
+}

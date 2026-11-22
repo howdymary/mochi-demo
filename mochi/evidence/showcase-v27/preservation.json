@@ -1,0 +1,45 @@
+{
+  "frozen_manifests": [
+    {
+      "manifest": "artifacts/navigation-v23/baseline-freeze.json",
+      "files": 339,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/continuation-v25/preserved.json",
+      "files": 34,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/continuation-v25/nav-source-freeze.json",
+      "files": 240,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/continuation-v25/tasks/physical-freeze-r2.json",
+      "files": 253,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/continuation-v25/compact/source-freeze.json",
+      "files": 7,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r2.json",
+      "files": 259,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r3.json",
+      "files": 261,
+      "changed": 0
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r4.json",
+      "files": 264,
+      "changed": 0
+    }
+  ],
+  "all_unchanged": true
+}

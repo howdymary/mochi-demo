@@ -1,8 +1,14 @@
 # MOCHI: Navigation Policy Learning on Cluttered Desks
 
+## Three-video demonstration
+
+[Watch the three recordings](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) · [Full experiment viewer](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/continuation-v25.html) · [Recording methods](docs/showcase-v27.md)
+
+The presentation now follows three recordings: the first desktop prototype, a matched Tinker post-training comparison, and a complete corner-desk sequence. The matched V15 comparison completes all four tasks in both panes while reducing measured steps from 804 to 470. The final video reproduces the qualified 399-step V22 reference, with the printer in the corner and no paper obstacle. It is a known-scenario demonstration selected for presentation, not a new generalization result or a matched 470-to-399 training gain. The native gait network stays fixed.
+
 ## V25: balanced navigation training and the globe transition
 
-[Current progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) · [Findings](docs/continuation-v25-findings.md) · [Methods](docs/continuation-v25-methods.md)
+[Detailed progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/continuation-v25.html) · [Findings](docs/continuation-v25-findings.md) · [Methods](docs/continuation-v25-methods.md)
 
 Tinker completed 48 navigation and 16 separate task/recovery optimizer updates. On eight fresh layouts with two physics seeds, checkpoint 48 and the training-selected fixed strategy each qualified on 16/16 attempts. Checkpoint 48 used 16.0% fewer mean paired-layout steps and 14.2% less physical time. The earlier trained parent was faster still; the additional updates have not demonstrated a gain over that parent. The fitted contextual control also remains in the published comparison.
 

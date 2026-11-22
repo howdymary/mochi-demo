@@ -1,0 +1,39 @@
+{
+  "health": {
+    "status": "ok",
+    "release": "showcase-v27-20261121-corner399",
+    "run_id": "mochi-nav25-20261121a",
+    "evaluation_status": "Completed bounded study; one qualified fresh four-task replay, broader task reliability unresolved",
+    "optimizer_updates": 64,
+    "navigation_optimizer_updates": 48,
+    "task_optimizer_updates": 16,
+    "cases": 50,
+    "native_gait_weights_trained": false,
+    "privileged_state": true,
+    "showcase_videos": 3,
+    "showcase_final_steps": 399,
+    "mode": "Three recorded simulation videos; detailed experiment viewer preserved"
+  },
+  "video_ranges": [
+    {
+      "file": "01-first.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "content_range": "bytes 0-1023/10262054"
+    },
+    {
+      "file": "02-training.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "content_range": "bytes 0-1023/24553128"
+    },
+    {
+      "file": "03-final.mp4",
+      "status": 206,
+      "bytes": 1024,
+      "content_range": "bytes 0-1023/19357460"
+    }
+  ],
+  "manifest_identical": true,
+  "detailed_viewer_preserved": true
+}
