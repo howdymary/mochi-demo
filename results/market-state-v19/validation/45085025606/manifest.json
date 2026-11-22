@@ -1,0 +1,37 @@
+{
+  "study_id": "market-state-v19",
+  "source_sha": "45c8ba8cd19ba4b6293b400baae18912e642b735",
+  "trigger_sha": "45c8ba8cd19ba4b6293b400baae18912e642b735",
+  "files": [
+    {
+      "path": "desktop.png",
+      "bytes": 400590,
+      "sha256": "bb551445a2d3b6e2d8b0fdcb486a40b9a76817adc6b6838edb561443956b4297"
+    },
+    {
+      "path": "live-desktop.png",
+      "bytes": 400590,
+      "sha256": "bb551445a2d3b6e2d8b0fdcb486a40b9a76817adc6b6838edb561443956b4297"
+    },
+    {
+      "path": "live-mobile.png",
+      "bytes": 345964,
+      "sha256": "85674dc8bb1f689fbe3fb645bb0947b9418f265af17bdcefbaf3c70254685889"
+    },
+    {
+      "path": "mobile.png",
+      "bytes": 345964,
+      "sha256": "85674dc8bb1f689fbe3fb645bb0947b9418f265af17bdcefbaf3c70254685889"
+    },
+    {
+      "path": "script.js",
+      "bytes": 18967,
+      "sha256": "c2e67ce7c789e44c16541a510b338daed7a9d6086c2f720ec6a659957fc3b0cd"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 710,
+      "sha256": "d647d4422cf60b16c3a532a4bc0b4352167676ea91de7650ac4f0be1fb39981d"
+    }
+  ]
+}
