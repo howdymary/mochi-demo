@@ -1,0 +1,122 @@
+{
+  "usage_actual_or_conservatively_reserved": {
+    "physical_rollouts": 508,
+    "simulation_cpu_hours": 13.569940605675585,
+    "optimizer_updates": 64,
+    "training_token_presentations": 1311959,
+    "inference_input_plus_max_output_tokens": 552298,
+    "exa_searches": 4,
+    "past_writes": 36,
+    "past_actual_recalls": 39,
+    "modeled_provider_usd": 8.85089379070572,
+    "physics_workers": 0,
+    "past_ingested_bytes": 33102,
+    "past_estimated_credits": 151
+  },
+  "verified_unique_cross_role_recalls": 24,
+  "verified_pairs": [
+    {
+      "reader_identity": "mochi-nav25-20261121a-c26-critic",
+      "source_record_id": "mochi-nav25-20261121a-c26-r1"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-c26-designer",
+      "source_record_id": "mochi-nav25-20261121a-c26-r2"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-c26-experimenter",
+      "source_record_id": "mochi-nav25-20261121a-c26-r3"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-c26-researcher",
+      "source_record_id": "mochi-nav25-20261121a-c26-r1"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-c26-researcher",
+      "source_record_id": "mochi-nav25-20261121a-c26-r4"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-compact-critic",
+      "source_record_id": "mochi-nav25-20261121a-compact-r4"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-compact-designer",
+      "source_record_id": "mochi-nav25-20261121a-compact-r2"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-compact-experimenter",
+      "source_record_id": "mochi-nav25-20261121a-compact-r3"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-compact-researcher",
+      "source_record_id": "mochi-nav25-20261121a-compact-r1"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-compact-researcher",
+      "source_record_id": "mochi-nav25-20261121a-compact-r5"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-critic",
+      "source_record_id": "mochi-nav25-20261121a-h26-r3"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-critic",
+      "source_record_id": "mochi-nav25-20261121a-h26-r4"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-designer",
+      "source_record_id": "mochi-nav25-20261121a-h26-r2"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-experimenter",
+      "source_record_id": "mochi-nav25-20261121a-h26-r3"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-researcher",
+      "source_record_id": "mochi-nav25-20261121a-h26-r1"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-h26-researcher",
+      "source_record_id": "mochi-nav25-20261121a-h26-r4"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-critic",
+      "source_record_id": "mochi-nav25-20261121a-r5-r4"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-designer",
+      "source_record_id": "mochi-nav25-20261121a-r5-r1"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-designer",
+      "source_record_id": "mochi-nav25-20261121a-r5-r6"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-experimenter",
+      "source_record_id": "mochi-nav25-20261121a-r5-r2"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-researcher",
+      "source_record_id": "mochi-nav25-20261121a-r5-r0"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-r5-researcher",
+      "source_record_id": "mochi-nav25-20261121a-r5-r5"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-review-critic",
+      "source_record_id": "mochi-nav25-20261121a-review-r0"
+    },
+    {
+      "reader_identity": "mochi-nav25-20261121a-review-researcher",
+      "source_record_id": "mochi-nav25-20261121a-review-r1"
+    }
+  ],
+  "native_gait_weights_trained": false,
+  "optimizer_updates": {
+    "navigation": 48,
+    "task_recovery": 16
+  },
+  "prospective_heading_validation_opened": false,
+  "scope": "Training count is actual completed optimizer steps. Costs are modeled, not invoices. Unique recalls deduplicate repeated evidence reports."
+}

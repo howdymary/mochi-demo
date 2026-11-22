@@ -1,6 +1,6 @@
 # V25 continuation findings
 
-Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. The original fresh task comparison was negative. After shared contact repair, both models qualified on one of six new complete-sequence attempts, on different scenario pairs. A later heading-aware engineering candidate is in development. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) retains checkpoint and engineering attempts.
+Status: the complete 64-rollout final navigation comparison passed the fixed-reference goal. The earlier trained parent remains more efficient than checkpoint 48. After shared contact repair, both models qualified on one of six new complete-sequence attempts, on different scenario pairs. Later heading-aware engineering candidates were not promoted. The [progress replay](https://howdymary--mochi-continuation-v25-demo-web.us-east.modal.run/) opens on a qualified fresh-layout four-task recording and retains every paired final outcome.
 
 ## What is trained
 
@@ -9,6 +9,8 @@ Tinker completed 48 navigation and 16 separate task/recovery optimizer updates. 
 A separate numerical audit compared navigation updates 32 and 48. It found changes in all 498 exported adapter tensors, with maximum absolute change 0.00345411 and L2 change 4.95889. That confirms the compact continuation changed model parameters. It does not establish an improvement in physical performance.
 
 The task update-16 tensor audit found changes in 498 adapter tensors, with maximum absolute change 0.00159891 and L2 change 4.03317. The original saved states are intact. Expiring exports provide numerical evidence of weight changes, not evidence of better performance by themselves. The earlier failed audit is preserved alongside the successful retry.
+
+The selected task update-eight audit also found 498 changed adapter tensors, with maximum absolute change 0.00080217. The default selected demo uses navigation update 48 and task update 8. Sixteen task updates were completed, but update 16 was not selected for deployment.
 
 ## Navigation development results so far
 
@@ -81,7 +83,17 @@ The default copied laptop controller was checked against the original API under 
 
 An offline reconstruction of the failed robot pose matched its recorded body positions to numerical precision. The existing circular-envelope planner rejected the station approach. A bounded search found 90 routes passing the original oriented body, heading-sweep and foot-clearance checks, with no physics steps executed. This is geometric feasibility evidence, not physical success.
 
-The R3 development candidate adds a bounded oriented fallback and prefers approaches that permit forward travel. It also physically settles into a supported neutral stance before laptop contact. Body movement still uses the existing joint actuators and free base. No success threshold, native gait weight or selection-model weight changes. A subsequent selected-model validation set is being sealed using geometric checks only. Its results cannot establish a model-weight gain because the comparison is engineering validation with fixed selected weights.
+The R3 development candidate adds a bounded oriented fallback and prefers approaches that permit forward travel. It also physically settles into a supported neutral stance before laptop contact. Body movement still uses the existing joint actuators and free base. No success threshold, native gait weight or selection-model weight changes. A separate selected-model set was sealed using geometric checks only and remains unopened. A future test would validate engineering with fixed selected weights; it would not establish a model-weight gain.
+
+R3 reached its first oriented waypoint with 11.024 mm position error, within the existing 12 mm arrival tolerance. The next reached-state check rejected the segment; no fall or forbidden contact occurred. The nominal plan had not reserved enough tracking room. R4 applies the same collision and foot checks to the nominal corridor and eight translated copies on a sampled 16 mm envelope. Its bounded first-feasible preflight found a route in 10.04 seconds. An earlier exhaustive geometric search was interrupted without any physics rollout; it is retained as an unpromoted planning prototype. The sample envelope is not a formal guarantee over all disturbances.
+
+This refinement has a real service trail. Exa retrieved primary research on [humanoid footstep collision checking](https://staff.aist.go.jp/e.yoshida/papers/TRO_Perrin.pdf) and [swept-volume bounds](https://staff.aist.go.jp/e.yoshida/papers/Perrin-AR2013.pdf). Four roles wrote to and read from past.dev; five cross-role recalls verified the expected source IDs and the private canary remained isolated. The planning role selected the tracking-clearance experiment using actual Tinker inference. That decision added zero optimizer updates. Physical development and prospective validation remain the performance tests.
+
+R4 physically passed the blocked drawer approach and completed the clock, drawer and laptop, then stopped because it could not validate a globe approach. Its forward-facing travel fraction before the globe was 87.36%, below the unchanged 90% requirement. A geometric follow-up restored the recorded closed-laptop and drawer states and found no admissible short turn/retreat variant in its bounded search. These results do not establish that no route exists. They show that this candidate has not solved the full task.
+
+R4 remains experimental. The three prospective validation layouts stay unopened, and there are no R4 product-validation results. The working default remains the earlier qualified fresh-layout sequence. The final published evidence distinguishes the navigation win against the fixed strategy, the lack of an incremental gain over the earlier navigation parent, the 1/6 paired task qualifications, and the rejected engineering candidates. No native gait weights or physical success thresholds were changed.
+
+The bounded campaign ended with 508 charged physical attempts and 64 completed optimizer updates. All physical jobs have ended. The final usage snapshot separates actual API calls, deduplicated source-verified recalls, conservatively reserved resources and modeled costs. The post-evaluation memory handoff rejected the full R4 target and retained the unopened-set status rather than fabricating a validation result.
 
 ## Fresh navigation results
 

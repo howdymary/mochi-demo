@@ -40,9 +40,9 @@ async def review(packet):
             'decision': 'Keep engineering and checkpoint comparisons separate. Preserve failures, compare identical source and resets, and do not train on opened final outcomes.'})
         await services.read('experimenter', plan)
         measured = await services.read('critic', fact)
-        classification = await services.decide('critic', 'Review all recorded physical outcomes. State whether this cohort establishes every selected-model four-task attempt completing within all original quality checks. Do not attribute shared controller engineering to model training.',
-            measured, ['all_selected_final_attempts_qualified', 'full_four_task_target_unmet'], [fact, plan])
-        numerical = 'all_selected_final_attempts_qualified' if packet.get('selected_final_qualified') == 6 else 'full_four_task_target_unmet'
+        classification = await services.decide('critic', 'Review the completed paired R2 contact cohort. State whether all six selected-model attempts completed within every original quality check. Later engineering studies are separate. Do not attribute shared controller engineering to model training.',
+            measured, ['paired_r2_selected_all_qualified', 'paired_r2_target_unmet'], [fact, plan])
+        numerical = 'paired_r2_selected_all_qualified' if packet.get('selected_final_qualified') == 6 else 'paired_r2_target_unmet'
         verdict = await services.write('critic', {'kind': 'contact-continuation-verdict', 'sources': [fact, plan],
             'model_classification': classification, 'numerical_classification': numerical,
             'qualification': 'Numerical physical gates determine promotion. Preserve any model/numerical disagreement. This handoff occurs after evaluation and provides no causal memory-benefit estimate.'})

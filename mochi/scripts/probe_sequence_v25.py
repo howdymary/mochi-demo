@@ -20,9 +20,11 @@ p.add_argument('--seed',type=int,default=231000)
 p.add_argument('--layout',type=Path)
 p.add_argument('--capture',action='store_true')
 p.add_argument('--policy-config',type=Path)
-p.add_argument('--engineering-revision',choices=['r2','r3','r5','contact-v26','contact-v26r2','contact-v26r3'],default='r2')
+p.add_argument('--engineering-revision',choices=['r2','r3','r5','contact-v26','contact-v26r2','contact-v26r3','contact-v26r4'],default='r2')
 args=p.parse_args()
-if args.engineering_revision=='contact-v26r3':
+if args.engineering_revision=='contact-v26r4':
+    from mochi.navigation_v25.tasks_contact_v26r4 import run
+elif args.engineering_revision=='contact-v26r3':
     from mochi.navigation_v25.tasks_contact_v26r3 import run
 elif args.engineering_revision=='contact-v26r2':
     from mochi.navigation_v25.tasks_contact_v26r2 import run
@@ -39,6 +41,7 @@ if args.policy_config:
     if args.engineering_revision=='contact-v26':freeze_path=root/'configs/laptop-contact-v26/source-freeze.json'
     if args.engineering_revision=='contact-v26r2':freeze_path=root/'configs/laptop-contact-v26/source-freeze-r2.json'
     if args.engineering_revision=='contact-v26r3':freeze_path=root/'configs/laptop-contact-v26/source-freeze-r3.json'
+    if args.engineering_revision=='contact-v26r4':freeze_path=root/'configs/laptop-contact-v26/source-freeze-r4.json'
     freeze=json.loads(freeze_path.read_text())
     for name,expected in freeze['sha256'].items():
         assert hashlib.sha256((root/name).read_bytes()).hexdigest()==expected,name

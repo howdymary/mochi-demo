@@ -1,0 +1,669 @@
+{
+  "status": "completed",
+  "optimizer_updates_added": 0,
+  "physical_rollouts_added": 0,
+  "numerical_classification": "paired_r2_target_unmet",
+  "services": {
+    "actors": {
+      "researcher": "mochi-nav25-20261121a-c26-researcher",
+      "designer": "mochi-nav25-20261121a-c26-designer",
+      "experimenter": "mochi-nav25-20261121a-c26-experimenter",
+      "critic": "mochi-nav25-20261121a-c26-critic"
+    },
+    "audiences": {
+      "shared": "mochi-nav25-20261121a-c26-shared",
+      "critic_private": "mochi-nav25-20261121a-c26-critic"
+    },
+    "records": [
+      {
+        "id": "mochi-nav25-20261121a-c26-r1",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-c26-experimenter",
+        "audience": "mochi-nav25-20261121a-c26-shared",
+        "at": "2026-11-22T00:21:44.868493+00:00",
+        "sha256": "571a399a9da9c0f65b11a1faec91233bd266656157efed1cb20b576bf76b575d",
+        "ingestion_id": "d857ca18-6e9d-4ac9-9b1d-306dd6366e2b",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-c26-r1",
+          "author": "mochi-nav25-20261121a-c26-experimenter",
+          "occurred_at": "2026-11-22T00:21:44.868493+00:00",
+          "content": {
+            "kind": "contact-continuation-measurements",
+            "evidence": {
+              "original_final": {
+                "parent": {
+                  "n": 6,
+                  "layouts": 3,
+                  "all_tasks_completed": 0,
+                  "qualified": 0,
+                  "falls": 0,
+                  "forbidden_contacts": 0,
+                  "per_task_completed": {
+                    "alarm": 6,
+                    "drawer": 6,
+                    "laptop": 0,
+                    "globe": 0
+                  }
+                },
+                "selected": {
+                  "n": 6,
+                  "layouts": 3,
+                  "all_tasks_completed": 0,
+                  "qualified": 0,
+                  "falls": 0,
+                  "forbidden_contacts": 0,
+                  "per_task_completed": {
+                    "alarm": 6,
+                    "drawer": 6,
+                    "laptop": 0,
+                    "globe": 0
+                  }
+                }
+              },
+              "new_final": {
+                "parent": {
+                  "n": 6,
+                  "layouts": 3,
+                  "all_tasks_completed": 3,
+                  "all_four_object_checks_passed": 3,
+                  "qualified": 1,
+                  "falls": 0,
+                  "forbidden_contacts": 0,
+                  "per_task_completed": {
+                    "alarm": 6,
+                    "drawer": 4,
+                    "laptop": 3,
+                    "globe": 3
+                  }
+                },
+                "selected": {
+                  "n": 6,
+                  "layouts": 3,
+                  "all_tasks_completed": 2,
+                  "all_four_object_checks_passed": 2,
+                  "qualified": 1,
+                  "falls": 0,
+                  "forbidden_contacts": 1,
+                  "per_task_completed": {
+                    "alarm": 6,
+                    "drawer": 4,
+                    "laptop": 2,
+                    "globe": 2
+                  }
+                }
+              },
+              "original_assessment_sha256": "75bdfa8ff43523fef2e3c2cecaeeb48b152181f3943bf3ec2abda0d96b48d34e",
+              "new_assessment_sha256": "8a70a893be96328e0bfe5a6bf3d876ae03fb49b841d89a8ac00026dd24776540",
+              "selected_final_qualified": 1,
+              "not_training_labels": true,
+              "packet_sha256": "6aaa01581961f5e20d57377bb08ecd48a9b4447cc52696123a54bd90f93e4618"
+            },
+            "qualification": "All original task-final failures retained. Controller revisions are engineering. Tinker updates remain 64 and native gait weights remain fixed."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 37.106974810000004
+      },
+      {
+        "id": "mochi-nav25-20261121a-c26-r2",
+        "role": "researcher",
+        "author": "mochi-nav25-20261121a-c26-researcher",
+        "audience": "mochi-nav25-20261121a-c26-shared",
+        "at": "2026-11-22T00:22:26.185029+00:00",
+        "sha256": "db9f9bf1a8f1d996b88942c20f728a75470c6bc3a168bdf09b01c19073853054",
+        "ingestion_id": "e7043958-2063-43a1-851c-3e0738cbf8c8",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-c26-r2",
+          "author": "mochi-nav25-20261121a-c26-researcher",
+          "occurred_at": "2026-11-22T00:22:26.185029+00:00",
+          "content": {
+            "kind": "contact-versus-selection-distinction",
+            "source": "mochi-nav25-20261121a-c26-r1",
+            "finding": "The original final cohort localized failure at laptop contact. A shared controller repair must pass full physical checks before model weights can be meaningfully compared. Component success is insufficient.",
+            "measured_packet_sha256": "6aaa01581961f5e20d57377bb08ecd48a9b4447cc52696123a54bd90f93e4618"
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 12.394231409
+      },
+      {
+        "id": "mochi-nav25-20261121a-c26-r3",
+        "role": "designer",
+        "author": "mochi-nav25-20261121a-c26-designer",
+        "audience": "mochi-nav25-20261121a-c26-shared",
+        "at": "2026-11-22T00:22:49.199954+00:00",
+        "sha256": "e2f63617d977e9acbed252d6f41a41c0e38c084b4379aaa9bbac107df933064b",
+        "ingestion_id": "06015bc3-40ac-49e1-9a1c-c431814e82c6",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-c26-r3",
+          "author": "mochi-nav25-20261121a-c26-designer",
+          "occurred_at": "2026-11-22T00:22:49.199954+00:00",
+          "content": {
+            "kind": "contact-study-control-plan",
+            "source": "mochi-nav25-20261121a-c26-r2",
+            "used_recalled_finding": "The original final cohort localized failure at laptop contact. A shared controller repair must pass full physical checks before model weights can be meaningfully compared. Component success is insufficient.",
+            "decision": "Keep engineering and checkpoint comparisons separate. Preserve failures, compare identical source and resets, and do not train on opened final outcomes."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 16.38244552900001
+      },
+      {
+        "id": "mochi-nav25-20261121a-c26-r4",
+        "role": "critic",
+        "author": "mochi-nav25-20261121a-c26-critic",
+        "audience": "mochi-nav25-20261121a-c26-shared",
+        "at": "2026-11-22T00:23:19.020342+00:00",
+        "sha256": "32c61ffeb086c3637ee66e83173f3b62cdfadf2c3f6d58cc0819c584bc4e7d91",
+        "ingestion_id": "d921774a-5073-4434-8469-b3671822aac9",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-c26-r4",
+          "author": "mochi-nav25-20261121a-c26-critic",
+          "occurred_at": "2026-11-22T00:23:19.020342+00:00",
+          "content": {
+            "kind": "contact-continuation-verdict",
+            "sources": [
+              "mochi-nav25-20261121a-c26-r1",
+              "mochi-nav25-20261121a-c26-r3"
+            ],
+            "model_classification": "paired_r2_target_unmet",
+            "numerical_classification": "paired_r2_target_unmet",
+            "qualification": "Numerical physical gates determine promotion. Preserve any model/numerical disagreement. This handoff occurs after evaluation and provides no causal memory-benefit estimate."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 25.92130785499998
+      }
+    ],
+    "reads": [
+      {
+        "reader": "mochi-nav25-20261121a-c26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-c26-critic",
+        "record_id": "mochi-nav25-20261121a-c26-r0",
+        "source_id_verified": false,
+        "expected_access": false,
+        "cross_agent_use": false,
+        "sha256": null,
+        "at": "2026-11-22T00:21:44.868420+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:21:44.867593+00:00",
+            "returned_documents": 81,
+            "used_evidence_tokens": 7996,
+            "required_source_verified": false,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-methods-v3-validated-failures-43749410835"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-c26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-c26-experimenter",
+        "record_id": "mochi-nav25-20261121a-c26-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "571a399a9da9c0f65b11a1faec91233bd266656157efed1cb20b576bf76b575d",
+        "at": "2026-11-22T00:22:26.184990+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:22:26.184971+00:00",
+            "returned_documents": 86,
+            "used_evidence_tokens": 8000,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-c26-r1"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-c26-designer",
+        "reader_role": "designer",
+        "author": "mochi-nav25-20261121a-c26-researcher",
+        "record_id": "mochi-nav25-20261121a-c26-r2",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "db9f9bf1a8f1d996b88942c20f728a75470c6bc3a168bdf09b01c19073853054",
+        "at": "2026-11-22T00:22:49.199909+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:22:49.199889+00:00",
+            "returned_documents": 81,
+            "used_evidence_tokens": 7989,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-c26-r1",
+              "mochi-nav25-20261121a-c26-r2"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-c26-experimenter",
+        "reader_role": "experimenter",
+        "author": "mochi-nav25-20261121a-c26-designer",
+        "record_id": "mochi-nav25-20261121a-c26-r3",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "e2f63617d977e9acbed252d6f41a41c0e38c084b4379aaa9bbac107df933064b",
+        "at": "2026-11-22T00:23:09.838876+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:23:09.838858+00:00",
+            "returned_documents": 84,
+            "used_evidence_tokens": 7980,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-c26-r1",
+              "mochi-nav25-20261121a-c26-r2",
+              "mochi-nav25-20261121a-c26-r3"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-c26-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-c26-experimenter",
+        "record_id": "mochi-nav25-20261121a-c26-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "571a399a9da9c0f65b11a1faec91233bd266656157efed1cb20b576bf76b575d",
+        "at": "2026-11-22T00:23:13.380166+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:23:13.380149+00:00",
+            "returned_documents": 83,
+            "used_evidence_tokens": 7985,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-c26-r0",
+              "mochi-nav25-20261121a-c26-r1",
+              "mochi-nav25-20261121a-c26-r2",
+              "mochi-nav25-20261121a-c26-r3"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-c26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-c26-critic",
+        "record_id": "mochi-nav25-20261121a-c26-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "32c61ffeb086c3637ee66e83173f3b62cdfadf2c3f6d58cc0819c584bc4e7d91",
+        "at": "2026-11-22T00:23:49.227033+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:23:49.227007+00:00",
+            "returned_documents": 85,
+            "used_evidence_tokens": 7982,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-c26-r1",
+              "mochi-nav25-20261121a-c26-r2",
+              "mochi-nav25-20261121a-c26-r3",
+              "mochi-nav25-20261121a-c26-r4"
+            ]
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "role": "critic",
+        "question": "Review the completed paired R2 contact cohort. State whether all six selected-model attempts completed within every original quality check. Later engineering studies are separate. Do not attribute shared controller engineering to model training.",
+        "selected": "paired_r2_target_unmet",
+        "distribution": {
+          "paired_r2_selected_all_qualified": 0.03308597952127457,
+          "paired_r2_target_unmet": 0.9669140577316284
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-c26-r1",
+          "mochi-nav25-20261121a-c26-r3"
+        ],
+        "context_sha256": "a46472ad966a728a5b77aa0ca17edc95023baba2a9ece422c21e95225b9cf2fb",
+        "at": "2026-11-22T00:23:18.182735+00:00"
+      }
+    ],
+    "calls": [
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:21:05.175981+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:21:05.251213+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:21:05.291211+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:21:05.327602+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-22T00:21:05.366848+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-22T00:21:05.403509+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:21:28.077855+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:21:28.816387+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:21:41.340214+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:21:44.866962+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:21:52.152109+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:21:52.938245+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:21:58.850035+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:04.568999+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:10.327687+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:16.230643+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:21.975384+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:22:26.183809+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:22:31.848537+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:32.501570+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:38.579209+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:22:49.198721+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:22:53.389743+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:54.014904+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:22:59.837278+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:23:05.582351+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:23:09.837706+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:23:13.379539+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:23:33.002924+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:23:33.710663+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:23:39.383715+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:23:44.941611+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:23:49.225399+00:00"
+      }
+    ],
+    "sources": [],
+    "eligibility": {
+      "writers": 4,
+      "readers": 4,
+      "cross_agent_reads": 5,
+      "isolation_passed": true
+    },
+    "pending_ingestions": []
+  },
+  "public_representation": "Source excerpts omitted. Canonical hashes refer to full backend records, retained unchanged."
+}

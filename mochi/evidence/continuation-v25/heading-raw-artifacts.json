@@ -1,0 +1,18 @@
+{
+  "volume": "mochi-continuation-v25-artifacts",
+  "records": [
+    {
+      "id": "contact26r3-dev-selected",
+      "path": "mochi-nav25-20261121a/heading-continuation/raw/contact26r3-dev-selected.json.gz",
+      "sha256": "eda4627b1de75e36cf9a6034b97ddfc001eb909aec037440a569228326d81fd6",
+      "bytes": 44354653
+    },
+    {
+      "id": "contact26r4-dev-selected",
+      "path": "mochi-nav25-20261121a/heading-continuation/raw/contact26r4-dev-selected.json.gz",
+      "sha256": "7aa96658a14d510e6732074bb14ce66fc6685375b541ee2e471451a1881decc6",
+      "bytes": 71490967
+    }
+  ],
+  "scope": "Exact failed development records. Prospective validation remains unopened; no hypothetical success recordings."
+}

@@ -1,0 +1,7 @@
+{
+  "final_set_sha256": "cbc1f0b7d2bfcfd51f83477187c9addc4bbc89316c122821ee42134f649a855f",
+  "source_freeze_sha256": "26fcd8c0188163359b314c12f211d7a2901ae0afba5ca1639b540d734dd5b521",
+  "eligibility": "Require the R4 uninterrupted development attempt to qualify before opening the unchanged sealed set. R3 stopped safely after reaching a waypoint within its 12 mm tolerance. R4 reserves 16 mm sampled translation clearance. No new model selection or optimizer updates.",
+  "research_evidence_sha256": "d686447f66d5b676b35ce37dcb0e436f579a84088906a17439d769a3d6897dfd",
+  "limits": "Original 512 attempts, 16 summed simulation wall-hours and 64 actual optimizer updates retained."
+}

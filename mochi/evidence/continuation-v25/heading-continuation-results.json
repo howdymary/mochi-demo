@@ -1,0 +1,434 @@
+{
+  "development": [
+    {
+      "id": "contact26r3-dev-selected",
+      "status": "completed",
+      "failure": "reached-state-oriented-approach-check-failed",
+      "qualified_complete": false,
+      "complete_sequence_success": false,
+      "tasks": {
+        "alarm": true
+      },
+      "steps": 227,
+      "physical_seconds": 231.99049462343166,
+      "fall": false,
+      "invalid_contact": false,
+      "contacts": [],
+      "snapshots": [],
+      "sha256": "eda4627b1de75e36cf9a6034b97ddfc001eb909aec037440a569228326d81fd6",
+      "layout_sha256": "ed27155e11861ed2090b66a30f52c6559a5fa7d764132f69ae5839ca28ace119",
+      "source_sha256": "b4c9935fc03f362df6fbeec5c28603ccdf92c9ea420a2929ecd39dbf81d96548",
+      "evaluation_partition": "contact_v26r3_development",
+      "engineering_revision": "contact-v26r3",
+      "source_freeze_sha256": "d1aa6f0febd1fb3bd97b6ee416ddc64f6d53d05cfae9a611a218dfbe4ac26c33",
+      "receipt": {
+        "provider": "local",
+        "architecture": "arm64",
+        "physical_rollouts": 1,
+        "cpu_threads": 1
+      },
+      "scope": "Uninterrupted actuator-driven development attempt, object-relative task primitives. No state restoration within this sequence. Native gait weights fixed.",
+      "policy_settings": {
+        "navigation": {
+          "mode": "tinker",
+          "representation": "compact",
+          "update": 48
+        },
+        "task": {
+          "update": 8
+        }
+      },
+      "checkpoint_decisions": [
+        {
+          "domain": "navigation",
+          "task": "book-entry",
+          "selection": {
+            "action": "direct",
+            "distribution": {
+              "direct": 0.7310585975646973,
+              "buffered": 0.2689414322376251
+            },
+            "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+            "optimizer_updates": 48,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "compact_navigation",
+            "request_sha256": "9f2d593397aa0dd9baf0a735c13651bfcd7aa81e867fc67cfe1b114b60fad96b",
+            "observation_sha256": "264ede4ec20a2d4ade69bdce0b7fce9ef65d6a9c1040ee679ea8bef166a4014c",
+            "inference_seconds": 3.2438307400000213,
+            "input_plus_reserved_output_tokens": 740,
+            "geometrically_available_actions": [
+              "direct",
+              "buffered"
+            ],
+            "raw_preference": "direct",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "433a38b146b565fcc46c6984b7b2b1bcd48e25261e4cedde6cc24c49c60831af",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "selection": {
+            "action": "H0",
+            "distribution": {
+              "H0": 0.9465966820716858,
+              "F": 0.053403329104185104
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "d4bb767f152c277d2c942861f67ac15fa5fadc92b03ff30ed4f9c364dc140f92",
+            "observation_sha256": "90d1a3b5d3e4d78668e60e946d71a6de38a5eefcd9dc7d1db63af5e65975360d",
+            "inference_seconds": 2.633704813999998,
+            "input_plus_reserved_output_tokens": 462,
+            "geometrically_available_actions": [
+              "H0",
+              "F"
+            ],
+            "raw_preference": "H0",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "selection": {
+            "action": "R4",
+            "distribution": {
+              "R0": 0.07585818320512772,
+              "R4": 0.9241418242454529
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "93b088de768c686ad4b67123b970d4827d6e551dbab76deade933fc3502bf628",
+            "observation_sha256": "97e52524ed99173e72c4d6e84968260b7629ee4cf7d41fcf07d678a4df5aa695",
+            "inference_seconds": 2.569786965999924,
+            "input_plus_reserved_output_tokens": 489,
+            "geometrically_available_actions": [
+              "R0",
+              "R4"
+            ],
+            "raw_preference": "R4",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        }
+      ],
+      "wall_seconds": 388.2426721667871
+    },
+    {
+      "id": "contact26r4-dev-selected",
+      "status": "completed",
+      "failure": "no-validated-heading-aware-task-approach",
+      "qualified_complete": false,
+      "complete_sequence_success": false,
+      "tasks": {
+        "alarm": true,
+        "drawer": true,
+        "laptop": true
+      },
+      "steps": 722,
+      "physical_seconds": 315.83507416105243,
+      "fall": false,
+      "invalid_contact": false,
+      "contacts": [],
+      "snapshots": [],
+      "sha256": "7aa96658a14d510e6732074bb14ce66fc6685375b541ee2e471451a1881decc6",
+      "layout_sha256": "ed27155e11861ed2090b66a30f52c6559a5fa7d764132f69ae5839ca28ace119",
+      "source_sha256": "b4c9935fc03f362df6fbeec5c28603ccdf92c9ea420a2929ecd39dbf81d96548",
+      "evaluation_partition": "contact_v26r4_development",
+      "engineering_revision": "contact-v26r4",
+      "source_freeze_sha256": "26fcd8c0188163359b314c12f211d7a2901ae0afba5ca1639b540d734dd5b521",
+      "receipt": {
+        "provider": "local",
+        "architecture": "arm64",
+        "physical_rollouts": 1,
+        "cpu_threads": 1
+      },
+      "scope": "Uninterrupted actuator-driven development attempt, object-relative task primitives. No state restoration within this sequence. Native gait weights fixed.",
+      "policy_settings": {
+        "navigation": {
+          "mode": "tinker",
+          "representation": "compact",
+          "update": 48
+        },
+        "task": {
+          "update": 8
+        }
+      },
+      "checkpoint_decisions": [
+        {
+          "domain": "navigation",
+          "task": "book-entry",
+          "selection": {
+            "action": "direct",
+            "distribution": {
+              "direct": 0.7310585975646973,
+              "buffered": 0.2689414322376251
+            },
+            "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+            "optimizer_updates": 48,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "compact_navigation",
+            "request_sha256": "9f2d593397aa0dd9baf0a735c13651bfcd7aa81e867fc67cfe1b114b60fad96b",
+            "observation_sha256": "264ede4ec20a2d4ade69bdce0b7fce9ef65d6a9c1040ee679ea8bef166a4014c",
+            "inference_seconds": 2.5649056199999993,
+            "input_plus_reserved_output_tokens": 740,
+            "geometrically_available_actions": [
+              "direct",
+              "buffered"
+            ],
+            "raw_preference": "direct",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "433a38b146b565fcc46c6984b7b2b1bcd48e25261e4cedde6cc24c49c60831af",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "alarm",
+          "task": "alarm",
+          "selection": {
+            "action": "H0",
+            "distribution": {
+              "H0": 0.9465966820716858,
+              "F": 0.053403329104185104
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "d4bb767f152c277d2c942861f67ac15fa5fadc92b03ff30ed4f9c364dc140f92",
+            "observation_sha256": "90d1a3b5d3e4d78668e60e946d71a6de38a5eefcd9dc7d1db63af5e65975360d",
+            "inference_seconds": 2.5905739010000026,
+            "input_plus_reserved_output_tokens": 462,
+            "geometrically_available_actions": [
+              "H0",
+              "F"
+            ],
+            "raw_preference": "H0",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "recovery",
+          "task": "alarm",
+          "selection": {
+            "action": "R4",
+            "distribution": {
+              "R0": 0.07585818320512772,
+              "R4": 0.9241418242454529
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "93b088de768c686ad4b67123b970d4827d6e551dbab76deade933fc3502bf628",
+            "observation_sha256": "97e52524ed99173e72c4d6e84968260b7629ee4cf7d41fcf07d678a4df5aa695",
+            "inference_seconds": 2.4324502249999966,
+            "input_plus_reserved_output_tokens": 489,
+            "geometrically_available_actions": [
+              "R0",
+              "R4"
+            ],
+            "raw_preference": "R4",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "drawer",
+          "task": "drawer",
+          "selection": {
+            "action": "C",
+            "distribution": {
+              "B": 0.0004878571489825845,
+              "C": 0.9995121955871582
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "426cfb42e0145234292d15ddd50b8284895bc2df58bd45bae41eb4ce12751a06",
+            "observation_sha256": "e6f119fd7cd91be036c8c6dfa86cc2237bb295df3f3ca926dc980277e23b31af",
+            "inference_seconds": 2.730003620999998,
+            "input_plus_reserved_output_tokens": 455,
+            "geometrically_available_actions": [
+              "B",
+              "C"
+            ],
+            "raw_preference": "C",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "recovery",
+          "task": "drawer",
+          "selection": {
+            "action": "R4",
+            "distribution": {
+              "R0": 0.07585818320512772,
+              "R4": 0.9241418242454529
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "5edf677b575c08037d5d581340238a994a712feea9980635a97504c2cd1d5f5d",
+            "observation_sha256": "c4e8d633b226376b9cd35c7841bad75982d3efbd8df511ccc7f3c9d9aa0d8630",
+            "inference_seconds": 2.7126053940000006,
+            "input_plus_reserved_output_tokens": 491,
+            "geometrically_available_actions": [
+              "R0",
+              "R4"
+            ],
+            "raw_preference": "R4",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "navigation",
+          "task": "laptop",
+          "selection": {
+            "action": "direct",
+            "distribution": {
+              "direct": 0.8519527316093445,
+              "buffered": 0.14804719388484955
+            },
+            "checkpoint_id": "b5ee3049d1ef4e110d2d8fb5dd3be7d235a34adf61b69d5f40eec5e2e619cc87",
+            "optimizer_updates": 48,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "compact_navigation",
+            "request_sha256": "d9cd73a63845fdf5688a3c633769aeb14e687e5d6c9dbe09228b47d2af25c5f1",
+            "observation_sha256": "0cfca16c7de7a2fb5c316f801fffddf1c10bfed5bad0201011803b9768aa79fd",
+            "inference_seconds": 3.2401520230000003,
+            "input_plus_reserved_output_tokens": 506,
+            "geometrically_available_actions": [
+              "direct"
+            ],
+            "raw_preference": "direct",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": true,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "433a38b146b565fcc46c6984b7b2b1bcd48e25261e4cedde6cc24c49c60831af",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "laptop",
+          "task": "laptop",
+          "selection": {
+            "action": "P5",
+            "distribution": {
+              "P5": 0.957912266254425,
+              "L0": 0.04208773002028465
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "81ab51a22e76ac926593cdf498ba99a8e449acddf843fdbd966b45b8903e33c2",
+            "observation_sha256": "cb535402c9a32cfe4fa24ed35bfad352eef29bd3dc2fe23da5702ffee52d1102",
+            "inference_seconds": 2.740246732999992,
+            "input_plus_reserved_output_tokens": 570,
+            "geometrically_available_actions": [
+              "P5",
+              "L0"
+            ],
+            "raw_preference": "P5",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        },
+        {
+          "domain": "recovery",
+          "task": "laptop",
+          "selection": {
+            "action": "R4",
+            "distribution": {
+              "R0": 0.04742587357759476,
+              "R4": 0.9525741338729858
+            },
+            "checkpoint_id": "82eb672aaf8f288d90f2ced03adbc2c67f141ca057979b2c81d6218d41192576",
+            "optimizer_updates": 8,
+            "source": "Actual Tinker checkpoint sampling; native gait fixed",
+            "kind": "task",
+            "request_sha256": "7513a68b9e370888f84fc0737613661dac85c06284502ad20b98516e6b13e48f",
+            "observation_sha256": "cb40f40536725326a7f0bf1b52f8262387a592f376b97565f27ad62737bab046",
+            "inference_seconds": 2.7004052099999996,
+            "input_plus_reserved_output_tokens": 494,
+            "geometrically_available_actions": [
+              "R0",
+              "R4"
+            ],
+            "raw_preference": "R4",
+            "geometric_mask_changed_choice": false,
+            "single_feasible_profile": false,
+            "serving_mode": "named_checkpoint",
+            "sampler_weights_sha256": "01f6d3d916fd611fbf37edc4a61172532660f94cf988a3befe52068dbbc94ade",
+            "inference_route": "sampling",
+            "optimizer_updates_in_inference": 0
+          }
+        }
+      ],
+      "wall_seconds": 587.4143054168671
+    }
+  ],
+  "product": null,
+  "usage": {
+    "physical_rollouts": 508,
+    "simulation_cpu_hours": 13.569940605675585,
+    "optimizer_updates": 64,
+    "training_token_presentations": 1311959,
+    "inference_input_plus_max_output_tokens": 542298,
+    "exa_searches": 4,
+    "past_writes": 34,
+    "past_actual_recalls": 36,
+    "modeled_provider_usd": 8.838393790705723,
+    "physics_workers": 0,
+    "past_ingested_bytes": 31661,
+    "past_estimated_credits": 143
+  }
+}

@@ -18,6 +18,12 @@ PYTHONPATH=mochi/src mochi/.venv/bin/python mochi/scripts/evaluate_contact_v26.p
 
 The evaluator refuses to open final layouts without a qualified development result and checks source hashes before execution. Existing artifact IDs are immutable; reproduction requires new IDs and an explicitly declared budget. The commands need backend credentials and retained Tinker states. The public replay does not.
 
+The later heading-aware continuation uses `source-freeze-r3.json` and `source-freeze-r4.json`. R3 stopped safely after an 11.024 mm waypoint error consumed its nominal clearance. R4 reserves a sampled 16 mm translation envelope on the broad corridor legs, retaining the original narrow task-approach checks. The prospective three-layout selected-model set has hash `cbc1f0b7d2bfcfd51f83477187c9addc4bbc89316c122821ee42134f649a855f`. It was sealed before R4 development selection. A metadata-only recovery retained its original sealed bytes and repeated no physical rollouts.
+
+`evaluate_heading_validation_v26.py` requires a qualified R4 development run and its prospective amendment before opening that set. Each layout receives one new physics seed and one continuous selected-model attempt. This is product validation of shared engineering, not a parent/selected weight comparison. The viewer labels any two-camera replay of one attempt explicitly. The paired model-weight evidence remains in the earlier cohorts.
+
+The Exa/past.dev planning handoff is reproducible through `research_heading_v26.py`. It retains source URLs, observed error, source-verified recalls, the actual planning-model choice and an unverified-hypothesis verdict. It does not train weights. The original 48 navigation and 16 task/recovery optimizer updates remain the complete training count for this campaign.
+
 This study continues the V23 navigation experiment and V24 task preflight. V23's selected model did not beat its strongest fixed strategy. V24 completed the clock, drawer and laptop, then made an unintended wrist contact on its approach to the globe.
 
 The new navigation comparison asks whether a post-trained selector can preserve the fixed strategy's qualified completions while reducing measured steps on fresh layouts. The physical gait network is fixed. Tinker updates rank-16 LoRA weights in Qwen3.5-4B, which selects a route and controller profile from privileged geometry.

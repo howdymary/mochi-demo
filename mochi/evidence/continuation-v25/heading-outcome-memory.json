@@ -1,0 +1,937 @@
+{
+  "status": "completed",
+  "optimizer_updates_added": 0,
+  "physical_rollouts_added": 0,
+  "numerical_classification": "target_not_demonstrated",
+  "new_reads": 3,
+  "new_records": 0,
+  "services": {
+    "actors": {
+      "researcher": "mochi-nav25-20261121a-h26-researcher",
+      "designer": "mochi-nav25-20261121a-h26-designer",
+      "experimenter": "mochi-nav25-20261121a-h26-experimenter",
+      "critic": "mochi-nav25-20261121a-h26-critic"
+    },
+    "audiences": {
+      "shared": "mochi-nav25-20261121a-h26-shared",
+      "critic_private": "mochi-nav25-20261121a-h26-critic"
+    },
+    "records": [
+      {
+        "id": "mochi-nav25-20261121a-h26-r1",
+        "role": "experimenter",
+        "author": "mochi-nav25-20261121a-h26-experimenter",
+        "audience": "mochi-nav25-20261121a-h26-shared",
+        "at": "2026-11-22T00:11:57.338139+00:00",
+        "sha256": "282ee451af9ebc51669f1d5ce474cf1b96668a437e301d51af956a21a6f83fd7",
+        "ingestion_id": "d7355757-4e5d-43eb-b4c4-4edc5b077006",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-h26-r1",
+          "author": "mochi-nav25-20261121a-h26-experimenter",
+          "occurred_at": "2026-11-22T00:11:57.338139+00:00",
+          "content": {
+            "kind": "reached-waypoint-tracking-error",
+            "evidence": {
+              "id": "contact26r3-dev-selected",
+              "physical_record_sha256": "eda4627b1de75e36cf9a6034b97ddfc001eb909aec037440a569228326d81fd6",
+              "failure": "reached-state-oriented-approach-check-failed",
+              "reached_position_error_mm": 11.024263976546962,
+              "position_tolerance_mm": 12.0,
+              "source_freeze_sha256": "d1aa6f0febd1fb3bd97b6ee416ddc64f6d53d05cfae9a611a218dfbe4ac26c33",
+              "native_gait_weights_fixed": true
+            },
+            "observation": "A nominally feasible oriented route reached its first waypoint with 11.024 mm position error inside the existing 12 mm arrival tolerance. The subsequent reached-state collision check rejected the next segment. No collision or fall occurred. Static feasibility alone did not establish executable navigation."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 14.802319955999998
+      },
+      {
+        "id": "mochi-nav25-20261121a-h26-r2",
+        "role": "researcher",
+        "author": "mochi-nav25-20261121a-h26-researcher",
+        "audience": "mochi-nav25-20261121a-h26-shared",
+        "at": "2026-11-22T00:12:25.537701+00:00",
+        "sha256": "6d6a70094e6421810b348e23bb5be94b71177ef87f7f5a5722912bddba1eaf84",
+        "ingestion_id": "d6a5fc75-29d2-451f-9866-401df4c8f5ed",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-h26-r2",
+          "author": "mochi-nav25-20261121a-h26-researcher",
+          "occurred_at": "2026-11-22T00:12:25.537701+00:00",
+          "content": {
+            "kind": "tracking-margin-research",
+            "source": "mochi-nav25-20261121a-h26-r1",
+            "sources": [
+              {
+                "url": "https://staff.aist.go.jp/e.yoshida/papers/TRO_Perrin.pdf",
+                "title": "Research source; follow URL for original text",
+                "retrieved_at": "2026-11-22T00:12:24.114440+00:00"
+              },
+              {
+                "url": "https://staff.aist.go.jp/e.yoshida/papers/Perrin-AR2013.pdf",
+                "title": "Research source; follow URL for original text",
+                "retrieved_at": "2026-11-22T00:12:24.114503+00:00"
+              },
+              {
+                "url": "https://doi.org/10.1109/humanoids43949.2019.9035046",
+                "title": "Research source; follow URL for original text",
+                "retrieved_at": "2026-11-22T00:12:24.114579+00:00"
+              }
+            ],
+            "testable_hypothesis": "Planning must reserve room for measured tracking error as well as the nominal body and feet. Compare a bounded sampled tracking envelope with the rejected nominal route. Keep physical collision and quality verifiers unchanged.",
+            "observation_used": "A nominally feasible oriented route reached its first waypoint with 11.024 mm position error inside the existing 12 mm arrival tolerance. The subsequent reached-state collision check rejected the next segment. No collision or fall occurred. Static feasibility alone did not establish executable navigation."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 21.215370868000008
+      },
+      {
+        "id": "mochi-nav25-20261121a-h26-r3",
+        "role": "designer",
+        "author": "mochi-nav25-20261121a-h26-designer",
+        "audience": "mochi-nav25-20261121a-h26-shared",
+        "at": "2026-11-22T00:13:01.509767+00:00",
+        "sha256": "1e06c310bc0738f696a74690832c111b34eaeca30a10ffae85613f2a0b205113",
+        "ingestion_id": "ad6b30ac-15f9-46af-be9f-4ad4a72d827d",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-h26-r3",
+          "author": "mochi-nav25-20261121a-h26-designer",
+          "occurred_at": "2026-11-22T00:13:01.509767+00:00",
+          "content": {
+            "kind": "tracking-clearance-experiment-plan",
+            "source": "mochi-nav25-20261121a-h26-r2",
+            "model_choice": "reserve_measured_tracking_clearance",
+            "proposed_test": "A sampled 16 mm translation envelope around nominal route segments covers the 12 mm arrival tolerance plus 4 mm reserve. Existing heading and foot-clearance checks still apply. Test physically from reset before opening the new validation set.",
+            "qualification": "This is shared controller/planner engineering, with the already frozen navigation-48/task-8 weights. No additional optimizer update."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 15.377550521999993
+      },
+      {
+        "id": "mochi-nav25-20261121a-h26-r4",
+        "role": "critic",
+        "author": "mochi-nav25-20261121a-h26-critic",
+        "audience": "mochi-nav25-20261121a-h26-shared",
+        "at": "2026-11-22T00:34:52.833231+00:00",
+        "sha256": "2a484c022be183a9a38610a0a62bc00f2186ba9c8efaab0b5e8bde2e1838d16a",
+        "ingestion_id": "c1107f02-8c59-49ee-8d97-590d9dd77ea3",
+        "payload": {
+          "record_id": "mochi-nav25-20261121a-h26-r4",
+          "author": "mochi-nav25-20261121a-h26-critic",
+          "occurred_at": "2026-11-22T00:34:52.833231+00:00",
+          "content": {
+            "kind": "tracking-envelope-qualified-verdict",
+            "sources": [
+              "mochi-nav25-20261121a-h26-r3",
+              "mochi-nav25-20261121a-h26-r4"
+            ],
+            "model_choice": "target_not_demonstrated",
+            "numerical_classification": "target_not_demonstrated",
+            "qualification": "A small selected-model engineering validation. Broader paired-model task reliability and native gait learning remain unestablished. The numerical gates determine promotion."
+          }
+        },
+        "status": "completed",
+        "write_to_ready_seconds": 16.373319164999998
+      }
+    ],
+    "reads": [
+      {
+        "reader": "mochi-nav25-20261121a-h26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-h26-critic",
+        "record_id": "mochi-nav25-20261121a-h26-r0",
+        "source_id_verified": false,
+        "expected_access": false,
+        "cross_agent_use": false,
+        "sha256": null,
+        "at": "2026-11-22T00:11:57.338069+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:11:57.337161+00:00",
+            "returned_documents": 79,
+            "used_evidence_tokens": 7985,
+            "required_source_verified": false,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-methods-v3-validated-failures-43749410835"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-h26-experimenter",
+        "record_id": "mochi-nav25-20261121a-h26-r1",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "282ee451af9ebc51669f1d5ce474cf1b96668a437e301d51af956a21a6f83fd7",
+        "at": "2026-11-22T00:12:19.691218+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:12:19.691193+00:00",
+            "returned_documents": 84,
+            "used_evidence_tokens": 7994,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-2",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671444344-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-designer",
+        "reader_role": "designer",
+        "author": "mochi-nav25-20261121a-h26-researcher",
+        "record_id": "mochi-nav25-20261121a-h26-r2",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "6d6a70094e6421810b348e23bb5be94b71177ef87f7f5a5722912bddba1eaf84",
+        "at": "2026-11-22T00:12:54.157972+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:12:54.157954+00:00",
+            "returned_documents": 68,
+            "used_evidence_tokens": 7992,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-experimenter",
+        "reader_role": "experimenter",
+        "author": "mochi-nav25-20261121a-h26-designer",
+        "record_id": "mochi-nav25-20261121a-h26-r3",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "1e06c310bc0738f696a74690832c111b34eaeca30a10ffae85613f2a0b205113",
+        "at": "2026-11-22T00:13:24.010150+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:13:24.010127+00:00",
+            "returned_documents": 75,
+            "used_evidence_tokens": 7998,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-h26-designer",
+        "record_id": "mochi-nav25-20261121a-h26-r3",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "1e06c310bc0738f696a74690832c111b34eaeca30a10ffae85613f2a0b205113",
+        "at": "2026-11-22T00:13:34.348976+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:13:34.348932+00:00",
+            "returned_documents": 74,
+            "used_evidence_tokens": 7983,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679780777-experimenter",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r0",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-h26-critic",
+        "record_id": "mochi-nav25-20261121a-h26-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "359ab13a248443d72b7180aec1f70c6511eedfa7cd3ea961a0e7409f9e336758",
+        "at": "2026-11-22T00:13:56.971073+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:13:56.971048+00:00",
+            "returned_documents": 71,
+            "used_evidence_tokens": 8000,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671444344-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3",
+              "mochi-nav25-20261121a-h26-r4"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-experimenter",
+        "reader_role": "experimenter",
+        "author": "mochi-nav25-20261121a-h26-designer",
+        "record_id": "mochi-nav25-20261121a-h26-r3",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "1e06c310bc0738f696a74690832c111b34eaeca30a10ffae85613f2a0b205113",
+        "at": "2026-11-22T00:34:27.191180+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:34:27.191159+00:00",
+            "returned_documents": 75,
+            "used_evidence_tokens": 7982,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3",
+              "mochi-nav25-20261121a-h26-r4"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-critic",
+        "reader_role": "critic",
+        "author": "mochi-nav25-20261121a-h26-experimenter",
+        "record_id": "mochi-nav25-20261121a-h26-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "9c4d96e5750a43086db49ab516e7216d80b8fedeeca3b2192c335a72a139e3a1",
+        "at": "2026-11-22T00:34:47.343979+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:34:47.343963+00:00",
+            "returned_documents": 75,
+            "used_evidence_tokens": 7998,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r0",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3",
+              "mochi-nav25-20261121a-h26-r4"
+            ]
+          }
+        ]
+      },
+      {
+        "reader": "mochi-nav25-20261121a-h26-researcher",
+        "reader_role": "researcher",
+        "author": "mochi-nav25-20261121a-h26-critic",
+        "record_id": "mochi-nav25-20261121a-h26-r4",
+        "source_id_verified": true,
+        "expected_access": true,
+        "cross_agent_use": true,
+        "sha256": "2a484c022be183a9a38610a0a62bc00f2186ba9c8efaab0b5e8bde2e1838d16a",
+        "at": "2026-11-22T00:35:14.471828+00:00",
+        "retrieval": "source-verified compact evidence, 8000-token budget, no occurrence window",
+        "attempts": [
+          {
+            "at": "2026-11-22T00:35:14.471812+00:00",
+            "returned_documents": 69,
+            "used_evidence_tokens": 7989,
+            "required_source_verified": true,
+            "returned_source_ids": [
+              "boundforge-43670325538-proposer-failed-neighborhoods",
+              "boundforge-43670325538-verifier-baseline",
+              "boundforge-43670325538-verifier-review",
+              "boundforge-43670827227-proposer-precision-plan-0",
+              "boundforge-43670827227-proposer-precision-plan-1",
+              "boundforge-43670827227-proposer-precision-plan-2",
+              "boundforge-43670827227-proposer-precision-plan-3",
+              "boundforge-43670827227-proposer-precision-plan-4",
+              "boundforge-43670827227-proposer-precision-plan-5",
+              "boundforge-43671271112-proposer-precision-plan-0",
+              "boundforge-43671271112-proposer-precision-plan-1",
+              "boundforge-43671271112-proposer-precision-plan-3",
+              "boundforge-43671444344-proposer-precision-plan-0",
+              "boundforge-43671444344-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-0",
+              "boundforge-43671753698-proposer-precision-plan-1",
+              "boundforge-43671753698-proposer-precision-plan-2",
+              "boundforge-43671753698-proposer-precision-plan-3",
+              "boundforge-43675810337-literature-v2-review",
+              "boundforge-43675810337-proposer-v2-development",
+              "boundforge-43675810337-verifier-v2-guard",
+              "boundforge-c49-43679935507-controller",
+              "boundforge-methods-v3-validated-failures-43749410835",
+              "mochi-nav25-20261121a-h26-r1",
+              "mochi-nav25-20261121a-h26-r2",
+              "mochi-nav25-20261121a-h26-r3",
+              "mochi-nav25-20261121a-h26-r4"
+            ]
+          }
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "role": "designer",
+        "question": "Select the next bounded engineering experiment from the failure and sourced research. Do not weaken any verifier or claim native gait learning.",
+        "selected": "reserve_measured_tracking_clearance",
+        "distribution": {
+          "reserve_measured_tracking_clearance": 0.995701253414154,
+          "increase_actuator_feedback_gains": 0.00406920351088047,
+          "insufficient_evidence": 0.00022956874454393983
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-h26-r1",
+          "mochi-nav25-20261121a-h26-r2"
+        ],
+        "context_sha256": "72d07abc3db9719d9d083ab834fd7aa8b4fa9912e2430d4309be89ed4fd1f80b",
+        "at": "2026-11-22T00:13:00.161349+00:00"
+      },
+      {
+        "role": "critic",
+        "question": "Assess the R4 tracking-clearance engineering experiment. Acceptance requires a qualified development run and all three prospective product attempts within every original quality check. An unopened set is untested, not a failed trial. This is not a model-weight comparison.",
+        "selected": "target_not_demonstrated",
+        "distribution": {
+          "all_declared_physical_tests_qualified": 0.03308597952127457,
+          "target_not_demonstrated": 0.9669140577316284
+        },
+        "input_record_ids": [
+          "mochi-nav25-20261121a-h26-r3",
+          "mochi-nav25-20261121a-h26-r4"
+        ],
+        "context_sha256": "92aa0f1bdb751c18bf0fa0dc7825caaa05e86e4ce0de223a4a6f6917078dabb7",
+        "at": "2026-11-22T00:34:52.019982+00:00"
+      }
+    ],
+    "calls": [
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:11:18.871913+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:11:19.345731+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:11:19.482444+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:11:19.630880+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-22T00:11:19.747436+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 201,
+        "at": "2026-11-22T00:11:19.837186+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:11:41.900164+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:11:43.460327+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:11:50.040946+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:11:57.336435+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:12:04.532459+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:12:05.738966+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:12:12.140405+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:12:19.689837+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:12:32.484972+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:12:33.727676+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:12:40.238028+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:12:46.753039+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:12:54.157433+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:13:09.210860+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:13:10.597971+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:13:16.887287+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:13:24.008927+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:13:34.348377+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:13:42.166004+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:13:43.550894+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:13:49.930166+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:13:56.969747+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:34:10.980886+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:34:11.056129+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:34:11.088302+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "identities",
+        "status": 200,
+        "at": "2026-11-22T00:34:11.117258+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 200,
+        "at": "2026-11-22T00:34:11.152987+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "PUT",
+        "kind": "audiences",
+        "status": 200,
+        "at": "2026-11-22T00:34:11.184653+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:34:27.190607+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:34:30.706284+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:34:31.447868+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:34:37.298864+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:34:42.860617+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:34:47.343477+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "ingest",
+        "status": 202,
+        "at": "2026-11-22T00:34:56.831785+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:34:57.672865+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:35:03.495301+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "GET",
+        "kind": "ingest",
+        "status": 200,
+        "at": "2026-11-22T00:35:09.206507+00:00"
+      },
+      {
+        "provider": "past.dev",
+        "method": "POST",
+        "kind": "recall",
+        "status": 200,
+        "at": "2026-11-22T00:35:14.471291+00:00"
+      }
+    ],
+    "sources": [
+      {
+        "query": "robot motion planning tracking error footprint inflation robust swept volume humanoid footstep turning clearance",
+        "request_id": "b55c3bf660a995717fe7e5548e825d23",
+        "cost_dollars": {
+          "total": 0.007,
+          "search": {
+            "neural": 0.007
+          }
+        },
+        "sources": [
+          {
+            "url": "https://staff.aist.go.jp/e.yoshida/papers/TRO_Perrin.pdf",
+            "title": "Research source; follow URL for original text",
+            "retrieved_at": "2026-11-22T00:12:24.114440+00:00"
+          },
+          {
+            "url": "https://staff.aist.go.jp/e.yoshida/papers/Perrin-AR2013.pdf",
+            "title": "Research source; follow URL for original text",
+            "retrieved_at": "2026-11-22T00:12:24.114503+00:00"
+          },
+          {
+            "url": "https://doi.org/10.1109/humanoids43949.2019.9035046",
+            "title": "Research source; follow URL for original text",
+            "retrieved_at": "2026-11-22T00:12:24.114579+00:00"
+          }
+        ],
+        "response_sha256": "71c08ec4d33140fc36865ff3f8cf8fb14579ba6ef0c33345ef843017b8d91846",
+        "at": "2026-11-22T00:12:24.114719+00:00"
+      }
+    ],
+    "eligibility": {
+      "writers": 4,
+      "readers": 4,
+      "cross_agent_reads": 8,
+      "isolation_passed": true
+    },
+    "pending_ingestions": []
+  },
+  "public_representation": "Source excerpts omitted. Canonical hashes refer to full backend records, retained unchanged."
+}

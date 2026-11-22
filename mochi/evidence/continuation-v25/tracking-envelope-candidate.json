@@ -1,0 +1,28 @@
+{
+  "source_sha256": "e1701e34e8ce2a9e7eed0330c240cf9f3cd828a61091eb9b4e330be05afb5915",
+  "maximum_fk_error_m": 1.3877787807814457e-17,
+  "approach": {
+    "pose": [
+      -0.15868352603873306,
+      0.15,
+      1.5707963267948966
+    ],
+    "alignment_mode": "turn_at_goal"
+  },
+  "poses": [
+    [
+      -0.16368352603873307,
+      -0.2333853241895642,
+      1.557755356688595
+    ],
+    [
+      -0.15868352603873306,
+      0.15,
+      1.5707963267948966
+    ]
+  ],
+  "tracking_translation_samples_m": 0.016,
+  "physics_steps": 0,
+  "planning_wall_seconds": 10.043907165527344,
+  "scope": "Bounded first-feasible geometric preflight; nominal and eight translated copies pass original collision and foot checks. No physical success or global optimality claim."
+}

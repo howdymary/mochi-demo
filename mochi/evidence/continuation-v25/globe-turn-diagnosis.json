@@ -1,0 +1,24 @@
+{
+  "source_sha256": "7aa96658a14d510e6732074bb14ce66fc6685375b541ee2e471451a1881decc6",
+  "start": [
+    0.335170668052602,
+    0.28260604081308854,
+    1.6973812206382826
+  ],
+  "goal": [
+    0.38325989002638505,
+    0.28,
+    0.0
+  ],
+  "routes": [],
+  "maximum_robot_fk_error_m": 5.551115123125783e-17,
+  "fixture_state_restored_from_recorded_values": true,
+  "physics_steps": 0,
+  "forward_fraction_before_globe": 0.8735557389797105,
+  "native_smoothness": {
+    "sampled_acceleration_rms_rad_s2": 149.2649782541745,
+    "sampled_torque_change_rms_nm": 0.003158288013304235,
+    "scope": "Only adjacent samples inside native walking and turning, excluding holds and book-controller phases."
+  },
+  "scope": "Geometry-only diagnosis with actual recorded closed-laptop and closed-drawer states. No physical success claim."
+}

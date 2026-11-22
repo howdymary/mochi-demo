@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "manifest": "artifacts/navigation-v23/baseline-freeze.json",
+      "entries_checked": 339,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/continuation-v25/preserved.json",
+      "entries_checked": 34,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/continuation-v25/nav-source-freeze.json",
+      "entries_checked": 240,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/continuation-v25/tasks/physical-freeze-r2.json",
+      "entries_checked": 253,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/continuation-v25/compact/source-freeze.json",
+      "entries_checked": 7,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r2.json",
+      "entries_checked": 259,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r3.json",
+      "entries_checked": 261,
+      "all_match": true
+    },
+    {
+      "manifest": "configs/laptop-contact-v26/source-freeze-r4.json",
+      "entries_checked": 264,
+      "all_match": true
+    }
+  ],
+  "native_gait_sha256": "2ee446c8d7fb718d9479db0f82fe5659d382158d347fdacd5ffc35831e1d642c",
+  "git_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "prospective_heading_validation_opened": false
+}
