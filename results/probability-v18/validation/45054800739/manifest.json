@@ -1,0 +1,37 @@
+{
+  "study_id": "direct-probability-v18",
+  "source_sha": "bd60ebc325a64d90cbd5bdd5cb40009e67e9b466",
+  "trigger_sha": "bd60ebc325a64d90cbd5bdd5cb40009e67e9b466",
+  "files": [
+    {
+      "path": "desktop.png",
+      "bytes": 334305,
+      "sha256": "8bc9535e2fcc6d806679da6a1c99ec51da550d06c9a907a14ff20bae6f76c0e5"
+    },
+    {
+      "path": "live-desktop.png",
+      "bytes": 352433,
+      "sha256": "a0cd12ecccc94357c9d0f38411d220b88e28c3118e72731a6c7682b39958d8c6"
+    },
+    {
+      "path": "live-mobile.png",
+      "bytes": 317985,
+      "sha256": "3fb28bb0fbdf05b4082e37f1d9d9995dc5a3974b01b93cbb7f09b5524d2ce649"
+    },
+    {
+      "path": "mobile.png",
+      "bytes": 307042,
+      "sha256": "e144b935f5957ff37521e7f8c3431fe088be75580379e41fca7a9e3c9e4404ac"
+    },
+    {
+      "path": "script.js",
+      "bytes": 15178,
+      "sha256": "bf59b3c5c3133f63b4447e5d7b291920b26f81b737f03e02b635c53567ed8fc7"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 1454,
+      "sha256": "93e74f57b7b4a94f32d49cc2eb62d29c3752b4ddb72a9112591d39f27af290fc"
+    }
+  ]
+}
