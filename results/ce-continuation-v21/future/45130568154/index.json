@@ -1,0 +1,87 @@
+{
+  "study_id": "ce-continuation-v21-prospective",
+  "checked_at": "2026-11-23T07:22:50.058695+00:00",
+  "protocol_sha256": "a8cf51ff8896c6e2f94501e6b06c175f3336c2cd8c69968132bcf07b3a99447b",
+  "status": "pending",
+  "reasons": [
+    "insufficient_contracts",
+    "insufficient_providers",
+    "insufficient_A100",
+    "insufficient_H100",
+    "outside_registered_panel",
+    "outside_issuance_window"
+  ],
+  "latest_observation": null,
+  "first_eligible_origin": "2026-12-20",
+  "final_analysis_not_before": "2027-04-12T00:00:00+00:00",
+  "model_lock_sha256": "112b83f7a624347898580c9afd39aebb9b86aa5417b36bf330030359573b432c",
+  "issued_origins": 0,
+  "verified_publication_receipts": {},
+  "new_optimizer_updates": 0,
+  "model_calls": 0,
+  "provider_cost_usd": null,
+  "prospective_accuracy": "not established",
+  "forecast_cases": [],
+  "produced_origins": 0,
+  "model_lock": {
+    "base_model": "Qwen/Qwen3.5-4B",
+    "renderer": "qwen3_5_disable_thinking",
+    "tokenizer_sha256": "4d765ac5a92a75f240af39f9358a09a140216dce113e57754c91042ef8b9e4e8",
+    "log_levels": [
+      -0.6931471805599453,
+      -0.30600060026488674,
+      -0.1350887228406941,
+      -0.059637017126544296,
+      -0.026327688477341595,
+      -0.011622767434681559,
+      -0.00513105140076979,
+      -0.002265182421079987,
+      -0.0010000000000000002,
+      0.0,
+      0.0010000000000000002,
+      0.002265182421079987,
+      0.00513105140076979,
+      0.011622767434681559,
+      0.026327688477341595,
+      0.059637017126544296,
+      0.1350887228406941,
+      0.30600060026488674,
+      0.6931471805599453
+    ],
+    "records": [
+      {
+        "arm": "incumbent",
+        "update": 0,
+        "checkpoint_id": "27320038901ef32a394c16d4",
+        "development_loss": 0.008652142545484801
+      },
+      {
+        "arm": "same",
+        "update": 20,
+        "checkpoint_id": "aad93443301814af2e00a38d",
+        "development_loss": 0.007938938958549805
+      },
+      {
+        "arm": "expanded",
+        "update": 50,
+        "checkpoint_id": "d979e5f7fe4a4f2fe0a831e9",
+        "development_loss": 0.008182590288285793
+      }
+    ],
+    "primary_arm": "same",
+    "dataset_sha256": "2921b5ee09b24e4f18d59565a5ac7057e0673cfa31c5489de4706ce6c01dc720",
+    "protocol_sha256": "4af88a5c12b75bbd6571428feb866b41bd2736f721f3d306a6fb9767764781c7",
+    "identity_kind": "Hashes of immutable private checkpoint identities; not weight-byte checksums",
+    "study_protocol_sha256": "4af88a5c12b75bbd6571428feb866b41bd2736f721f3d306a6fb9767764781c7",
+    "registered_future_protocol_sha256": "abdd06a8270a3d55593b8cc5aa950264521ab5c97c1aa1035e4d4af99af7c590",
+    "engine_files": [
+      "continuation_future_v21.py",
+      "continuation_future_remote_v21.py",
+      "market_future_v19.py",
+      "market_state_v19.py",
+      "probability_v18.py",
+      "signals_remote_v6.py"
+    ],
+    "engine_sha256": "766af6d0e6a937f407ddbf52cfe32c581343232aef436d14c6f0d1897d4052f2"
+  }
+}

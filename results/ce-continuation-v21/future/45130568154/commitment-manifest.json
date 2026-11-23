@@ -1,0 +1,12 @@
+{
+  "study_id": "ce-continuation-v21-prospective",
+  "kind": "readiness_no_forecasts",
+  "execution_source_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "workflow_trigger_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "files": [
+    {
+      "name": "index.json",
+      "sha256": "ed5908f0fd86df69005e4e2bce6fccb17c03944d0d52a78a6c30b278ba9cdb80"
+    }
+  ]
+}

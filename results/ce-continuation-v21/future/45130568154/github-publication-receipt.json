@@ -1,0 +1,29 @@
+{
+  "status": "retrieved",
+  "artifact": {
+    "id": 14797602774,
+    "node_id": "MDg6QXJ0aWZhY3QxNDc5NzYwMjc3NA==",
+    "name": "ce-continuation-v21-future-45130568154",
+    "size_in_bytes": 17324,
+    "url": "https://api.github.com/repos/howdymary/mochi-demo/actions/artifacts/14797602774",
+    "archive_download_url": "https://api.github.com/repos/howdymary/mochi-demo/actions/artifacts/14797602774/zip",
+    "expired": false,
+    "digest": "sha256:06864070c13cad666042a65b1bd3032f43c3a4c9d1501fab99973258c9235a06",
+    "created_at": "2026-11-23T07:23:01Z",
+    "updated_at": "2026-11-23T07:23:01Z",
+    "expires_at": "2027-02-21T07:22:03Z",
+    "workflow_run": {
+      "id": 45130568154,
+      "repository_id": 1458090735,
+      "head_repository_id": 1458090735,
+      "head_branch": "compute-observatory",
+      "head_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9"
+    }
+  },
+  "attempts": [
+    {
+      "returncode": 0,
+      "message": ""
+    }
+  ]
+}

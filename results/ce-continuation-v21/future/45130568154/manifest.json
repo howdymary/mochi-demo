@@ -1,0 +1,32 @@
+{
+  "study_id": "ce-continuation-v21",
+  "source_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "trigger_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "files": [
+    {
+      "path": "attestation-verification.json",
+      "bytes": 17348,
+      "sha256": "25e375dff6c5b98376b68a2d7d05a76e31274fad8da120e47cc0efd71a0a1796"
+    },
+    {
+      "path": "attestation.bundle.json",
+      "bytes": 11525,
+      "sha256": "64b752cbdcf54d8c44f0ea81fe90d9bd89d34d0b07713d4f6e70db936bc67a26"
+    },
+    {
+      "path": "commitment-manifest.json",
+      "bytes": 369,
+      "sha256": "7f7f93c7e829e81b565c2c300d3cf674df151c753341262f66e52ec6b10b36ff"
+    },
+    {
+      "path": "github-publication-receipt.json",
+      "bytes": 960,
+      "sha256": "3c0fd14b0a2fccdc7b6e8f94e80e92cb71e56b7583e2dcf7822c02acbdce8bb9"
+    },
+    {
+      "path": "index.json",
+      "bytes": 2951,
+      "sha256": "ed5908f0fd86df69005e4e2bce6fccb17c03944d0d52a78a6c30b278ba9cdb80"
+    }
+  ]
+}
