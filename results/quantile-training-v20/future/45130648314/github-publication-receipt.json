@@ -1,0 +1,29 @@
+{
+  "status": "retrieved",
+  "artifact": {
+    "id": 14797228531,
+    "node_id": "MDg6QXJ0aWZhY3QxNDc5NzIyODUzMQ==",
+    "name": "quantile-training-v20-future-45130648314",
+    "size_in_bytes": 16994,
+    "url": "https://api.github.com/repos/howdymary/mochi-demo/actions/artifacts/14797228531",
+    "archive_download_url": "https://api.github.com/repos/howdymary/mochi-demo/actions/artifacts/14797228531/zip",
+    "expired": false,
+    "digest": "sha256:39540e847c7c14904ee16f1629f7cb920936899f6359204c981217d8f3493a45",
+    "created_at": "2026-11-23T07:23:46Z",
+    "updated_at": "2026-11-23T07:23:46Z",
+    "expires_at": "2027-02-21T07:22:45Z",
+    "workflow_run": {
+      "id": 45130648314,
+      "repository_id": 1458090735,
+      "head_repository_id": 1458090735,
+      "head_branch": "compute-observatory",
+      "head_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9"
+    }
+  },
+  "attempts": [
+    {
+      "returncode": 0,
+      "message": ""
+    }
+  ]
+}

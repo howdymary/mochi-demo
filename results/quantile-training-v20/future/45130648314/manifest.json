@@ -1,0 +1,32 @@
+{
+  "study_id": "quantile-training-v20",
+  "source_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "trigger_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "files": [
+    {
+      "path": "attestation-verification.json",
+      "bytes": 17054,
+      "sha256": "f8315b2e70ab546f4bcaf62644b17da0d8cd2eb5b0d3cc71489e00da35bbf03d"
+    },
+    {
+      "path": "attestation.bundle.json",
+      "bytes": 11310,
+      "sha256": "fccdd49008c88a262362564f6ea978d2d1762b8452737a0d93cbb99fc2a52b9f"
+    },
+    {
+      "path": "commitment-manifest.json",
+      "bytes": 371,
+      "sha256": "45e3e8b1f6a2542789db9bf75c166b6c4cc18d0117ac080f4c75bb88e8bffd5b"
+    },
+    {
+      "path": "github-publication-receipt.json",
+      "bytes": 962,
+      "sha256": "441d0858dcd641546dd1f17abb84ed5afd8624ee21c1d3399bfd4ceaaa7c52db"
+    },
+    {
+      "path": "index.json",
+      "bytes": 2462,
+      "sha256": "9fc5abaeb553ed3d57072be0ea0f1f299b1516fa97970a9eb68a297b5104029c"
+    }
+  ]
+}

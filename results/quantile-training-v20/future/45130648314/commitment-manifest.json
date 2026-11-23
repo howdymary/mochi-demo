@@ -1,0 +1,12 @@
+{
+  "study_id": "quantile-training-v20-prospective",
+  "kind": "readiness_no_forecasts",
+  "execution_source_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "workflow_trigger_sha": "2568e12b9cfcb14c3701a47a82ed5485377a33a9",
+  "files": [
+    {
+      "name": "index.json",
+      "sha256": "9fc5abaeb553ed3d57072be0ea0f1f299b1516fa97970a9eb68a297b5104029c"
+    }
+  ]
+}

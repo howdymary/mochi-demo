@@ -1,0 +1,72 @@
+{
+  "study_id": "quantile-training-v20-prospective",
+  "checked_at": "2026-11-23T07:23:34.033908+00:00",
+  "protocol_sha256": "a7eb47efc2e866e67b93159e3d70839aded0b595facb67275220726525250e9a",
+  "status": "pending",
+  "reasons": [
+    "insufficient_contracts",
+    "insufficient_providers",
+    "insufficient_A100",
+    "insufficient_H100",
+    "outside_registered_panel",
+    "outside_issuance_window"
+  ],
+  "latest_observation": null,
+  "first_eligible_origin": "2026-12-20",
+  "final_analysis_not_before": "2027-04-12T00:00:00+00:00",
+  "model_lock_sha256": "ada727c9975b81cd1f694c48d5a32c2d019a1e63c2aac41d6184a6d9dfb39b23",
+  "issued_origins": 0,
+  "verified_publication_receipts": {},
+  "new_optimizer_updates": 0,
+  "model_calls": 0,
+  "provider_cost_usd": null,
+  "prospective_accuracy": "not established",
+  "forecast_cases": [],
+  "produced_origins": 0,
+  "model_lock": {
+    "base_model": "Qwen/Qwen3.5-4B",
+    "renderer": "qwen3_5_disable_thinking",
+    "tokenizer_sha256": "4d765ac5a92a75f240af39f9358a09a140216dce113e57754c91042ef8b9e4e8",
+    "log_levels": [
+      -0.6931471805599453,
+      -0.30600060026488674,
+      -0.1350887228406941,
+      -0.059637017126544296,
+      -0.026327688477341595,
+      -0.011622767434681559,
+      -0.00513105140076979,
+      -0.002265182421079987,
+      -0.0010000000000000002,
+      0.0,
+      0.0010000000000000002,
+      0.002265182421079987,
+      0.00513105140076979,
+      0.011622767434681559,
+      0.026327688477341595,
+      0.059637017126544296,
+      0.1350887228406941,
+      0.30600060026488674,
+      0.6931471805599453
+    ],
+    "parent_ids": [
+      "27320038901ef32a394c16d4",
+      "7ad40d905dcbcaeae4b5e7b3",
+      "7328876d3ae63c20cce34f18"
+    ],
+    "selected_head_id": "db626b6e905dc62d76f8271d",
+    "selected_head_update": 64,
+    "selected_ensemble": "uniform_probability_pool",
+    "study_protocol_sha256": "2a05ee199d4e92c97e983e84536721d3e7716e41f283c60c2e3a527614996af4",
+    "registered_future_protocol_sha256": "39c1f82f929c70d0e5df89712219235376d5cb4ec51e46c9319443d92d4745f6",
+    "report_sha256": "b9cdb930f7ee5f9b363d82d78f336947764029068af013fc88f2d94b630204c1",
+    "engine_files": [
+      "quantile_future_v20.py",
+      "quantile_future_remote_v20.py",
+      "quantile_v20.py",
+      "market_future_v19.py",
+      "market_state_v19.py",
+      "probability_v18.py"
+    ],
+    "engine_sha256": "12e925b4454c8969d269fd97b2b9b6d3d638a68e818b2eaeef22205fb94cd300"
+  }
+}
