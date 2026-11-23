@@ -1,0 +1,5 @@
+{
+  "change": "Remove a null model-lock placeholder from registration format; original file retained; scientific protocol, dates and candidates unchanged",
+  "old_registration_sha256": "95f4a78a7ed7d990e0af5e297d1602a7cbcf5a294ad14051b4a7b341eac1e33c",
+  "protocol_sha256": "c6962a4bd87878a7fa1af75ffe669755f459ee6a1480b564fae3416d5087907f"
+}

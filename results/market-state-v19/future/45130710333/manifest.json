@@ -1,0 +1,42 @@
+{
+  "study_id": "market-state-v19",
+  "source_sha": "3666985c893a7ff9bc371db29640ae93ca2d59a3",
+  "trigger_sha": "3666985c893a7ff9bc371db29640ae93ca2d59a3",
+  "files": [
+    {
+      "path": "attestation-verification.json",
+      "bytes": 16766,
+      "sha256": "da334b1304f6bb864a8641c8315f01780a7a4ce94eb811e98eeb7ab8d65f4831"
+    },
+    {
+      "path": "attestation.bundle.json",
+      "bytes": 11114,
+      "sha256": "e76ba2c6a82b507fec11379dcb0231ebd55a0c2ebb0d3c2ee6324d32eda84595"
+    },
+    {
+      "path": "commitment-manifest.json",
+      "bytes": 366,
+      "sha256": "23346a235ae40aea3400aa1cb6d94464cbfb0f9726fd6ed0961e9d3cfeb59d62"
+    },
+    {
+      "path": "github-publication-receipt.json",
+      "bytes": 717,
+      "sha256": "7761ff13c12a57aaeda436b88ac6f954f280f962bb3a037df00ad5f69b625416"
+    },
+    {
+      "path": "index.json",
+      "bytes": 888,
+      "sha256": "33a1fc0f8e965701a7c913df259c865956652c2ee630f360a55be08749e08ce1"
+    },
+    {
+      "path": "model-readiness.json",
+      "bytes": 1284,
+      "sha256": "3ba4972f295c14c3807d9b993fde8c42403501643f612ff40e17a8fe2a1bc988"
+    },
+    {
+      "path": "registration-format-upgrade.json",
+      "bytes": 343,
+      "sha256": "2b2aaed5e03996d2f1b6514021ac4d4066717584e0795b164a23a883cd9ef508"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "study_id": "market-state-v19-prospective",
+  "kind": "readiness_no_forecasts",
+  "execution_source_sha": "3666985c893a7ff9bc371db29640ae93ca2d59a3",
+  "workflow_trigger_sha": "3666985c893a7ff9bc371db29640ae93ca2d59a3",
+  "files": [
+    {
+      "name": "index.json",
+      "sha256": "33a1fc0f8e965701a7c913df259c865956652c2ee630f360a55be08749e08ce1"
+    }
+  ]
+}

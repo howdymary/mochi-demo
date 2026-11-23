@@ -1,0 +1,27 @@
+{
+  "study_id": "market-state-v19-prospective",
+  "checked_at": "2026-11-23T07:24:08.757743+00:00",
+  "protocol_sha256": "c6962a4bd87878a7fa1af75ffe669755f459ee6a1480b564fae3416d5087907f",
+  "model_lock_sha256": "d94a900c35304c04c0bf79fe7e85afd1e3518994015ae0585af709fa2c51aedd",
+  "origin": "2026-11-22",
+  "status": "pending",
+  "reasons": [
+    "insufficient_contracts",
+    "insufficient_providers",
+    "insufficient_A100",
+    "insufficient_H100",
+    "outside_registered_panel",
+    "outside_issuance_window"
+  ],
+  "latest_observation": null,
+  "first_eligible_origin": "2026-12-20",
+  "final_analysis_not_before": "2027-04-12T00:00:00+00:00",
+  "prospective_accuracy": "not established",
+  "new_optimizer_updates": 0,
+  "model_calls": 0,
+  "produced_origins": 0,
+  "issued_origins": 0,
+  "verified_publication_receipts": {},
+  "provider_cost_usd": null,
+  "forecast_cases": []
+}

@@ -1,0 +1,26 @@
+{
+  "fixture": "Explicitly synthetic API-only probe, not a GPU forecast",
+  "market_forecasts_issued": 0,
+  "model_lock_sha256": "d94a900c35304c04c0bf79fe7e85afd1e3518994015ae0585af709fa2c51aedd",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "probability_sha256": [
+    "aac57b7d37c3affac8112c93d735711b67034930652a21eee688e4f966775f08",
+    "11a8c5ccadfbdd6be3a54ccec66250ac68c7b2eac1363ddd857b8003dbeae135",
+    "68c2f6c707df9d246d6ba06c11c7d124250bb56701eee122c4266d8e600c3a3f",
+    "6560a75fc95092bb68b344fdb1cd7ede47fa678a1ab9c4243f39b6d9f74657c1",
+    "0ab09ff0d5d9a63f7c43ef1971b14fd6172283073b85f427c1933fe98d195cda",
+    "9bcff882f665b26ae09a39a4b84bac405d4496ba02e6aba68c1a334794e7f096",
+    "fe9f224cd6eb8de68299f5d7827b0d8ccad382c3df733d53fadabceabf2031c1",
+    "bb7b5c04e9ad61d760469e44dc01d300e948efd55f179522677b3fd2a988e2f3",
+    "581bcb10c798c14164b2f56d1e8d7657c2a036d46e1d02e793aa57408b28e314",
+    "73cb9319d6a7f8960ccd7f307b63584cf7e9cbe61cc3c1151003544d0ad6665a",
+    "44e405bf0dc992e05f29d15bd0c238f574a37de5d78bf46c40a9e77e11446b5a",
+    "217d7c39079fe0d80d040380901df0bba7c1f51b551076d8ded9727f2c90de65"
+  ],
+  "probability_vectors": 12,
+  "provider_cost_usd": null,
+  "status": "passed",
+  "study_id": "market-state-v19",
+  "reused_probe": true
+}
