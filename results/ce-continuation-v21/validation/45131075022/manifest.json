@@ -1,0 +1,22 @@
+{
+  "study_id": "ce-continuation-v21",
+  "source_sha": "91e72a963dc4008701b4c125f5a720313609168a",
+  "trigger_sha": "824771424af3246b785abdbbdcb4851f634d645c",
+  "files": [
+    {
+      "path": "live-desktop.png",
+      "bytes": 369520,
+      "sha256": "94c3bdc6a2f56165fd6d7a867626b36d7cdb566365c1dc4d664b2520d41e330d"
+    },
+    {
+      "path": "live-mobile.png",
+      "bytes": 352218,
+      "sha256": "fd41c626854d386103bc66bacb3fb5c86bffa683fb3b1b28edcc4e5e09aa097b"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 1643,
+      "sha256": "cb5aa461c9af9fa4146e3a2fa5a31c9f1815595f033b976b663c2c516447f4e5"
+    }
+  ]
+}
