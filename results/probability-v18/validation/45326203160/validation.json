@@ -1,0 +1,45 @@
+{
+  "study_id": "direct-probability-v18",
+  "source_sha": "d4f98cbdd28c12c0d6140e08b559d587f2e0173b",
+  "report_sha256": "181f4c5e7d8bca3ead8d895620707f69f54a4cd01fb257b8732319739f9efef0",
+  "live_report_sha256": "181f4c5e7d8bca3ead8d895620707f69f54a4cd01fb257b8732319739f9efef0",
+  "completed_final_runs": 6,
+  "training_interactions_pending": false,
+  "synthetic_market_values": false,
+  "video_recorded": false,
+  "checks": [
+    "strict HTTP and live canonical SHA",
+    "probability source-bound inspection",
+    "touch and keyboard parity",
+    "fixed price axes across checkpoints where available",
+    "focus and selection persistence",
+    "immutable pins",
+    "actual empty/error/retry",
+    "concurrent independent v14/v18 requests",
+    "desktop/mobile no overflow",
+    "axis text >=11px",
+    "reduced motion"
+  ],
+  "screenshots": [
+    {
+      "path": "desktop.png",
+      "sha256": "8bc9535e2fcc6d806679da6a1c99ec51da550d06c9a907a14ff20bae6f76c0e5",
+      "bytes": 334305
+    },
+    {
+      "path": "live-desktop.png",
+      "sha256": "a0cd12ecccc94357c9d0f38411d220b88e28c3118e72731a6c7682b39958d8c6",
+      "bytes": 352433
+    },
+    {
+      "path": "live-mobile.png",
+      "sha256": "3fb28bb0fbdf05b4082e37f1d9d9995dc5a3974b01b93cbb7f09b5524d2ce649",
+      "bytes": 317985
+    },
+    {
+      "path": "mobile.png",
+      "sha256": "e144b935f5957ff37521e7f8c3431fe088be75580379e41fca7a9e3c9e4404ac",
+      "bytes": 307042
+    }
+  ]
+}
