@@ -1,0 +1,22 @@
+{
+  "study_id": "quantile-training-v20",
+  "source_sha": "06f208736a731a5252e4010e38338a595472937b",
+  "trigger_sha": "06f208736a731a5252e4010e38338a595472937b",
+  "files": [
+    {
+      "path": "live-desktop.png",
+      "bytes": 275190,
+      "sha256": "784b40f92eef2b09ed47873d46b6a0c20853b34fce8742c22b8b75eb46e246b7"
+    },
+    {
+      "path": "live-mobile.png",
+      "bytes": 276732,
+      "sha256": "43f191e68bad23f88f9bfbe6317a870dc5b2c7e020a3282a3fb7f4676bf7da55"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 1613,
+      "sha256": "3849107c0773cc84dfdb4146767f26ebf3a6e63032f3cd137b90499cbc8c101a"
+    }
+  ]
+}
