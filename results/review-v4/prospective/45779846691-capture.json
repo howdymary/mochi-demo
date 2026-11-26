@@ -1,0 +1,31 @@
+{
+  "status": "captured",
+  "receipt": {
+    "schema_version": 4,
+    "coverage": [
+      {
+        "series_id": "hubbard-independent-a100-40",
+        "observations": 234,
+        "first_observation": "2026-01-12",
+        "last_observation": "2026-11-06",
+        "missing_calendar_days": 65,
+        "quote_freshness_verified": false
+      },
+      {
+        "series_id": "hubbard-independent-t4",
+        "observations": 234,
+        "first_observation": "2026-01-12",
+        "last_observation": "2026-11-06",
+        "missing_calendar_days": 65,
+        "quote_freshness_verified": false
+      }
+    ],
+    "snapshot_id": "185c5d2c19cfb21a9b6968f99daf53115b7d2d9ec3d33cb98e978f611d607f6c",
+    "snapshot_bytes_sha256": "aab18a199441b86236c035331bba3caebfeb9e5628e0ec89e8f50323b1b01909",
+    "retrieved_at": "2026-11-26T08:04:32.461547+00:00",
+    "cutoff": "2026-11-25",
+    "target_definition_sha256": "6af3a56d1a285dc54de56173f80f8f9db86b7f6afdede034f48f0b94560ddd43",
+    "revisions": [],
+    "first_observed_vintage_preserved": true
+  }
+}
