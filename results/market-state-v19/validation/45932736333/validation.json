@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "source_report_sha256": "374d677312191a04402e8ad7862f16e57b59da80886bf1f736e7f4f666783145",
+  "arithmetic": {
+    "status": "passed",
+    "runs": 6,
+    "matched_cells": 72,
+    "optimizer_updates": 354,
+    "prospective_accuracy": "not established"
+  },
+  "http_batches": [
+    {
+      "requests": 15,
+      "http_version": "HTTP/2",
+      "all_status": 200
+    },
+    {
+      "requests": 15,
+      "http_version": "HTTP/2",
+      "all_status": 200
+    }
+  ],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png",
+    "live-desktop.png",
+    "live-mobile.png"
+  ],
+  "synthetic_future_controls_tested": true,
+  "synthetic_market_data_published": false,
+  "video_recorded": false
+}
