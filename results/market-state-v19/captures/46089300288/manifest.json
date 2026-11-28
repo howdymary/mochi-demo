@@ -1,0 +1,12 @@
+{
+  "study_id": "market-state-v19",
+  "source_sha": "2a305b74b2190cd005425410cd9e1a7a717a48b3",
+  "trigger_sha": "2a305b74b2190cd005425410cd9e1a7a717a48b3",
+  "files": [
+    {
+      "path": "capture.json",
+      "bytes": 79598,
+      "sha256": "3b11154e28b3b246dad8bc0f2ea58239d8be5be478a44b74d0fda74142ad5eea"
+    }
+  ]
+}
